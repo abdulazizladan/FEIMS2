@@ -4,6 +4,15 @@ import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/aut
 import { AuthGuard } from './shared/guards/auth.guard';
 
 export const rootRouterConfig: Routes = [
+  {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch: 'full'
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
+  },
   /**{
     path: '',
     redirectTo: 'dashboard',
@@ -13,7 +22,7 @@ export const rootRouterConfig: Routes = [
     path: 'home',
     loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule),
     data: { title: 'Choose A Demo' }
-  },**/
+  },
   {
     path: '',
     component: AuthLayoutComponent,
