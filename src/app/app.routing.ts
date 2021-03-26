@@ -13,6 +13,15 @@ export const rootRouterConfig: Routes = [
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: 'sessions/404'
+  }
   /**{
     path: '',
     redirectTo: 'dashboard',
@@ -173,9 +182,6 @@ export const rootRouterConfig: Routes = [
       }
     ]
   },*/
-  {
-    path: '**',
-    redirectTo: 'sessions/404'
-  }
+  
 ];
 

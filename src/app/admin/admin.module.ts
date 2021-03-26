@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+//required Egret Module
+import { SharedComponentsModule } from '../shared/components/shared-components.module';
+
 //Material Modules
 import { MatCardModule } from '@angular/material/card';
 
@@ -25,6 +28,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
   declarations: [HomeComponent, AddBuildingComponent, SummaryComponent, BuildingComponent, BuildingsComponent, DashboardComponent, FooterComponent, ReportsComponent, SettingsComponent, SidenavComponent, ToolbarComponent],
   imports: [
     CommonModule,
+    SharedComponentsModule,
     MatCardModule,
     FlexLayoutModule,
     AdminRoutingModule
