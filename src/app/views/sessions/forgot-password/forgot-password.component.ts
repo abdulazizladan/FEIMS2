@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { MatProgressBar } from '@angular/material/progress-bar';
+import { FormControl } from '@angular/forms';
+
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
