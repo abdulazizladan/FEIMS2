@@ -70,7 +70,56 @@
                 </div>
             </div>
             <!-- Navigation -->
+            <!--
             <app-sidenav [items]="menuItems" [hasIconMenu]="hasIconTypeMenuItem" [iconMenuTitle]="iconTypeMenuTitle"></app-sidenav>
+            -->
+            <!--Site selection -->
+            <mat-form-field >
+                <mat-label>Site</mat-label>
+                <mat-select name="site">
+                    <mat-option value="">
+                        Site
+                    </mat-option>
+                    <mat-option value="kongo">
+                        Kongo
+                    </mat-option>
+                    <mat-option value="samaru">
+                        Samaru
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <!-- Faculty selection-->
+            <mat-form-field>
+                <mat-label>Faculty</mat-label>
+                <mat-select name="faculty">
+                    <mat-option value="">
+                        Faculty
+                    </mat-option>
+                    <mat-option value="kongo">
+                        Kongo
+                    </mat-option>
+                    <mat-option value="samaru">
+                        Samaru
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <!-- Department selection -->
+            <mat-form-field>
+                <mat-label>Department</mat-label>
+                <mat-select name="department">
+                    <mat-option value="">
+                        ---
+                    </mat-option>
+                    <mat-option value="kongo">
+                        Law
+                    </mat-option>
+                    <mat-option value="samaru">
+                        Administration
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     </div>
 </div>

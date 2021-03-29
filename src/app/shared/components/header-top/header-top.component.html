@@ -2,68 +2,23 @@
   <div class="container">
     <div class="topnav">
       <!-- App Logo -->
-      <div class="topbar-branding">
+      <!--<div class="topbar-branding">
         <img src="assets/images/egret.png" alt="" class="app-logo">
-      </div>
+      </div>-->
+      <button mat-icon-button>
+        <mat-icon>
+          menu
+        </mat-icon>
+      </button>
 
-      <ul class="menu" *ngIf="!layoutConf.isMobile">
-        <li *ngFor="let item of menuItems; let i = index;">
-          <div *ngIf="item.type !== 'separator'" routerLinkActive="open">
-            <a matRipple routerLink="/{{item.state}}" *ngIf="item.type === 'link'">
-              <mat-icon>{{item.icon}}</mat-icon> 
-              {{item.name | translate}}
-            </a>
-            <div *ngIf="item.type === 'dropDown'">
-              <label matRipple for="drop-{{i}}" class="toggle"><mat-icon>{{item.icon}}</mat-icon> {{item.name | translate}}</label>
-              <a matRipple><mat-icon>{{item.icon}}</mat-icon> {{item.name | translate}}</a>
-              <input type="checkbox" id="drop-{{i}}" />
-              <ul>
-                <li *ngFor="let itemLvL2 of item.sub; let j = index;" routerLinkActive="open">
-                  <a matRipple routerLink="{{item.state ? '/'+item.state : ''}}/{{itemLvL2.state}}" 
-                  *ngIf="itemLvL2.type !== 'dropDown'">
-                    <mat-icon *ngIf="itemLvL2.icon">{{itemLvL2.icon}}</mat-icon>  
-                    {{itemLvL2.name | translate}}
-                  </a>
-                  
-                  <div *ngIf="itemLvL2.type === 'dropDown'">
-                    <label matRipple for="drop-{{i}}{{j}}" class="toggle">{{itemLvL2.name | translate}}</label>
-                    <a matRipple><mat-icon *ngIf="itemLvL2.icon">{{itemLvL2.icon}}</mat-icon>  {{itemLvL2.name | translate}}</a>
-                    <input type="checkbox" id="drop-{{i}}{{j}}" />
-                    <!-- Level 3 -->
-                    <ul>
-                      <li *ngFor="let itemLvL3 of itemLvL2.sub" routerLinkActive="open">
-                        <a matRipple routerLink="{{item.state ? '/'+item.state : ''}}{{itemLvL2.state ? '/'+itemLvL2.state : ''}}/{{itemLvL3.state}}">
-                          <mat-icon *ngIf="itemLvL3.icon">{{itemLvL3.icon}}</mat-icon>
-                          {{itemLvL3.name | translate}}
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ul>
+      
       <span fxFlex></span>
       <!-- End Navigation -->
       
       <!-- Language Switcher -->
-      <mat-select 
-      *ngIf="!layoutConf.isMobile"
-      placeholder=""
-      id="langToggle"
-      [style.width]="'auto'"
-      name="currentLang"
-      [(ngModel)]="currentLang" 
-      (selectionChange)="setLang()"
-      class="topbar-button-right">
-        <mat-option 
-        *ngFor="let lang of availableLangs" 
-        [value]="lang.code" ngDefaultControl>{{ lang.name }}</mat-option>
-      </mat-select>
+      
       <!-- Theme Switcher -->
-      <button 
+      <!--<button 
       mat-icon-button
       id="schemeToggle" 
       [style.overflow]="'visible'"
@@ -72,6 +27,7 @@
       class="topbar-button-right">
         <mat-icon>format_color_fill</mat-icon>
       </button>
+      -->
       <mat-menu #themeMenu="matMenu">
         <mat-grid-list
         class="theme-list" 
@@ -121,10 +77,10 @@
       </mat-menu>
       <!-- Mobile screen menu toggle -->
       <button 
-      mat-icon-button 
-      class="mr-16" 
-      (click)="toggleSidenav()" 
-      *ngIf="layoutConf.isMobile">
+        mat-icon-button 
+        class="mr-16" 
+        (click)="toggleSidenav()" 
+        *ngIf="layoutConf.isMobile">
         <mat-icon>menu</mat-icon>
       </button>
 

@@ -37,6 +37,10 @@ import { EgretExampleViewerComponent } from './example-viewer/example-viewer.com
 import { EgretExampleViewerTemplateComponent } from './example-viewer-template/example-viewer-template.component';
 import { EgretNotifications2Component } from './egret-notifications2/egret-notifications2.component';
 
+///Mat Select
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+
 
 const components = [
   HeaderTopComponent,
@@ -72,7 +76,9 @@ CommonModule,
     SearchModule,
     SharedPipesModule,
     SharedDirectivesModule,
-    SharedMaterialModule
+    SharedMaterialModule,
+    MatSelectModule,
+    MatInputModule
   ],
   declarations: components,
   // entryComponents: [AppComfirmComponent, AppLoaderComponent, BottomSheetShareComponent],
