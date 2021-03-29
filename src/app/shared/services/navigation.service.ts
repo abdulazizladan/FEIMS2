@@ -30,30 +30,34 @@ interface IBadge {
 export class NavigationService {
   iconMenu: IMenuItem[] = [
     {
-      name: 'HOME',
-      type: 'icon',
-      tooltip: 'Home',
+      name: 'Home',
+      type: 'link',
+      tooltip: 'dashboard home',
       icon: 'home',
-      state: 'home'
+      state: 'dashboard'
     },
     {
-      name: 'PROFILE',
-      type: 'icon',
-      tooltip: 'Profile',
-      icon: 'person',
-      state: 'profile/overview'
+      name: 'Report',
+      type: 'link',
+      tooltip: 'Report',
+      icon: 'assessment',
+      state: 'dashboard/report'
     },
     {
-      name: 'TOUR',
-      type: 'icon',
-      tooltip: 'Tour',
-      icon: 'flight_takeoff',
-      state: 'tour'
+      name: 'Settings',
+      type: 'link',
+      tooltip: 'settings',
+      icon: 'settings',
+      state: 'dashboard/settings'
     },
     {
-      type: 'separator',
-      name: 'Main Items'
-    },
+      name: 'About',
+      type: 'link',
+      tooltip: 'about FEIMS',
+      icon: 'report',
+      state: 'dashboard/about'
+    }
+    /*
     {
       name: 'DASHBOARD',
       type: 'dropDown',
@@ -768,7 +772,7 @@ export class NavigationService {
       tooltip: 'Documentation',
       icon: 'library_books',
       state: 'http://demos.ui-lib.com/egret-doc/'
-    }
+    }*/
   ];
 
   // Icon menu TITLE at the very top of navigation.
@@ -785,15 +789,15 @@ export class NavigationService {
   // Or you can customize this method to supply different menu for
   // different user type.
   publishNavigationChange(menuType: string) {
-    switch (menuType) {
-      case 'separator-menu':
-        this.menuItems.next(this.separatorMenu);
-        break;
-      case 'icon-menu':
-        this.menuItems.next(this.iconMenu);
-        break;
-      default:
-        this.menuItems.next(this.plainMenu);
-    }
+  //switch (menuType) {
+  //    case 'separator-menu':
+  //      this.menuItems.next(this.separatorMenu);
+  //      break;
+  //    case 'icon-menu':
+  //      this.menuItems.next(this.iconMenu);
+  //      break;
+  //    default:
+  //      this.menuItems.next(this.plainMenu);
+  //  }
   }
 }
