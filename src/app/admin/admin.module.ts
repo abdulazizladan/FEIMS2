@@ -6,6 +6,7 @@ import { SharedComponentsModule } from '../shared/components/shared-components.m
 
 //Material Modules
 import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -30,6 +31,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     CommonModule,
     SharedComponentsModule,
     MatCardModule,
+    MatSidenavModule,
     FlexLayoutModule,
     AdminRoutingModule
   ]
