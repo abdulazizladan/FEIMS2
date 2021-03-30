@@ -64,7 +64,7 @@ export class NavigationService {
       name: 'Kongo',
       type: 'dropDown',
       tooltip: 'Koongo Campus',
-      icon: 'site_on',
+      icon: 'location_on',
       sub: [
         {
           name: 'Administration',
@@ -73,12 +73,12 @@ export class NavigationService {
             {
               name: 'Business',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             },
             {
               name: 'LGA Studies',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             }
           ]
 
@@ -90,12 +90,12 @@ export class NavigationService {
             {
               name: 'Civil',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             },
             {
               name: 'Sharia',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             }
           ]
 
@@ -106,7 +106,7 @@ export class NavigationService {
       name: 'Samaru',
       type: 'dropDown',
       tooltip: 'Samaru Campus',
-      icon: 'site_on',
+      icon: 'location_on',
       sub: [
         {
           name: 'Sciences',
@@ -115,12 +115,12 @@ export class NavigationService {
             {
               name: 'Mathematics',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             },
             {
               name: 'Chemistry',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             }
           ]
 
@@ -132,12 +132,12 @@ export class NavigationService {
             {
               name: 'Civil',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             },
             {
               name: 'Mechanical',
               type: 'link',
-              state: ''
+              state: 'dashboard/buildings'
             }
           ]
 

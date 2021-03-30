@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { LoginData } from '../loginData.model';
+import { environment } from '../../environment';
+import { ApiPaths } from '../../ApiPaths';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -15,14 +18,18 @@ const httpOptions = {
 })
 export class AuthService {
 
-  private readonly loginUrl: string = "https://api.narr.ng/api/v1/auth/login";
-  private readonly registerUrl: string = "https://api.narr.ng/api/v1/auth/register";
+  private baseUrl= environment.baseUrl;
+
+  private loginUrl: string = '${this.baseUrl}/${ApiPaths.signinUrl}';
+  private registerUrl: string = '${this.baseUrl}/${ApiPaths.signupUrl}';
+  //private readonly loginUrl: string = "https://api.narr.ng/api/v1/auth/login";
+  //private readonly registerUrl: string = "https://api.narr.ng/api/v1/auth/register";
 
   constructor( private _http: HttpClient){
 
    }
 
-  login(credentials: {email: String, password: string}){
+  login(credentials: LoginData){
     return this._http.post<any>( this.loginUrl, credentials, httpOptions)
   }
 
