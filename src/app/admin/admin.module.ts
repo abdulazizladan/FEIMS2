@@ -23,10 +23,11 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, AddBuildingComponent, SummaryComponent, BuildingComponent, BuildingsComponent, DashboardComponent, FooterComponent, ReportsComponent, SettingsComponent, SidenavComponent, ToolbarComponent],
+  declarations: [HomeComponent, AddBuildingComponent, SummaryComponent, BuildingComponent, BuildingsComponent, DashboardComponent, FooterComponent, ReportsComponent, SettingsComponent, SidenavComponent, ToolbarComponent, AboutComponent],
   imports: [
     CommonModule,
     SharedComponentsModule,
