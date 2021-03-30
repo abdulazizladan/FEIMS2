@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
+
 //required Egret Module
 import { SharedComponentsModule } from '../shared/components/shared-components.module';
 
 //Material Modules
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -33,8 +38,13 @@ import { AboutComponent } from './components/about/about.component';
     SharedComponentsModule,
     MatCardModule,
     MatSidenavModule,
+    MatChipsModule,
+    MatIconModule,
     FlexLayoutModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    NgxEchartsModule.forRoot({
+      echarts
+    })
   ]
 })
 export class AdminModule { }

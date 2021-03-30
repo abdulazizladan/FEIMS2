@@ -56,6 +56,93 @@ export class NavigationService {
       tooltip: 'about FEIMS',
       icon: 'report',
       state: 'dashboard/about'
+    },
+    {
+      type: 'separator'
+    },
+    {
+      name: 'Kongo',
+      type: 'dropDown',
+      tooltip: 'Koongo Campus',
+      icon: 'site_on',
+      sub: [
+        {
+          name: 'Administration',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Business',
+              type: 'link',
+              state: ''
+            },
+            {
+              name: 'LGA Studies',
+              type: 'link',
+              state: ''
+            }
+          ]
+
+        },
+        {
+          name: 'Law',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Civil',
+              type: 'link',
+              state: ''
+            },
+            {
+              name: 'Sharia',
+              type: 'link',
+              state: ''
+            }
+          ]
+
+        }
+      ]
+    },
+    {
+      name: 'Samaru',
+      type: 'dropDown',
+      tooltip: 'Samaru Campus',
+      icon: 'site_on',
+      sub: [
+        {
+          name: 'Sciences',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Mathematics',
+              type: 'link',
+              state: ''
+            },
+            {
+              name: 'Chemistry',
+              type: 'link',
+              state: ''
+            }
+          ]
+
+        },
+        {
+          name: 'Engineering',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Civil',
+              type: 'link',
+              state: ''
+            },
+            {
+              name: 'Mechanical',
+              type: 'link',
+              state: ''
+            }
+          ]
+
+        }
+      ]
     }
     /*
     {

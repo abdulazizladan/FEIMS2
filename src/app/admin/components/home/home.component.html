@@ -1,1 +1,226 @@
-Home 
+
+<!-- SECOND ROW -->
+
+<div fxLayout="row wrap" [@animate]="{value:'*',params:{delay:'600ms',scale:'.9'}}">
+    <!-- Sites -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+      <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+        <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+        <span style="width: 20px"></span>
+        <div>
+          <p class="m-0 text-14 text-muted line-height-1">Sites</p>
+          <span class="text-18 font-weight-bold text-green">2
+              <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+        </div>
+      </mat-card>
+    </div>
+    
+    <!-- Buildings -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+        <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <span style="width: 20px"></span>
+          <div>
+            <p class="m-0 text-14 text-muted line-height-1">Buildings</p>
+            <span class="text-18 font-weight-bold text-green">2
+                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          </div>
+        </mat-card>
+    </div>
+
+    <!-- High Value Equipment -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+        <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <span style="width: 20px"></span>
+          <div>
+            <p class="m-0 text-14 text-muted line-height-1">Equipment (HV)</p>
+            <span class="text-18 font-weight-bold text-green">2
+                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          </div>
+        </mat-card>
+    </div>
+
+    <!-- Low Value Equipment -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+        <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <span style="width: 20px"></span>
+          <div>
+            <p class="m-0 text-14 text-muted line-height-1">Equipment (LV)</p>
+            <span class="text-18 font-weight-bold text-green">2
+                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          </div>
+        </mat-card>
+    </div>
+
+    <!-- Obsolete -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+        <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <span style="width: 20px"></span>
+          <div>
+            <p class="m-0 text-14 text-muted line-height-1">Obsolete</p>
+            <span class="text-18 font-weight-bold text-green">2
+                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          </div>
+        </mat-card>
+    </div>
+
+    <!-- Abandoned -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+        <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <span style="width: 20px"></span>
+          <div>
+            <p class="m-0 text-14 text-muted line-height-1">Abandoned</p>
+            <span class="text-18 font-weight-bold text-green">2
+                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          </div>
+        </mat-card>
+    </div>
+
+    <!-- Repairable -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+        <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <span style="width: 20px"></span>
+          <div>
+            <p class="m-0 text-14 text-muted line-height-1">Repairable</p>
+            <span class="text-18 font-weight-bold text-green">2
+                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          </div>
+        </mat-card>
+    </div>
+
+    <!-- Good Condition -->
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
+        <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
+          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <span style="width: 20px"></span>
+          <div>
+            <p class="m-0 text-14 text-muted line-height-1">Good Condition</p>
+            <span class="text-18 font-weight-bold text-green">2
+                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          </div>
+        </mat-card>
+    </div>
+    
+  </div>
+  <!--/ SECOND ROW 
+
+  <div fxLayout="row wrap">
+    <div
+      fxFlex="100"
+      fxFlex.gt-sm="66.67"
+      fxFlex.sm="50"
+      [@animate]="{ value: '*', params: { y: '50px', delay: '600ms' } }"
+    >
+      <mat-card class="p-0 ">
+        
+            <div
+              echarts
+              [options]="trafficVsSaleOptions"
+              [merge]="trafficVsSale"
+              [autoResize]="true"
+              style="height: 255px;"
+            ></div>
+            <div
+              echarts
+              [options]="sessionOptions"
+              [merge]="sessions"
+              [autoResize]="true"
+              style="height: 255px;"
+            ></div>
+      </mat-card>
+    </div>
+    / End tab -->
+  
+    <!-- Donut chart
+    <div
+      fxFlex="100"
+      fxFlex.gt-sm="33.33"
+      fxFlex.sm="50"
+      [@animate]="{ value: '*', params: { y: '50px', delay: '400ms' } }"
+    >
+      <mat-card class="p-0 ">
+        <p class=" ml-16 mt-16">TRAFFIC SOURCES</p>
+        <div
+          echarts
+          [options]="trafficSourcesChart"
+          [autoResize]="true"
+          style="height: 250px;"
+        ></div>
+      </mat-card>
+    </div>
+    / End donut chart -->
+    <!--/ End 2nd row -->
+
+  <div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{scale:'.9',delay:'300ms'}}">
+      <mat-card>
+        <mat-card-title fxLayoutAlign="start center">
+          <small class="text-muted">Total Sales</small>
+          <span fxFlex></span>
+          <mat-chip
+          class="icon-chip" 
+          color="primary" 
+          selected="true"><mat-icon>trending_up</mat-icon>20%</mat-chip>
+        </mat-card-title>
+        <mat-card-content>
+          <h3 class="m-0 font-normal">22,450</h3>
+          <small class="text-muted">Monthly</small>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
+      <mat-card>
+        <mat-card-title>
+          <small class="text-muted">Revenue</small>
+          <span fxFlex></span>
+          <mat-chip
+          class="icon-chip" 
+          color="accent" 
+          selected="true"><mat-icon>trending_up</mat-icon>10%</mat-chip>
+        </mat-card-title>
+        <mat-card-content>
+          <h3 class="m-0 font-normal">377,670</h3>
+          <small class="text-muted">Monthly</small>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
+      <mat-card>
+        <mat-card-title>
+          <small class="text-muted">Traffic</small>
+          <span fxFlex></span>
+          <mat-chip
+          class="icon-chip" 
+          color="accent" 
+          selected="true"><mat-icon>trending_up</mat-icon>9%</mat-chip>
+        </mat-card-title>
+        <mat-card-content>
+          <h3 class="m-0 font-normal">54,845</h3>
+          <small class="text-muted">Monthly</small>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
+      <mat-card>
+        <mat-card-title>
+          <small class="text-muted">New User</small>
+          <span fxFlex></span>
+          <mat-chip
+          class="icon-chip" 
+          color="warn" 
+          selected="true"><mat-icon>trending_down</mat-icon>2%</mat-chip>
+        </mat-card-title>
+        <mat-card-content>
+          <h3 class="m-0 font-normal">245</h3>
+          <small class="text-muted">Monthly</small>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
