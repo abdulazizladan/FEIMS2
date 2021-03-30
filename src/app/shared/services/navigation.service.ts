@@ -58,13 +58,15 @@ export class NavigationService {
       state: 'dashboard/about'
     },
     {
-      type: 'separator'
+      type: 'separator',
+      name: 'Select separtment'
     },
     {
       name: 'Kongo',
       type: 'dropDown',
       tooltip: 'Koongo Campus',
       icon: 'location_on',
+      disabled: true,
       sub: [
         {
           name: 'Administration',
@@ -107,6 +109,7 @@ export class NavigationService {
       type: 'dropDown',
       tooltip: 'Samaru Campus',
       icon: 'location_on',
+      disabled: true,
       sub: [
         {
           name: 'Sciences',
