@@ -56,6 +56,96 @@ export class NavigationService {
       tooltip: 'about FEIMS',
       icon: 'report',
       state: 'dashboard/about'
+    },
+    {
+      type: 'separator',
+      name: 'Select separtment'
+    },
+    {
+      name: 'Kongo',
+      type: 'dropDown',
+      tooltip: 'Koongo Campus',
+      icon: 'location_on',
+      disabled: true,
+      sub: [
+        {
+          name: 'Administration',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Business',
+              type: 'link',
+              state: 'dashboard/buildings'
+            },
+            {
+              name: 'LGA Studies',
+              type: 'link',
+              state: 'dashboard/buildings'
+            }
+          ]
+
+        },
+        {
+          name: 'Law',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Civil',
+              type: 'link',
+              state: 'dashboard/buildings'
+            },
+            {
+              name: 'Sharia',
+              type: 'link',
+              state: 'dashboard/buildings'
+            }
+          ]
+
+        }
+      ]
+    },
+    {
+      name: 'Samaru',
+      type: 'dropDown',
+      tooltip: 'Samaru Campus',
+      icon: 'location_on',
+      disabled: true,
+      sub: [
+        {
+          name: 'Sciences',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Mathematics',
+              type: 'link',
+              state: 'dashboard/buildings'
+            },
+            {
+              name: 'Chemistry',
+              type: 'link',
+              state: 'dashboard/buildings'
+            }
+          ]
+
+        },
+        {
+          name: 'Engineering',
+          type: 'dropDown',
+          sub: [
+            {
+              name: 'Civil',
+              type: 'link',
+              state: 'dashboard/buildings'
+            },
+            {
+              name: 'Mechanical',
+              type: 'link',
+              state: 'dashboard/buildings'
+            }
+          ]
+
+        }
+      ]
     }
     /*
     {

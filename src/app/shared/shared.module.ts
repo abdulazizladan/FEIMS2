@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+
 // SERVICES
 import { ThemeService } from './services/theme.service';
 import { NavigationService } from "./services/navigation.service";
@@ -17,6 +20,8 @@ import { SharedDirectivesModule } from './directives/shared-directives.module';
 @NgModule({
   imports: [
   CommonModule,
+  MatInputModule,
+  MatSelectModule,
     SharedComponentsModule,
     SharedPipesModule,
     SharedDirectivesModule    

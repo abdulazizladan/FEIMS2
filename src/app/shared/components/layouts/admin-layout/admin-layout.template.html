@@ -8,7 +8,7 @@
   <!-- Main Container -->
   <mat-sidenav-container 
   [dir]='layoutConf.dir'
-  class="app-admin-container app-side-nav-container mat-drawer-transition sidebar-{{layoutConf?.sidebarColor}} topbar-{{layoutConf?.topbarColor}} footer-{{layoutConf?.footerColor}}"
+  class="app-admin-container app-side-nav-container mat-drawer-transition sidebar-white topbar-{{layoutConf?.topbarColor}} footer-white"
   [ngClass]="adminContainerClasses">
     <mat-sidenav-content>
     <!-- SIDEBAR -->
@@ -66,12 +66,9 @@
         <app-notifications [notificPanel]="notificationPanel"></app-notifications>
       </div>
     </mat-sidenav>
-    
-    <egret-notifications2></egret-notifications2>
   </mat-sidenav-container>
 </div>
 
 
 <!-- Only for demo purpose -->
 <!-- Remove this from your production version -->
-<app-customizer></app-customizer>

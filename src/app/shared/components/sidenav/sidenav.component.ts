@@ -5,6 +5,11 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './sidenav.template.html'
 })
 export class SidenavComponent {
+
+  site: string;
+  faculty: string;
+  department: string;
+  
   @Input('items') public menuItems: any[] = [];
   @Input('hasIconMenu') public hasIconTypeMenuItem: boolean;
   @Input('iconMenuTitle') public iconTypeMenuTitle: string;

@@ -1,5 +1,9 @@
 import { Routes } from '@angular/router';
-//import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
+import { AboutComponent } from './admin/components/about/about.component';
+import { HomeComponent } from './admin/components/home/home.component';
+import { ReportsComponent } from './admin/components/reports/reports.component';
+import { SettingsComponent } from './admin/components/settings/settings.component';
+import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 //import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/auth-layout.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 
@@ -14,14 +18,37 @@ export const rootRouterConfig: Routes = [
     loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
   },
   {
-    path: 'dashboard',
+    path: 'dashboard1',
     loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule),
     canActivate: [AuthGuard]
   },
   {
     path: '**',
     redirectTo: 'sessions/404'
-  }
+  },
+  {
+    path: 'dashboard',
+    component: AdminLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'report',
+        component: ReportsComponent
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      }
+    ]
+  },
   /**{
     path: '',
     redirectTo: 'dashboard',
@@ -53,14 +80,7 @@ export const rootRouterConfig: Routes = [
     component: AdminLayoutComponent,
     canActivate: [AuthGuard]
   },
-  {
-    path: 'dashboard',
-    loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule),
-    canActivate: [AuthGuard],
-    data: { title: 'Insitution'}
-  },
-  /*,
-  {
+/*{
     path: '',
     component: AdminLayoutComponent,
     canActivate: [AuthGuard],
