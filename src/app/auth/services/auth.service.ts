@@ -22,7 +22,7 @@ export class AuthService {
 
    }
 
-  login(credentials: {email: String, password: string}){
+  login(credentials: {email: string, password: string}){
     return this._http.post<any>( this.loginUrl, credentials, httpOptions)
   }
 

@@ -25,6 +25,7 @@ import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 
 //MaaterialModule
 import { MatSelectModule } from '@angular/material/select';
+import { SocketModule } from './socket/socket.module';
 
 
 // AoT requires an exported function for factories
@@ -52,7 +53,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       }
     }),
     InMemoryWebApiModule.forRoot(InMemoryDataService, { passThruUnknownUrl: true}),
-    RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' })
+    RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),
+    SocketModule
   ],
   declarations: [AppComponent],
   providers: [
