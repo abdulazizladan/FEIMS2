@@ -15,6 +15,7 @@ import tinyColor from 'tinycolor2';
   animations: egretAnimations
 })
 export class AnalyticsComponent implements OnInit, AfterViewInit {
+  
   trafficVsSaleOptions: any;
   trafficVsSale: any;
   trafficData: any;

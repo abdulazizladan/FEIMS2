@@ -83,7 +83,7 @@
         <mat-label>Select site</mat-label>
         <mat-select [(value)]="selectedSite" name="site">
           <mat-option value="">
-            Select Faculty
+            Select site
           </mat-option>
           <mat-option *ngFor="let site of sites" value="{{site}}">
             {{ site | titlecase }}
@@ -93,8 +93,8 @@
     </li>
 
     <li *ngIf="selectedSite">
-      <mat-form-field>
-      <mat-label>Select Faculty</mat-label>
+      <mat-form-field appearance="outline">
+      <mat-label>Select faculty</mat-label>
         <mat-select [(value)]="selectedFaculty">
           <mat-option value="">
             Select faculty
@@ -108,7 +108,7 @@
 
     <li *ngIf="selectedFaculty">
       <mat-form-field appearance="outline">
-        <mat-label>Select Department</mat-label>
+        <mat-label>Select department</mat-label>
         <mat-select [(value)]="department">
           <mat-option value="">
             Select department
