@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+
+export interface building{
+  id: number,
+  name: string,
+  image: string,
+  type: string,
+  description: string,
+  repair_cost: number
+}
 
 @Component({
   selector: 'app-building',
@@ -7,9 +16,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuildingComponent implements OnInit {
 
+  @Input()
+  data : building;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  @Output()
+  showSummary(id : number){
+    console.log(id)
   }
 
 }

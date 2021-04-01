@@ -3,16 +3,33 @@ import { CommonModule } from '@angular/common';
 
 import { NgxEchartsModule } from 'ngx-echarts';
 import * as echarts from 'echarts';
+import { ReactiveFormsModule } from '@angular/forms';
 
 //required Egret Module
 import { SharedComponentsModule } from '../shared/components/shared-components.module';
 import { AppChartsModule } from '../views/charts/charts.module';
 
 //Material Modules
-import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatChipsModule } from '@angular/material/chips';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatRadioModule } from '@angular/material/radio';
+import { MatChipsModule } from '@angular/material/chips'
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -37,11 +54,30 @@ import { AboutComponent } from './components/about/about.component';
   imports: [
     CommonModule,
     SharedComponentsModule,
+    ReactiveFormsModule,
     AppChartsModule,
-    MatCardModule,
+    MatDialogModule,
+    MatSlideToggleModule,
+    MatBadgeModule,
+    MatExpansionModule,
+    MatTableModule,
     MatSidenavModule,
-    MatChipsModule,
+    MatToolbarModule,
+    MatDialogModule,
+    MatMenuModule,
+    MatButtonModule,
     MatIconModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatSelectModule,
+    MatInputModule,
+    MatListModule,
+    MatGridListModule,
+    MatDatepickerModule,
+    MatStepperModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatChipsModule,
     FlexLayoutModule,
     AdminRoutingModule,
     NgxEchartsModule.forRoot({
