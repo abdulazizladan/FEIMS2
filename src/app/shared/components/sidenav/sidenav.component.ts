@@ -151,6 +151,6 @@ export class SidenavComponent {
 
   navigate(){
     console.log('displaying ' + this.selectedDepartment + ' buildings');
-    //this._router.navigateByUrl('127.0.0.1:4200/dashboard/Settings');
+    this._router.navigate(['/dashboard/buildings', { }]);
   }
 }

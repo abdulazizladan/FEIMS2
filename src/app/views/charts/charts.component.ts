@@ -16,21 +16,23 @@ export class ChartsComponent implements OnInit {
     }
   };
   chartColors: Array <any> = [{
-    backgroundColor: 'rgba(21,101,192,1)',
+    backgroundColor: '#1565c0',
     borderColor: '#3f51b5',
     pointBackgroundColor: '#3f51b5',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
     pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-  }, {
-    backgroundColor: '#eeeeee',
+  }, 
+  {
+    backgroundColor: '#1e88e5',
     borderColor: '#e0e0e0',
     pointBackgroundColor: '#e0e0e0',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
     pointHoverBorderColor: 'rgba(77,83,96,1)'
-  }, {
-    backgroundColor: 'rgba(148,159,177,0.2)',
+  }, 
+  {
+    backgroundColor: '#64b5f6',
     borderColor: 'rgba(148,159,177,1)',
     pointBackgroundColor: 'rgba(148,159,177,1)',
     pointBorderColor: '#fff',
@@ -92,17 +94,17 @@ export class ChartsComponent implements OnInit {
   }
 ];
   barChartOptions: any = Object.assign({
-    scaleShowVerticalLines: false,
+    scaleShowVerticalLines: true,
     scales: {
       xAxes: [{
         gridLines: {
-          color: 'rgba(0,0,0,0.02)',
+          color: 'rgba(0,0,0,0.05)',
           zeroLineColor: 'rgba(0,0,0,0.02)'
         }
       }],
       yAxes: [{
         gridLines: {
-          color: 'rgba(0,0,0,0.02)',
+          color: 'rgba(0,0,0,0.05)',
           zeroLineColor: 'rgba(0,0,0,0.02)'
         },
         position: 'left',
