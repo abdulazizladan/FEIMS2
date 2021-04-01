@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router'
 
 export interface faculty{
   'name': string,
@@ -47,6 +48,11 @@ export class SidenavComponent {
       name: 'engineering',
       site: 'samaru',
       code: 'eng'
+    },
+    {
+      name: 'social sciences',
+      site: 'samaru',
+      code: 'sol'
     }
   ] 
 
@@ -55,6 +61,61 @@ export class SidenavComponent {
       name: 'civil law',
       faculty: 'law',
       code: 'cvl'
+    },
+    {
+      name: 'sharia law',
+      faculty: 'law',
+      code: 'shr'
+    },
+    { 
+      name: 'business administration',
+      faculty: 'administration',
+      code: 'bsd'
+    },
+    {
+      name: 'public administration',
+      faculty: 'administration',
+      code: 'pbc'
+    },
+    {
+      name: 'mechanical engineering',
+      faculty: 'engineering',
+      code: 'mch'
+    },
+    {
+      name: 'civil engineering',
+      faculty: 'engineering',
+      code: 'cvn'
+    },
+    {
+      name: 'electrical engineering',
+      faculty: 'engineering',
+      code: 'een'
+    },
+    {
+      name: 'biology',
+      faculty: 'sciences',
+      code: 'mch'
+    },
+    {
+      name: 'chemistry',
+      faculty: 'sciences',
+      code: 'chm'
+    },
+    {
+      name: 'mathematics',
+      faculty: 'sciences',
+      code: 'mth'
+    },
+    {
+      name: 'sociology',
+      faculty: 'social sciences',
+      code: 'soc'
+    },
+    {
+      name: 'economics',
+      faculty: 'social sciences',
+      code: 'ecn'
     }
   ]
   
@@ -62,7 +123,7 @@ export class SidenavComponent {
   @Input('hasIconMenu') public hasIconTypeMenuItem: boolean;
   @Input('iconMenuTitle') public iconTypeMenuTitle: string;
 
-  constructor() {}
+  constructor( private _router: Router) {}
   ngOnInit() {}
 
   getFaculties(){
@@ -86,5 +147,10 @@ export class SidenavComponent {
         {name: 'SUBITEM', state: 'buttons'}
       ]
     });
+  }
+
+  navigate(){
+    console.log('displaying ' + this.selectedDepartment + ' buildings');
+    //this._router.navigateByUrl('127.0.0.1:4200/dashboard/Settings');
   }
 }

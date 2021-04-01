@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { NgxEchartsModule } from 'ngx-echarts';
 import * as echarts from 'echarts';
-//import { ChartsModule } from '../views/charts/charts.module';
 
 //required Egret Module
 import { SharedComponentsModule } from '../shared/components/shared-components.module';
+import { AppChartsModule } from '../views/charts/charts.module';
 
 //Material Modules
 import { MatCardModule } from '@angular/material/card';
@@ -37,6 +37,7 @@ import { AboutComponent } from './components/about/about.component';
   imports: [
     CommonModule,
     SharedComponentsModule,
+    AppChartsModule,
     MatCardModule,
     MatSidenavModule,
     MatChipsModule,

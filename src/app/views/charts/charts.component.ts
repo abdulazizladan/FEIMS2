@@ -16,7 +16,7 @@ export class ChartsComponent implements OnInit {
     }
   };
   chartColors: Array <any> = [{
-    backgroundColor: '#3f51b5',
+    backgroundColor: 'rgba(21,101,192,1)',
     borderColor: '#3f51b5',
     pointBackgroundColor: '#3f51b5',
     pointBorderColor: '#fff',
@@ -40,18 +40,57 @@ export class ChartsComponent implements OnInit {
   /*
   * Bar Chart
   */
-  barChartLabels: string[] = ['1', '2', '3', '4', '5', '6', '7'];
+  barChartLabels: string[] = [
+    '2014', 
+    '2015', 
+    '2016', 
+    '2017', 
+    '2018', 
+    '2019', 
+    '2020'
+  ];
   barChartType = 'bar';
   barChartLegend = true;
   barChartData: any[] = [{
-    data: [5, 6, 7, 8, 4, 5, 5],
-    label: 'Series A',
+    data: [
+      500000, 
+      650000, 
+      175000, 
+      580000, 
+      425000, 
+      455000, 
+      527000
+    ],
+    label: 'Budget',
     borderWidth: 0
-  }, {
-    data: [5, 4, 4, 3, 6, 2, 5],
-    label: 'Series B',
+  }, 
+  {
+    data: [
+      154000, 
+      140000, 
+      450000, 
+      433000, 
+      764000, 
+      223000, 
+      456000
+    ],
+    label: 'Repairs',
     borderWidth: 0
-  }];
+  },
+  {
+    data: [
+      254000, 
+      740000, 
+      150000, 
+      233000, 
+      564000, 
+      423000, 
+      756000
+    ],
+    label: 'Purchase',
+    borderWidth: 0
+  }
+];
   barChartOptions: any = Object.assign({
     scaleShowVerticalLines: false,
     scales: {
@@ -316,11 +355,23 @@ export class ChartsComponent implements OnInit {
   /*
   * Pie Chart Options
   */
-  public pieChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-  public pieChartData: number[] = [300, 500, 100];
+  public pieChartLabels: string[] = [
+    'Good condition', 
+    'Repairable', 
+    'Abandoned'
+  ];
+  public pieChartData: number[] = [
+    75, 
+    23, 
+    2
+  ];
   public pieChartType: string = 'pie';
   public pieChartColors: Array<any> = [{
-    backgroundColor: ['rgba(255, 217, 125, 0.8)', 'rgba(36, 123, 160, 0.8)', 'rgba(244, 67, 54, 0.8)']
+    backgroundColor: [
+      'rgba(21, 101, 192, 0.8)', 
+      'rgba(100, 181, 246, 0.8)', 
+      'rgba(255, 50, 50, 0.8)'
+    ]
   }];
 
   constructor() {

@@ -9,6 +9,9 @@ import { ChartsModule } from 'ng2-charts';
 import { ChartsComponent } from './charts.component';
 import { ChartsRoutes } from "./charts.routing";
 
+const components = [
+  ChartsComponent
+]
 
 @NgModule({
   imports: [
@@ -19,6 +22,9 @@ import { ChartsRoutes } from "./charts.routing";
     ChartsModule,
     RouterModule.forChild(ChartsRoutes)
   ],
-  declarations: [ChartsComponent]
+  declarations: [ChartsComponent],
+  exports: [
+    components
+  ]
 })
 export class AppChartsModule { }

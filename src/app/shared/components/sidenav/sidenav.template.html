@@ -109,11 +109,11 @@
     <li *ngIf="selectedFaculty">
       <mat-form-field appearance="outline">
         <mat-label>Select department</mat-label>
-        <mat-select [(value)]="department">
+        <mat-select [(value)]="selectedDepartment">
           <mat-option value="">
             Select department
           </mat-option>
-          <mat-option *ngFor="let department of getDepartments()" value="{{department.name}}">
+          <mat-option *ngFor="let department of getDepartments()" value="{{department.name}}" (click)="navigate()">
             {{ department.name | titlecase }}
           </mat-option>
         </mat-select>        
