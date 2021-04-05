@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Socket } from './socket';
-
-@Injectable()
+import { SocketIOConfig } from './socket.config';
 export class SocketService extends Socket {
-  constructor() {
-    super({url: 'ws://localhost:3000'});
+  constructor(config: SocketIOConfig) {
+    super(config);
   }
 }

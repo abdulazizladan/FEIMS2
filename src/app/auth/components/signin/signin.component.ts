@@ -7,6 +7,9 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { AppLoaderService } from '../../../shared/services/app-loader/app-loader.service';
 import { JwtAuthService } from '../../../shared/services/auth/jwt-auth.service';
+import { Store } from '@ngrx/store';
+import { AppState } from 'app/store/app.reducer';
+import { loginSuccess } from 'app/store/auth/auth.actions';
 
 @Component({
   selector: 'app-signin',
@@ -26,7 +29,8 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     private jwtAuth: JwtAuthService,
     private egretLoader: AppLoaderService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private store: Store<AppState>
   ) { 
     this._unsubscribeAll = new Subject();
   }
@@ -62,7 +66,8 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
         this.progressBar.mode = 'determinate';
         this.errorMsg = err.message;
         // console.log(err);
-      })
+      });
+    this.store.dispatch(loginSuccess({token: '1234', user: {name: 'xero'}}));
   }
 
   autoSignIn() {

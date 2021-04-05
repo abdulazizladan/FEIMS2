@@ -1,11 +1,10 @@
+
 export interface AuthState {
-	loggedIn: boolean;
-	loading: boolean;
-	user: any;
+    token: string;
+    user: any;
 }
 
-export const initialState: AuthState = {
-	loading: false,
-	loggedIn: false,
-	user: {}
+export const initialAuthState: AuthState = {
+    token: undefined,
+    user: undefined
 };

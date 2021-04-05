@@ -6,6 +6,7 @@ import { RoutePartsService } from './shared/services/route-parts.service';
 
 import { filter } from 'rxjs/operators';
 import { UILibIconService } from './shared/services/ui-lib-icon.service';
+import { AppSocket } from './app.socket';
 
 @Component({
   selector: 'app-root',
@@ -21,13 +22,15 @@ export class AppComponent implements OnInit, AfterViewInit {
     private router: Router,
     private activeRoute: ActivatedRoute,
     private routePartsService: RoutePartsService,
-    private iconService: UILibIconService
+    private iconService: UILibIconService,
+    private appSocket: AppSocket
   ) {
     iconService.init()
   }
 
   ngOnInit() {
     this.changePageTitle();
+    this.appSocket.onConnect();
   }
 
   ngAfterViewInit() {

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginData } from '../loginData.model';
 import { environment } from '../../environment';
 import { ApiPaths } from '../../ApiPaths';
+import { AppSocket } from '../../app.socket';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -25,7 +26,7 @@ export class AuthService {
   //private readonly loginUrl: string = "https://api.narr.ng/api/v1/auth/login";
   //private readonly registerUrl: string = "https://api.narr.ng/api/v1/auth/register";
 
-  constructor( private _http: HttpClient){
+  constructor( private _http: HttpClient, private appSocket: AppSocket) {
 
    }
 

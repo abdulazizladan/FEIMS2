@@ -26,6 +26,13 @@ import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 //MaaterialModule
 import { MatSelectModule } from '@angular/material/select';
 import { SocketModule } from './socket/socket.module';
+import { StoreModule } from '@ngrx/store';
+import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { reducers, metaReducers } from './store/app.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffect } from './store/auth/auth.effects';
 
 
 // AoT requires an exported function for factories
@@ -54,7 +61,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     }),
     InMemoryWebApiModule.forRoot(InMemoryDataService, { passThruUnknownUrl: true}),
     RouterModule.forRoot(rootRouterConfig, { useHash: false, relativeLinkResolution: 'legacy' }),
-    SocketModule
+    SocketModule.forRoot({url: 'http://localhost:3000'}),
+    StoreModule.forRoot(reducers, { metaReducers }),
+    StoreRouterConnectingModule.forRoot({
+      stateKey: 'router',
+      routerState: RouterState.Minimal
+    }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([AuthEffect])
   ],
   declarations: [AppComponent],
   providers: [
@@ -66,7 +80,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true,
-    },
+    }
   ],
   bootstrap: [AppComponent]
 })

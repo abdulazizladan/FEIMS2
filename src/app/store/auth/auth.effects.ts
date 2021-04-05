@@ -1,22 +1,20 @@
-import { Injectable } from '@angular/core';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { AuthService } from '../../auth/services/auth.service';
-import { catchError, map, mergeMap } from 'rxjs/operators';
-import { login, loginSuccess } from './auth.actions';
-import { EMPTY } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { Actions, createEffect, ofType } from "@ngrx/effects";
+import { AppSocket } from "app/app.socket";
+import { tap } from "rxjs/operators";
+import { loginSuccess } from "./auth.actions";
 
 @Injectable()
-export class AuthEffects {
-    constructor(
-        private readonly actions$: Actions,
-        private readonly authService: AuthService
-    ) {}
+export class AuthEffect {
 
-    login$ = createEffect(() => this.actions$.pipe(
-        ofType(login),
-        mergeMap(({payload}) => this.authService.login(payload).pipe(
-            map(user => loginSuccess({payload: user})),
-            catchError(() => EMPTY)
-        ))
-    ));
+  loginSuccess$ = createEffect(() => this.actions$.pipe(
+    ofType(loginSuccess),
+    tap(({token, user}) => {
+      this.appSocket.onLogin({token, user});
+    })
+  ), {dispatch: false});
+
+  constructor(
+    private actions$: Actions,
+    private appSocket: AppSocket) { }
 }
