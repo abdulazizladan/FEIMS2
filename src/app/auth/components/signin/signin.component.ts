@@ -1,5 +1,10 @@
 import { Component, OnInit, ViewChild, OnDestroy, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
+//Auth service
+import { AuthService } from '../../services/auth.service';
+
+//Material modules
 import { MatButton } from '@angular/material/button';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
@@ -26,16 +31,19 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     private jwtAuth: JwtAuthService,
     private egretLoader: AppLoaderService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private auth: AuthService
   ) { 
     this._unsubscribeAll = new Subject();
   }
 
   ngOnInit(): void {
     this.signinForm = new FormGroup({
-      username: new FormControl('shamskhalil@gmail.com', Validators.required),
-      password: new FormControl('shamsnet', Validators.required),
-      rememberMe: new FormControl(true)
+      //username: new FormControl('shamskhalil@gmail.com', Validators.required),
+      email: new FormControl('', Validators.required),
+      //password: new FormControl('shamsnet', Validators.required),
+      password: new FormControl('', Validators.required),
+      //rememberMe: new FormControl(true)
     });
   }
 
@@ -49,20 +57,30 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   signin() {
-    const signinData = this.signinForm.value
+    //const signinData = this.signinForm.value
 
     this.submitButton.disabled = true;
     this.progressBar.mode = 'indeterminate';
+    
+    this.auth.login(this.signinForm.value).subscribe(
+      res => {
+        console.log(res)
+        //this.router.navigateByUrl(this.jwtAuth.return)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
-    this.jwtAuth.signin(signinData.username, signinData.password)
-      .subscribe(response => {
-        this.router.navigateByUrl(this.jwtAuth.return);
-      }, err => {
-        this.submitButton.disabled = false;
-        this.progressBar.mode = 'determinate';
-        this.errorMsg = err.message;
-        // console.log(err);
-      })
+    //this.jwtAuth.signin(signinData.username, signinData.password)
+    //  .subscribe(response => {
+    //    this.router.navigateByUrl(this.jwtAuth.return);
+    //  }, err => {
+    //    this.submitButton.disabled = false;
+    //    this.progressBar.mode = 'determinate';
+    //    this.errorMsg = err.message;
+    //    // console.log(err);
+    //  })
   }
 
   autoSignIn() {
