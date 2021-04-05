@@ -5,7 +5,7 @@
     <!-- Sites -->
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
       <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
-        <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+        <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/sites.png" alt="">
         <span style="width: 20px"></span>
         <div>
           <p class="m-0 text-14 text-muted line-height-1">Sites</p>
@@ -18,7 +18,7 @@
     <!-- Buildings -->
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
         <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
-          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/buildings.png" alt="">
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Buildings</p>
@@ -70,7 +70,7 @@
     <!-- Abandoned -->
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
         <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
-          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/abandoned.png" alt="">
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Abandoned</p>
@@ -83,7 +83,7 @@
     <!-- Repairable -->
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
         <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
-          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/repairable.png" alt="">
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Repairable</p>
@@ -96,7 +96,7 @@
     <!-- Good Condition -->
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" >
         <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
-          <img class="avatar-md rounded-circle" src="assets/images/cryptocurrencies/CNX.png" alt="">
+          <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/good_condition.png" alt="">
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Good Condition</p>
@@ -156,11 +156,13 @@
     / End donut chart -->
     <!--/ End 2nd row -->
 
+    <app-charts></app-charts>
+
   <div fxLayout="row wrap">
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{scale:'.9',delay:'300ms'}}">
       <mat-card>
         <mat-card-title fxLayoutAlign="start center">
-          <small class="text-muted">Total Sales</small>
+          <small class="text-muted">Total expenditure</small>
           <span fxFlex></span>
           <mat-chip
           class="icon-chip" 
@@ -168,8 +170,8 @@
           selected="true"><mat-icon>trending_up</mat-icon>20%</mat-chip>
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">22,450</h3>
-          <small class="text-muted">Monthly</small>
+          <h3 class="m-0 font-normal">252,450</h3>
+          <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>
     </div>
@@ -177,7 +179,7 @@
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
       <mat-card>
         <mat-card-title>
-          <small class="text-muted">Revenue</small>
+          <small class="text-muted">Repairs</small>
           <span fxFlex></span>
           <mat-chip
           class="icon-chip" 
@@ -186,7 +188,7 @@
         </mat-card-title>
         <mat-card-content>
           <h3 class="m-0 font-normal">377,670</h3>
-          <small class="text-muted">Monthly</small>
+          <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>
     </div>
@@ -194,7 +196,7 @@
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
       <mat-card>
         <mat-card-title>
-          <small class="text-muted">Traffic</small>
+          <small class="text-muted">Purchases</small>
           <span fxFlex></span>
           <mat-chip
           class="icon-chip" 
@@ -203,14 +205,15 @@
         </mat-card-title>
         <mat-card-content>
           <h3 class="m-0 font-normal">54,845</h3>
-          <small class="text-muted">Monthly</small>
+          <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>
     </div>
+
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
       <mat-card>
         <mat-card-title>
-          <small class="text-muted">New User</small>
+          <small class="text-muted">damages</small>
           <span fxFlex></span>
           <mat-chip
           class="icon-chip" 
@@ -219,8 +222,10 @@
         </mat-card-title>
         <mat-card-content>
           <h3 class="m-0 font-normal">245</h3>
-          <small class="text-muted">Monthly</small>
+          <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
+
+  

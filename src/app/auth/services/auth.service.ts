@@ -21,10 +21,10 @@ export class AuthService {
 
   private baseUrl= environment.baseUrl;
 
-  private loginUrl: string = '${this.baseUrl}/${ApiPaths.signinUrl}';
-  private registerUrl: string = '${this.baseUrl}/${ApiPaths.signupUrl}';
-  //private readonly loginUrl: string = "https://api.narr.ng/api/v1/auth/login";
-  //private readonly registerUrl: string = "https://api.narr.ng/api/v1/auth/register";
+  //private loginUrl: string = '${this.baseUrl}/${this.apiPaths.signinUrl}';
+  //private registerUrl: string = '${this.baseUrl}/${this.apiPaths.signupUrl}';
+  private readonly loginUrl: string = "https://api.narr.ng/api/v1/auth/login";
+  private readonly registerUrl: string = "https://api.narr.ng/api/v1/auth/register";
 
   constructor( private _http: HttpClient, private appSocket: AppSocket) {
 

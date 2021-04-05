@@ -41,21 +41,24 @@ export class NavigationService {
       type: 'link',
       tooltip: 'Report',
       icon: 'assessment',
-      state: 'dashboard/report'
+      state: 'dashboard/report',
+      disabled: true
     },
     {
       name: 'Settings',
       type: 'link',
       tooltip: 'settings',
       icon: 'settings',
-      state: 'dashboard/settings'
+      state: 'dashboard/settings',
+      disabled: true
     },
     {
       name: 'About',
       type: 'link',
       tooltip: 'about FEIMS',
       icon: 'report',
-      state: 'dashboard/about'
+      state: 'dashboard/about',
+      disabled: true
     },
     {
       type: 'separator',

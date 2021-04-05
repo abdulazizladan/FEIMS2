@@ -81,49 +81,40 @@
     <li>
       <mat-form-field appearance="outline">
         <mat-label>Select site</mat-label>
-        <mat-select [(value)]="site" name="site">
+        <mat-select [(value)]="selectedSite" name="site">
           <mat-option value="">
-            Select Faculty
+            Select site
           </mat-option>
-          <mat-option value="samaru">
-            Samaru
-          </mat-option>
-          <mat-option value="kongo">
-            Kongo
+          <mat-option *ngFor="let site of sites" value="{{site}}">
+            {{ site | titlecase }}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </li>
 
-    <li *ngIf="site">
+    <li *ngIf="selectedSite">
       <mat-form-field appearance="outline">
-        <mat-label>Select Faculty</mat-label>
-        <mat-select [(value)]="faculty">
+      <mat-label>Select faculty</mat-label>
+        <mat-select [(value)]="selectedFaculty">
           <mat-option value="">
             Select faculty
           </mat-option>
-          <mat-option value="law">
-            Law
-          </mat-option>
-          <mat-option value="admin">
-            administration
+          <mat-option *ngFor="let faculty of getFaculties()" value="{{faculty.name}}">
+              {{ faculty.name | titlecase }}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </li>
 
-    <li *ngIf="faculty">
+    <li *ngIf="selectedFaculty">
       <mat-form-field appearance="outline">
-        <mat-label>Select Department</mat-label>
-        <mat-select [(value)]="department">
+        <mat-label>Select department</mat-label>
+        <mat-select [(value)]="selectedDepartment">
           <mat-option value="">
             Select department
           </mat-option>
-          <mat-option value="cvl">
-            Civil
-          </mat-option>
-          <mat-option value="shr">
-            Shari'ah
+          <mat-option *ngFor="let department of getDepartments()" value="{{department.name}}" (click)="navigate()">
+            {{ department.name | titlecase }}
           </mat-option>
         </mat-select>        
       </mat-form-field>
