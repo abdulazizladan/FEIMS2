@@ -9,12 +9,16 @@ export class AppSocket {
   }
 
   onConnect() {
-    this.socket.on('connect', () => {
-      console.log('socket connected');
-    });
+    return this.socket.fromEvent('connect');
   }
 
   onLogin({token, user}) {
-    return this.socket.emit('EVENT:USER:LOGIN');
+    this.socket.emit('LOGIN', {token, user});
+    return this.socket.fromOneTimeEvent('EVENT:USER:LOGIN');
+  }
+
+  onLogout() {
+    this.socket.emit('LOGOUT');
+    return this.socket.fromOneTimeEvent('EVENT:USER:LOGOUT');
   }
 }

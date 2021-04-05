@@ -9,7 +9,7 @@ import { MatButton } from '@angular/material/button';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { map, takeUntil, tap } from 'rxjs/operators';
 import { AppLoaderService } from '../../../shared/services/app-loader/app-loader.service';
 import { JwtAuthService } from '../../../shared/services/auth/jwt-auth.service';
 import { Store } from '@ngrx/store';
@@ -43,10 +43,8 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.signinForm = new FormGroup({
-      //username: new FormControl('shamskhalil@gmail.com', Validators.required),
-      email: new FormControl('', Validators.required),
-      //password: new FormControl('shamsnet', Validators.required),
-      password: new FormControl('', Validators.required),
+      email: new FormControl('shamskhalil@gmail.com', Validators.required),
+      password: new FormControl('shamsnet', Validators.required),
       //rememberMe: new FormControl(true)
     });
   }
@@ -66,7 +64,12 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     this.submitButton.disabled = true;
     this.progressBar.mode = 'indeterminate';
     
-    this.auth.login(this.signinForm.value).subscribe(
+    this.auth.login(this.signinForm.value).pipe(
+      map(res => res.payload),
+      tap(({token, user}) => {
+        this.store.dispatch(loginSuccess({token, user}))
+      })
+    ).subscribe(
       res => {
         console.log(res)
         //this.router.navigateByUrl(this.jwtAuth.return)
@@ -74,8 +77,8 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
       err => {
         console.log(err)
       }
-    )
-    this.store.dispatch(loginSuccess({token: '1234', user: {name: 'xero'}}));
+    );
+    
     //this.jwtAuth.signin(signinData.username, signinData.password)
     //  .subscribe(response => {
     //    this.router.navigateByUrl(this.jwtAuth.return);

@@ -7,6 +7,9 @@ import { RoutePartsService } from './shared/services/route-parts.service';
 import { filter } from 'rxjs/operators';
 import { UILibIconService } from './shared/services/ui-lib-icon.service';
 import { AppSocket } from './app.socket';
+import { Store } from '@ngrx/store';
+import { AppState } from './store/app.reducer';
+import { loginSuccess } from './store/auth/auth.actions';
 
 @Component({
   selector: 'app-root',
@@ -23,14 +26,27 @@ export class AppComponent implements OnInit, AfterViewInit {
     private activeRoute: ActivatedRoute,
     private routePartsService: RoutePartsService,
     private iconService: UILibIconService,
-    private appSocket: AppSocket
+    private appSocket: AppSocket,
+    private store: Store<AppState>
   ) {
     iconService.init()
   }
 
   ngOnInit() {
     this.changePageTitle();
-    this.appSocket.onConnect();
+    
+    // Perform socket connect event or something.
+    this.appSocket.onConnect().subscribe(
+      () => console.log('socket connected')
+    );
+
+    // If auth profile is already in store,
+    // load it into our store.
+    const auth = localStorage.getItem('auth');
+    if (auth) {
+      const {token, user} = JSON.parse(auth);
+      this.store.dispatch(loginSuccess({token, user}));
+    }
   }
 
   ngAfterViewInit() {
