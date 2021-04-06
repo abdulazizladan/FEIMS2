@@ -43,8 +43,11 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.signinForm = new FormGroup({
-      email: new FormControl('shamskhalil@gmail.com', Validators.required),
-      password: new FormControl('shamsnet', Validators.required),
+      //Placeholder
+      //email: new FormControl('shamskhalil@gmail.com', Validators.required),
+      //password: new FormControl('shamsnet', Validators.required),
+      email: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
       //rememberMe: new FormControl(true)
     });
   }
@@ -72,7 +75,7 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     ).subscribe(
       res => {
         console.log(res)
-        //this.router.navigateByUrl(this.jwtAuth.return)
+        this.router.navigateByUrl('dashboard')
       },
       err => {
         console.log(err)

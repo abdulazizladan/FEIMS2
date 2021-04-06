@@ -10,12 +10,12 @@ import { AuthGuard } from './shared/guards/auth.guard';
 
 export const rootRouterConfig: Routes = [
   {
-    path: '',
+    path: 'auth',
     redirectTo: 'auth',
     pathMatch: 'full'
   },
   {
-    path: 'auth',
+    path: '',
     loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
   },
   {

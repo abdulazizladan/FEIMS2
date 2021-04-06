@@ -59,6 +59,9 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean{
+    //if(local storage credentials are validated){
+    //  return tru
+    //}
     return true;
   }
 }
