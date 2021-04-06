@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { LoginData } from '../loginData.model';
+import { LoginData } from '../models/loginData.model';
 import { environment } from '../../environment';
 import { ApiPaths } from '../../ApiPaths';
 import { AppSocket } from '../../app.socket';
