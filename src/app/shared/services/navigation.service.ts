@@ -34,7 +34,8 @@ export class NavigationService {
       type: 'link',
       tooltip: 'dashboard home',
       icon: 'home',
-      state: 'dashboard'
+      state: 'dashboard',
+      disabled: false
     },
     {
       name: 'Report',
@@ -42,7 +43,7 @@ export class NavigationService {
       tooltip: 'Report',
       icon: 'assessment',
       state: 'dashboard/report',
-      disabled: true
+      disabled: false
     },
     {
       name: 'Settings',
@@ -50,7 +51,7 @@ export class NavigationService {
       tooltip: 'settings',
       icon: 'settings',
       state: 'dashboard/settings',
-      disabled: true
+      disabled: false
     },
     {
       name: 'About',

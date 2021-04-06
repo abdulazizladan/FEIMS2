@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { NgxEchartsModule } from 'ngx-echarts';
 import * as echarts from 'echarts';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -54,6 +56,7 @@ import { AboutComponent } from './components/about/about.component';
   imports: [
     CommonModule,
     SharedComponentsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppChartsModule,
     MatDialogModule,
