@@ -4019,8 +4019,7 @@
                 user: user
               }));
             })).subscribe(function (res) {
-              console.log(res);
-
+              //console.log(res)
               _this.router.navigateByUrl('dashboard');
             }, function (err) {
               console.log(err);

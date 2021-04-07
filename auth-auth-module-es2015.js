@@ -2068,7 +2068,7 @@ class SigninComponent {
         this.auth.login(this.signinForm.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(res => res.payload), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["tap"])(({ token, user }) => {
             this.store.dispatch(Object(app_store_auth_auth_actions__WEBPACK_IMPORTED_MODULE_11__["loginSuccess"])({ token, user }));
         })).subscribe(res => {
-            console.log(res);
+            //console.log(res)
             this.router.navigateByUrl('dashboard');
         }, err => {
             console.log(err);

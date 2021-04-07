@@ -10294,16 +10294,16 @@
         _createClass(AuthGuard, [{
           key: "canActivate",
           value: function canActivate(route, state) {
-            if (this.jwtAuth.isLoggedIn()) {
-              return true;
-            } else {
-              this.router.navigate(["/sessions/signin"], {
-                queryParams: {
-                  "return": state.url
-                }
-              });
-              return false;
-            }
+            return true; //if (this.jwtAuth.isLoggedIn()) {
+            //  return true;
+            //} else {
+            //  this.router.navigate(["/signin"], {
+            //    queryParams: {
+            //      return: state.url
+            //    }
+            //  });
+            //  return false;
+            //}
           }
         }]);
 
@@ -17906,7 +17906,7 @@
           key: "signout",
           value: function signout() {
             this.setUserAndToken(null, null, false);
-            this.router.navigateByUrl("sessions/signin");
+            this.router.navigateByUrl("/signin");
           }
         }, {
           key: "isLoggedIn",

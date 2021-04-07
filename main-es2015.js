@@ -6049,17 +6049,17 @@ class AuthGuard {
         this.jwtAuth = jwtAuth;
     }
     canActivate(route, state) {
-        if (this.jwtAuth.isLoggedIn()) {
-            return true;
-        }
-        else {
-            this.router.navigate(["/sessions/signin"], {
-                queryParams: {
-                    return: state.url
-                }
-            });
-            return false;
-        }
+        return true;
+        //if (this.jwtAuth.isLoggedIn()) {
+        //  return true;
+        //} else {
+        //  this.router.navigate(["/signin"], {
+        //    queryParams: {
+        //      return: state.url
+        //    }
+        //  });
+        //  return false;
+        //}
     }
 }
 AuthGuard.ɵfac = function AuthGuard_Factory(t) { return new (t || AuthGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_services_auth_jwt_auth_service__WEBPACK_IMPORTED_MODULE_2__["JwtAuthService"])); };
@@ -10781,7 +10781,7 @@ class JwtAuthService {
     }
     signout() {
         this.setUserAndToken(null, null, false);
-        this.router.navigateByUrl("sessions/signin");
+        this.router.navigateByUrl("/signin");
     }
     isLoggedIn() {
         return !!this.getJwtToken();
