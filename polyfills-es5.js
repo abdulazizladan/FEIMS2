@@ -362,30 +362,6 @@
     },
 
     /***/
-    1:
-    /*!***********************************************************************************************************************************!*\
-      !*** multi ./node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js zone.js/dist/zone-legacy ./src/polyfills.ts ***!
-      \***********************************************************************************************************************************/
-
-    /*! no static exports found */
-
-    /***/
-    function _(module, exports, __webpack_require__) {
-      __webpack_require__(
-      /*! /home/abdulaziz/Documents/WIP/Developer/FEIMS2.0/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
-      "voQr");
-
-      __webpack_require__(
-      /*! zone.js/dist/zone-legacy */
-      "R0gw");
-
-      module.exports = __webpack_require__(
-      /*! /home/abdulaziz/Documents/WIP/Developer/FEIMS2.0/src/polyfills.ts */
-      "hN/g");
-      /***/
-    },
-
-    /***/
     "149L":
     /*!*******************************************************************************************!*\
       !*** ./node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js ***!
@@ -454,6 +430,30 @@
       };
       /***/
 
+    },
+
+    /***/
+    2:
+    /*!***********************************************************************************************************************************!*\
+      !*** multi ./node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js zone.js/dist/zone-legacy ./src/polyfills.ts ***!
+      \***********************************************************************************************************************************/
+
+    /*! no static exports found */
+
+    /***/
+    function _(module, exports, __webpack_require__) {
+      __webpack_require__(
+      /*! /home/abdulaziz/Documents/WIP/Developer/FEIMS2.0/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
+      "voQr");
+
+      __webpack_require__(
+      /*! zone.js/dist/zone-legacy */
+      "R0gw");
+
+      module.exports = __webpack_require__(
+      /*! /home/abdulaziz/Documents/WIP/Developer/FEIMS2.0/src/polyfills.ts */
+      "hN/g");
+      /***/
     },
 
     /***/
@@ -14951,12 +14951,21 @@
       !*** ./node_modules/@angular/localize/fesm2015/init.js ***!
       \*********************************************************/
 
-    /*! no static exports found */
+    /*! exports provided: $localize */
 
     /***/
-    function NDB(module, exports) {
+    function NDB(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "$localize", function () {
+        return $localize;
+      });
       /**
-       * @license Angular v11.2.5
+       * @license Angular v11.2.8
        * (c) 2010-2021 Google LLC. https://angular.io/
        * License: MIT
        */
@@ -14968,6 +14977,8 @@
        * Use of this source code is governed by an MIT-style license that can be
        * found in the LICENSE file at https://angular.io/license
        */
+
+
       var __globalThis = typeof globalThis !== 'undefined' && globalThis;
 
       var __window = typeof window !== 'undefined' && window;
@@ -15011,7 +15022,7 @@
        * ```
        *
        * This format is the same as that used for `i18n` markers in Angular templates. See the
-       * [Angular 18n guide](guide/i18n#template-translations).
+       * [Angular 18n guide](guide/i18n#mark-text-for-translations).
        *
        * **Naming placeholders**
        *
@@ -15075,9 +15086,13 @@
        * the original template literal string without applying any translations to the parts. This
        * version is used during development or where there is no need to translate the localized
        * template literals.
+       *
        * @param messageParts a collection of the static parts of the template string.
        * @param expressions a collection of the values of each placeholder in the template string.
        * @returns the translated string, with the `messageParts` and `expressions` interleaved together.
+       *
+       * @globalApi
+       * @publicApi
        */
 
 
@@ -22051,10 +22066,6 @@
       var _angular_localize_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/localize/init */
       "N/DB");
-      /* harmony import */
-
-
-      var _angular_localize_init__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_angular_localize_init__WEBPACK_IMPORTED_MODULE_0__);
       /* harmony import */
 
 
@@ -32115,6 +32126,6 @@
       });
       /***/
     }
-  }, [[1, "runtime"]]]);
+  }, [[2, "runtime"]]]);
 })();
 //# sourceMappingURL=polyfills-es5.js.map

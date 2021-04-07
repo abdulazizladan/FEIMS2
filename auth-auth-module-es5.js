@@ -3831,75 +3831,101 @@
       /* harmony import */
 
 
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../../services/auth.service */
+      "N/25");
+      /* harmony import */
+
+
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/material/button */
       "Dxy4");
       /* harmony import */
 
 
-      var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/material/progress-bar */
       "BTe0");
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/forms */
       "s7LF");
       /* harmony import */
 
 
-      var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! rxjs */
       "qCKp");
       /* harmony import */
 
 
-      var _shared_services_app_loader_app_loader_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! rxjs/operators */
+      "kU1M");
+      /* harmony import */
+
+
+      var _shared_services_app_loader_app_loader_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ../../../shared/services/app-loader/app-loader.service */
       "3sEA");
       /* harmony import */
 
 
-      var _shared_services_auth_jwt_auth_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _shared_services_auth_jwt_auth_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! ../../../shared/services/auth/jwt-auth.service */
       "nZzT");
       /* harmony import */
 
 
-      var _angular_material_card__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _ngrx_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @ngrx/store */
+      "l7P3");
+      /* harmony import */
+
+
+      var app_store_auth_auth_actions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      /*! app/store/auth/auth.actions */
+      "C9XJ");
+      /* harmony import */
+
+
+      var _angular_material_card__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/card */
       "PDjf");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/common */
       "SVse");
       /* harmony import */
 
 
-      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @angular/material/form-field */
       "Q2Ze");
       /* harmony import */
 
 
-      var _angular_material_input__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _angular_material_input__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @angular/material/input */
       "e6WT");
       /* harmony import */
 
 
-      var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! @angular/flex-layout/flex */
-      "VDRc");
+      "VDRc"); //Auth service
+      //Material modules
+
 
       function SigninComponent_p_9_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "small", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "small", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
 
@@ -3917,9 +3943,9 @@
         }
       }
 
-      function SigninComponent_small_14_Template(rf, ctx) {
+      function SigninComponent_small_16_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "small", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "small", 19);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Username is required ");
 
@@ -3927,9 +3953,9 @@
         }
       }
 
-      function SigninComponent_small_18_Template(rf, ctx) {
+      function SigninComponent_small_22_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "small", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "small", 19);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Password is required ");
 
@@ -3938,24 +3964,28 @@
       }
 
       var SigninComponent = /*#__PURE__*/function () {
-        function SigninComponent(jwtAuth, egretLoader, router, route) {
+        function SigninComponent(jwtAuth, egretLoader, router, route, store, auth) {
           _classCallCheck(this, SigninComponent);
 
           this.jwtAuth = jwtAuth;
           this.egretLoader = egretLoader;
           this.router = router;
           this.route = route;
+          this.store = store;
+          this.auth = auth;
           this.errorMsg = '';
-          this._unsubscribeAll = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subject"]();
+          this._unsubscribeAll = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
         }
 
         _createClass(SigninComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            this.signinForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroup"]({
-              username: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('shamskhalil@gmail.com', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required),
-              password: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('shamsnet', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required),
-              rememberMe: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](true)
+            this.signinForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroup"]({
+              //Placeholder
+              //email: new FormControl('shamskhalil@gmail.com', Validators.required),
+              //password: new FormControl('shamsnet', Validators.required),
+              email: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required),
+              password: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required)
             });
           }
         }, {
@@ -3975,16 +4005,34 @@
           value: function signin() {
             var _this = this;
 
-            var signinData = this.signinForm.value;
+            //const signinData = this.signinForm.value
             this.submitButton.disabled = true;
             this.progressBar.mode = 'indeterminate';
-            this.jwtAuth.signin(signinData.username, signinData.password).subscribe(function (response) {
-              _this.router.navigateByUrl(_this.jwtAuth["return"]);
+            this.auth.login(this.signinForm.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (res) {
+              return res.payload;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["tap"])(function (_ref) {
+              var token = _ref.token,
+                  user = _ref.user;
+
+              _this.store.dispatch(Object(app_store_auth_auth_actions__WEBPACK_IMPORTED_MODULE_11__["loginSuccess"])({
+                token: token,
+                user: user
+              }));
+            })).subscribe(function (res) {
+              console.log(res);
+
+              _this.router.navigateByUrl('dashboard');
             }, function (err) {
-              _this.submitButton.disabled = false;
-              _this.progressBar.mode = 'determinate';
-              _this.errorMsg = err.message; // console.log(err);
-            });
+              console.log(err);
+            }); //this.jwtAuth.signin(signinData.username, signinData.password)
+            //  .subscribe(response => {
+            //    this.router.navigateByUrl(this.jwtAuth.return);
+            //  }, err => {
+            //    this.submitButton.disabled = false;
+            //    this.progressBar.mode = 'determinate';
+            //    this.errorMsg = err.message;
+            //    // console.log(err);
+            //  })
           }
         }, {
           key: "autoSignIn",
@@ -4012,7 +4060,7 @@
       }();
 
       SigninComponent.ɵfac = function SigninComponent_Factory(t) {
-        return new (t || SigninComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_auth_jwt_auth_service__WEBPACK_IMPORTED_MODULE_7__["JwtAuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_app_loader_app_loader_service__WEBPACK_IMPORTED_MODULE_6__["AppLoaderService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]));
+        return new (t || SigninComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_auth_jwt_auth_service__WEBPACK_IMPORTED_MODULE_9__["JwtAuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_app_loader_app_loader_service__WEBPACK_IMPORTED_MODULE_8__["AppLoaderService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_10__["Store"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]));
       };
 
       SigninComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -4020,9 +4068,9 @@
         selectors: [["app-signin"]],
         viewQuery: function SigninComponent_Query(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_3__["MatProgressBar"], true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_4__["MatProgressBar"], true);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButton"], true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButton"], true);
           }
 
           if (rf & 2) {
@@ -4032,9 +4080,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.submitButton = _t.first);
           }
         },
-        decls: 30,
-        vars: 8,
-        consts: [[1, "page-wrap", "h-full"], [1, "session-form-hold"], ["mode", "determinate", 1, "session-progress"], [1, "text-center", "pt-8", "pb-16"], ["width", "60px", "src", "assets/images/egret.png", "alt", ""], [1, "text-muted", "m-0"], ["class", "text-center", 4, "ngIf"], [3, "formGroup", "ngSubmit"], [1, ""], [1, "full-width"], ["matInput", "", "name", "username", "placeholder", "Username", "value", "", 3, "formControl"], ["class", "form-error-msg", 4, "ngIf"], ["type", "password", "name", "password", "matInput", "", "placeholder", "Password", "value", "", 3, "formControl"], [1, "pb-16"], ["name", "rememberMe", 1, "pb-16", 3, "formControl"], ["mat-raised-button", "", "routerLink", "/dashboard", 1, "mat-primary", "full-width", "mb-16", 3, "disabled"], [1, "text-center"], ["routerLink", "../forgot-password", 1, "mat-primary", "text-center", "full-width"], ["fxFlex", ""], ["routerLink", "../signup", 1, "mat-primary", "text-center", "full-width"], [1, "text-red"], [1, "form-error-msg"]],
+        decls: 31,
+        vars: 7,
+        consts: [[1, "page-wrap", "h-full"], [1, "session-form-hold"], ["mode", "determinate", 1, "session-progress"], [1, "text-center", "pt-8", "pb-16"], ["width", "60px", "src", "assets/images/egret.png", "alt", ""], [1, "text-muted", "m-0"], ["class", "text-center", 4, "ngIf"], [3, "formGroup"], [1, ""], [1, "full-width"], ["matInput", "", "name", "email", "type", "email", "placeholder", "email", "required", "", "value", "", 3, "formControl"], ["class", "form-error-msg", 4, "ngIf"], ["type", "password", "name", "password", "matInput", "", "placeholder", "Password", "required", "", "value", "", 3, "formControl"], ["mat-raised-button", "", 1, "mat-primary", "full-width", "mb-16", 3, "disabled", "click"], [1, "text-center"], ["routerLink", "../forgot-password", 1, "mat-primary", "text-center", "full-width"], ["fxFlex", ""], ["routerLink", "../signup", 1, "mat-primary", "text-center", "full-width"], [1, "text-red"], [1, "form-error-msg"]],
         template: function SigninComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -4063,63 +4111,65 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "form", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function SigninComponent_Template_form_ngSubmit_10_listener() {
-              return ctx.signin();
-            });
-
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 8);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-form-field", 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "input", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-label");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "email");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, SigninComponent_small_14_Template, 2, 0, "small", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "input", 10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-form-field", 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "input", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, SigninComponent_small_16_Template, 2, 0, "small", 11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, SigninComponent_small_18_Template, 2, 0, "small", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-form-field", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "mat-label");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "password");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 13);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-checkbox", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Remember this computer");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "input", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "button", 15);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Sign in");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, SigninComponent_small_22_Template, 2, 0, "small", 11);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "button", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "a", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SigninComponent_Template_button_click_23_listener() {
+              return ctx.signin();
+            });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Forgot password");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Sign in");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "span", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "a", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Create a new account");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Forgot password");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "span", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Create a new account");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -4145,15 +4195,15 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.signinForm);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formControl", ctx.signinForm.controls["username"]);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formControl", ctx.signinForm.controls["email"]);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.signinForm.controls["username"].hasError("required") && ctx.signinForm.controls["username"].touched);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.signinForm.controls["email"].hasError("required") && ctx.signinForm.controls["email"].touched);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formControl", ctx.signinForm.controls["password"]);
 
@@ -4161,16 +4211,12 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.signinForm.controls["password"].hasError("required") && ctx.signinForm.controls["password"].touched);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formControl", ctx.signinForm.controls["rememberMe"]);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx.signinForm.invalid);
           }
         },
-        directives: [_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_3__["MatProgressBar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__["MatFormField"], _angular_material_input__WEBPACK_IMPORTED_MODULE_11__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControlDirective"], _angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButton"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLink"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_12__["DefaultFlexDirective"]],
+        directives: [_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_4__["MatProgressBar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_12__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_15__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControlDirective"], _angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButton"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_16__["DefaultFlexDirective"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzaWduaW4uY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
@@ -4185,24 +4231,166 @@
           }]
         }], function () {
           return [{
-            type: _shared_services_auth_jwt_auth_service__WEBPACK_IMPORTED_MODULE_7__["JwtAuthService"]
+            type: _shared_services_auth_jwt_auth_service__WEBPACK_IMPORTED_MODULE_9__["JwtAuthService"]
           }, {
-            type: _shared_services_app_loader_app_loader_service__WEBPACK_IMPORTED_MODULE_6__["AppLoaderService"]
+            type: _shared_services_app_loader_app_loader_service__WEBPACK_IMPORTED_MODULE_8__["AppLoaderService"]
           }, {
             type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
           }, {
             type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]
+          }, {
+            type: _ngrx_store__WEBPACK_IMPORTED_MODULE_10__["Store"]
+          }, {
+            type: _services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]
           }];
         }, {
           progressBar: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
-            args: [_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_3__["MatProgressBar"]]
+            args: [_angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_4__["MatProgressBar"]]
           }],
           submitButton: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
-            args: [_angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButton"]]
+            args: [_angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButton"]]
           }]
         });
+      })();
+      /***/
+
+    },
+
+    /***/
+    "N/25":
+    /*!***********************************************!*\
+      !*** ./src/app/auth/services/auth.service.ts ***!
+      \***********************************************/
+
+    /*! exports provided: AuthService */
+
+    /***/
+    function N25(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AuthService", function () {
+        return AuthService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "8Y7J");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "IheW");
+      /* harmony import */
+
+
+      var _environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../../environment */
+      "bXO7");
+      /* harmony import */
+
+
+      var _app_socket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ../../app.socket */
+      "rGZO");
+
+      var httpOptions = {
+        headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'X-Powered-By': 'Express'
+        })
+      };
+
+      var AuthService = /*#__PURE__*/function () {
+        function AuthService(_http, appSocket) {
+          _classCallCheck(this, AuthService);
+
+          this._http = _http;
+          this.appSocket = appSocket;
+          this.baseUrl = _environment__WEBPACK_IMPORTED_MODULE_2__["environment"].baseUrl; //private loginUrl: string = '${this.baseUrl}/${this.apiPaths.signinUrl}';
+          //private registerUrl: string = '${this.baseUrl}/${this.apiPaths.signupUrl}';
+
+          this.loginUrl = "https://api.narr.ng/api/v1/auth/login";
+          this.registerUrl = "https://api.narr.ng/api/v1/auth/register";
+        }
+
+        _createClass(AuthService, [{
+          key: "login",
+          value: function login(credentials) {
+            return this._http.post(this.loginUrl, credentials, httpOptions);
+          }
+        }, {
+          key: "register",
+          value: function register(value) {
+            return this._http.post(this.registerUrl, value);
+          }
+        }, {
+          key: "resetPassword",
+          value: function resetPassword(value) {
+            return true;
+          }
+        }, {
+          key: "isLoggedIn",
+          value: function isLoggedIn() {
+            return !!localStorage.getItem('token');
+          }
+        }, {
+          key: "getToken",
+          value: function getToken() {
+            return localStorage.getItem('token');
+          }
+        }, {
+          key: "addUserToCache",
+          value: function addUserToCache() {}
+        }, {
+          key: "getUserFromCache",
+          value: function getUserFromCache() {}
+        }, {
+          key: "isAuthenticated",
+          value: function isAuthenticated() {
+            //if(local storage credentials are validated){
+            //  return tru
+            //}
+            return true;
+          }
+        }]);
+
+        return AuthService;
+      }();
+
+      AuthService.ɵfac = function AuthService_Factory(t) {
+        return new (t || AuthService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_app_socket__WEBPACK_IMPORTED_MODULE_3__["AppSocket"]));
+      };
+
+      AuthService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: AuthService,
+        factory: AuthService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AuthService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+          }, {
+            type: _app_socket__WEBPACK_IMPORTED_MODULE_3__["AppSocket"]
+          }];
+        }, null);
       })();
       /***/
 
@@ -4435,13 +4623,13 @@
         factory: function AuthModule_Factory(t) {
           return new (t || AuthModule)();
         },
-        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"], _auth_routing_module__WEBPACK_IMPORTED_MODULE_10__["AuthRoutingModule"]]]
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"], _auth_routing_module__WEBPACK_IMPORTED_MODULE_10__["AuthRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AuthModule, {
           declarations: [_components_signin_signin_component__WEBPACK_IMPORTED_MODULE_11__["SigninComponent"], _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_12__["SignupComponent"], _components_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_13__["ForgotPasswordComponent"]],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"], _auth_routing_module__WEBPACK_IMPORTED_MODULE_10__["AuthRoutingModule"]]
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"], _auth_routing_module__WEBPACK_IMPORTED_MODULE_10__["AuthRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]]
         });
       })();
       /*@__PURE__*/
@@ -4452,12 +4640,39 @@
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
             declarations: [_components_signin_signin_component__WEBPACK_IMPORTED_MODULE_11__["SigninComponent"], _components_signup_signup_component__WEBPACK_IMPORTED_MODULE_12__["SignupComponent"], _components_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_13__["ForgotPasswordComponent"]],
-            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"], _auth_routing_module__WEBPACK_IMPORTED_MODULE_10__["AuthRoutingModule"]]
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInputModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatProgressSpinnerModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_8__["MatProgressBarModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"], _auth_routing_module__WEBPACK_IMPORTED_MODULE_10__["AuthRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]]
           }]
         }], null, null);
       })();
       /***/
 
+    },
+
+    /***/
+    "bXO7":
+    /*!********************************!*\
+      !*** ./src/app/environment.ts ***!
+      \********************************/
+
+    /*! exports provided: environment */
+
+    /***/
+    function bXO7(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "environment", function () {
+        return environment;
+      });
+
+      var environment = {
+        production: false,
+        baseUrl: 'https://api.narr.ng/api/v1'
+      };
+      /***/
     }
   }]);
 })();
