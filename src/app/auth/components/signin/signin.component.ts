@@ -74,7 +74,7 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
       })
     ).subscribe(
       res => {
-        console.log(res)
+        //console.log(res)
         this.router.navigateByUrl('dashboard')
       },
       err => {
