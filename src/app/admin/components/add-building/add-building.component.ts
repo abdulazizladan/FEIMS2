@@ -13,6 +13,13 @@ export class AddBuildingComponent implements OnInit {
   public firstFormGroup: FormGroup;
   public secondFormGroup: FormGroup;
   public thirdFormGroup: FormGroup;
+  public fourthFormGroup: FormGroup;
+  public fifthFormGroup: FormGroup;
+  public sixthFormGroup: FormGroup;
+  public seventhFormGroup: FormGroup;
+  public eighthFormGroup: FormGroup;
+  public ninthFormGroup: FormGroup;
+  public tenthFormGroup: FormGroup;
 
   constructor( private buildingService: BuildingService, private fb: FormBuilder) { }
 
@@ -55,7 +62,7 @@ export class AddBuildingComponent implements OnInit {
         Validators.required
       ]]
     })
-
+    //Dimensions
     this.secondFormGroup = this.fb.group({
       buildingFloorArea: [0, [
         Validators.required
@@ -77,7 +84,155 @@ export class AddBuildingComponent implements OnInit {
       ]],
       windows: ['', [
         Validators.required
+      ]]
+    })
+    //Walls
+    this.thirdFormGroup = this.fb.group({
+      roofLightsCondition: ['', [
+
       ]],
+      roofLightsRepairCost: ['', [
+
+      ]],
+      airQualityCondition: ['', [
+
+      ]],
+      airQualityRepairCost: [0, [
+
+      ]],
+      ventilationSystemCondition: ['', [
+
+      ]],
+      ventilationSystemRepairCost: [0, [
+
+      ]],
+      airConditioningCondition: ['', [
+
+      ]],
+      airConditioningRepairCost: [0, [
+
+      ]],
+      materialHandlingSystemCondition: ['', [
+
+      ]],
+      materialHandlingSystemRepairCost: [0, [
+
+      ]],
+      roofOpeningsCondition: ['', [
+
+      ]],
+      roofOpeningsRepairCost: [0, [
+
+      ]],
+      temperatureControlCondition: ['', [
+
+      ]],
+      temperatureControlRepairCost: [0, [
+
+      ]],
+      hotWaterCondition: ['', [
+
+      ]],
+      hotWaterRepairCost: [0, [
+
+      ]],
+      burglarProofCondition: ['', [
+
+      ]],
+      burglarProofRepairCost: [0, [
+
+      ]],
+      gatesCondition: ['', [
+
+      ]],
+      gatesRepairCost: [0, [
+
+      ]],
+      drainageCondition: ['', [
+
+      ]],
+      drainageRepairCost: [0, [
+
+      ]],
+      distributionCondition: ['', [
+
+      ]],
+      distributionRepairCost: [0, [
+
+      ]],
+      coldWaterCondition: ['', [
+
+      ]],
+      coldWaterRepairCost: [0, [
+
+      ]],
+      gasTanksCondition: ['', [
+
+      ]],
+      gasTanksRepairCost: [0, [
+
+      ]],
+      gasPipingCondition: ['', [
+
+      ]],
+      gasPipingRepairCost: [0, [
+
+      ]],
+      compressedAirCondition: ['', [
+
+      ]],
+      compressedAirRepairCost: [0,[
+
+      ]]
+    }),
+    // Floor
+    this.fourthFormGroup = this.fb.group({
+    
+    }),
+    //Roof & Ceiling
+    this.fifthFormGroup = this.fb.group({
+    
+    }),
+    //Doors & Windows
+    this.sixthFormGroup = this.fb.group({
+
+    }),
+    //Facilities
+    this.seventhFormGroup = this.fb.group({
+
+    }),
+    //Structure
+    this.eighthFormGroup = this.fb.group({
+
+    }),
+    //Elevator
+    this.ninthFormGroup = this.fb.group({
+      elevatorsCount: [0, [
+
+      ]],
+      elevatorType: ['', [
+
+      ]],
+      elevatorKeyLocation: ['', [
+
+      ]],
+      elevatorBrandName: ['', [
+
+      ]],
+      elevatorServiceCompany: ['', [
+
+      ]],
+      elevatorServicePhoneNumber: ['', [
+
+      ]],
+      elevatorEmergencyShutoffLocation: ['', [
+
+      ]],
+      elevatorExit: ['', [
+
+      ]]
+    }),
+    this.tenthFormGroup = this.fb.group({
       exteriorWall: ['', [
         Validators.required
       ]],
@@ -293,130 +448,7 @@ export class AddBuildingComponent implements OnInit {
       ]],
       furnitureRepairCost: ['', [
         Validators.required
-      ]],
-      elevatorsCount: [0, [
-
-      ]],
-      elevatorType: ['', [
-
-      ]],
-      elevatorKeyLocation: ['', [
-
-      ]],
-      elevatorBrandName: ['', [
-
-      ]],
-      elevatorServiceCompany: ['', [
-
-      ]],
-      elevatorServicePhoneNumber: ['', [
-
-      ]],
-      elevatorEmergencyShutoffLocation: ['', [
-
-      ]],
-      elevatorExit: ['', [
-
-      ]]
-    })
-
-    this.thirdFormGroup = this.fb.group({
-      roofLightsCondition: ['', [
-
-      ]],
-      roofLightsRepairCost: ['', [
-
-      ]],
-      airQualityCondition: ['', [
-
-      ]],
-      airQualityRepairCost: [0, [
-
-      ]],
-      ventilationSystemCondition: ['', [
-
-      ]],
-      ventilationSystemRepairCost: [0, [
-
-      ]],
-      airConditioningCondition: ['', [
-
-      ]],
-      airConditioningRepairCost: [0, [
-
-      ]],
-      materialHandlingSystemCondition: ['', [
-
-      ]],
-      materialHandlingSystemRepairCost: [0, [
-
-      ]],
-      roofOpeningsCondition: ['', [
-
-      ]],
-      roofOpeningsRepairCost: [0, [
-
-      ]],
-      temperatureControlCondition: ['', [
-
-      ]],
-      temperatureControlRepairCost: [0, [
-
-      ]],
-      hotWaterCondition: ['', [
-
-      ]],
-      hotWaterRepairCost: [0, [
-
-      ]],
-      burglarProofCondition: ['', [
-
-      ]],
-      burglarProofRepairCost: [0, [
-
-      ]],
-      gatesCondition: ['', [
-
-      ]],
-      gatesRepairCost: [0, [
-
-      ]],
-      drainageCondition: ['', [
-
-      ]],
-      drainageRepairCost: [0, [
-
-      ]],
-      distributionCondition: ['', [
-
-      ]],
-      distributionRepairCost: [0, [
-
-      ]],
-      coldWaterCondition: ['', [
-
-      ]],
-      coldWaterRepairCost: [0, [
-
-      ]],
-      gasTanksCondition: ['', [
-
-      ]],
-      gasTanksRepairCost: [0, [
-
-      ]],
-      gasPipingCondition: ['', [
-
-      ]],
-      gasPipingRepairCost: [0, [
-
-      ]],
-      compressedAirCondition: ['', [
-
-      ]],
-      compressedAirRepairCost: [0,[
-
-      ]]
+      ]]      
     })
   }
 

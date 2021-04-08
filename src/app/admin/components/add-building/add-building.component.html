@@ -80,49 +80,16 @@
 
     </div>
     </form>
+    
     <div>
       <span fxFlex="1 1 auto"></span>
       <button mat-flat-button matStepperNext color="primary">Next</button>
     </div>
   </mat-step>
 
-  <mat-step label="Building Dimensions">
-
-  </mat-step>
-
-  <mat-step label="Walls">
-
-  </mat-step>
-
-  <mat-step label="Floor">
-
-  </mat-step>
-
-  <mat-step label="Roof & Ceiling">
-
-  </mat-step>
-
-  <mat-step label="Doors & Windows">
-
-  </mat-step>
-
-  <mat-step label="Facilities">
-
-  </mat-step>
-
-  <mat-step label="Structure">
-
-  </mat-step>
-
-  <mat-step label="Elevator">
-
-  </mat-step>
-
-  <!-- Structure and interior -->
-  <mat-step label="Structure and interior" [stepControl]="secondFormGroup">
-
+  <!-- Building Dimension -->
+  <mat-step label="Building Dimensions" [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <div fxLayoutGap="25px" fxLayout="column">
       <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         <legend>Building Dimensions</legend>
         <mat-form-field>
@@ -195,6 +162,188 @@
         </mat-form-field>
 
       </fieldset>
+    </form>
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Walls -->
+  <mat-step label="Walls" [stepControl]="thirdFormGroup">
+
+    <form [formGroup]="thirdFormGroup">
+
+    </form>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Floor -->
+  <mat-step label="Floor" [stepControl]="fourthFormGroup">
+
+    <form [formGroup]="fourthFormGroup">
+
+    </form>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Roof and Ceiling -->
+  <mat-step label="Roof & Ceiling" [stepControl]="fifthFormGroup">
+
+    <form [formGroup]="fifthFormGroup">
+
+    </form>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Doors and Windows -->
+  <mat-step label="Doors & Windows" [stepControl]="sixthFormGroup">
+
+    <form [formGroup]="sixthFormGroup">
+
+    </form>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Facilities -->
+  <mat-step label="Facilities" [stepControl]="seventhFormGroup">
+
+    <form [formGroup]="seventhFormGroup">
+
+    </form>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Structure -->
+  <mat-step label="Structure" [stepControl]="eighthFormGroup">
+
+    <form [formGroup]="eighthFormGroup">
+
+    </form>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Elevators -->
+  <mat-step label="Elevator" [stepControl]="ninthFormGroup">
+
+    <form [formGroup]="ninthFormGroup">
+      <fieldset fxLayout="column" fxLayoutGap="10px grid" style="border: 0px solid white;">
+
+        <legend>Elevators</legend>
+
+        <mat-form-field>
+          <mat-label>Number of elevators</mat-label>
+          <input formControlName="elevatorsCount" matInput type="number">
+        </mat-form-field>
+
+
+        <br>
+        <div style="padding: 10px">
+          <div class="mat-title">Elevator type</div>
+        <mat-radio-group formControlName="elevatorType">
+          <mat-radio-button style="margin-left: 16px;" value="electric">Electric</mat-radio-button>
+          <mat-radio-button style="margin-left: 16px;" value="hydraulic">Hydraulic</mat-radio-button>
+        </mat-radio-group>
+        </div>
+        <br>
+
+        <div style="padding: 10px">
+          <div class="mat-title">Elevator sensors</div>
+        <ul>
+          <li>
+            <mat-checkbox value="electricEye">Electric eye</mat-checkbox>
+          </li>
+          <li>
+            <mat-checkbox value="heatSensor">Heat sensor</mat-checkbox>
+          </li>
+        </ul>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Key location</mat-label>
+          <input formControlName="elevatorKeyLocation" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Brand name</mat-label>
+          <input formControlName="elevatorBrandName" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Service company</mat-label>
+          <input formControlName="elevatorServiceCompany" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Phone number</mat-label>
+          <input formControlName="elevatorServicePhoneNumber" matInput type="tel" required>
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Emergency shutoff location</mat-label>
+          <input formControlName="elevatorEmergencyShutoffLocation" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Exit</mat-label>
+          <mat-select formControlName="elevatorExit">
+            <mat-option value="">-----</mat-option>
+            <mat-option value="top">Top</mat-option>
+            <mat-option value="side">Side</mat-option>
+            <mat-option value="dumb_waiter">Dumb waiter</mat-option>
+            <mat-option value="laundry_chute">Laundry chute</mat-option>
+            <mat-option value="trash_chute">Trash chute</mat-option>
+            <mat-option value="other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </fieldset>
+    </form>
+
+    <div>
+      <button mat-flat-button matStepperPrevious color="primary">Previous</button>
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+  </mat-step>
+
+  <!-- Structure and interior -->
+  <mat-step label="Structure and interior" [stepControl]="tenthFormGroup">
+
+    <form [formGroup]="tenthFormGroup">
+      <div fxLayoutGap="25px" fxLayout="column">
 
       <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         <legend>Thickness and Construction of Walls</legend>
@@ -717,78 +866,7 @@
 
         </fieldset>
 
-        <fieldset fxLayout="column" fxLayoutGap="10px grid">
-
-          <legend>Elevators</legend>
-
-          <mat-form-field>
-            <mat-label>Number of elevators</mat-label>
-            <input formControlName="elevatorsCount" matInput type="number">
-          </mat-form-field>
-
-
-          <br>
-          <div style="padding: 10px">
-            <div class="mat-title">Elevator type</div>
-          <mat-radio-group formControlName="elevatorType">
-            <mat-radio-button style="margin-left: 16px;" value="electric">Electric</mat-radio-button>
-            <mat-radio-button style="margin-left: 16px;" value="hydraulic">Hydraulic</mat-radio-button>
-          </mat-radio-group>
-          </div>
-          <br>
-
-          <div style="padding: 10px">
-            <div class="mat-title">Elevator sensors</div>
-          <ul>
-            <li>
-              <mat-checkbox value="electricEye">Electric eye</mat-checkbox>
-            </li>
-            <li>
-              <mat-checkbox value="heatSensor">Heat sensor</mat-checkbox>
-            </li>
-          </ul>
-          </div>
-
-          <mat-form-field>
-            <mat-label>Key location</mat-label>
-            <input formControlName="elevatorKeyLocation" matInput type="text" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Brand name</mat-label>
-            <input formControlName="elevatorBrandName" matInput type="text" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Service company</mat-label>
-            <input formControlName="elevatorServiceCompany" matInput type="text" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Phone number</mat-label>
-            <input formControlName="elevatorServicePhoneNumber" matInput type="tel" required>
-            <mat-icon matSuffix>phone</mat-icon>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Emergency shutoff location</mat-label>
-            <input formControlName="elevatorEmergencyShutoffLocation" matInput type="text" required>
-          </mat-form-field>
-
-          <mat-form-field>
-            <mat-label>Exit</mat-label>
-            <mat-select formControlName="elevatorExit">
-              <mat-option value="">-----</mat-option>
-              <mat-option value="top">Top</mat-option>
-              <mat-option value="side">Side</mat-option>
-              <mat-option value="dumb_waiter">Dumb waiter</mat-option>
-              <mat-option value="laundry_chute">Laundry chute</mat-option>
-              <mat-option value="trash_chute">Trash chute</mat-option>
-              <mat-option value="other">Other</mat-option>
-            </mat-select>
-          </mat-form-field>
-
-        </fieldset>
+        
       </div>
     </form>
 
