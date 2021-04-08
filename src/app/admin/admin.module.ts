@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorInterceptor } from '../auth/services/interceptor.interceptor';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -86,6 +88,13 @@ import { AboutComponent } from './components/about/about.component';
     NgxEchartsModule.forRoot({
       echarts
     })
+  ], 
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorInterceptor,
+      multi: true
+    }
   ]
 })
 export class AdminModule { }
