@@ -9,447 +9,180 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddBuildingComponent implements OnInit {
 
-  private addBuildingForm: FormGroup;
-  public firstFormGroup: FormGroup;
-  public secondFormGroup: FormGroup;
-  public thirdFormGroup: FormGroup;
-  public fourthFormGroup: FormGroup;
-  public fifthFormGroup: FormGroup;
-  public sixthFormGroup: FormGroup;
-  public seventhFormGroup: FormGroup;
-  public eighthFormGroup: FormGroup;
-  public ninthFormGroup: FormGroup;
-  public tenthFormGroup: FormGroup;
+  //private addBuildingForm: FormGroup;
+  public firstFormGroup: FormGroup;//Building Survey
+  public secondFormGroup: FormGroup;//Building Dimensions
+  public thirdFormGroup: FormGroup;//Walls and Floors
+  //public fourthFormGroup: FormGroup;//
+  public fifthFormGroup: FormGroup;//Roof & Ceiling
+  public sixthFormGroup: FormGroup;//Doors & Windows
+  public seventhFormGroup: FormGroup;//Facilities
+  public eighthFormGroup: FormGroup;//Structure
+  public ninthFormGroup: FormGroup;//Elevators
+  public tenthFormGroup: FormGroup;//Services
 
   constructor( private buildingService: BuildingService, private fb: FormBuilder) { }
 
   ngOnInit(): void{
+    // 01 Building survey
     this.firstFormGroup = this.fb.group({
-      facilityType: ['', [
-        Validators.required
-      ]],
-      facilityName: ['', [
-        Validators.required
-      ]],
-      facilityCode: ['', [
-        Validators.required
-      ]],
-      facilityDescription: ['', [
-        Validators.required
-      ]],
-      facilityStructure: ['', [
-        Validators.required
-      ]],
-      facilityPurpose: ['', [
-        Validators.required
-      ]],
-      numberOfStoreys: [0, [
-        Validators.required
-      ]],
-      facilityStatus: ['', [
-        Validators.required
-      ]],
-      facilityDateBuilt: ['', [
-        Validators.required
-      ]],
-      facilityDatePurchased: ['', [
-        Validators.required
-      ]],
-      facilityLongitude: [0, [
-        Validators.required
-      ]],
-      facilityLatitude: [0, [
-        Validators.required
-      ]]
+      facilityType: ['', [Validators.required]],
+      facilityName: ['', [Validators.required]],
+      facilityCode: ['', [Validators.required]],
+      facilityDescription: ['', [Validators.required]],
+      facilityStructure: ['', [Validators.required]],
+      facilityPurpose: ['', [Validators.required]],
+      numberOfStoreys: [0, [Validators.required]],
+      facilityStatus: ['', [Validators.required]],
+      facilityDateBuilt: ['', [Validators.required]],
+      facilityDatePurchased: ['', [Validators.required]],
+      facilityLongitude: [0, [Validators.required]],
+      facilityLatitude: [0, [Validators.required]]
     })
-    //Dimensions
+    // 02 Building Dimensions
     this.secondFormGroup = this.fb.group({
-      buildingFloorArea: [0, [
-        Validators.required
-      ]],
-      buildingHeadroom: [0, [
-        Validators.required
-      ]],
-      numberOfFloors: [0, [
-        Validators.required
-      ]],
-      superStructure: ['', [
-        Validators.required
-      ]],
-      floorStructure: ['', [
-        Validators.required
-      ]],
-      floorCovering: ['', [
-        Validators.required
-      ]],
-      windows: ['', [
-        Validators.required
-      ]]
+      buildingFloorArea: [0, [Validators.required]],
+      buildingHeadroom: [0, [Validators.required]],
+      numberOfFloors: [0, [Validators.required]],
+      superStructure: ['', [Validators.required]],
+      floorStructure: ['', [Validators.required]],
+      floorCovering: ['', [Validators.required]],
+      windows: ['', [Validators.required]]
     })
-    //Walls
+    // 03 Walls and Floors
     this.thirdFormGroup = this.fb.group({
-      roofLightsCondition: ['', [
-
-      ]],
-      roofLightsRepairCost: ['', [
-
-      ]],
-      airQualityCondition: ['', [
-
-      ]],
-      airQualityRepairCost: [0, [
-
-      ]],
-      ventilationSystemCondition: ['', [
-
-      ]],
-      ventilationSystemRepairCost: [0, [
-
-      ]],
-      airConditioningCondition: ['', [
-
-      ]],
-      airConditioningRepairCost: [0, [
-
-      ]],
-      materialHandlingSystemCondition: ['', [
-
-      ]],
-      materialHandlingSystemRepairCost: [0, [
-
-      ]],
-      roofOpeningsCondition: ['', [
-
-      ]],
-      roofOpeningsRepairCost: [0, [
-
-      ]],
-      temperatureControlCondition: ['', [
-
-      ]],
-      temperatureControlRepairCost: [0, [
-
-      ]],
-      hotWaterCondition: ['', [
-
-      ]],
-      hotWaterRepairCost: [0, [
-
-      ]],
-      burglarProofCondition: ['', [
-
-      ]],
-      burglarProofRepairCost: [0, [
-
-      ]],
-      gatesCondition: ['', [
-
-      ]],
-      gatesRepairCost: [0, [
-
-      ]],
-      drainageCondition: ['', [
-
-      ]],
-      drainageRepairCost: [0, [
-
-      ]],
-      distributionCondition: ['', [
-
-      ]],
-      distributionRepairCost: [0, [
-
-      ]],
-      coldWaterCondition: ['', [
-
-      ]],
-      coldWaterRepairCost: [0, [
-
-      ]],
-      gasTanksCondition: ['', [
-
-      ]],
-      gasTanksRepairCost: [0, [
-
-      ]],
-      gasPipingCondition: ['', [
-
-      ]],
-      gasPipingRepairCost: [0, [
-
-      ]],
-      compressedAirCondition: ['', [
-
-      ]],
-      compressedAirRepairCost: [0,[
-
-      ]]
-    }),
-    // Floor
-    this.fourthFormGroup = this.fb.group({
-    
-    }),
-    //Roof & Ceiling
-    this.fifthFormGroup = this.fb.group({
-    
-    }),
-    //Doors & Windows
-    this.sixthFormGroup = this.fb.group({
-
-    }),
-    //Facilities
-    this.seventhFormGroup = this.fb.group({
-
-    }),
-    //Structure
-    this.eighthFormGroup = this.fb.group({
-
-    }),
-    //Elevator
-    this.ninthFormGroup = this.fb.group({
-      elevatorsCount: [0, [
-
-      ]],
-      elevatorType: ['', [
-
-      ]],
-      elevatorKeyLocation: ['', [
-
-      ]],
-      elevatorBrandName: ['', [
-
-      ]],
-      elevatorServiceCompany: ['', [
-
-      ]],
-      elevatorServicePhoneNumber: ['', [
-
-      ]],
-      elevatorEmergencyShutoffLocation: ['', [
-
-      ]],
-      elevatorExit: ['', [
-
-      ]]
-    }),
-    this.tenthFormGroup = this.fb.group({
-      exteriorWall: ['', [
-        Validators.required
-      ]],
-      paintCondition: ['', [
-        Validators.required
-      ]],
-      mortarCondition: ['', [
-        Validators.required
-      ]],
-      structureType: ['', [
-        Validators.required
-      ]],
-      yearLastDecorated: [0, [
-        Validators.required
-      ]],
-      floorJointsMaterials: ['', [
-        Validators.required
-      ]],
-      floorJointsFinishes: ['', [
-        Validators.required
-      ]],
-      floorJointsCondition: ['', [
-        Validators.required
-      ]],
-      floorJointsRepairCost: [0, [
-        Validators.required
-      ]],
-      ceilingMaterial: ['', [
-        Validators.required
-      ]],
-      ceilingFinishes: ['', [
-        Validators.required
-      ]],
-      ceilingCondition: ['', [
-        Validators.required
-      ]],
-      ceilingRepairCost: [0, [
-        Validators.required
-      ]],
-      fanLightMaterial: ['', [
-        Validators.required
-      ]],
-      fanLightFinishes: ['', [
-        Validators.required
-      ]],
-      fanLightCondition: ['', [
-        Validators.required
-      ]],
-      fanLightRepairCost: [0, [
-        Validators.required
-      ]],
-      doorsMaterial: ['', [
-        Validators.required
-      ]],
-      doorsFinishes: ['', [
-        Validators.required
-      ]],
-      doorsCondition: ['', [
-        Validators.required
-      ]],
-      doorsRepairCost: [0, [
-        Validators.required
-      ]],
-      roofStyleShape: ['', [
-        Validators.required
-      ]],
-      roofTrussType: ['', [
-        Validators.required
-      ]],
-      roofDeckingMaterial: ['', [
-        Validators.required
-      ]],
-      trimMaterial: ['', [
-        Validators.required
-      ]],
-      trimFinishes: ['', [
-        Validators.required
-      ]],
-      trimCondition: ['', [
-        Validators.required
-      ]],
-      trimRepairCost: [0, [
-        Validators.required
-      ]],
-      foundationMaterial: ['', [
-        Validators.required
-      ]],
-      foundationFinishes: ['', [
-        Validators.required
-      ]],
-      foundationCondition: ['', [
-        Validators.required
-      ]],
-      foundationRepairCost: [0, [
-        Validators.required
-      ]],
-      floorSlabsMaterial: ['', [
-        Validators.required
-      ]],
-      floorSlabsFinishes: ['', [
-        Validators.required
-      ]],
-      floorSlabsCondition: ['', [
-        Validators.required
-      ]],
-      floorSlabsRepairCost: [0, [
-        Validators.required
-      ]],
-      frameMaterial: ['', [
-        Validators.required
-      ]],
-      frameFinishes: ['', [
-        Validators.required
-      ]],
-      frameCondition: ['', [
-        Validators.required
-      ]],
-      frameRepairCost: [0, [
-        Validators.required
-      ]],
-      buildingFacadeMaterial: ['', [
-        Validators.required
-      ]],
-      buildingFacadeFinishes: ['', [
-        Validators.required
-      ]],
-      buildingFacadeCondition: ['', [
-        Validators.required
-      ]],
-      buildingFacadeRepairCost: [0, [
-        Validators.required
-      ]],
-      buildingWindowsMaterial: ['', [
-        Validators.required
-      ]],
-      buildingWindowsFinishes: ['', [
-        Validators.required
-      ]],
-      buildingWindowsCondition: ['', [
-        Validators.required
-      ]],
-      buildingWindowsRepairCost: [0, [
-        Validators.required
-      ]],
-      corridorsMaterial: ['', [
-        Validators.required
-      ]],
-      corridorsFinishes: ['', [
-        Validators.required
-      ]],
-      corridorsCondition: ['', [
-        Validators.required
-      ]],
-      corridorsRepairCost: [0, [
-        Validators.required
-      ]],
-      glazingMaterial: ['', [
-        Validators.required
-      ]],
-      glazingFinishes: ['', [
-        Validators.required
-      ]],
-      glazingCondition: ['', [
-        Validators.required
-      ]],
-      glazingRepairCost: [0, [
-        Validators.required
-      ]],
-      partitionsMaterial: ['', [
-        Validators.required
-      ]],
-      partitionsFinishes: ['', [
-        Validators.required
-      ]],
-      partitionsCondition: ['', [
-        Validators.required
-      ]],
-      partitionsRepairCost: [0, [
-        Validators.required
-      ]],
-      entrancesMaterial: ['', [
-        Validators.required
-      ]],
-      entrancesFinishes: ['', [
-        Validators.required
-      ]],
-      entrancesCondition: ['', [
-        Validators.required
-      ]],
-      entrancesRepairCost: [0, [
-        Validators.required
-      ]],
-      serviceDuctMaterial: ['', [
-        Validators.required
-      ]],
-      serviceDuctFinishes: ['', [
-        Validators.required
-      ]],
-      serviceDuctCondition: ['', [
-        Validators.required
-      ]],
-      serviceDuctRepairCost: [0, [
-        Validators.required
-      ]],
-      furnitureMaterial: ['', [
-        Validators.required
-      ]],
-      furnitureFinishes: ['', [
-        Validators.required
-      ]],
-      furnitureCondition: ['', [
-        Validators.required
-      ]],
-      furnitureRepairCost: ['', [
-        Validators.required
-      ]]      
+      partitionsMaterial: ['', [Validators.required]],
+      partitionsFinishes: ['', [Validators.required]],
+      partitionsCondition: ['', [Validators.required]],
+      partitionsRepairCost: [0, [Validators.required]],
+      exteriorWall: ['', [Validators.required]],
+      paintCondition: ['', [Validators.required]],
+      foundationMaterial: ['', [Validators.required]],
+      foundationFinishes: ['', [Validators.required]],
+      foundationCondition: ['', [Validators.required]],
+      foundationRepairCost: [0, [Validators.required]],
+      floorSlabsMaterial: ['', [Validators.required]],
+      floorSlabsFinishes: ['', [Validators.required]],
+      floorSlabsCondition: ['', [Validators.required]],
+      floorSlabsRepairCost: [0, [Validators.required]],
+      floorJointsMaterials: ['', [Validators.required]],
+      floorJointsFinishes: ['', [Validators.required]],
+      floorJointsCondition: ['', [Validators.required]],
+      floorJointsRepairCost: [0, [Validators.required]]
     })
+    // 05 Roof & Ceiling
+    this.fifthFormGroup = this.fb.group({
+      roofOpeningsCondition: ['', [Validators.required]],
+      roofOpeningsRepairCost: [0, [Validators.required]],
+      roofStyleShape: ['', [Validators.required]],
+      roofTrussType: ['', [Validators.required]],
+      roofDeckingMaterial: ['', [Validators.required]],
+      ceilingMaterial: ['', [Validators.required]],
+      ceilingFinishes: ['', [Validators.required]],
+      ceilingCondition: ['', [Validators.required]],
+      ceilingRepairCost: [0, [Validators.required]]
+    })
+    // 06 Doors & Windows
+    this.sixthFormGroup = this.fb.group({
+      doorsMaterial: ['', [Validators.required]],
+      doorsFinishes: ['', [Validators.required]],
+      doorsCondition: ['', [Validators.required]],
+      doorsRepairCost: [0, [Validators.required]],
+      buildingWindowsMaterial: ['', [Validators.required]],
+      buildingWindowsFinishes: ['', [Validators.required]],
+      buildingWindowsCondition: ['', [Validators.required]],
+      buildingWindowsRepairCost: [0, [Validators.required]],
+      glazingMaterial: ['', [Validators.required]],
+      glazingFinishes: ['', [Validators.required]],
+      glazingCondition: ['', [Validators.required]],
+      glazingRepairCost: [0, [Validators.required]],
+      burglarProofCondition: ['', []],
+      burglarProofRepairCost: [0, []],
+      gatesCondition: ['', []],
+      gatesRepairCost: [0, []],
+    })
+    // 07 Facilities
+    this.seventhFormGroup = this.fb.group({
+      roofLightsCondition: ['', []],
+      roofLightsRepairCost: ['', []],
+      airQualityCondition: ['', []],
+      airQualityRepairCost: [0, []],
+      ventilationSystemCondition: ['', []],
+      ventilationSystemRepairCost: [0, []],
+      airConditioningCondition: ['', []],
+      airConditioningRepairCost: [0, []],
+      temperatureControlCondition: ['', []],
+      temperatureControlRepairCost: [0, []],
+      hotWaterCondition: ['', []],
+      hotWaterRepairCost: [0, []],      
+      coldWaterCondition: ['', []],
+      coldWaterRepairCost: [0, []],
+      gasTanksCondition: ['', []],
+      gasTanksRepairCost: [0, []],
+      gasPipingCondition: ['', []],
+      gasPipingRepairCost: [0, []],
+      compressedAirCondition: ['', []],
+      compressedAirRepairCost: [0,[]],
+      furnitureMaterial: ['', [Validators.required]],
+      furnitureFinishes: ['', [Validators.required]],
+      furnitureCondition: ['', [Validators.required]],
+      furnitureRepairCost: ['', [Validators.required]]    
+    })
+    // 08 Structure
+    this.eighthFormGroup = this.fb.group({
+      trimMaterial: ['', [Validators.required]],
+      trimFinishes: ['', [Validators.required]],
+      trimCondition: ['', [Validators.required]],
+      trimRepairCost: [0, [Validators.required]],
+      frameMaterial: ['', [Validators.required]],
+      frameFinishes: ['', [Validators.required]],
+      frameCondition: ['', [Validators.required]],
+      frameRepairCost: [0, [Validators.required]],
+      buildingFacadeMaterial: ['', [Validators.required]],
+      buildingFacadeFinishes: ['', [Validators.required]],
+      buildingFacadeCondition: ['', [Validators.required]],
+      buildingFacadeRepairCost: [0, [Validators.required]],
+      corridorsMaterial: ['', [Validators.required]],
+      corridorsFinishes: ['', [Validators.required]],
+      corridorsCondition: ['', [Validators.required]],
+      corridorsRepairCost: [0, [Validators.required]],
+      entrancesMaterial: ['', [Validators.required]],
+      entrancesFinishes: ['', [Validators.required]],
+      entrancesCondition: ['', [Validators.required]],
+      entrancesRepairCost: [0, [Validators.required]]
+    })
+    // 09 Elevator
+    this.ninthFormGroup = this.fb.group({
+      elevatorsCount: [0, []],
+      elevatorType: ['', []],
+      elevatorKeyLocation: ['', []],
+      elevatorBrandName: ['', []],
+      elevatorServiceCompany: ['', []],
+      elevatorServicePhoneNumber: ['', []],
+      elevatorEmergencyShutoffLocation: ['', []],
+      elevatorExit: ['', []]
+    })
+    // 10 Services
+    this.tenthFormGroup = this.fb.group({      
+      mortarCondition: ['', [Validators.required]],
+      structureType: ['', [Validators.required]],
+      yearLastDecorated: [0, [Validators.required]],
+      fanLightMaterial: ['', [Validators.required]],
+      fanLightFinishes: ['', [Validators.required]],
+      fanLightCondition: ['', [Validators.required]],
+      fanLightRepairCost: [0, [Validators.required]],
+      serviceDuctMaterial: ['', [Validators.required]],
+      serviceDuctFinishes: ['', [Validators.required]],
+      serviceDuctCondition: ['', [Validators.required]],
+      serviceDuctRepairCost: [0, [Validators.required]],
+      drainageCondition: ['', []],
+      drainageRepairCost: [0, []],  
+      distributionCondition: ['', []],
+      distributionRepairCost: [0, []],
+      materialHandlingSystemCondition: ['', []],
+      materialHandlingSystemRepairCost: [0, []],
+    })
+
   }
 
   ngOnDestroy(){
@@ -457,18 +190,14 @@ export class AddBuildingComponent implements OnInit {
   }
 
   addBuilding(){
-    this.buildingService.addBuilding(this.addBuildingForm.value).subscribe(
-      //res=>{
-      //  console.log(this.firstFormGroup.value)
-      //},err=>{
-      //  console.log("error submitting form data.")
-      //}
+    //this.buildingService.addBuilding(this.firstFormGroup.value).subscribe(
+    // res=>{
+    //    console.log("Adding building")
+    //  },err=>{
+    //    console.log("Unable to add building")
+    //  }
 
-    )
-  }
-
-  addBuildings(){
-    console.log(this.firstFormGroup.value)
+    //)
   }
 
 }
