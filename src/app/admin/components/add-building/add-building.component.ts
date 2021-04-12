@@ -126,7 +126,7 @@ export class AddBuildingComponent implements OnInit {
       furnitureMaterial: ['', [Validators.required]],
       furnitureFinishes: ['', [Validators.required]],
       furnitureCondition: ['', [Validators.required]],
-      furnitureRepairCost: ['', [Validators.required]]    
+      furnitureRepairCost: ['', []]    
     })
     // 08 Structure
     this.eighthFormGroup = this.fb.group({
