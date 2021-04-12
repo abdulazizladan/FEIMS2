@@ -75,11 +75,11 @@ export class AddBuildingComponent implements OnInit {
     })
     // 05 Roof & Ceiling
     this.fifthFormGroup = this.fb.group({
+      roofStyleShape: ['', [Validators.required]],
+      roofTrussType: ['', []],
+      roofDeckingMaterial: ['', []],
       roofOpeningsCondition: ['', [Validators.required]],
       roofOpeningsRepairCost: [0, [Validators.required]],
-      roofStyleShape: ['', [Validators.required]],
-      roofTrussType: ['', [Validators.required]],
-      roofDeckingMaterial: ['', [Validators.required]],
       ceilingMaterial: ['', [Validators.required]],
       ceilingFinishes: ['', [Validators.required]],
       ceilingCondition: ['', [Validators.required]],
@@ -95,14 +95,14 @@ export class AddBuildingComponent implements OnInit {
       buildingWindowsFinishes: ['', [Validators.required]],
       buildingWindowsCondition: ['', [Validators.required]],
       buildingWindowsRepairCost: [0, [Validators.required]],
-      glazingMaterial: ['', [Validators.required]],
-      glazingFinishes: ['', [Validators.required]],
-      glazingCondition: ['', [Validators.required]],
-      glazingRepairCost: [0, [Validators.required]],
+      glazingMaterial: ['', []],
+      glazingFinishes: ['', []],
+      glazingCondition: ['', []],
+      glazingRepairCost: [0, []],
       burglarProofCondition: ['', []],
       burglarProofRepairCost: [0, []],
       gatesCondition: ['', []],
-      gatesRepairCost: [0, []],
+      gatesRepairCost: [0, []]
     })
     // 07 Facilities
     this.seventhFormGroup = this.fb.group({
