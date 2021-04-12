@@ -22,6 +22,11 @@
             </mat-select>
           </mat-form-field>
 
+          <mat-form-field>
+            <mat-label>Structure type</mat-label>
+            <input type="text" matInput formControlName="structureType">
+          </mat-form-field>
+
           <mat-form-field fxFlex.gt-xs="320px">
             <mat-label>Facility name</mat-label>
             <input matInput type="text" formControlName="facilityName">
@@ -71,7 +76,15 @@
             <mat-label>Date purchased</mat-label>
             <input matInput type="date" formControlName="facilityDatePurchased">
           </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Year last decorated</mat-label>
+            <input matInput type="number" formControlName="yearLastDecorated">
+          </mat-form-field>
+
           </div>
+
+          
 
           <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="30px grid">
             <legend>Building location</legend>
@@ -309,6 +322,16 @@
               <mat-option value="poor">poor mm</mat-option>
             </mat-select>
           </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Mortar condition</mat-label>
+            <mat-select formControlName="mortarCondition" required>
+              <mat-option value="">-----</mat-option>
+              <mat-option value="good">good</mat-option>
+              <mat-option value="fair">fair</mat-option>
+              <mat-option value="poor">poor mm</mat-option>
+            </mat-select>
+          </mat-form-field>
         </fieldset>
       </div>
     </form>
@@ -484,7 +507,7 @@
         <legend>Burglar Proof</legend>
         <mat-form-field>
           <mat-label>Condition</mat-label>
-        <mat-select burglarProofCondition>
+        <mat-select formControlName="burglarProofCondition">
           <mat-option value="">-----</mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
@@ -537,8 +560,7 @@
 
     <form [formGroup]="seventhFormGroup">
 
-      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
-        
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">        
         <legend>Roof lights</legend>
         <mat-form-field>
           <mat-label>Condition</mat-label>
@@ -554,6 +576,33 @@
         <mat-form-field>
           <mat-label>Cost of repair</mat-label>
           <input matInput type="number" formControlName="roofLightsRepairCost">
+          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+        </mat-form-field>
+
+      </fieldset>
+
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">        
+        <legend>Fan lights</legend>
+
+        <mat-form-field>
+          <mat-label></mat-label>
+          <input type="text" matInput formControlName="fanLightRepairCost">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Condition</mat-label>
+        <mat-select formControlName="fanLightCondition">
+          <mat-option value="">-----</mat-option>
+          <mat-option value="working">Working</mat-option>
+          <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="not_working">Not working</mat-option>
+          <mat-option value="obsolete">Obsolete</mat-option>
+        </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Cost of repair</mat-label>
+          <input matInput type="number" formControlName="fanLightRepairCost">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
 
@@ -712,11 +761,7 @@
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
 
-      </fieldset>
-
-      
-
-      
+      </fieldset>      
 
       <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -1151,6 +1196,27 @@
           <input formControlName="distributionRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Material handling system</legend>
+
+        <mat-form-field> 
+          <mat-select formControlName="materialHandlingSystemCondition">
+            <mat-option value="">-----</mat-option>
+            <mat-option value="working">Working</mat-option>
+            <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="not_working">Not working</mat-option>
+            <mat-option value="obsolete">Obsolete</mat-option>
+          </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Cost of repair</mat-label>
+            <input formControlName="materialHandlingSystemRepairCost" matInput type="number">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
 
       </fieldset>
 

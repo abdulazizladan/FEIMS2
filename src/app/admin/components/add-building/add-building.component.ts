@@ -37,7 +37,9 @@ export class AddBuildingComponent implements OnInit {
       facilityDateBuilt: ['', [Validators.required]],
       facilityDatePurchased: ['', [Validators.required]],
       facilityLongitude: [0, [Validators.required]],
-      facilityLatitude: [0, [Validators.required]]
+      facilityLatitude: [0, [Validators.required]],
+      structureType: ['', [Validators.required]],
+      yearLastDecorated: [0, [Validators.required]],
     })
     // 02 Building Dimensions
     this.secondFormGroup = this.fb.group({
@@ -68,7 +70,8 @@ export class AddBuildingComponent implements OnInit {
       floorJointsMaterials: ['', [Validators.required]],
       floorJointsFinishes: ['', [Validators.required]],
       floorJointsCondition: ['', [Validators.required]],
-      floorJointsRepairCost: [0, [Validators.required]]
+      floorJointsRepairCost: [0, [Validators.required]],
+      mortarCondition: ['', [Validators.required]],
     })
     // 05 Roof & Ceiling
     this.fifthFormGroup = this.fb.group({
@@ -105,6 +108,10 @@ export class AddBuildingComponent implements OnInit {
     this.seventhFormGroup = this.fb.group({
       roofLightsCondition: ['', []],
       roofLightsRepairCost: ['', []],
+      fanLightMaterial: ['', [Validators.required]],
+      fanLightFinishes: ['', [Validators.required]],
+      fanLightCondition: ['', [Validators.required]],
+      fanLightRepairCost: [0, [Validators.required]],
       airQualityCondition: ['', []],
       airQualityRepairCost: [0, []],
       ventilationSystemCondition: ['', []],
@@ -163,14 +170,7 @@ export class AddBuildingComponent implements OnInit {
       elevatorExit: ['', []]
     })
     // 10 Services
-    this.tenthFormGroup = this.fb.group({      
-      // move to  Floor mortarCondition: ['', [Validators.required]],
-      //structureType: ['', [Validators.required]],
-      //yearLastDecorated: [0, [Validators.required]],
-      //fanLightMaterial: ['', [Validators.required]],
-      //fanLightFinishes: ['', [Validators.required]],
-      //fanLightCondition: ['', [Validators.required]],
-      //fanLightRepairCost: [0, [Validators.required]],
+    this.tenthFormGroup = this.fb.group({
       serviceDuctMaterial: ['', [Validators.required]],
       serviceDuctFinishes: ['', [Validators.required]],
       serviceDuctCondition: ['', [Validators.required]],
@@ -179,8 +179,8 @@ export class AddBuildingComponent implements OnInit {
       drainageRepairCost: [0, []],  
       distributionCondition: ['', []],
       distributionRepairCost: [0, []],
-      //materialHandlingSystemCondition: ['', []],
-      //materialHandlingSystemRepairCost: [0, []],
+      materialHandlingSystemCondition: ['', []],
+      materialHandlingSystemRepairCost: [0, []],
     })
 
   }
