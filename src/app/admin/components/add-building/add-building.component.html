@@ -8,7 +8,7 @@
 
     <form [formGroup]="firstFormGroup">
       
-      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="30px grid">
         
         <mat-form-field>
           <mat-label>Facility type</mat-label>
@@ -93,8 +93,10 @@
   <mat-step label="Building Dimensions" [stepControl]="secondFormGroup">
     
     <form [formGroup]="secondFormGroup">
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
-
+      <div fxLayout="column" fxLayoutGap="30px">
+        
+      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="40px grid">
+        <legend>Dimensions</legend>
         <mat-form-field>
           <mat-label>Floor area</mat-label>
           <span matSuffix>m<sup>2</sup></span>
@@ -112,6 +114,10 @@
           <input matInput type="number" formControlName="numberOfFloors" required>
         </mat-form-field>
 
+      </fieldset>
+
+      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="40px grid">
+        <legend>Materials</legend>
         <mat-form-field>
           <mat-label>Super structure</mat-label>
           <mat-select formControlName="superStructure" required>
@@ -163,10 +169,11 @@
             <mat-option value="other">Other</mat-option>
           </mat-select>
         </mat-form-field>
+      </fieldset>
       </div>
     </form>
 
-    <div>
+    <div style="margin-top: 50px;">
       <button mat-flat-button matStepperPrevious color="primary">Previous</button>
       <span fxFlex="1 1 auto"></span>
       <button mat-flat-button matStepperNext color="primary">Next</button>
@@ -177,112 +184,127 @@
   <mat-step label="Walls & Floor" [stepControl]="thirdFormGroup">
     
     <form [formGroup]="thirdFormGroup">
-      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <div fxLayout="column" fxLayoutGap="30px">
 
-        <mat-form-field>
-          <mat-label>Materials</mat-label>
-          <input formControlName="partitionsMaterial" matInput type="text">
-        </mat-form-field>
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+          <legend>Partitions</legend>
+          <mat-form-field>
+            <mat-label>Materials</mat-label>
+            <input formControlName="partitionsMaterial" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Finishes</mat-label>
-          <input formControlName="partitionsFinishes" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Finishes</mat-label>
+            <input formControlName="partitionsFinishes" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-          <input formControlName="partitionsCondition" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Condition</mat-label>
+            <input formControlName="partitionsCondition" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Estimated cost</mat-label>
-          <input formControlName="partitionsRepairCost" matInput type="text">
-          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Estimated cost</mat-label>
+            <input formControlName="partitionsRepairCost" matInput type="text">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
+        </fieldset>
 
-        <mat-form-field>
-          <mat-label>Exterior wall</mat-label>
-          <mat-select formControlName="exteriorWall" required>
-            <mat-option value="">-----</mat-option>
-            <mat-option value="concrete_wall">Concrete wall</mat-option>
-            <mat-option value="150mm">150mm block wall</mat-option>
-            <mat-option value="225mm">220mm block wall</mat-option>
-            <mat-option value="other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+          <legend>Foundation</legend>
+          <mat-form-field>
+            <mat-label>Materials</mat-label>
+            <input formControlName="foundationMaterial" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Paint condition</mat-label>
-          <mat-select formControlName="paintCondition" required>
-            <mat-option value="">-----</mat-option>
-            <mat-option value="good">good</mat-option>
-            <mat-option value="fair">fair</mat-option>
-            <mat-option value="poor">poor mm</mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Finishes</mat-label>
+            <input formControlName="foundationFinishes" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Materials</mat-label>
-          <input formControlName="foundationMaterial" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Condition</mat-label>
+            <input formControlName="foundationCondition" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Finishes</mat-label>
-          <input formControlName="foundationFinishes" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Estimated cost</mat-label>
+            <input formControlName="foundationRepairCost" matInput type="number">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
+        </fieldset>
 
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-          <input formControlName="foundationCondition" matInput type="text">
-        </mat-form-field>
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+          <legend>Floor slabs</legend>
+          <mat-form-field>
+            <mat-label>Materials</mat-label>
+            <input formControlName="floorSlabsMaterial" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Estimated cost</mat-label>
-          <input formControlName="foundationRepairCost" matInput type="number">
-          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Finishes</mat-label>
+            <input formControlName="floorSlabsFinishes" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Materials</mat-label>
-          <input formControlName="floorSlabsMaterial" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Condition</mat-label>
+            <input formControlName="floorSlabsCondition" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Finishes</mat-label>
-          <input formControlName="floorSlabsFinishes" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Estimated cost</mat-label>
+            <input formControlName="floorSlabsRepairCost" matInput type="number">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
+        </fieldset>
 
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-          <input formControlName="floorSlabsCondition" matInput type="text">
-        </mat-form-field>
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+          <legend>Floor joints</legend>
+          <mat-form-field>
+            <mat-label>Materials</mat-label>
+            <input formControlName="floorJointsMaterials" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Estimated cost</mat-label>
-          <input formControlName="floorSlabsRepairCost" matInput type="number">
-          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Finishes</mat-label>
+            <input formControlName="floorJointsFinishes" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Materials</mat-label>
-          <input formControlName="floorJointsMaterials" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Condition</mat-label>
+            <input formControlName="floorJointsCondition" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Finishes</mat-label>
-          <input formControlName="floorJointsFinishes" matInput type="text">
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Estimated cost</mat-label>
+            <input matInput formControlName="floorJointsRepairCost" type="text">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
+        </fieldset>
 
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-          <input formControlName="floorJointsCondition" matInput type="text">
-        </mat-form-field>
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+          <legend>Surface</legend>
+          <mat-form-field>
+            <mat-label>Exterior wall</mat-label>
+            <mat-select formControlName="exteriorWall" required>
+              <mat-option value="">-----</mat-option>
+              <mat-option value="concrete_wall">Concrete wall</mat-option>
+              <mat-option value="150mm">150mm block wall</mat-option>
+              <mat-option value="225mm">220mm block wall</mat-option>
+              <mat-option value="other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Estimated cost</mat-label>
-          <input matInput formControlName="floorJointsRepairCost" type="text">
-          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-        </mat-form-field>
+          <mat-form-field>
+            <mat-label>Paint condition</mat-label>
+            <mat-select formControlName="paintCondition" required>
+              <mat-option value="">-----</mat-option>
+              <mat-option value="good">good</mat-option>
+              <mat-option value="fair">fair</mat-option>
+              <mat-option value="poor">poor mm</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </fieldset>
       </div>
     </form>
 
