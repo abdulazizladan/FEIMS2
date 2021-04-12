@@ -164,13 +164,13 @@ export class AddBuildingComponent implements OnInit {
     })
     // 10 Services
     this.tenthFormGroup = this.fb.group({      
-      mortarCondition: ['', [Validators.required]],
-      structureType: ['', [Validators.required]],
-      yearLastDecorated: [0, [Validators.required]],
-      fanLightMaterial: ['', [Validators.required]],
-      fanLightFinishes: ['', [Validators.required]],
-      fanLightCondition: ['', [Validators.required]],
-      fanLightRepairCost: [0, [Validators.required]],
+      // move to  Floor mortarCondition: ['', [Validators.required]],
+      //structureType: ['', [Validators.required]],
+      //yearLastDecorated: [0, [Validators.required]],
+      //fanLightMaterial: ['', [Validators.required]],
+      //fanLightFinishes: ['', [Validators.required]],
+      //fanLightCondition: ['', [Validators.required]],
+      //fanLightRepairCost: [0, [Validators.required]],
       serviceDuctMaterial: ['', [Validators.required]],
       serviceDuctFinishes: ['', [Validators.required]],
       serviceDuctCondition: ['', [Validators.required]],
@@ -179,8 +179,8 @@ export class AddBuildingComponent implements OnInit {
       drainageRepairCost: [0, []],  
       distributionCondition: ['', []],
       distributionRepairCost: [0, []],
-      materialHandlingSystemCondition: ['', []],
-      materialHandlingSystemRepairCost: [0, []],
+      //materialHandlingSystemCondition: ['', []],
+      //materialHandlingSystemRepairCost: [0, []],
     })
 
   }

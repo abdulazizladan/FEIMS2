@@ -33,7 +33,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatRadioModule } from '@angular/material/radio';
-import { MatChipsModule } from '@angular/material/chips'
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDividerModule } from '@angular/material/divider';
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -83,6 +84,7 @@ import { AboutComponent } from './components/about/about.component';
     MatCheckboxModule,
     MatRadioModule,
     MatChipsModule,
+    MatDividerModule,
     FlexLayoutModule,
     AdminRoutingModule,
     NgxEchartsModule.forRoot({
