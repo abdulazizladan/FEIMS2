@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './admin/components/about/about.component';
+import { BuildingSummaryComponent } from './admin/components/building-summary/building-summary.component';
 import { BuildingsComponent } from './admin/components/buildings/buildings.component';
 import { HomeComponent } from './admin/components/home/home.component';
 import { ReportsComponent } from './admin/components/reports/reports.component';
@@ -51,6 +52,10 @@ export const rootRouterConfig: Routes = [
       {
         path: 'buildings',
         component: BuildingsComponent
+      },
+      {
+        path: 'building/:id',
+        component: BuildingSummaryComponent
       }
     ]
   },

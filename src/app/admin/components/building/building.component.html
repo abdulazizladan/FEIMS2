@@ -26,7 +26,7 @@
     <mat-divider></mat-divider>
   
     <mat-card-actions align="end">
-      <button mat-flat-button color="primary" value={{data.id}} (click)="showSummary(data.id)">
+      <button mat-flat-button color="primary" routerLink="../building/{{data.id}}" value={{data.id}} (click)="showSummary(data.id)">
         More details
       </button>
     </mat-card-actions>

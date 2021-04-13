@@ -8,12 +8,16 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    children: [
-      {
-        path: 'buiding/:id',
-        component: BuildingSummaryComponent
-      }
-    ]
+    //children: [
+    //  {
+    //    path: 'building/:id',
+    //    component: BuildingSummaryComponent
+    //  }
+    //]
+  },
+  {
+    path: 'building/:id',
+    component: BuildingSummaryComponent
   }
 ];
 
