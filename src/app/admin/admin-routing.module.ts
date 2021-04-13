@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BuildingComponent } from './components/building/building.component';
+import { BuildingSummaryComponent } from './components/building-summary/building-summary.component';
 //import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 
@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: 'buiding/:id',
-        component: BuildingComponent
+        component: BuildingSummaryComponent
       }
     ]
   }
