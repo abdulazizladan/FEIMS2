@@ -1,5 +1,19 @@
 <!-- Add Building dialog -->
-<h2 mat-dialog-title>Add building</h2>
+<!--
+  TODO
+  Conditions as select
+-->
+
+<h2 mat-dialog-title>
+  Add building
+  <span fxFlex="1 1 auto">
+  
+  </span>
+  <button mat-fab color="warn" mat-dialog-close>
+    <mat-icon >close</mat-icon>
+  </button>
+</h2>
+
 <mat-dialog-content>
 <mat-horizontal-stepper labelPosition="bottom" #stepper linear>
 
@@ -1292,7 +1306,6 @@
 </mat-horizontal-stepper>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-flat-button mat-dialog-close color="warn">Cancel</button>
   <span fxFlex="1 1 auto"></span>
   <button [disabled]="tenthFormGroup.invalid" mat-flat-button color="primary">Submit building data</button>
 </mat-dialog-actions>
