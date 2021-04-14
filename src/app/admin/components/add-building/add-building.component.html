@@ -100,17 +100,20 @@
 
           
 
-          <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="30px grid">
+          <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+            
             <legend>Building location</legend>
-          <mat-form-field>
-            <mat-label>GIS longitude</mat-label>
-            <input matInput type="number" formControlName="facilityLongitude">
-          </mat-form-field>
+            
+            <mat-form-field>
+              <mat-label>GIS longitude</mat-label>
+              <input matInput type="number" formControlName="facilityLongitude">
+            </mat-form-field>
 
-          <mat-form-field>
-            <mat-label>GIS latitude</mat-label>
-            <input matInput type="number" formControlName="facilityLatitude">
-          </mat-form-field>
+            <mat-form-field>
+              <mat-label>GIS latitude</mat-label>
+              <input matInput type="number" formControlName="facilityLatitude">
+            </mat-form-field>
+          
           </fieldset>
       </div>
     </form>
@@ -127,7 +130,7 @@
     <form [formGroup]="secondFormGroup">
       <div fxLayout="column" fxLayoutGap="30px">
         
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="40px grid">
+      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
         <legend>Dimensions</legend>
         <mat-form-field>
           <mat-label>Floor area</mat-label>
@@ -148,7 +151,7 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="40px grid">
+      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
         <legend>Materials</legend>
         <mat-form-field>
           <mat-label>Super structure</mat-label>
