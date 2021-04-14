@@ -22,11 +22,13 @@
 
     <form [formGroup]="firstFormGroup">
 
-      <div fxLayout="column" fxLayoutGap="30px">
-      
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="30px grid">
+      <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
           
-          <mat-form-field>
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+
+          <legend>Basic info</legend>
+
+          <mat-form-field fxFlex="30%">
             <mat-label>Facility type</mat-label>
             <mat-select formControlName="facilityType" name="facilityType">
               <mat-option></mat-option>
@@ -36,42 +38,42 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Structure type</mat-label>
             <input type="text" matInput formControlName="structureType">
           </mat-form-field>
 
-          <mat-form-field fxFlex.gt-xs="320px">
+          <mat-form-field fxFlex="30%">
             <mat-label>Facility name</mat-label>
             <input matInput type="text" formControlName="facilityName">
           </mat-form-field>
 
-          <mat-form-field fxFlex="120px">
+          <mat-form-field fxFlex="30%">
             <mat-label>Facility code</mat-label>
             <input matInput type="text" formControlName="facilityCode">
           </mat-form-field>
 
-          <mat-form-field fxFlex="1 1 auto" fxFlex.gt-xs="320px">
+          <mat-form-field fxFlex="30%">
             <mat-label>Facility description</mat-label>
             <input matInput type="text" formControlName="facilityDescription">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Facility structure</mat-label>
             <input matInput type="text" formControlName="facilityStructure">
           </mat-form-field>
 
-          <mat-form-field xFlex.gt-xs="320px">
+          <mat-form-field fxFlex="30%">
             <mat-label>Facility purpose</mat-label>
             <input matInput type="text" formControlName="facilityPurpose">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Number of storeys</mat-label>
             <input matInput type="number" formControlName="numberOfStoreys">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Facility status</mat-label>
             <mat-select formControlName="facilityStatus" name="facilityStatus">
               <mat-option></mat-option>
@@ -81,35 +83,33 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Date built</mat-label>
             <input matInput type="date" formControlName="facilityDateBuilt">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Date purchased</mat-label>
             <input matInput type="date" formControlName="facilityDatePurchased">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Year last decorated</mat-label>
             <input matInput type="number" formControlName="yearLastDecorated">
           </mat-form-field>
 
-          </div>
+        </fieldset>  
 
-          
-
-          <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+          <fieldset fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="center">
             
             <legend>Building location</legend>
             
-            <mat-form-field>
+            <mat-form-field fxFlex="30%">
               <mat-label>GIS longitude</mat-label>
               <input matInput type="number" formControlName="facilityLongitude">
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field fxFlex="30%">
               <mat-label>GIS latitude</mat-label>
               <input matInput type="number" formControlName="facilityLatitude">
             </mat-form-field>
@@ -128,32 +128,36 @@
   <mat-step label="Building Dimensions" [stepControl]="secondFormGroup">
     
     <form [formGroup]="secondFormGroup">
-      <div fxLayout="column" fxLayoutGap="30px">
+      <div fxLayout="column" fxLayoutGap="10px">
         
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+        
         <legend>Dimensions</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Floor area</mat-label>
           <span matSuffix>m<sup>2</sup></span>
           <input matInput type="number" formControlName="buildingFloorArea" required>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Headroom</mat-label>
           <span matSuffix>m</span>
           <input matInput type="number" formControlName="buildingHeadroom" required>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Number of floors</mat-label>
           <input matInput type="number" formControlName="numberOfFloors" required>
         </mat-form-field>
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+        
         <legend>Materials</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Super structure</mat-label>
           <mat-select formControlName="superStructure" required>
             <mat-option></mat-option>
@@ -168,7 +172,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Floor structure</mat-label>
           <mat-select formControlName="floorStructure" required>
             <mat-option></mat-option>
@@ -179,7 +183,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Floor covering</mat-label>
           <mat-select formControlName="floorCovering" required>
             <mat-option></mat-option>
@@ -191,7 +195,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Windows</mat-label>
           <mat-select formControlName="windows" required>
             <mat-option></mat-option>
@@ -219,21 +223,23 @@
   <mat-step label="Walls & Floor" [stepControl]="thirdFormGroup">
     
     <form [formGroup]="thirdFormGroup">
-      <div fxLayout="column" fxLayoutGap="30px">
+      <div fxLayout="column" fxLayoutGap="10px">
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Partitions</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Materials</mat-label>
             <input formControlName="partitionsMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Finishes</mat-label>
             <input formControlName="partitionsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="partitionsCondition" name="partitionsCondition">
               <mat-option></mat-option>
@@ -243,26 +249,28 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="partitionsRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Foundation</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Materials</mat-label>
             <input formControlName="foundationMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Finishes</mat-label>
             <input formControlName="foundationFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="foundationCondition" name="foundationCondition">
               <mat-option></mat-option>
@@ -272,26 +280,28 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%"> 
             <mat-label>Estimated cost</mat-label>
             <input formControlName="foundationRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Floor slabs</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Materials</mat-label>
             <input formControlName="floorSlabsMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Finishes</mat-label>
             <input formControlName="floorSlabsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="floorSlabsCondition" name="floorSlabsCondition">
               <mat-option></mat-option>
@@ -301,26 +311,28 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="floorSlabsRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Floor joints</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Materials</mat-label>
             <input formControlName="floorJointsMaterials" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Finishes</mat-label>
             <input formControlName="floorJointsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="floorJointsCondition" name="floorJointsCondition">
               <mat-option></mat-option>
@@ -330,16 +342,18 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Estimated cost</mat-label>
             <input matInput formControlName="floorJointsRepairCost" type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Surface</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Exterior wall</mat-label>
             <mat-select formControlName="exteriorWall" required>
               <mat-option value="">-----</mat-option>
@@ -350,7 +364,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Paint condition</mat-label>
             <mat-select formControlName="paintCondition" required>
               <mat-option></mat-option>
@@ -360,7 +374,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Mortar condition</mat-label>
             <mat-select formControlName="mortarCondition" required>
               <mat-option></mat-option>
@@ -386,81 +400,86 @@
 
     <form [formGroup]="fifthFormGroup">
 
-      <div fxLayout="column" fxLayoutGap="30px">
+      <div fxLayout="column" fxLayoutGap="10px">
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
-        <legend>Roof details</legend>
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+        
+          <legend>Roof details</legend>
 
-        <mat-form-field>
-          <mat-label>Roof style/shape</mat-label>
-          <mat-select formControlName="roofStyleShape">
+          <mat-form-field fxFlex="30%">
+            <mat-label>Roof style/shape</mat-label>
+            <mat-select formControlName="roofStyleShape">
+              <mat-option></mat-option>
+              <mat-option value="flat">Flat</mat-option>
+              <mat-option value="pitched">Pitched</mat-option>
+              <mat-option value="arched">Arched</mat-option>
+              <mat-option value="butterfly">Butterfly</mat-option>
+              <mat-option value="hip">Hip</mat-option>
+              <mat-option value="gambrel">Gambrel</mat-option>
+              <mat-option value="mansard">Mansard</mat-option>
+              <mat-option value="monitor">Monitor</mat-option>
+              <mat-option value="shed">Shed</mat-option>
+              <mat-option value="dome">Dome</mat-option>
+              <mat-option value="gable">Gable</mat-option>
+              <mat-option value="other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+    
+          <mat-form-field fxFlex="30%">
+            <mat-label>Truss type</mat-label>
+            <input formControlName="roofTrussType" matInput type="text">
+          </mat-form-field>
+    
+          <mat-form-field fxFlex="30%">
+            <mat-label>Decking material</mat-label>
+            <mat-select formControlName="roofDeckingMaterial">
+              <mat-option></mat-option>
+              <mat-option value="wood">Wood</mat-option>
+              <mat-option value="concrete">Concrete</mat-option>
+              <mat-option value="other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">       
+          
+          <legend>Roof Openings</legend>
+          
+          <mat-form-field fxFlex="30%">
+            <mat-label>Condition</mat-label>
+          <mat-select formControlName="roofOpeningsCondition">
             <mat-option></mat-option>
-            <mat-option value="flat">Flat</mat-option>
-            <mat-option value="pitched">Pitched</mat-option>
-            <mat-option value="arched">Arched</mat-option>
-            <mat-option value="butterfly">Butterfly</mat-option>
-            <mat-option value="hip">Hip</mat-option>
-            <mat-option value="gambrel">Gambrel</mat-option>
-            <mat-option value="mansard">Mansard</mat-option>
-            <mat-option value="monitor">Monitor</mat-option>
-            <mat-option value="shed">Shed</mat-option>
-            <mat-option value="dome">Dome</mat-option>
-            <mat-option value="gable">Gable</mat-option>
-            <mat-option value="other">Other</mat-option>
+            <mat-option value="working">Working</mat-option>
+            <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="not_working">Not working</mat-option>
+            <mat-option value="obsolete">Obsolete</mat-option>
           </mat-select>
-        </mat-form-field>
-  
-        <mat-form-field>
-          <mat-label>Truss type</mat-label>
-          <input formControlName="roofTrussType" matInput type="text">
-        </mat-form-field>
-  
-        <mat-form-field>
-          <mat-label>Decking material</mat-label>
-          <mat-select formControlName="roofDeckingMaterial">
-            <mat-option></mat-option>
-            <mat-option value="wood">Wood</mat-option>
-            <mat-option value="concrete">Concrete</mat-option>
-            <mat-option value="other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
+          </mat-form-field>
 
-      </fieldset>
+          <mat-form-field fxFlex="30%">
+            <mat-label>Cost of repair</mat-label>
+            <input formControlName="roofOpeningsRepairCost" matInput type="number">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">       
-        <legend>Roof Openings</legend>
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-        <mat-select formControlName="roofOpeningsCondition">
-          <mat-option></mat-option>
-          <mat-option value="working">Working</mat-option>
-          <mat-option value="repairable">Incomplete/Repairable</mat-option>
-          <mat-option value="not_working">Not working</mat-option>
-          <mat-option value="obsolete">Obsolete</mat-option>
-        </mat-select>
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label>Cost of repair</mat-label>
-          <input formControlName="roofOpeningsRepairCost" matInput type="number">
-          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-        </mat-form-field>
-
-      </fieldset>
+        </fieldset>
       
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+        
         <legend>Ceiling</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Materials</mat-label>
           <input formControlName="ceilingMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Finishes</mat-label>
           <input formControlName="ceilingFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="ceilingCondition" name="ceilingCondition">
             <mat-option></mat-option>
@@ -470,7 +489,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input matInput formControlName="ceilingRepairCost" type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -495,20 +514,21 @@
     <form [formGroup]="sixthFormGroup">
       
       
-      <div fxLayout="column" fxLayoutGap="30px">
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <div fxLayout="column" fxLayoutGap="10px">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Doors</legend>
-        <mat-form-field>
+        
+          <mat-form-field fxFlex="30%">
           <mat-label>Materials</mat-label>
           <input formControlName="doorsMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Finishes</mat-label>
           <input formControlName="doorsFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="doorsCondition" name="doorsCondition">
             <mat-option></mat-option>
@@ -518,27 +538,27 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="doorsRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Windows</legend>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Materials</mat-label>
           <input formControlName="buildingWindowsMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Finishes</mat-label>
           <input formControlName="buildingWindowsFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="buildingWindowsCondition" name="buildingWindowsCondition">
             <mat-option></mat-option>
@@ -548,7 +568,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="buildingWindowsRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -557,39 +577,41 @@
         </fieldset>
 
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Glazing</legend>
-        <mat-form-field>
+        
+          <mat-form-field fxFlex="30%">
           <mat-label>Materials</mat-label>
           <input formControlName="glazingMaterial" matInput type="text">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="30%">
+            <mat-label>Finishes</mat-label>
+            <input formControlName="glazingFinishes" matInput type="text">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="30%">
+            <mat-label>Condition</mat-label>
+            <mat-select formControlName="glazingCondition" name="glazingCondition">
+              <mat-option></mat-option>
+              <mat-option value="good">Good</mat-option>
+              <mat-option value="abandoned">Abandoned</mat-option>
+              <mat-option value="repairable">Repairable</mat-option>
+            </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Finishes</mat-label>
-          <input formControlName="glazingFinishes" matInput type="text">
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-          <mat-select formControlName="glazingCondition" name="glazingCondition">
-            <mat-option></mat-option>
-            <mat-option value="good">Good</mat-option>
-            <mat-option value="abandoned">Abandoned</mat-option>
-            <mat-option value="repairable">Repairable</mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="glazingRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
           <legend>Burglar Proof</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="burglarProofCondition">
             <mat-option></mat-option>
@@ -600,7 +622,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Cost of repair</mat-label>
             <input formControlName="burglarProofRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -611,7 +633,8 @@
         <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
           <legend>Gates</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="gatesCondition">
             <mat-option></mat-option>
@@ -622,7 +645,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Cost of repair</mat-label>
             <input formControlName="gatesRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -644,10 +667,12 @@
 
     <form [formGroup]="seventhFormGroup">
       
-      <div fxLayout="column" fxLayoutGap="30px">
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">      
+      <div fxLayout="column" fxLayoutGap="10px">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">      
+          
           <legend>Roof lights</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="roofLightsCondition">
             <mat-option></mat-option>
@@ -658,7 +683,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Cost of repair</mat-label>
             <input matInput type="number" formControlName="roofLightsRepairCost">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -666,20 +691,20 @@
 
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">       
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">       
         <legend>Fan lights</legend>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Fan light material</mat-label>
           <input type="text" matInput formControlName="fanLightMaterial">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Fan light finishes</mat-label>
           <input type="text" matInput formControlName="fanLightFinishes">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="fanLightCondition">
           <mat-option></mat-option>
@@ -690,7 +715,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input matInput type="number" formControlName="fanLightRepairCost">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -698,10 +723,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         
         <legend>Air quality and Handling</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="airQualityCondition">
           <mat-option></mat-option>
@@ -712,7 +738,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input matInput type="number" formControlName="airQualityRepairCost">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -720,10 +746,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         
         <legend>Ventilation System</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="ventilationSystemCondition">
           <mat-option></mat-option>
@@ -734,7 +761,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="ventilationSystemRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -742,10 +769,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Air Conditioning</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="airConditioningCondition">
           <mat-option></mat-option>
@@ -756,7 +784,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input matInput type="number" formControlName="airConditioningRepairCost">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -764,24 +792,20 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         <legend>Furniture</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Materials</mat-label>
           <input formControlName="furnitureMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Finishes</mat-label>
           <input formControlName="furnitureFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-          <input formControlName="furnitureCondition" matInput type="text">
-        </mat-form-field>
-
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="furnitureCondition" name="furnitureCondition">
             <mat-option></mat-option>
@@ -791,7 +815,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="furnitureRepairCost" matInput type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -799,9 +823,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+        
         <legend>Material Handling & Transportation System</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select>
           <mat-option></mat-option>
@@ -812,7 +838,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -822,10 +848,11 @@
 
       
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Temperature & Humidity Control</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="temperatureControlCondition">
           <mat-option></mat-option>
@@ -836,7 +863,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="temperatureControlRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -844,10 +871,10 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Hot Water</legend>
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="hotWaterCondition">
           <mat-option></mat-option>
@@ -858,7 +885,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="hotWaterRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -866,21 +893,22 @@
 
       </fieldset>      
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Cold Water</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
-        <mat-select formControlName="coldWaterCondition">
-          <mat-option></mat-option>
-          <mat-option value="working">Working</mat-option>
-          <mat-option value="repairable">Incomplete/Repairable</mat-option>
-          <mat-option value="not_working">Not working</mat-option>
-          <mat-option value="obsolete">Obsolete</mat-option>
-        </mat-select>
+          <mat-select formControlName="coldWaterCondition">
+            <mat-option></mat-option>
+            <mat-option value="working">Working</mat-option>
+            <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="not_working">Not working</mat-option>
+            <mat-option value="obsolete">Obsolete</mat-option>
+          </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="coldWaterRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -888,9 +916,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+       
         <legend>Gas Tanks</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="gasTanksCondition">
           <mat-option></mat-option>
@@ -901,7 +931,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="gasTanksRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -909,11 +939,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Gas Piping</legend>
         
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="gasPipingCondition">
           <mat-option></mat-option>
@@ -924,7 +954,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="gasPipingRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -932,10 +962,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Air Compressed</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="compressedAirCondition">
           <mat-option></mat-option>
@@ -946,7 +977,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="compressedAirRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -967,21 +998,22 @@
   <mat-step label="Structure & Interior " [stepControl]="eighthFormGroup">
 
     <form [formGroup]="eighthFormGroup">
-      <div fxLayout="column" fxLayoutGap="30px">
+      <div fxLayout="column" fxLayoutGap="10px">
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Trim</legend>
-        <mat-form-field>
-          <mat-label>Materials</mat-label>
-          <input formControlName="trimMaterial" matInput type="text">
-        </mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
+            <mat-label>Materials</mat-label>
+            <input formControlName="trimMaterial" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Finishes</mat-label>
           <input formControlName="trimFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="trimCondition" name="trimCondition">
             <mat-option></mat-option>
@@ -991,26 +1023,27 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="trimRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Frame</legend>
-        <mat-form-field>
-          <mat-label>Materials</mat-label>
-          <input formControlName="frameMaterial" matInput type="text">
-        </mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
+            <mat-label>Materials</mat-label>
+            <input formControlName="frameMaterial" matInput type="text">
+          </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Finishes</mat-label>
           <input formControlName="frameFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="frameCondition" name="frameCondition">
             <mat-option></mat-option>
@@ -1020,26 +1053,28 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="frameRepairCost" matInput type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Building facade</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Materials</mat-label>
             <input formControlName="buildingFacadeMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Finishes</mat-label>
             <input formControlName="buildingFacadeFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="buildingFacadeCondition" name="buildingFacadeCondition">
               <mat-option></mat-option>
@@ -1049,26 +1084,28 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="buildingFacadeRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Corridors</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Materials</mat-label>
             <input formControlName="corridorsMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Finishes</mat-label>
             <input formControlName="corridorsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="corridorsCondition" name="corridorsCondition">
               <mat-option></mat-option>
@@ -1078,26 +1115,28 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="corridorsRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
         </fieldset>
 
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+          
           <legend>Entrance</legend>
-          <mat-form-field>
+          
+          <mat-form-field fxFlex="30%">
             <mat-label>Materials</mat-label>
             <input formControlName="entrancesMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Finishes</mat-label>
             <input formControlName="entrancesFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="entrancesCondition" name="entrancesCondition">
               <mat-option></mat-option>
@@ -1107,7 +1146,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="entrancesRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1128,7 +1167,8 @@
 
     <form [formGroup]="ninthFormGroup">
       
-      <div fxLayout="column" fxLayoutGap="30px">
+      <div fxLayout="column" fxLayoutGap="10px">
+      
       <mat-form-field>
         <mat-label>Number of elevators</mat-label>
         <input formControlName="elevatorsCount" matInput type="number">
@@ -1275,27 +1315,22 @@
   <mat-step label="Services" [stepControl]="tenthFormGroup">
 
     <form [formGroup]="tenthFormGroup">
-      <div fxLayout="column" fxLayoutGap="30px">
-        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <div fxLayout="column" fxLayoutGap="10px">
+        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         
         <legend>Service ducts</legend>
         
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Materials</mat-label>
           <input formControlName="serviceDuctMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Finishes</mat-label>
           <input formControlName="serviceDuctFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Condition</mat-label>
-          <input formControlName="serviceDuctCondition" matInput type="text">
-        </mat-form-field>
-
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="serviceDuctCondition" name="serviceDuctCondition">
             <mat-option></mat-option>
@@ -1305,17 +1340,18 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="serviceDuctRepairCost" matInput type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Drainage</legend>
-        <mat-form-field>
+        
+        <mat-form-field fxFlex="30%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="drainageCondition">
           <mat-option></mat-option>
@@ -1326,7 +1362,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="drainageRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1334,11 +1370,13 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
-      <legend>Distribution</legend>
-      <mat-label>Condition</mat-label>
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+      
+        <legend>Distribution</legend>
+      
+        <mat-label>Condition</mat-label>
         
-        <mat-form-field> 
+        <mat-form-field fxFlex="30%"> 
         <mat-select formControlName="distributionCondition">
           <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
@@ -1348,7 +1386,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field fxFlex="30%">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="distributionRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1356,10 +1394,11 @@
 
       </fieldset>
 
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="20px grid">
+      <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         <legend>Material handling system</legend>
 
-        <mat-form-field> 
+        <mat-form-field fxFlex="30%">
+          <mat-label>Material handling system</mat-label> 
           <mat-select formControlName="materialHandlingSystemCondition">
             <mat-option></mat-option>
             <mat-option value="working">Working</mat-option>
@@ -1369,7 +1408,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field fxFlex="30%">
             <mat-label>Cost of repair</mat-label>
             <input formControlName="materialHandlingSystemRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
