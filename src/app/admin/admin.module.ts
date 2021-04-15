@@ -36,6 +36,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
 
+
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -68,7 +69,8 @@ import { BuildingSummaryComponent } from './components/building-summary/building
     SettingsComponent, 
     SidenavComponent, 
     ToolbarComponent, 
-    AboutComponent, BuildingSummaryComponent
+    AboutComponent, 
+    BuildingSummaryComponent
   ],
   imports: [
     CommonModule,

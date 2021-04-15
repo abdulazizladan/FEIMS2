@@ -18,10 +18,38 @@
 <mat-dialog-content>
 <mat-horizontal-stepper labelPosition="bottom" #stepper linear>
 
+  <mat-step label="faux step">
+    
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Step
+          </mat-panel-title>
+          <mat-panel-description>
+            Description
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-action-row>
+          <button mat-flat-button color="primary">Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <div style="margin-top: 50px;">
+      <span fxFlex="1 1 auto"></span>
+      <button mat-flat-button matStepperNext color="primary">Next</button>
+    </div>
+
+  </mat-step>
+
   <!-- 1 Building survey -->
   <mat-step label="Building survey" [stepControl]="firstFormGroup">
 
-    <form [formGroup]="firstFormGroup">
+    
+    <div fxLayout="column">
+
+    <form [formGroup]="firstFormGroup" fxFlex="1 1 auto">  
 
       <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
           
@@ -77,8 +105,7 @@
           <mat-form-field fxFlex="22%">
             <mat-label>Facility status</mat-label>
             <mat-select formControlName="facilityStatus" name="facilityStatus">
-              <mat-option></mat-option>
-              <mat-option value="good">Good</mat-option>
+              <mat-option focus value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
             </mat-select>
@@ -114,6 +141,8 @@
             
       </div>
     </form>
+
+    </div>
     
     <div style="margin-top: 50px;">
       <span fxFlex="1 1 auto"></span>
@@ -239,10 +268,10 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="partitionsCondition" name="partitionsCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
+              <mat-option value="replaceable">Replceable</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -270,10 +299,10 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="foundationCondition" name="foundationCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
+              <mat-option value="replaceable">Replceable</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -301,10 +330,10 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="floorSlabsCondition" name="floorSlabsCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
+              <mat-option value="replaceable">Replceable</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -332,10 +361,10 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="floorJointsCondition" name="floorJointsCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
+              <mat-option value="replaceable">Replceable</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -364,7 +393,6 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Paint condition</mat-label>
             <mat-select formControlName="paintCondition" required>
-              <mat-option></mat-option>
               <mat-option value="good">good</mat-option>
               <mat-option value="fair">fair</mat-option>
               <mat-option value="poor">poor</mat-option>
@@ -374,7 +402,6 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Mortar condition</mat-label>
             <mat-select formControlName="mortarCondition" required>
-              <mat-option></mat-option>
               <mat-option value="good">good</mat-option>
               <mat-option value="fair">fair</mat-option>
               <mat-option value="poor">poor</mat-option>
@@ -479,10 +506,10 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="ceilingCondition" name="ceilingCondition">
-            <mat-option></mat-option>
             <mat-option value="good">Good</mat-option>
             <mat-option value="abandoned">Abandoned</mat-option>
             <mat-option value="repairable">Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -528,10 +555,10 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="doorsCondition" name="doorsCondition">
-            <mat-option></mat-option>
             <mat-option value="good">Good</mat-option>
             <mat-option value="abandoned">Abandoned</mat-option>
             <mat-option value="repairable">Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -558,10 +585,10 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="buildingWindowsCondition" name="buildingWindowsCondition">
-            <mat-option></mat-option>
             <mat-option value="good">Good</mat-option>
             <mat-option value="abandoned">Abandoned</mat-option>
             <mat-option value="repairable">Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -590,10 +617,10 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="glazingCondition" name="glazingCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
+              <mat-option value="replaceable">Replceable</mat-option>
             </mat-select>
         </mat-form-field>
 
@@ -611,9 +638,9 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="burglarProofCondition">
-            <mat-option></mat-option>
             <mat-option value="working">Working</mat-option>
             <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
             <mat-option value="not_working">Not working</mat-option>
             <mat-option value="obsolete">Obsolete</mat-option>
           </mat-select>
@@ -634,10 +661,10 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="gatesCondition">
-            <mat-option></mat-option>
             <mat-option value="none">none</mat-option>
             <mat-option value="working">Working</mat-option>
             <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
             <mat-option value="not_working">Not working</mat-option>
             <mat-option value="obsolete">Obsolete</mat-option>
           </mat-select>
@@ -673,9 +700,9 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="roofLightsCondition">
-            <mat-option></mat-option>
             <mat-option value="working">Working</mat-option>
             <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
             <mat-option value="not_working">Not working</mat-option>
             <mat-option value="obsolete">Obsolete</mat-option>
           </mat-select>
@@ -705,9 +732,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="fanLightCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -728,9 +755,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="airQualityCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -751,9 +778,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="ventilationSystemCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -774,7 +801,6 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="airConditioningCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
@@ -806,10 +832,10 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="furnitureCondition" name="furnitureCondition">
-            <mat-option></mat-option>
             <mat-option value="good">Good</mat-option>
             <mat-option value="abandoned">Abandoned</mat-option>
             <mat-option value="repairable">Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -828,9 +854,9 @@
         <mat-form-field fxFlex="24">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="materialHandlingSystemCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -853,9 +879,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="temperatureControlCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -875,9 +901,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="hotWaterCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -898,9 +924,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="coldWaterCondition">
-            <mat-option></mat-option>
             <mat-option value="working">Working</mat-option>
             <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
             <mat-option value="not_working">Not working</mat-option>
             <mat-option value="obsolete">Obsolete</mat-option>
           </mat-select>
@@ -921,9 +947,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="gasTanksCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -944,9 +970,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="gasPipingCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -967,9 +993,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="compressedAirCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -1014,10 +1040,10 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="trimCondition" name="trimCondition">
-            <mat-option></mat-option>
             <mat-option value="good">Good</mat-option>
             <mat-option value="abandoned">Abandoned</mat-option>
             <mat-option value="repairable">Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -1044,10 +1070,10 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="frameCondition" name="frameCondition">
-            <mat-option></mat-option>
             <mat-option value="good">Good</mat-option>
             <mat-option value="abandoned">Abandoned</mat-option>
             <mat-option value="repairable">Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -1075,10 +1101,10 @@
           <mat-form-field fxFlex="24%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="buildingFacadeCondition" name="buildingFacadeCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
+              <mat-option value="replaceable">Replceable</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -1331,10 +1357,10 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="serviceDuctCondition" name="serviceDuctCondition">
-            <mat-option></mat-option>
             <mat-option value="good">Good</mat-option>
             <mat-option value="abandoned">Abandoned</mat-option>
             <mat-option value="repairable">Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -1352,9 +1378,9 @@
         <mat-form-field fxFlex="24%">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="drainageCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -1376,9 +1402,9 @@
         
         <mat-form-field fxFlex="24%"> 
         <mat-select formControlName="distributionCondition">
-          <mat-option></mat-option>
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
+          <mat-option value="replaceable">Replceable</mat-option>
           <mat-option value="not_working">Not working</mat-option>
           <mat-option value="obsolete">Obsolete</mat-option>
         </mat-select>
@@ -1398,9 +1424,9 @@
         <mat-form-field fxFlex="24">
           <mat-label>Material handling system</mat-label> 
           <mat-select formControlName="materialHandlingSystemCondition">
-            <mat-option></mat-option>
             <mat-option value="working">Working</mat-option>
             <mat-option value="repairable">Incomplete/Repairable</mat-option>
+            <mat-option value="replaceable">Replceable</mat-option>
             <mat-option value="not_working">Not working</mat-option>
             <mat-option value="obsolete">Obsolete</mat-option>
           </mat-select>
