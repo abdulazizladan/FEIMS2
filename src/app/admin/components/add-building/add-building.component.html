@@ -9,8 +9,9 @@
   <span fxFlex="1 1 auto">
   
   </span>
-  <button mat-fab color="warn" mat-dialog-close>
-    <mat-icon >close</mat-icon>
+
+  <button mat-icon-button color="warn" aria-label="close dialog" mat-dialog-close>
+    <mat-icon>close</mat-icon>
   </button>
 </h2>
 
@@ -28,7 +29,7 @@
 
           <legend>Basic info</legend>
 
-          <mat-form-field fxFlex="30%">
+          <mat-form-field fxFlex="30%" appearance="outline">
             <mat-label>Facility type</mat-label>
             <mat-select formControlName="facilityType" name="facilityType">
               <mat-option></mat-option>
@@ -1417,8 +1418,8 @@
       
       <div>
         <button matStepperPrevious mat-flat-button color="primary">Previous</button>
-        <!--<span fxFlex="1 1 auto"></span>
-        <button mat-flat-button color="primary" (click)="addBuilding()">Submit</button>-->
+        <span fxFlex="1 1 auto"></span>
+        <button mat-flat-button color="primary" (click)="addBuilding()">Submit</button>
       </div>
       </div>
 
@@ -1430,7 +1431,7 @@
  
 </mat-horizontal-stepper>
 </mat-dialog-content>
-<mat-dialog-actions>
+<!--<mat-dialog-actions>
   <span fxFlex="1 1 auto"></span>
   <button [disabled]="tenthFormGroup.invalid" mat-flat-button color="primary">Submit building data</button>
-</mat-dialog-actions>
+</mat-dialog-actions>-->
