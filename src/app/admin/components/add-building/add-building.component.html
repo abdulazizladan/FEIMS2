@@ -21,7 +21,75 @@
   <mat-step label="faux step">
     
     <mat-accordion>
-      <mat-expansion-panel>
+      <!--panel 001 -->
+      <mat-expansion-panel [expanded]="expansion1Step === 0" (opened)="set1Step(0)" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Step 1
+          </mat-panel-title>
+          <mat-panel-description>
+            Description
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
+          
+          <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
+  
+            <legend>Basic info</legend>
+  
+            <mat-form-field fxFlex="30%" appearance="outline">
+              <mat-label>Facility type</mat-label>
+              <mat-select>
+                <mat-option></mat-option>
+                <mat-option value="lab">Laboratory</mat-option>
+                <mat-option value="lt">Lecture Theatre</mat-option>
+                <mat-option value="fclt">Faculty Complex</mat-option>
+              </mat-select>
+            </mat-form-field>
+  
+            <mat-form-field fxFlex="22%" appearance="outline">
+              <mat-label>Structure type</mat-label>
+              <input type="text" matInput>
+            </mat-form-field>
+  
+            <mat-form-field fxFlex="22%" appearance="outline">
+              <mat-label>Facility name</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+  
+
+  
+          </fieldset> 
+              
+              
+        </div>
+        <mat-action-row>
+          <button mat-flat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- panel 002 -->
+      <mat-expansion-panel  [expanded]="expansion1Step === 1" (opened)="set1Step(1)" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Step 2
+          </mat-panel-title>
+          <mat-panel-description>
+            Description
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <mat-label>Input field</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+        <mat-action-row>
+          <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
+          <button mat-flat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- panel 003 -->
+      <mat-expansion-panel [expanded]="expansion1Step === 2" (opened)="set1Step(2)" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Step
@@ -31,14 +99,16 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-action-row>
-          <button mat-flat-button color="primary">Next</button>
+          <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
+          <button mat-flat-button color="primary" matStepperNext>Next</button>
         </mat-action-row>
       </mat-expansion-panel>
+      
     </mat-accordion>
 
     <div style="margin-top: 50px;">
       <span fxFlex="1 1 auto"></span>
-      <button mat-flat-button matStepperNext color="primary">Next</button>
+      <!--<button mat-flat-button matStepperNext color="primary">Next</button>-->
     </div>
 
   </mat-step>

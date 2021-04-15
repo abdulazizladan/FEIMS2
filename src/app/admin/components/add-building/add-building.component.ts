@@ -21,6 +21,24 @@ export class AddBuildingComponent implements OnInit {
   public ninthFormGroup: FormGroup;//Elevators
   public tenthFormGroup: FormGroup;//Services
 
+  expansion1Step: number = 0;
+
+  set1Step( index: number){
+    this.expansion1Step = index;
+  }
+
+  nextStep(){
+    this.expansion1Step++; 
+  }
+
+  prevStep(){
+    this.expansion1Step--; 
+  }
+
+  previousStep(){
+
+  }
+
   constructor( private buildingService: BuildingService, private fb: FormBuilder) { 
     
   }
