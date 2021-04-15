@@ -98,23 +98,19 @@
             <input matInput type="number" formControlName="yearLastDecorated">
           </mat-form-field>
 
-        </fieldset>  
+          <mat-form-field fxFlex="30%">
+            <mat-label>Longitude</mat-label>
+            <input matInput type="number" formControlName="facilityLongitude">
+          </mat-form-field>
 
-          <fieldset fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid" fxLayoutAlign="center">
-            
-            <legend>Building location</legend>
-            
-            <mat-form-field fxFlex="30%">
-              <mat-label>GIS longitude</mat-label>
-              <input matInput type="number" formControlName="facilityLongitude">
-            </mat-form-field>
+          <mat-form-field fxFlex="30%">
+            <mat-label>Latitude</mat-label>
+            <input matInput type="number" formControlName="facilityLatitude">
+          </mat-form-field>
 
-            <mat-form-field fxFlex="30%">
-              <mat-label>GIS latitude</mat-label>
-              <input matInput type="number" formControlName="facilityLatitude">
-            </mat-form-field>
-          
-          </fieldset>
+        </fieldset> 
+            
+            
       </div>
     </form>
     
