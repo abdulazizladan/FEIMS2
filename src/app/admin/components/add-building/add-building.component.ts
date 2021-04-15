@@ -21,7 +21,9 @@ export class AddBuildingComponent implements OnInit {
   public ninthFormGroup: FormGroup;//Elevators
   public tenthFormGroup: FormGroup;//Services
 
-  constructor( private buildingService: BuildingService, private fb: FormBuilder) { }
+  constructor( private buildingService: BuildingService, private fb: FormBuilder) { 
+    
+  }
 
   ngOnInit(): void{
     // 01 Building survey
@@ -118,6 +120,12 @@ export class AddBuildingComponent implements OnInit {
       ventilationSystemRepairCost: [0, []],
       airConditioningCondition: ['', []],
       airConditioningRepairCost: [0, []],
+      furnitureMaterial: ['', [Validators.required]],
+      furnitureFinishes: ['', [Validators.required]],
+      furnitureCondition: ['', [Validators.required]],
+      furnitureRepairCost: ['', []],  
+      materialHandlingSystemCondition: ['', []],
+      materialHandlingSystemRepairCost: [0, []],
       temperatureControlCondition: ['', []],
       temperatureControlRepairCost: [0, []],
       hotWaterCondition: ['', []],
@@ -129,11 +137,7 @@ export class AddBuildingComponent implements OnInit {
       gasPipingCondition: ['', []],
       gasPipingRepairCost: [0, []],
       compressedAirCondition: ['', []],
-      compressedAirRepairCost: [0,[]],
-      furnitureMaterial: ['', [Validators.required]],
-      furnitureFinishes: ['', [Validators.required]],
-      furnitureCondition: ['', [Validators.required]],
-      furnitureRepairCost: ['', []]    
+      compressedAirRepairCost: [0,[]],  
     })
     // 08 Structure
     this.eighthFormGroup = this.fb.group({
@@ -178,11 +182,10 @@ export class AddBuildingComponent implements OnInit {
       drainageCondition: ['', []],
       drainageRepairCost: [0, []],  
       distributionCondition: ['', []],
-      distributionRepairCost: [0, []],
-      materialHandlingSystemCondition: ['', []],
-      materialHandlingSystemRepairCost: [0, []],
+      distributionRepairCost: [0, []]
     })
 
+    console.log(this.thirdFormGroup)
   }
 
   ngOnDestroy(){
