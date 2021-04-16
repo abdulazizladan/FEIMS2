@@ -5,6 +5,34 @@ import { Subscription } from "rxjs";
 import { ILayoutConf, LayoutService } from "app/shared/services/layout.service";
 import { JwtAuthService } from "app/shared/services/auth/jwt-auth.service";
 
+export interface User{
+  token: string;
+  user: {
+    address: string;
+    createdAt: string;
+    dob: string;
+    email: string;
+    fName: string;
+    fullName: string;
+    institution: {
+      type: string; 
+      name: string;
+    }
+    interests: []
+    lName: string;
+    password: string;
+    phone: string;
+    specialization: []
+    status: string;
+    totalUploads: number;
+    updatedAt: string;
+    userRole: string;
+    userType: string;
+    __v: number;
+    _id: string;
+  }
+}
+
 @Component({
   selector: "app-sidebar-side",
   templateUrl: "./sidebar-side.component.html"
@@ -15,7 +43,8 @@ export class SidebarSideComponent implements OnInit, OnDestroy, AfterViewInit {
   public iconTypeMenuTitle: string;
   private menuItemsSub: Subscription;
   public layoutConf: ILayoutConf;
-  public user: {};
+  public user: User;
+  //public user: {} | any;
 
   constructor(
     private navService: NavigationService,
