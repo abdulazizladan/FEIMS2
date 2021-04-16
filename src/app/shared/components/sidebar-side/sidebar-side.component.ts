@@ -15,6 +15,7 @@ export class SidebarSideComponent implements OnInit, OnDestroy, AfterViewInit {
   public iconTypeMenuTitle: string;
   private menuItemsSub: Subscription;
   public layoutConf: ILayoutConf;
+  public user: {};
 
   constructor(
     private navService: NavigationService,
@@ -33,6 +34,7 @@ export class SidebarSideComponent implements OnInit, OnDestroy, AfterViewInit {
       ).length;
     });
     this.layoutConf = this.layout.layoutConf;
+    this.user = JSON.parse(localStorage.getItem("auth"));
   }
   ngAfterViewInit() {}
   ngOnDestroy() {
