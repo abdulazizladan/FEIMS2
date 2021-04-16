@@ -515,7 +515,7 @@ EgretExampleViewerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/abdulaziz/Documents/WIP/Developer/FEIMS2.0/src/main.ts */"zUnb");
+module.exports = __webpack_require__(/*! /home/abdulaziz/Documents/WIP/programmer/FEIMS/src/main.ts */"zUnb");
 
 
 /***/ }),
@@ -978,6 +978,64 @@ const config = {
         guest: ['SA', 'Admin', 'Editor', 'User', 'Guest'] // Everyone has access
     }
 };
+
+
+/***/ }),
+
+/***/ "25rQ":
+/*!*********************************************************************************!*\
+  !*** ./src/app/admin/components/building-summary/building-summary.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: BuildingSummaryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BuildingSummaryComponent", function() { return BuildingSummaryComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
+/* harmony import */ var _shared_animations_egret_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../shared/animations/egret-animations */ "GmJt");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/card */ "PDjf");
+/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/list */ "SqCe");
+
+
+
+
+
+const _c0 = function () { return { delay: "600ms", scale: ".9" }; };
+const _c1 = function (a1) { return { value: "*", params: a1 }; };
+class BuildingSummaryComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+BuildingSummaryComponent.ɵfac = function BuildingSummaryComponent_Factory(t) { return new (t || BuildingSummaryComponent)(); };
+BuildingSummaryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BuildingSummaryComponent, selectors: [["app-building-summary"]], decls: 9, vars: 4, template: function BuildingSummaryComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Building: name ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "mat-card-subtitle");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mat-card-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-list");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "mat-list-item");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "mat-card-actions");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](2, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](1, _c0)));
+    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardContent"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatListItem"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardActions"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidWlsZGluZy1zdW1tYXJ5LmNvbXBvbmVudC5zY3NzIn0= */"], data: { animation: _shared_animations_egret_animations__WEBPACK_IMPORTED_MODULE_1__["egretAnimations"] } });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BuildingSummaryComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-building-summary',
+                templateUrl: './building-summary.component.html',
+                styleUrls: ['./building-summary.component.scss'],
+                animations: _shared_animations_egret_animations__WEBPACK_IMPORTED_MODULE_1__["egretAnimations"]
+            }]
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
@@ -1952,16 +2010,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_building_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/building.service */ "gPaL");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "s7LF");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/dialog */ "iELJ");
-/* harmony import */ var _angular_material_stepper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/stepper */ "hzfI");
-/* harmony import */ var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/flex-layout/flex */ "VDRc");
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/form-field */ "Q2Ze");
-/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/select */ "ZTz/");
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/core */ "UhP/");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/input */ "e6WT");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/button */ "Dxy4");
-/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/radio */ "zQhy");
-/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/checkbox */ "pMoy");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/icon */ "Tj54");
+/* harmony import */ var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/flex-layout/flex */ "VDRc");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/button */ "Dxy4");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/icon */ "Tj54");
+/* harmony import */ var _angular_material_stepper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/stepper */ "hzfI");
+/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/expansion */ "o4Yh");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/form-field */ "Q2Ze");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/select */ "ZTz/");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/core */ "UhP/");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/input */ "e6WT");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common */ "SVse");
+/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/radio */ "zQhy");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/checkbox */ "pMoy");
 
 
 
@@ -1979,288 +2039,612 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+function AddBuildingComponent_mat_form_field_278_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 198);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_302_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 199);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_326_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 200);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_350_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 201);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_460_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 202);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_484_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 203);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_517_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 204);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_541_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 205);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_565_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 206);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_583_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 207);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_603_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 208);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_630_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 209);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_656_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 210);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_674_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 211);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_692_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 212);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_708_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 213);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_732_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 214);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_750_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 195);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_768_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 215);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_786_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 216);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_804_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 217);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_822_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 218);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_840_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 219);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_858_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 220);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_891_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 221);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_915_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 222);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_939_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 223);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_962_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 224);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_985_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 225);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_1090_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Estimated cost");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 226);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_1108_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 227);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function AddBuildingComponent_mat_form_field_1126_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-form-field", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Cost of repair");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 228);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 196);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "\u20A6");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ".00");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
 class AddBuildingComponent {
     constructor(buildingService, fb) {
         this.buildingService = buildingService;
         this.fb = fb;
+        this.expansion1Step = 0;
+    }
+    set1Step(index) {
+        this.expansion1Step = index;
+    }
+    nextStep() {
+        this.expansion1Step++;
+    }
+    prevStep() {
+        this.expansion1Step--;
+    }
+    previousStep() {
     }
     ngOnInit() {
+        // 01 Building survey
         this.firstFormGroup = this.fb.group({
-            facilityType: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityName: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityCode: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityDescription: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityStructure: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityPurpose: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            numberOfStoreys: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityStatus: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityDateBuilt: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityDatePurchased: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityLongitude: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            facilityLatitude: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]]
+            facilityType: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityCode: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityDescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityStructure: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityPurpose: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            numberOfStoreys: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityStatus: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityDateBuilt: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityDatePurchased: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityLongitude: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            facilityLatitude: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            structureType: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            yearLastDecorated: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
         });
+        // 02 Building Dimensions
         this.secondFormGroup = this.fb.group({
-            buildingFloorArea: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingHeadroom: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            numberOfFloors: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            superStructure: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorStructure: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorCovering: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            windows: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            exteriorWall: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            paintCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            mortarCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            structureType: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            yearLastDecorated: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorJointsMaterials: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorJointsFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorJointsCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorJointsRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            ceilingMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            ceilingFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            ceilingCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            ceilingRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            fanLightMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            fanLightFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            fanLightCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            fanLightRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            doorsMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            doorsFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            doorsCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            doorsRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            roofStyleShape: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            roofTrussType: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            roofDeckingMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            trimMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            trimFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            trimCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            trimRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            foundationMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            foundationFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            foundationCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            foundationRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorSlabsMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorSlabsFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorSlabsCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            floorSlabsRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            frameMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            frameFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            frameCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            frameRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingFacadeMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingFacadeFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingFacadeCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingFacadeRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingWindowsMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingWindowsFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingWindowsCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            buildingWindowsRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            corridorsMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            corridorsFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            corridorsCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            corridorsRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            glazingMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            glazingFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            glazingCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            glazingRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            partitionsMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            partitionsFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            partitionsCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            partitionsRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            entrancesMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            entrancesFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            entrancesCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            entrancesRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            serviceDuctMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            serviceDuctFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            serviceDuctCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            serviceDuctRepairCost: [0, [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            furnitureMaterial: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            furnitureFinishes: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            furnitureCondition: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
-            furnitureRepairCost: ['', [
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required
-                ]],
+            buildingFloorArea: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingHeadroom: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            numberOfFloors: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            superStructure: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorStructure: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorCovering: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            windows: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]]
+        });
+        // 03 Walls and Floors
+        this.thirdFormGroup = this.fb.group({
+            partitionsMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            partitionsFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            partitionsCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            partitionsRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            exteriorWall: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            paintCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            foundationMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            foundationFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            foundationCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            foundationRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorSlabsMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorSlabsFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorSlabsCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorSlabsRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorJointsMaterials: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorJointsFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorJointsCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            floorJointsRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            mortarCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+        });
+        // 05 Roof & Ceiling
+        this.fifthFormGroup = this.fb.group({
+            roofStyleShape: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            roofTrussType: ['', []],
+            roofDeckingMaterial: ['', []],
+            roofOpeningsCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            roofOpeningsRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            ceilingMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            ceilingFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            ceilingCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            ceilingRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]]
+        });
+        // 06 Doors & Windows
+        this.sixthFormGroup = this.fb.group({
+            doorsMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            doorsFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            doorsCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            doorsRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingWindowsMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingWindowsFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingWindowsCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingWindowsRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            glazingMaterial: ['', []],
+            glazingFinishes: ['', []],
+            glazingCondition: ['', []],
+            glazingRepairCost: [0, []],
+            burglarProofCondition: ['', []],
+            burglarProofRepairCost: [0, []],
+            gatesCondition: ['', []],
+            gatesRepairCost: [0, []]
+        });
+        // 07 Facilities
+        this.seventhFormGroup = this.fb.group({
+            roofLightsCondition: ['', []],
+            roofLightsRepairCost: ['', []],
+            fanLightMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            fanLightFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            fanLightCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            fanLightRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            airQualityCondition: ['', []],
+            airQualityRepairCost: [0, []],
+            ventilationSystemCondition: ['', []],
+            ventilationSystemRepairCost: [0, []],
+            airConditioningCondition: ['', []],
+            airConditioningRepairCost: [0, []],
+            furnitureMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            furnitureFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            furnitureCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            furnitureRepairCost: ['', []],
+            materialHandlingSystemCondition: ['', []],
+            materialHandlingSystemRepairCost: [0, []],
+            temperatureControlCondition: ['', []],
+            temperatureControlRepairCost: [0, []],
+            hotWaterCondition: ['', []],
+            hotWaterRepairCost: [0, []],
+            coldWaterCondition: ['', []],
+            coldWaterRepairCost: [0, []],
+            gasTanksCondition: ['', []],
+            gasTanksRepairCost: [0, []],
+            gasPipingCondition: ['', []],
+            gasPipingRepairCost: [0, []],
+            compressedAirCondition: ['', []],
+            compressedAirRepairCost: [0, []],
+        });
+        // 08 Structure
+        this.eighthFormGroup = this.fb.group({
+            trimMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            trimFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            trimCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            trimRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            frameMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            frameFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            frameCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            frameRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingFacadeMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingFacadeFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingFacadeCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            buildingFacadeRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            corridorsMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            corridorsFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            corridorsCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            corridorsRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            entrancesMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            entrancesFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            entrancesCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            entrancesRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]]
+        });
+        // 09 Elevator
+        this.ninthFormGroup = this.fb.group({
             elevatorsCount: [0, []],
             elevatorType: ['', []],
             elevatorKeyLocation: ['', []],
@@ -2270,1821 +2654,1951 @@ class AddBuildingComponent {
             elevatorEmergencyShutoffLocation: ['', []],
             elevatorExit: ['', []]
         });
-        this.thirdFormGroup = this.fb.group({
-            roofLightsCondition: ['', []],
-            roofLightsRepairCost: ['', []],
-            airQualityCondition: ['', []],
-            airQualityRepairCost: [0, []],
-            ventilationSystemCondition: ['', []],
-            ventilationSystemRepairCost: [0, []],
-            airConditioningCondition: ['', []],
-            airConditioningRepairCost: [0, []],
-            materialHandlingSystemCondition: ['', []],
-            materialHandlingSystemRepairCost: [0, []],
-            roofOpeningsCondition: ['', []],
-            roofOpeningsRepairCost: [0, []],
-            temperatureControlCondition: ['', []],
-            temperatureControlRepairCost: [0, []],
-            hotWaterCondition: ['', []],
-            hotWaterRepairCost: [0, []],
-            burglarProofCondition: ['', []],
-            burglarProofRepairCost: [0, []],
-            gatesCondition: ['', []],
-            gatesRepairCost: [0, []],
+        // 10 Services
+        this.tenthFormGroup = this.fb.group({
+            serviceDuctMaterial: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            serviceDuctFinishes: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            serviceDuctCondition: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            serviceDuctRepairCost: [0, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
             drainageCondition: ['', []],
             drainageRepairCost: [0, []],
             distributionCondition: ['', []],
-            distributionRepairCost: [0, []],
-            coldWaterCondition: ['', []],
-            coldWaterRepairCost: [0, []],
-            gasTanksCondition: ['', []],
-            gasTanksRepairCost: [0, []],
-            gasPipingCondition: ['', []],
-            gasPipingRepairCost: [0, []],
-            compressedAirCondition: ['', []],
-            compressedAirRepairCost: [0, []]
+            distributionRepairCost: [0, []]
         });
+        console.log(this.thirdFormGroup);
     }
     ngOnDestroy() {
     }
     addBuilding() {
-        this.buildingService.addBuilding(this.addBuildingForm.value).subscribe(
-        //res=>{
-        //  console.log(this.firstFormGroup.value)
-        //},err=>{
-        //  console.log("error submitting form data.")
-        //}
-        );
-    }
-    addBuildings() {
-        console.log(this.firstFormGroup.value);
+        //this.buildingService.addBuilding(this.firstFormGroup.value).subscribe(
+        // res=>{
+        //    console.log("Adding building")
+        //  },err=>{
+        //    console.log("Unable to add building")
+        //  }
+        //)
     }
 }
 AddBuildingComponent.ɵfac = function AddBuildingComponent_Factory(t) { return new (t || AddBuildingComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_building_service__WEBPACK_IMPORTED_MODULE_1__["BuildingService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"])); };
-AddBuildingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AddBuildingComponent, selectors: [["app-add-building"]], decls: 1130, vars: 6, consts: [["mat-dialog-title", ""], ["labelPosition", "bottom", "linear", ""], ["stepper", ""], ["label", "Building survey", 3, "stepControl"], [3, "formGroup"], ["fxLayout.xs", "column", "fxLayout.gt-xs", "row wrap", "fxLayoutGap", "20px grid"], ["formControlName", "facilityType", "name", "facilityType"], ["value", ""], ["value", "lab"], ["value", "lt"], ["value", "fclt"], ["fxFlex.gt-xs", "320px"], ["matInput", "", "type", "text", "formControlName", "facilityName"], ["fxFlex", "120px"], ["matInput", "", "type", "text", "formControlName", "facilityCode"], ["fxFlex", "1 1 auto", "fxFlex.gt-xs", "320px"], ["matInput", "", "type", "text", "formControlName", "facilityDescription"], ["matInput", "", "type", "text", "formControlName", "facilityStructure"], ["xFlex.gt-xs", "320px"], ["matInput", "", "type", "text", "formControlName", "facilityPurpose"], ["matInput", "", "type", "number", "formControlName", "numberOfStoreys"], ["formControlName", "facilityStatus", "name", "facilityStatus"], ["value", "good"], ["value", "abandoned"], ["value", "repairable"], ["matInput", "", "type", "date", "formControlName", "facilityDateBuilt"], ["matInput", "", "type", "date", "formControlName", "facilityDatePurchased"], ["matInput", "", "type", "number", "formControlName", "facilityLongitude"], ["matInput", "", "type", "number", "formControlName", "facilityLatitude"], ["fxFlex", "1 1 auto"], ["mat-flat-button", "", "matStepperNext", "", "color", "primary"], ["label", "Structure and interior", 3, "stepControl"], ["fxLayoutGap", "25px", "fxLayout", "column"], ["fxLayout", "row wrap", "fxLayoutGap", "10px grid"], ["matSuffix", ""], ["matInput", "", "type", "number", "formControlName", "buildingFloorArea", "required", ""], ["matInput", "", "type", "number", "formControlName", "buildingHeadroom", "required", ""], ["matInput", "", "type", "number", "formControlName", "numberOfFloors", "required", ""], ["formControlName", "superStructure", "required", ""], ["value", "metal"], ["value", "wood"], ["value", "sheetrock"], ["value", "plaster"], ["value", "concrete"], ["value", "brick"], ["value", "paneling"], ["value", "other"], ["formControlName", "floorStructure", "required", ""], ["formControlName", "floorCovering", "required", ""], ["value", "carpet"], ["value", "vinyl"], ["formControlName", "windows", "required", ""], ["value", "wire_glass"], ["value", "glass_block"], ["value", "plate"], ["value", "tempered"], ["value", "operating"], ["value", "fixed"], ["formControlName", "exteriorWall", "required", ""], ["value", "concrete_wall"], ["value", "150mm"], ["value", "225mm"], ["formControlName", "paintCondition", "required", ""], ["value", "fair"], ["value", "poor"], ["formControlName", "mortarCondition", "required", ""], ["formControlName", "structureType", "required", ""], ["value", "frame"], ["value", "load bearing"], ["matInput", "", "formControlName", "yearLastDecorated", "type", "number"], ["formControlName", "floorJointsMaterials", "matInput", "", "type", "text"], ["formControlName", "floorJointsFinishes", "matInput", "", "type", "text"], ["formControlName", "floorJointsCondition", "matInput", "", "type", "text"], ["matInput", "", "formControlName", "floorJointsRepairCost", "type", "text"], ["matPrefix", ""], ["formControlName", "ceilingMaterial", "matInput", "", "type", "text"], ["formControlName", "ceilingFinishes", "matInput", "", "type", "text"], ["formControlName", "ceilingCondition", "matInput", "", "type", "text"], ["matInput", "", "formControlName", "ceilingRepairCost", "type", "text"], ["formControlName", "fanLightMaterial", "matInput", "", "type", "text"], ["formControlName", "fanLightFinishes", "matInput", "", "type", "text"], ["formControlName", "fanLightCondition", "matInput", "", "type", "text"], ["formControlName", "fanLightRepairCost", "matInput", "", "type", "text"], ["formControlName", "doorsMaterial", "matInput", "", "type", "number"], ["formControlName", "doorsFinishes", "matInput", "", "type", "number"], ["formControlName", "doorsCondition", "matInput", "", "type", "number"], ["formControlName", "doorsRepairCost", "matInput", "", "type", "number"], ["formControlName", "roofStyleShape"], ["value", "flat"], ["value", "pitched"], ["value", "arched"], ["value", "butterfly"], ["value", "hip"], ["value", "gambrel"], ["value", "mansard"], ["value", "monitor"], ["value", "shed"], ["value", "dome"], ["value", "gable"], ["formControlName", "roofTrussType", "matInput", "", "type", "text"], ["formControlName", "roofDeckingMaterial"], ["formControlName", "trimMaterial", "matInput", "", "type", "text"], ["formControlName", "trimFinishes", "matInput", "", "type", "text"], ["formControlName", "trimCondition", "matInput", "", "type", "text"], ["formControlName", "trimRepairCost", "matInput", "", "type", "number"], ["formControlName", "foundationMaterial", "matInput", "", "type", "text"], ["formControlName", "foundationFinishes", "matInput", "", "type", "text"], ["formControlName", "foundationCondition", "matInput", "", "type", "text"], ["formControlName", "foundationRepairCost", "matInput", "", "type", "number"], ["formControlName", "floorSlabsMaterial", "matInput", "", "type", "text"], ["formControlName", "floorSlabsFinishes", "matInput", "", "type", "text"], ["formControlName", "floorSlabsCondition", "matInput", "", "type", "text"], ["formControlName", "floorSlabsRepairCost", "matInput", "", "type", "number"], ["formControlName", "frameMaterial", "matInput", "", "type", "text"], ["formControlName", "frameFinishes", "matInput", "", "type", "text"], ["formControlName", "frameCondition", "matInput", "", "type", "text"], ["formControlName", "frameRepairCost", "matInput", "", "type", "text"], ["formControlName", "buildingFacadeMaterial", "matInput", "", "type", "text"], ["formControlName", "buildingFacadeFinishes", "matInput", "", "type", "text"], ["formControlName", "buildingFacadeCondition", "matInput", "", "type", "text"], ["formControlName", "buildingFacadeRepairCost", "matInput", "", "type", "text"], ["formControlName", "buildingWindowsMaterial", "matInput", "", "type", "text"], ["formControlName", "buildingWindowsFinishes", "matInput", "", "type", "text"], ["formControlName", "buildingWindowsCondition", "matInput", "", "type", "text"], ["formControlName", "buildingWindowsRepairCost", "matInput", "", "type", "text"], ["formControlName", "corridorsMaterial", "matInput", "", "type", "text"], ["formControlName", "corridorsFinishes", "matInput", "", "type", "text"], ["formControlName", "corridorsCondition", "matInput", "", "type", "text"], ["formControlName", "corridorsRepairCost", "matInput", "", "type", "text"], ["formControlName", "glazingMaterial", "matInput", "", "type", "text"], ["formControlName", "glazingFinishes", "matInput", "", "type", "text"], ["formControlName", "glazingCondition", "matInput", "", "type", "text"], ["formControlName", "glazingRepairCost", "matInput", "", "type", "text"], ["formControlName", "partitionsMaterial", "matInput", "", "type", "text"], ["formControlName", "partitionsFinishes", "matInput", "", "type", "text"], ["formControlName", "partitionsCondition", "matInput", "", "type", "text"], ["formControlName", "partitionsRepairCost", "matInput", "", "type", "text"], ["formControlName", "entrancesMaterial", "matInput", "", "type", "text"], ["formControlName", "entrancesFinishes", "matInput", "", "type", "text"], ["formControlName", "entrancesCondition", "matInput", "", "type", "text"], ["formControlName", "entrancesRepairCost", "matInput", "", "type", "text"], ["formControlName", "serviceDuctMaterial", "matInput", "", "type", "text"], ["formControlName", "serviceDuctFinishes", "matInput", "", "type", "text"], ["formControlName", "serviceDuctCondition", "matInput", "", "type", "text"], ["formControlName", "serviceDuctRepairCost", "matInput", "", "type", "text"], ["formControlName", "furnitureMaterial", "matInput", "", "type", "text"], ["formControlName", "furnitureFinishes", "matInput", "", "type", "text"], ["formControlName", "furnitureCondition", "matInput", "", "type", "text"], ["formControlName", "furnitureRepairCost", "matInput", "", "type", "text"], ["fxLayout", "column", "fxLayoutGap", "10px grid"], ["formControlName", "elevatorsCount", "matInput", "", "type", "number"], [2, "padding", "10px"], [1, "mat-title"], ["formControlName", "elevatorType"], ["value", "electric", 2, "margin-left", "16px"], ["value", "hydraulic", 2, "margin-left", "16px"], ["value", "electricEye"], ["value", "heatSensor"], ["formControlName", "elevatorKeyLocation", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorBrandName", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorServiceCompany", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorServicePhoneNumber", "matInput", "", "type", "tel", "required", ""], ["formControlName", "elevatorEmergencyShutoffLocation", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorExit"], ["value", "top"], ["value", "side"], ["value", "dumb_waiter"], ["value", "laundry_chute"], ["value", "trash_chute"], ["mat-flat-button", "", "matStepperPrevious", "", "color", "primary"], ["label", "Services", 3, "stepControl"], ["formControlName", "roofLightsCondition"], ["value", "working"], ["value", "not_working"], ["value", "obsolete"], ["matInput", "", "type", "number", "formControlName", "roofLightsRepairCost"], ["formControlName", "airQualityCondition"], ["matInput", "", "type", "number", "formControlName", "airQualityRepairCost"], ["formControlName", "ventilationSystemCondition"], ["formControlName", "ventilationSystemRepairCost", "matInput", "", "type", "number"], ["formControlName", "airConditioningCondition"], ["matInput", "", "type", "number", "formControlName", "airConditioningRepairCost"], ["matInput", "", "type", "number"], ["formControlName", "roofOpeningsCondition"], ["formControlName", "roofOpeningsRepairCost", "matInput", "", "type", "number"], ["formControlName", "temperatureControlCondition"], ["formControlName", "temperatureControlRepairCost", "matInput", "", "type", "number"], ["formControlName", "hotWaterCondition"], ["formControlName", "hotWaterRepairCost", "matInput", "", "type", "number"], ["burglarProofCondition", ""], ["formControlName", "burglarProofRepairCost", "matInput", "", "type", "number"], ["formControlName", "gatesCondition"], ["formControlName", "gatesRepairCost", "matInput", "", "type", "number"], ["formControlName", "drainageCondition"], ["formControlName", "drainageRepairCost", "matInput", "", "type", "number"], ["formControlName", "distributionCondition"], ["formControlName", "distributionRepairCost", "matInput", "", "type", "number"], ["formControlName", "coldWaterCondition"], ["formControlName", "coldWaterRepairCost", "matInput", "", "type", "number"], ["formControlName", "gasTanksCondition"], ["formControlName", "gasTanksRepairCost", "matInput", "", "type", "number"], ["formControlName", "gasPipingCondition"], ["formControlName", "gasPipingRepairCost", "matInput", "", "type", "number"], ["formControlName", "compressedAirCondition"], ["formControlName", "compressedAirRepairCost", "matInput", "", "type", "number"], ["matStepperPrevious", "", "mat-flat-button", "", "color", "primary"], ["mat-flat-button", "", "color", "primary", 3, "click"], ["align", "end"], ["mat-button", "", "mat-dialog-close", ""], ["mat-button", "", "color", "primary"]], template: function AddBuildingComponent_Template(rf, ctx) { if (rf & 1) {
+AddBuildingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AddBuildingComponent, selectors: [["app-add-building"]], decls: 1158, vars: 53, consts: [["mat-dialog-title", ""], ["fxFlex", "1 1 auto"], ["mat-icon-button", "", "color", "warn", "aria-label", "close dialog", "mat-dialog-close", ""], ["labelPosition", "bottom", "linear", ""], ["stepper", ""], ["label", "faux step"], ["hideToggle", "", 3, "expanded", "opened"], ["fxLayout", "column", "fxLayoutGap", "10px", "fxLayoutAlign", "center"], ["fxLayout", "row wrap", "fxLayoutGap", "10px grid"], ["fxFlex", "30%", "appearance", "outline"], ["value", "lab"], ["value", "lt"], ["value", "fclt"], ["fxFlex", "22%", "appearance", "outline"], ["type", "text", "matInput", ""], ["matInput", "", "type", "text"], ["mat-flat-button", "", "color", "primary", 3, "click"], ["mat-flat-button", "", "color", "primary", "matStepperNext", ""], [2, "margin-top", "50px"], ["label", "Building survey", 3, "stepControl"], ["fxLayout", "column"], ["fxFlex", "1 1 auto", 3, "formGroup"], ["formControlName", "facilityType", "name", "facilityType"], ["fxFlex", "22%"], ["type", "text", "matInput", "", "formControlName", "structureType"], ["matInput", "", "type", "text", "formControlName", "facilityName"], ["matInput", "", "type", "text", "formControlName", "facilityCode"], ["matInput", "", "type", "text", "formControlName", "facilityDescription"], ["matInput", "", "type", "text", "formControlName", "facilityStructure"], ["matInput", "", "type", "text", "formControlName", "facilityPurpose"], ["matInput", "", "type", "number", "formControlName", "numberOfStoreys"], ["formControlName", "facilityStatus", "name", "facilityStatus"], ["focus", "", "value", "good"], ["value", "abandoned"], ["value", "repairable"], ["matInput", "", "type", "date", "formControlName", "facilityDateBuilt"], ["matInput", "", "type", "date", "formControlName", "facilityDatePurchased"], ["matInput", "", "type", "number", "formControlName", "yearLastDecorated"], ["fxFlex", "30%"], ["matInput", "", "type", "number", "formControlName", "facilityLongitude"], ["matInput", "", "type", "number", "formControlName", "facilityLatitude"], ["mat-flat-button", "", "matStepperNext", "", "color", "primary"], ["label", "Building Dimensions", 3, "stepControl"], [3, "formGroup"], ["fxLayout", "column", "fxLayoutGap", "10px"], ["fxLayout.xs", "column", "fxLayout.gt-xs", "row wrap", "fxLayoutGap", "10px grid"], ["fxFlex", "24%"], ["matSuffix", ""], ["matInput", "", "type", "number", "formControlName", "buildingFloorArea", "required", ""], ["matInput", "", "type", "number", "formControlName", "buildingHeadroom", "required", ""], ["matInput", "", "type", "number", "formControlName", "numberOfFloors", "required", ""], ["formControlName", "superStructure", "required", ""], ["value", "metal"], ["value", "wood"], ["value", "sheetrock"], ["value", "plaster"], ["value", "concrete"], ["value", "brick"], ["value", "paneling"], ["value", "other"], ["formControlName", "floorStructure", "required", ""], ["formControlName", "floorCovering", "required", ""], ["value", "carpet"], ["value", "vinyl"], ["formControlName", "windows", "required", ""], ["value", "wire_glass"], ["value", "glass_block"], ["value", "plate"], ["value", "tempered"], ["value", "operating"], ["value", "fixed"], ["mat-flat-button", "", "matStepperPrevious", "", "color", "primary"], ["label", "Walls & Floor", 3, "stepControl"], ["formControlName", "partitionsMaterial", "matInput", "", "type", "text"], ["formControlName", "partitionsFinishes", "matInput", "", "type", "text"], ["formControlName", "partitionsCondition", "name", "partitionsCondition"], ["value", "good"], ["value", "replaceable"], ["fxFlex", "24%", 4, "ngIf"], ["formControlName", "foundationMaterial", "matInput", "", "type", "text"], ["formControlName", "foundationFinishes", "matInput", "", "type", "text"], ["formControlName", "foundationCondition", "name", "foundationCondition"], ["formControlName", "floorSlabsMaterial", "matInput", "", "type", "text"], ["formControlName", "floorSlabsFinishes", "matInput", "", "type", "text"], ["formControlName", "floorSlabsCondition", "name", "floorSlabsCondition"], ["formControlName", "floorJointsMaterials", "matInput", "", "type", "text"], ["fxFlex", "%"], ["formControlName", "floorJointsFinishes", "matInput", "", "type", "text"], ["formControlName", "floorJointsCondition", "name", "floorJointsCondition"], ["formControlName", "exteriorWall", "required", ""], ["value", ""], ["value", "concrete_wall"], ["value", "150mm"], ["value", "225mm"], ["formControlName", "paintCondition", "required", ""], ["value", "fair"], ["value", "poor"], ["formControlName", "mortarCondition", "required", ""], [2, "margin-top", "30px"], ["label", "Roof & Ceiling", 3, "stepControl"], ["formControlName", "roofStyleShape"], ["value", "flat"], ["value", "pitched"], ["value", "arched"], ["value", "butterfly"], ["value", "hip"], ["value", "gambrel"], ["value", "mansard"], ["value", "monitor"], ["value", "shed"], ["value", "dome"], ["value", "gable"], ["formControlName", "roofTrussType", "matInput", "", "type", "text"], ["formControlName", "roofDeckingMaterial"], ["formControlName", "roofOpeningsCondition"], ["value", "working"], ["value", "not_working"], ["value", "obsolete"], ["formControlName", "ceilingMaterial", "matInput", "", "type", "text"], ["formControlName", "ceilingFinishes", "matInput", "", "type", "text"], ["formControlName", "ceilingCondition", "name", "ceilingCondition"], ["label", "Doors & Windows", 3, "stepControl"], ["formControlName", "doorsMaterial", "matInput", "", "type", "text"], ["formControlName", "doorsFinishes", "matInput", "", "type", "text"], ["formControlName", "doorsCondition", "name", "doorsCondition"], ["formControlName", "buildingWindowsMaterial", "matInput", "", "type", "text"], ["formControlName", "buildingWindowsFinishes", "matInput", "", "type", "text"], ["formControlName", "buildingWindowsCondition", "name", "buildingWindowsCondition"], ["formControlName", "glazingMaterial", "matInput", "", "type", "text"], ["formControlName", "glazingFinishes", "matInput", "", "type", "text"], ["formControlName", "glazingCondition", "name", "glazingCondition"], ["formControlName", "burglarProofCondition"], ["formControlName", "gatesCondition"], ["value", "none"], ["label", "Facilities", 3, "stepControl"], ["formControlName", "roofLightsCondition"], ["type", "text", "matInput", "", "formControlName", "fanLightMaterial"], ["type", "text", "matInput", "", "formControlName", "fanLightFinishes"], ["formControlName", "fanLightCondition"], ["formControlName", "airQualityCondition"], ["formControlName", "ventilationSystemCondition"], ["formControlName", "airConditioningCondition"], ["formControlName", "furnitureMaterial", "matInput", "", "type", "text"], ["formControlName", "furnitureFinishes", "matInput", "", "type", "text"], ["formControlName", "furnitureCondition", "name", "furnitureCondition"], ["fxFlex", "24"], ["formControlName", "materialHandlingSystemCondition"], ["formControlName", "temperatureControlCondition"], ["formControlName", "hotWaterCondition"], ["formControlName", "coldWaterCondition"], ["formControlName", "gasTanksCondition"], ["formControlName", "gasPipingCondition"], ["formControlName", "compressedAirCondition"], ["label", "Structure & Interior ", 3, "stepControl"], ["formControlName", "trimMaterial", "matInput", "", "type", "text"], ["formControlName", "trimFinishes", "matInput", "", "type", "text"], ["formControlName", "trimCondition", "name", "trimCondition"], ["formControlName", "frameMaterial", "matInput", "", "type", "text"], ["formControlName", "frameFinishes", "matInput", "", "type", "text"], ["formControlName", "frameCondition", "name", "frameCondition"], ["formControlName", "buildingFacadeMaterial", "matInput", "", "type", "text"], ["formControlName", "buildingFacadeFinishes", "matInput", "", "type", "text"], ["formControlName", "buildingFacadeCondition", "name", "buildingFacadeCondition"], ["formControlName", "corridorsMaterial", "matInput", "", "type", "text"], ["formControlName", "corridorsFinishes", "matInput", "", "type", "text"], ["formControlName", "corridorsCondition", "name", "corridorsCondition"], ["formControlName", "entrancesMaterial", "matInput", "", "type", "text"], ["formControlName", "entrancesFinishes", "matInput", "", "type", "text"], ["formControlName", "entrancesCondition", "name", "entrancesCondition"], ["label", "Elevator", 3, "stepControl"], ["formControlName", "elevatorsCount", "matInput", "", "type", "number"], [2, "padding", "10px"], [1, "mat-title"], ["formControlName", "elevatorType"], ["value", "electric", 2, "margin-left", "16px"], ["value", "hydraulic", 2, "margin-left", "16px"], ["value", "electricEye"], ["value", "heatSensor"], ["formControlName", "elevatorKeyLocation", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorBrandName", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorServiceCompany", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorServicePhoneNumber", "matInput", "", "type", "tel", "required", ""], ["formControlName", "elevatorEmergencyShutoffLocation", "matInput", "", "type", "text", "required", ""], ["formControlName", "elevatorExit"], ["value", "top"], ["value", "side"], ["value", "dumb_waiter"], ["value", "laundry_chute"], ["value", "trash_chute"], ["label", "Services", 3, "stepControl"], ["formControlName", "serviceDuctMaterial", "matInput", "", "type", "text"], ["formControlName", "serviceDuctFinishes", "matInput", "", "type", "text"], ["formControlName", "serviceDuctCondition", "name", "serviceDuctCondition"], ["formControlName", "drainageCondition"], ["formControlName", "distributionCondition"], ["formControlName", "materialHandlingSystemRepairCost", "matInput", "", "type", "number"], ["matPrefix", ""], ["matStepperPrevious", "", "mat-flat-button", "", "color", "primary"], ["formControlName", "partitionsRepairCost", "matInput", "", "type", "text"], ["formControlName", "foundationRepairCost", "matInput", "", "type", "number"], ["formControlName", "floorSlabsRepairCost", "matInput", "", "type", "number"], ["matInput", "", "formControlName", "floorJointsRepairCost", "type", "text"], ["formControlName", "roofOpeningsRepairCost", "matInput", "", "type", "number"], ["matInput", "", "formControlName", "ceilingRepairCost", "type", "text"], ["formControlName", "doorsRepairCost", "matInput", "", "type", "number"], ["formControlName", "buildingWindowsRepairCost", "matInput", "", "type", "number"], ["formControlName", "glazingRepairCost", "matInput", "", "type", "number"], ["formControlName", "burglarProofRepairCost", "matInput", "", "type", "number"], ["formControlName", "gatesRepairCost", "matInput", "", "type", "number"], ["matInput", "", "type", "number", "formControlName", "roofLightsRepairCost"], ["matInput", "", "type", "number", "formControlName", "fanLightRepairCost"], ["matInput", "", "type", "number", "formControlName", "airQualityRepairCost"], ["formControlName", "ventilationSystemRepairCost", "matInput", "", "type", "number"], ["matInput", "", "type", "number", "formControlName", "airConditioningRepairCost"], ["formControlName", "furnitureRepairCost", "matInput", "", "type", "text"], ["formControlName", "temperatureControlRepairCost", "matInput", "", "type", "number"], ["formControlName", "hotWaterRepairCost", "matInput", "", "type", "number"], ["formControlName", "coldWaterRepairCost", "matInput", "", "type", "number"], ["formControlName", "gasTanksRepairCost", "matInput", "", "type", "number"], ["formControlName", "gasPipingRepairCost", "matInput", "", "type", "number"], ["formControlName", "compressedAirRepairCost", "matInput", "", "type", "number"], ["formControlName", "trimRepairCost", "matInput", "", "type", "number"], ["formControlName", "frameRepairCost", "matInput", "", "type", "text"], ["formControlName", "buildingFacadeRepairCost", "matInput", "", "type", "text"], ["formControlName", "corridorsRepairCost", "matInput", "", "type", "text"], ["formControlName", "entrancesRepairCost", "matInput", "", "type", "text"], ["formControlName", "serviceDuctRepairCost", "matInput", "", "type", "text"], ["formControlName", "drainageRepairCost", "matInput", "", "type", "number"], ["formControlName", "distributionRepairCost", "matInput", "", "type", "number"]], template: function AddBuildingComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h2", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Add building");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-dialog-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-horizontal-stepper", 1, 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mat-step", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "form", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Facility type");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-select", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " --- ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-option", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Laboratory");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-option", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Lecture Theatre");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-option", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Faculty Complex");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Add building ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "close");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-form-field", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Facility name");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-dialog-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "mat-horizontal-stepper", 3, 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "mat-step", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-accordion");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-expansion-panel", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("opened", function AddBuildingComponent_Template_mat_expansion_panel_opened_11_listener() { return ctx.set1Step(0); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-expansion-panel-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-panel-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " Step 1 ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "input", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-panel-description");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Description ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "mat-form-field", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Facility code");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "input", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Basic info");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-form-field", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Facility description");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-form-field", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Facility type");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "input", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "mat-select");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "mat-option", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Laboratory");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-option", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Lecture Theatre");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "mat-option", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Faculty Complex");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "mat-form-field", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Facility structure");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Structure type");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "input", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "input", 14);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "mat-form-field", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "mat-form-field", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Facility purpose");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Facility name");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "input", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "input", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "Number of storeys");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](43, "input", 20);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "Facility status");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "mat-action-row");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "button", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddBuildingComponent_Template_button_click_41_listener() { return ctx.nextStep(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "mat-select", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "---");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "mat-option", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "mat-option", 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "Abandoned");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "mat-expansion-panel", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("opened", function AddBuildingComponent_Template_mat_expansion_panel_opened_43_listener() { return ctx.set1Step(1); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "mat-expansion-panel-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "mat-panel-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " Step 2 ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "mat-panel-description");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, " Description ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "Input field");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "Date built");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](52, "input", 14);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](59, "input", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "mat-action-row");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "button", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddBuildingComponent_Template_button_click_54_listener() { return ctx.prevStep(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, "Date purchased");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "button", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddBuildingComponent_Template_button_click_56_listener() { return ctx.nextStep(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](63, "input", 26);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, "GIS longitude");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](67, "input", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "mat-expansion-panel", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("opened", function AddBuildingComponent_Template_mat_expansion_panel_opened_58_listener() { return ctx.set1Step(2); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "mat-expansion-panel-header");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "mat-panel-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, " Step ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, "GIS latitude");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "mat-panel-description");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, " Description ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](71, "input", 28);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "mat-action-row");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "button", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddBuildingComponent_Template_button_click_65_listener() { return ctx.prevStep(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "button", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](68, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](73, "span", 29);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](74, "button", 30);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](75, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "mat-step", 31);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "form", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "div", 32);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, "Building Dimensions");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](70, "span", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](84, "Floor area");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](85, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](86, "m");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "sup");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](88, "2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "mat-step", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "div", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "form", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](74, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, "Basic info");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "mat-form-field", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](80, "Facility type");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](89, "input", 35);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "mat-select", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](82, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "mat-option", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](84, "Laboratory");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](91, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](92, "Headroom");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](85, "mat-option", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](86, "Lecture Theatre");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](94, "m");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "mat-option", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](88, "Faculty Complex");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](95, "input", 36);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](98, "Number of floors");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](99, "input", 37);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, "Structure type");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](102, "Super structure");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](92, "input", 24);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "mat-select", 38);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](105, "----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](94, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](95, "Facility name");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "mat-option", 39);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](107, "Metal");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](96, "input", 25);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "mat-option", 40);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](109, "Wood");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](99, "Facility code");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "mat-option", 41);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](111, "Sheetrock");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](100, "input", 26);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](112, "mat-option", 42);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](113, "Plaster");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](103, "Facility description");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "mat-option", 43);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](115, "Concrete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](104, "input", 27);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "mat-option", 44);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](117, "Brick");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](107, "Facility structure");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](118, "mat-option", 45);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](119, "Paneling");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](108, "input", 28);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](120, "mat-option", 46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](121, "Other");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](111, "Facility purpose");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](112, "input", 29);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](113, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](115, "Number of storeys");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](122, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](123, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](124, "Floor structure");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](116, "input", 30);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "mat-select", 47);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](126, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](127, "----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](117, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](118, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](119, "Facility status");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](128, "mat-option", 39);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](129, "Metal");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](120, "mat-select", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](121, "mat-option", 32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](122, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](130, "mat-option", 40);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](131, "Wood");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](123, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](124, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](132, "mat-option", 43);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](133, "Concrete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](126, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](134, "mat-option", 46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](135, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](127, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](128, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](129, "Date built");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](136, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](137, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](138, "Floor covering");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](130, "input", 35);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](139, "mat-select", 48);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](140, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](141, "----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](131, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](132, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](133, "Date purchased");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](142, "mat-option", 40);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](143, "metal");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](134, "input", 36);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](144, "mat-option", 43);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](145, "wood");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](135, "mat-form-field", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](136, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](137, "Year last decorated");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](146, "mat-option", 49);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](147, "concrete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](138, "input", 37);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](148, "mat-option", 50);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](149, "vinyl");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](139, "mat-form-field", 38);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](140, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](141, "Longitude");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](150, "mat-option", 46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](151, "Other");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](142, "input", 39);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](143, "mat-form-field", 38);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](144, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](145, "Latitude");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](146, "input", 40);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](152, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](153, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](154, "Windows");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](155, "mat-select", 51);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](156, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](157, "----");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](158, "mat-option", 52);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](159, "Wire glass");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](160, "mat-option", 53);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](161, "Glass block");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](162, "mat-option", 54);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](163, "Plate");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](147, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](148, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](149, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](150, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](164, "mat-option", 55);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](165, "Tempered");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](166, "mat-option", 56);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](167, "Operating");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](168, "mat-option", 57);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](169, "Fixed");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](151, "mat-step", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](152, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](153, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](154, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](155, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](156, "Dimensions");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](170, "mat-option", 46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](171, "Other");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](157, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](158, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](159, "Floor area");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](160, "span", 47);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](161, "m");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](162, "sup");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](163, "2");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](164, "input", 48);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](172, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](173, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](174, "Thickness and Construction of Walls");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](165, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](166, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](167, "Headroom");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](175, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](176, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](177, "Exterior wall");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](168, "span", 47);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](169, "m");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](178, "mat-select", 58);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](179, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](180, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](170, "input", 49);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](181, "mat-option", 59);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](182, "Concrete wall");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](171, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](172, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](173, "Number of floors");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](183, "mat-option", 60);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](184, "150mm block wall");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](174, "input", 50);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](185, "mat-option", 61);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](186, "220mm block wall");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](187, "mat-option", 46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](188, "Other");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](175, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](176, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](177, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](178, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](179, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](180, "Super structure");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](181, "mat-select", 51);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](182, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](183, "mat-option", 52);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](184, "Metal");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](189, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](190, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](191, "Paint condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](185, "mat-option", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](186, "Wood");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](192, "mat-select", 62);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](193, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](194, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](187, "mat-option", 54);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](188, "Sheetrock");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](195, "mat-option", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](196, "good");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](189, "mat-option", 55);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](190, "Plaster");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](197, "mat-option", 63);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](198, "fair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](191, "mat-option", 56);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](192, "Concrete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](199, "mat-option", 64);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](200, "poor mm");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](193, "mat-option", 57);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](194, "Brick");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](195, "mat-option", 58);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](196, "Paneling");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](197, "mat-option", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](198, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](201, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](202, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](203, "Mortar condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](204, "mat-select", 65);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](205, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](206, "-----");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](207, "mat-option", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](208, "good");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](199, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](200, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](201, "Floor structure");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](209, "mat-option", 63);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](210, "fair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](202, "mat-select", 60);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](203, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](204, "mat-option", 52);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](205, "Metal");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](211, "mat-option", 64);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](212, "poor mm");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](206, "mat-option", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](207, "Wood");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](208, "mat-option", 56);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](209, "Concrete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](210, "mat-option", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](211, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](213, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](214, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](215, "Type of structure");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](216, "mat-select", 66);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](217, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](218, "-----");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](219, "mat-option", 67);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](220, "Frame");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](212, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](213, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](214, "Floor covering");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](221, "mat-option", 68);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](222, "Load bearing");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](215, "mat-select", 61);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](216, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](217, "mat-option", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](218, "metal");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](219, "mat-option", 56);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](220, "wood");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](221, "mat-option", 62);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](222, "concrete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](223, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](224, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](225, "Year when last decorated");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](223, "mat-option", 63);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](224, "vinyl");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](226, "input", 69);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](225, "mat-option", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](226, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](227, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](228, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](229, "Floor joints and beams");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](230, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](231, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](232, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](227, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](228, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](229, "Windows");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](233, "input", 70);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](230, "mat-select", 64);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](231, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](232, "mat-option", 65);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](233, "Wire glass");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](234, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](235, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](236, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](234, "mat-option", 66);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](235, "Glass block");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](237, "input", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](236, "mat-option", 67);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](237, "Plate");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](238, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](239, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](240, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](238, "mat-option", 68);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](239, "Tempered");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](241, "input", 72);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](240, "mat-option", 69);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](241, "Operating");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](242, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](243, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](244, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](242, "mat-option", 70);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](243, "Fixed");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](245, "input", 73);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](246, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](247, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](244, "mat-option", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](245, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](248, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](249, ".00");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](250, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](251, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](252, "Ceilings");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](253, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](254, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](255, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](256, "input", 75);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](246, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](247, "button", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](248, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](257, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](258, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](259, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](249, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](250, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](251, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](260, "input", 76);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](261, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](262, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](263, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](264, "input", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](252, "mat-step", 72);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](253, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](254, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](255, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](256, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](257, "Partitions");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](265, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](266, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](267, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](258, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](259, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](260, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](268, "input", 78);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](269, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](270, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](261, "input", 73);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](271, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](272, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](262, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](263, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](264, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](265, "input", 74);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](266, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](267, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](268, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](273, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](274, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](275, "Fanlights");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](269, "mat-select", 75);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](270, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](271, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](276, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](277, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](278, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](272, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](273, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](279, "input", 79);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](274, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](275, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](280, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](281, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](282, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](276, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](277, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](283, "input", 80);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](284, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](285, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](286, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](287, "input", 81);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](278, AddBuildingComponent_mat_form_field_278_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](288, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](289, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](290, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](279, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](280, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](281, "Foundation");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](291, "input", 82);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](292, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](293, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](282, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](283, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](284, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](294, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](295, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](285, "input", 79);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](286, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](287, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](288, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](289, "input", 80);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](296, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](297, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](298, "Doors");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](290, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](291, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](292, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](299, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](300, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](301, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](293, "mat-select", 81);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](294, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](295, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](302, "input", 83);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](296, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](297, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](303, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](304, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](305, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](298, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](299, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](306, "input", 84);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](300, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](301, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](307, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](308, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](309, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](310, "input", 85);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](311, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](312, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](313, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](302, AddBuildingComponent_mat_form_field_302_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](314, "input", 86);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](315, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](316, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](303, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](304, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](305, "Floor slabs");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](317, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](318, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](306, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](307, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](308, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](309, "input", 82);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](310, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](311, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](312, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](319, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](320, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](321, "Roof Characteristics");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](313, "input", 83);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](322, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](323, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](324, "Roof style/shape");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](314, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](315, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](316, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](325, "mat-select", 87);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](326, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](327, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](317, "mat-select", 84);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](318, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](319, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](328, "mat-option", 88);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](329, "Flat");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](320, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](321, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](330, "mat-option", 89);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](331, "Pitched");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](322, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](323, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](332, "mat-option", 90);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](333, "Arched");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](324, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](325, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](334, "mat-option", 91);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](335, "Butterfly");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](336, "mat-option", 92);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](337, "Hip");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](338, "mat-option", 93);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](339, "Gambrel");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](326, AddBuildingComponent_mat_form_field_326_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](340, "mat-option", 94);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](341, "Mansard");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](327, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](328, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](329, "Floor joints");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](342, "mat-option", 95);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](343, "Monitor");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](330, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](331, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](332, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](344, "mat-option", 96);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](345, "Shed");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](333, "input", 85);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](346, "mat-option", 97);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](347, "Dome");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](334, "mat-form-field", 86);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](335, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](336, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](348, "mat-option", 98);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](349, "Gable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](337, "input", 87);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](350, "mat-option", 46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](351, "Other");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](338, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](339, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](340, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](341, "mat-select", 88);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](342, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](343, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](344, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](345, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](352, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](353, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](354, "Truss type");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](346, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](347, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](355, "input", 99);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](348, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](349, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](356, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](357, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](358, "Decking material");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](359, "mat-select", 100);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](360, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](361, "----");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](362, "mat-option", 40);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](363, "Wood");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](350, AddBuildingComponent_mat_form_field_350_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](364, "mat-option", 43);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](365, "Concrete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](351, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](352, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](353, "Surface");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](366, "mat-option", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](354, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](355, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](356, "Exterior wall");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](357, "mat-select", 89);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](358, "mat-option", 90);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](359, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](360, "mat-option", 91);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](361, "Concrete wall");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](362, "mat-option", 92);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](363, "150mm block wall");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](364, "mat-option", 93);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](365, "220mm block wall");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](366, "mat-option", 59);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](367, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](368, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](369, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](370, "Paint condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](368, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](369, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](370, "Trim");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](371, "mat-select", 94);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](372, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](373, "good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](371, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](372, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](373, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](374, "mat-option", 95);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](375, "fair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](374, "input", 101);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](375, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](376, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](377, "Finishes");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](378, "input", 102);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](379, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](380, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](381, "Condition");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](382, "input", 103);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](383, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](384, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](385, "Estimated cost");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](386, "input", 104);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](387, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](388, "\u20A6");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](389, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](390, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](376, "mat-option", 96);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](377, "poor");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](391, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](392, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](393, "Foundation");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](378, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](379, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](380, "Mortar condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](394, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](395, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](396, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](381, "mat-select", 97);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](382, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](383, "good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](397, "input", 105);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](384, "mat-option", 95);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](385, "fair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](398, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](399, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](400, "Finishes");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](401, "input", 106);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](402, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](403, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](404, "Condition");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](405, "input", 107);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](406, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](407, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](408, "Estimated cost");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](409, "input", 108);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](410, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](411, "\u20A6");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](412, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](413, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](386, "mat-option", 96);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](387, "poor");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](414, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](415, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](416, "Floor slabs");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](417, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](418, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](419, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](420, "input", 109);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](421, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](422, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](423, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](388, "div", 98);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](389, "button", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](390, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](424, "input", 110);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](391, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](392, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](393, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](425, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](426, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](427, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](428, "input", 111);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](429, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](394, "mat-step", 99);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](395, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](396, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](397, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](398, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](399, "Roof details");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](400, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](401, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](402, "Roof style/shape");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](403, "mat-select", 100);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](404, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](405, "mat-option", 101);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](406, "Flat");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](407, "mat-option", 102);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](408, "Pitched");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](409, "mat-option", 103);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](410, "Arched");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](411, "mat-option", 104);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](412, "Butterfly");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](413, "mat-option", 105);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](414, "Hip");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](415, "mat-option", 106);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](416, "Gambrel");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](417, "mat-option", 107);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](418, "Mansard");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](419, "mat-option", 108);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](420, "Monitor");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](421, "mat-option", 109);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](422, "Shed");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](423, "mat-option", 110);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](424, "Dome");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](425, "mat-option", 111);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](426, "Gable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](427, "mat-option", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](428, "Other");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](429, "mat-form-field", 46);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](430, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](431, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](431, "Truss type");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](432, "input", 112);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](433, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](434, "\u20A6");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](435, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](436, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](433, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](434, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](435, "Decking material");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](436, "mat-select", 113);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](437, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](438, "mat-option", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](439, "Wood");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](440, "mat-option", 56);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](441, "Concrete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](437, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](438, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](439, "Frame");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](440, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](441, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](442, "Materials");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](443, "input", 113);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](444, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](445, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](446, "Finishes");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](447, "input", 114);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](448, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](449, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](450, "Condition");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](451, "input", 115);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](452, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](453, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](454, "Estimated cost");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](455, "input", 116);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](456, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](457, "\u20A6");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](458, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](459, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](442, "mat-option", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](443, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](460, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](461, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](462, "Building facade");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](463, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](464, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](465, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](444, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](445, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](446, "Roof Openings");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](466, "input", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](447, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](448, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](449, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](467, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](468, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](469, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](450, "mat-select", 114);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](451, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](452, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](453, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](470, "input", 118);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](454, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](455, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](471, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](472, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](473, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](456, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](457, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](474, "input", 119);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](475, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](476, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](477, "Estimated cost");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](478, "input", 120);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](479, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](480, "\u20A6");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](481, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](482, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](458, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](459, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](483, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](484, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](485, "Building windows");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](460, AddBuildingComponent_mat_form_field_460_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](486, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](487, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](488, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](461, "fieldset", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](462, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](463, "Ceiling");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](489, "input", 121);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](464, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](465, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](466, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](490, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](491, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](492, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](467, "input", 118);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](493, "input", 122);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](468, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](469, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](470, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](494, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](495, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](496, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](471, "input", 119);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](497, "input", 123);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](472, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](473, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](474, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](498, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](499, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](500, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](475, "mat-select", 120);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](476, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](477, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](501, "input", 124);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](502, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](503, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](478, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](479, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](504, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](505, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](480, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](481, "Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](482, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](483, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](506, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](507, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](508, "Corridors");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](484, AddBuildingComponent_mat_form_field_484_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](509, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](510, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](511, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](512, "input", 125);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](513, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](514, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](515, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](485, "div", 98);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](486, "button", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](487, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](516, "input", 126);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](488, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](489, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](490, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](517, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](518, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](519, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](520, "input", 127);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](521, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](491, "mat-step", 121);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](492, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](493, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](494, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](495, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](496, "Doors");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](497, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](498, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](499, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](500, "input", 122);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](501, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](502, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](503, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](504, "input", 123);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](505, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](506, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](507, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](508, "mat-select", 124);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](509, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](510, "Good");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](511, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](512, "Abandoned");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](513, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](514, "Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](515, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](516, "Replceable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](517, AddBuildingComponent_mat_form_field_517_Template, 8, 0, "mat-form-field", 78);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](518, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](519, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](520, "Windows");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](521, "mat-form-field", 46);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](522, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](523, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](523, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](524, "input", 128);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](525, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](526, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](524, "input", 125);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](527, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](528, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](525, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](526, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](527, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](528, "input", 126);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](529, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](530, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](531, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](529, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](530, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](531, "Glazing");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](532, "mat-select", 127);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](533, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](534, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](532, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](533, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](534, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](535, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](536, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](535, "input", 129);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](537, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](538, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](536, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](537, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](538, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](539, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](540, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](539, "input", 130);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](540, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](541, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](542, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](543, "input", 131);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](541, AddBuildingComponent_mat_form_field_541_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](544, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](545, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](546, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](542, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](543, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](544, "Glazing");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](547, "input", 132);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](548, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](549, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](545, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](546, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](547, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](550, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](551, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](548, "input", 128);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](549, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](550, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](551, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](552, "input", 129);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](552, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](553, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](554, "Partitions");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](553, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](554, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](555, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](555, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](556, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](557, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](556, "mat-select", 130);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](557, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](558, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](558, "input", 133);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](559, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](560, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](559, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](560, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](561, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](561, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](562, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](562, "input", 134);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](563, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](564, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](563, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](564, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](565, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](566, "input", 135);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](567, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](568, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](569, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](565, AddBuildingComponent_mat_form_field_565_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](570, "input", 136);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](571, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](572, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](566, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](567, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](568, "Burglar Proof");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](573, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](574, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](569, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](570, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](571, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](572, "mat-select", 131);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](573, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](574, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](575, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](576, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](575, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](576, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](577, "Entrances and Access spaces");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](577, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](578, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](578, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](579, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](580, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](579, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](580, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](581, "input", 137);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](581, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](582, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](582, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](583, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](584, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](585, "input", 138);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](586, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](587, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](588, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](583, AddBuildingComponent_mat_form_field_583_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](589, "input", 139);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](584, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](585, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](586, "Gates");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](590, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](591, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](592, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](587, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](588, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](589, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](593, "input", 140);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](594, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](595, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](590, "mat-select", 132);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](591, "mat-option", 133);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](592, "none");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](596, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](597, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](593, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](594, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](595, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](596, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](597, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](598, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](598, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](599, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](600, "Service ducts");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](599, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](600, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](601, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](602, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](603, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](601, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](602, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](604, "input", 141);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](605, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](606, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](607, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](608, "input", 142);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](603, AddBuildingComponent_mat_form_field_603_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](609, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](610, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](611, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](612, "input", 143);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](613, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](614, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](615, "Estimated cost");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](604, "div", 98);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](605, "button", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](606, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](616, "input", 144);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](617, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](618, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](607, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](608, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](609, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](619, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](620, ".00");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](610, "mat-step", 134);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](611, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](612, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](613, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](614, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](615, "Roof lights");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](621, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](622, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](623, "Furniture/Fittings");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](616, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](617, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](618, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](624, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](625, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](626, "Materials");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](619, "mat-select", 135);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](620, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](621, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](627, "input", 145);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](622, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](623, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](628, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](629, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](630, "Finishes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](624, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](625, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](631, "input", 146);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](626, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](627, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](632, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](633, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](634, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](628, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](629, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](635, "input", 147);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](636, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](637, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](638, "Estimated cost");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](639, "input", 148);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](640, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](641, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](630, AddBuildingComponent_mat_form_field_630_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](642, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](643, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](631, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](632, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](633, "Fan lights");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](634, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](635, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](636, "Fan light material");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](637, "input", 136);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](644, "fieldset", 149);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](645, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](646, "Elevators");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](638, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](639, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](640, "Fan light finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](647, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](648, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](649, "Number of elevators");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](641, "input", 137);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](650, "input", 150);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](642, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](643, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](644, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](651, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](652, "div", 151);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](653, "div", 152);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](654, "Elevator type");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](645, "mat-select", 138);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](646, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](647, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](655, "mat-radio-group", 153);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](656, "mat-radio-button", 154);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](657, "Electric");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](648, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](649, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](658, "mat-radio-button", 155);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](659, "Hydraulic");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](650, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](651, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](652, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](653, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](654, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](655, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](660, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](661, "div", 151);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](662, "div", 152);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](663, "Elevator sensors");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](664, "ul");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](665, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](666, "mat-checkbox", 156);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](667, "Electric eye");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](656, AddBuildingComponent_mat_form_field_656_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](668, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](669, "mat-checkbox", 157);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](670, "Heat sensor");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](657, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](658, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](659, "Air quality and Handling");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](660, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](661, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](662, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](663, "mat-select", 139);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](664, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](665, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](666, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](667, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](671, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](672, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](673, "Key location");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](668, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](669, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](674, "input", 158);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](670, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](671, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](675, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](676, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](677, "Brand name");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](672, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](673, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](678, "input", 159);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](679, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](680, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](681, "Service company");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](682, "input", 160);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](674, AddBuildingComponent_mat_form_field_674_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](683, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](684, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](685, "Phone number");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](675, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](676, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](677, "Ventilation System");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](686, "input", 161);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](687, "mat-icon", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](688, "phone");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](678, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](679, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](680, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](681, "mat-select", 140);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](682, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](683, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](689, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](690, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](691, "Emergency shutoff location");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](684, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](685, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](692, "input", 162);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](686, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](687, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](693, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](694, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](695, "Exit");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](688, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](689, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](696, "mat-select", 163);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](697, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](698, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](690, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](691, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](699, "mat-option", 164);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](700, "Top");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](701, "mat-option", 165);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](702, "Side");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](703, "mat-option", 166);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](704, "Dumb waiter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](692, AddBuildingComponent_mat_form_field_692_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](705, "mat-option", 167);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](706, "Laundry chute");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](693, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](694, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](695, "Air Conditioning");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](707, "mat-option", 168);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](708, "Trash chute");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](696, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](697, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](698, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](709, "mat-option", 46);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](710, "Other");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](699, "mat-select", 141);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](700, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](701, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](702, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](703, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](704, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](705, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](706, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](707, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](711, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](712, "button", 169);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](713, "Previous");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](708, AddBuildingComponent_mat_form_field_708_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](714, "span", 29);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](715, "button", 30);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](716, "Next");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](709, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](710, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](711, "Furniture");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](712, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](713, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](714, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](715, "input", 142);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](717, "mat-step", 170);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](718, "form", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](719, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](720, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](721, "Roof lights");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](716, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](717, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](718, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](722, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](723, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](724, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](719, "input", 143);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](725, "mat-select", 171);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](726, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](727, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](720, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](721, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](722, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](728, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](729, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](723, "mat-select", 144);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](724, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](725, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](730, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](731, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](726, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](727, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](732, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](733, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](728, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](729, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](734, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](735, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](730, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](731, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](736, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](732, AddBuildingComponent_mat_form_field_732_Template, 8, 0, "mat-form-field", 78);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](733, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](734, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](735, "Material Handling & Transportation System");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](736, "mat-form-field", 145);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](737, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](738, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](738, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](739, "input", 175);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](740, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](741, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](739, "mat-select", 146);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](740, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](741, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](742, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](743, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](742, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](743, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](744, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](745, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](746, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](747, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](744, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](745, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](746, "Air quality and Handling");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](747, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](748, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](749, "Condition");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](750, "mat-select", 176);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](751, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](752, "-----");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](753, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](754, "Working");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](755, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](756, "Incomplete/Repairable");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](757, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](758, "Not working");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](759, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](760, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](748, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](749, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](761, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](762, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](763, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](750, AddBuildingComponent_mat_form_field_750_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](764, "input", 177);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](765, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](766, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](751, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](752, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](753, "Temperature & Humidity Control");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](767, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](768, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](754, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](755, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](756, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](757, "mat-select", 147);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](758, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](759, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](760, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](761, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](762, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](763, "Replceable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](764, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](765, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](766, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](767, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](769, "fieldset", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](768, AddBuildingComponent_mat_form_field_768_Template, 8, 0, "mat-form-field", 78);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](769, "fieldset", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](770, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](771, "Ventilation System");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](771, "Hot Water");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](772, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](772, "mat-form-field", 46);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](773, "mat-label");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](774, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](775, "mat-select", 178);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](776, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](777, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](775, "mat-select", 148);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](776, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](777, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](778, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](779, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](778, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](779, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](780, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](781, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](780, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](781, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](782, "mat-option", 173);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](782, "mat-option", 116);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](783, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](784, "mat-option", 174);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](784, "mat-option", 117);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](785, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](786, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](787, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](788, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](786, AddBuildingComponent_mat_form_field_786_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](789, "input", 179);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](790, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](791, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](787, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](788, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](789, "Cold Water");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](792, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](793, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](790, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](791, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](792, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](793, "mat-select", 149);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](794, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](795, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](796, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](797, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](794, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](795, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](796, "Air Conditioning");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](798, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](799, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](797, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](798, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](799, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](800, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](801, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](800, "mat-select", 180);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](801, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](802, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](802, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](803, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](803, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](804, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](805, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](806, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](807, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](808, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](804, AddBuildingComponent_mat_form_field_804_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](809, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](810, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](805, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](806, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](807, "Gas Tanks");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](808, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](809, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](810, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](811, "mat-select", 150);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](812, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](813, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](811, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](812, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](813, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](814, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](815, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](814, "input", 181);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](815, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](816, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](816, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](817, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](817, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](818, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](818, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](819, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](820, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](821, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](819, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](820, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](821, "Material Handling & Transportation System");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](822, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](823, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](824, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](822, AddBuildingComponent_mat_form_field_822_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](825, "mat-select");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](826, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](827, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](823, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](824, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](825, "Gas Piping");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](828, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](829, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](826, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](827, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](828, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](830, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](831, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](829, "mat-select", 151);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](830, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](831, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](832, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](833, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](832, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](833, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](834, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](835, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](834, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](835, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](836, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](837, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](838, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](839, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](836, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](837, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](838, "Cost of repair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](839, "input", 182);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](840, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](841, "\u20A6");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](842, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](843, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](840, AddBuildingComponent_mat_form_field_840_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](841, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](842, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](843, "Air Compressed");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](844, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](845, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](846, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](844, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](845, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](846, "Roof Openings");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](847, "mat-select", 152);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](848, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](849, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](847, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](848, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](849, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](850, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](851, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](850, "mat-select", 183);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](851, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](852, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](852, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](853, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](853, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](854, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](854, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](855, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](855, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](856, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](856, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](857, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](857, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](858, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](859, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](860, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](858, AddBuildingComponent_mat_form_field_858_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](861, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](862, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](863, "Cost of repair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](864, "input", 184);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](865, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](866, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](859, "div", 98);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](860, "button", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](861, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](867, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](868, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](862, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](863, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](864, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](869, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](870, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](871, "Temperature & Humidity Control");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](865, "mat-step", 153);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](866, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](867, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](868, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](869, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](870, "Trim");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](872, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](873, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](874, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](871, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](872, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](873, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](875, "mat-select", 185);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](876, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](877, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](874, "input", 154);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](878, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](879, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](875, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](876, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](877, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](880, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](881, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](878, "input", 155);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](882, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](883, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](879, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](880, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](881, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](884, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](885, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](882, "mat-select", 156);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](883, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](884, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](885, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](886, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](887, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](888, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](886, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](887, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](888, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](889, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](890, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](889, "input", 186);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](890, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](891, "\u20A6");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](892, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](893, ".00");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](891, AddBuildingComponent_mat_form_field_891_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](892, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](893, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](894, "Frame");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](894, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](895, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](896, "Hot Water");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](895, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](896, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](897, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](897, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](898, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](899, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](898, "input", 157);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](900, "mat-select", 187);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](901, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](902, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](899, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](900, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](901, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](903, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](904, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](902, "input", 158);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](905, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](906, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](903, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](904, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](905, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](907, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](908, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](906, "mat-select", 159);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](907, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](908, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](909, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](910, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](909, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](910, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](911, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](912, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](913, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](914, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](911, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](912, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](913, "Cost of repair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](914, "input", 188);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](915, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](916, "\u20A6");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](917, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](918, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](915, AddBuildingComponent_mat_form_field_915_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](916, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](917, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](918, "Building facade");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](919, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](920, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](921, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](919, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](920, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](921, "Burglar Proof");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](922, "input", 160);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](922, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](923, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](924, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](923, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](924, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](925, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](925, "mat-select", 189);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](926, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](927, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](926, "input", 161);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](928, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](929, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](927, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](928, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](929, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](930, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](931, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](930, "mat-select", 162);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](931, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](932, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](932, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](933, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](933, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](934, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](934, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](935, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](935, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](936, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](937, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](938, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](936, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](937, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](938, "Cost of repair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](939, "input", 190);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](940, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](941, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](939, AddBuildingComponent_mat_form_field_939_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](942, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](943, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](940, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](941, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](942, "Corridors");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](943, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](944, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](945, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](946, "input", 163);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](944, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](945, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](946, "Gates");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](947, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](947, "mat-form-field", 46);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](948, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](949, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](949, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](950, "mat-select", 191);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](951, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](952, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](950, "input", 164);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](953, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](954, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](951, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](952, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](953, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](955, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](956, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](954, "mat-select", 165);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](955, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](956, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](957, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](957, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](958, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](958, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](959, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](959, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](960, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](960, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](961, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](961, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](962, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](963, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](962, AddBuildingComponent_mat_form_field_962_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](964, "input", 192);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](965, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](966, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](963, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](964, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](965, "Entrance");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](967, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](968, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](966, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](967, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](968, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](969, "input", 166);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](970, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](971, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](972, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](969, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](970, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](971, "Drainage");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](973, "input", 167);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](972, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](973, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](974, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](974, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](975, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](976, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](975, "mat-select", 193);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](976, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](977, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](977, "mat-select", 168);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](978, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](979, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](980, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](978, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](979, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](981, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](982, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](980, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](981, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](983, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](984, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](982, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](983, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](984, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](985, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](985, AddBuildingComponent_mat_form_field_985_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](986, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](987, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](988, "Cost of repair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](989, "input", 194);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](990, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](991, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](986, "div", 98);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](987, "button", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](988, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](992, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](993, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](989, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](990, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](991, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](994, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](995, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](996, "Distribution");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](992, "mat-step", 169);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](993, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](994, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](995, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](996, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](997, "Number of elevators");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](997, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](998, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](999, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](998, "input", 170);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1000, "mat-select", 195);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1001, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1002, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](999, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1000, "div", 171);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1001, "div", 172);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1002, "Elevator type");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1003, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1004, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1003, "mat-radio-group", 173);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1004, "mat-radio-button", 174);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1005, "Electric");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1005, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1006, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1006, "mat-radio-button", 175);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1007, "Hydraulic");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1007, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1008, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1009, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1010, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1008, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1009, "div", 171);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1010, "div", 172);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1011, "Elevator sensors");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1012, "ul");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1013, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1014, "mat-checkbox", 176);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1015, "Electric eye");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1011, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1012, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1013, "Cost of repair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1014, "input", 196);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1015, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1016, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1016, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1017, "mat-checkbox", 177);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1018, "Heat sensor");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1017, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1018, ".00");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1019, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1020, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1021, "Cold Water");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1019, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1020, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1021, "Key location");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1022, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1023, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1024, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1022, "input", 178);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1025, "mat-select", 197);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1026, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1027, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1023, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1024, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1025, "Brand name");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1028, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1029, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1026, "input", 179);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1030, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1031, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1027, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1028, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1029, "Service company");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1032, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1033, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1030, "input", 180);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1034, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1035, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1031, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1032, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1033, "Phone number");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1034, "input", 181);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1035, "mat-icon", 47);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1036, "phone");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1036, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1037, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1038, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1037, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1038, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1039, "Emergency shutoff location");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1039, "input", 198);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1040, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1041, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1040, "input", 182);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1042, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1043, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1041, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1042, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1043, "Exit");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1044, "mat-select", 183);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1045, "mat-option");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1046, "mat-option", 184);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1047, "Top");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1048, "mat-option", 185);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1049, "Side");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1044, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1045, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1046, "Gas Tanks");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1050, "mat-option", 186);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1051, "Dumb waiter");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1047, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1048, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1049, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1052, "mat-option", 187);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1053, "Laundry chute");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1050, "mat-select", 199);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1051, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1052, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1054, "mat-option", 188);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1055, "Trash chute");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1053, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1054, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1056, "mat-option", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1057, "Other");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1055, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1056, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1057, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1058, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1059, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1060, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1058, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1059, "button", 71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1060, "Previous");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1061, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1062, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1063, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1061, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1062, "button", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1063, "Next");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1064, "input", 200);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1065, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1066, "\u20A6");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1067, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1068, ".00");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1064, "mat-step", 189);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1065, "form", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1066, "div", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1067, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1068, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1069, "Service ducts");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1070, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1071, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1072, "Materials");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1069, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1070, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1071, "Gas Piping");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1073, "input", 190);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1072, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1073, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1074, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1074, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1075, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1076, "Finishes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1075, "mat-select", 201);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1076, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1077, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1077, "input", 191);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1078, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1079, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1078, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1079, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1080, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1080, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1081, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1081, "mat-select", 192);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1082, "mat-option", 76);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1083, "Good");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1082, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1083, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1084, "mat-option", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1085, "Abandoned");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1084, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1085, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1086, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1087, "Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1088, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1089, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1086, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1087, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1088, "Cost of repair");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1089, "input", 202);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1090, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1091, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1090, AddBuildingComponent_mat_form_field_1090_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1092, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1093, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1091, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1092, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1093, "Drainage");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1094, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1095, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1096, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1097, "mat-select", 193);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1098, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1099, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1094, "fieldset", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1095, "legend");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1096, "Air Compressed");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1100, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1101, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1097, "mat-form-field");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1098, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1099, "Condition");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1102, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1103, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1100, "mat-select", 203);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1101, "mat-option", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1102, "-----");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1104, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1105, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1103, "mat-option", 172);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1104, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1106, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1107, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1105, "mat-option", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1106, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1107, "mat-option", 173);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1108, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1109, "mat-option", 174);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1110, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1108, AddBuildingComponent_mat_form_field_1108_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1109, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1110, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1111, "Distribution");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1111, "mat-form-field");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1112, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1113, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1113, "Condition");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1114, "input", 204);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1115, "span", 74);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1116, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1114, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1115, "mat-select", 194);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1116, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1117, "Working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1117, "span", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1118, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1118, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1119, "Incomplete/Repairable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1120, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1121, "Replceable");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1122, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1123, "Not working");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1119, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1120, "button", 205);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1121, "Previous");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1122, "span", 29);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1123, "button", 206);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddBuildingComponent_Template_button_click_1123_listener() { return ctx.addBuildings(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1124, "Submit");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1124, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1125, "Obsolete");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1125, "mat-dialog-actions", 207);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1126, "button", 208);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1127, "Cancel");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1126, AddBuildingComponent_mat_form_field_1126_Template, 8, 0, "mat-form-field", 78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1128, "button", 209);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1129, "Submit building data");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1127, "fieldset", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1128, "legend");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1129, "Material handling system");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1130, "mat-form-field", 145);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1131, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1132, "Material handling system");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1133, "mat-select", 146);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1134, "mat-option", 115);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1135, "Working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1136, "mat-option", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1137, "Incomplete/Repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1138, "mat-option", 77);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1139, "Replceable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1140, "mat-option", 116);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1141, "Not working");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1142, "mat-option", 117);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1143, "Obsolete");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1144, "mat-form-field", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1145, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1146, "Cost of repair");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1147, "input", 195);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1148, "span", 196);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1149, "\u20A6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1150, "span", 47);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1151, ".00");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1152, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1153, "button", 197);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1154, "Previous");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1155, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1156, "button", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddBuildingComponent_Template_button_click_1156_listener() { return ctx.addBuilding(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1157, "Submit");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("expanded", ctx.expansion1Step === 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("expanded", ctx.expansion1Step === 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("expanded", ctx.expansion1Step === 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.firstFormGroup);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.firstFormGroup);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](70);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](78);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.secondFormGroup);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.secondFormGroup);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](640);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](100);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.thirdFormGroup);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.thirdFormGroup);
-    } }, directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogTitle"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogContent"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_4__["MatHorizontalStepper"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_4__["MatStep"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupDirective"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_5__["DefaultLayoutDirective"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_5__["DefaultLayoutGapDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_7__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControlName"], _angular_material_core__WEBPACK_IMPORTED_MODULE_8__["MatOption"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_5__["DefaultFlexDirective"], _angular_material_input__WEBPACK_IMPORTED_MODULE_9__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NumberValueAccessor"], _angular_material_button__WEBPACK_IMPORTED_MODULE_10__["MatButton"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_4__["MatStepperNext"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatSuffix"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["RequiredValidator"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatPrefix"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_11__["MatRadioGroup"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_11__["MatRadioButton"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__["MatCheckbox"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_13__["MatIcon"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_4__["MatStepperPrevious"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogActions"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogClose"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtYnVpbGRpbmcuY29tcG9uZW50LnNjc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.thirdFormGroup.value.partitionsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.thirdFormGroup.value.foundationCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.thirdFormGroup.value.floorSlabsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.thirdFormGroup.value.floorJointsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.fifthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.fifthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](65);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.fifthFormGroup.value.roofOpeningsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.fifthFormGroup.value.ceilingCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.sixthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.sixthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.sixthFormGroup.value.doorsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.sixthFormGroup.value.buildingWindowsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.sixthFormGroup.value.glazingCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.sixthFormGroup.value.burglarProofCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.sixthFormGroup.value.gatesCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.seventhFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.seventhFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.roofLightsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.fanLightCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.airQualityCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.ventilationSystemCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.airConditioningCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.furnitureCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.materialHandlingSystemCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.temperatureControlCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.hotWaterCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.coldWaterCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.gasTanksCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.gasPipingCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.seventhFormGroup.value.compressedAirCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.eighthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.eighthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.eighthFormGroup.value.trimCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.eighthFormGroup.value.frameCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.eighthFormGroup.value.buildingFacadeCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.eighthFormGroup.value.corridorsCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.eighthFormGroup.value.entranceCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.ninthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.ninthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](71);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("stepControl", ctx.tenthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.tenthFormGroup);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.tenthFormGroup.value.serviceDuctCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.tenthFormGroup.value.drainageCondition == "repairable");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.tenthFormGroup.value.distributionCondition == "repairable");
+    } }, directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogTitle"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultFlexDirective"], _angular_material_button__WEBPACK_IMPORTED_MODULE_5__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogClose"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIcon"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogContent"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_7__["MatHorizontalStepper"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_7__["MatStep"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_8__["MatAccordion"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_8__["MatExpansionPanel"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_8__["MatExpansionPanelHeader"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_8__["MatExpansionPanelTitle"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_8__["MatExpansionPanelDescription"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultLayoutDirective"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultLayoutGapDirective"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultLayoutAlignDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_10__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _angular_material_input__WEBPACK_IMPORTED_MODULE_12__["MatInput"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_8__["MatExpansionPanelActionRow"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_7__["MatStepperNext"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NumberValueAccessor"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatSuffix"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["RequiredValidator"], _angular_material_stepper__WEBPACK_IMPORTED_MODULE_7__["MatStepperPrevious"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_14__["MatRadioGroup"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_14__["MatRadioButton"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckbox"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatPrefix"]], styles: ["fieldset[_ngcontent-%COMP%] {\n  padding: 5px;\n  min-height: 100px;\n  border: 1px solid #dddddd;\n}\nfieldset[_ngcontent-%COMP%]   legend[_ngcontent-%COMP%] {\n  padding: 3px;\n  bottom: 0px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL2FkZC1idWlsZGluZy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFlBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQUFBO0FBQ0o7QUFBSTtFQUNJLFlBQUE7RUFDQSxXQUFBO0FBRVIiLCJmaWxlIjoiYWRkLWJ1aWxkaW5nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZmllbGRzZXR7XG4gICAgcGFkZGluZzo1cHg7XG4gICAgbWluLWhlaWdodDogMTAwcHg7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZGRkZDtcbiAgICBsZWdlbmR7XG4gICAgICAgIHBhZGRpbmc6IDNweDtcbiAgICAgICAgYm90dG9tOiAwcHg7XG4gICAgfVxufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AddBuildingComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -4267,6 +4781,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/list */ "SqCe");
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/divider */ "BSbQ");
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/button */ "Dxy4");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "iInd");
+
 
 
 
@@ -4282,7 +4798,7 @@ class BuildingComponent {
     }
 }
 BuildingComponent.ɵfac = function BuildingComponent_Factory(t) { return new (t || BuildingComponent)(); };
-BuildingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BuildingComponent, selectors: [["app-building"]], inputs: { data: "data" }, outputs: { showSummary: "showSummary" }, decls: 17, vars: 6, consts: [["mat-card-image", "", 3, "src"], ["dense", ""], ["color", "warn"], ["align", "end"], ["mat-flat-button", "", "color", "primary", 3, "value", "click"]], template: function BuildingComponent_Template(rf, ctx) { if (rf & 1) {
+BuildingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BuildingComponent, selectors: [["app-building"]], inputs: { data: "data" }, outputs: { showSummary: "showSummary" }, decls: 17, vars: 7, consts: [["mat-card-image", "", 3, "src"], ["dense", ""], ["color", "warn"], ["align", "end"], ["mat-flat-button", "", "color", "primary", 3, "routerLink", "value", "click"]], template: function BuildingComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card-header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-card-title");
@@ -4323,8 +4839,9 @@ BuildingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Repair cost: \u20A6", ctx.data.repair_cost, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("routerLink", "../building/", ctx.data.id, "");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", ctx.data.id);
-    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"], _angular_material_list__WEBPACK_IMPORTED_MODULE_2__["MatList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_2__["MatListItem"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_3__["MatDivider"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidWlsZGluZy5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"], _angular_material_list__WEBPACK_IMPORTED_MODULE_2__["MatList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_2__["MatListItem"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_3__["MatDivider"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterLink"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidWlsZGluZy5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BuildingComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -4447,7 +4964,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginSuccess", function() { return loginSuccess; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ngrx/store */ "l7P3");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ngrx/store */ "tqRt");
 
 var AuthActions;
 (function (AuthActions) {
@@ -6695,7 +7212,7 @@ ChatDB.chatCollection = [
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducers", function() { return reducers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "metaReducers", function() { return metaReducers; });
-/* harmony import */ var _ngrx_router_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ngrx/router-store */ "99NH");
+/* harmony import */ var _ngrx_router_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ngrx/router-store */ "dBJ5");
 /* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! environments/environment */ "AytR");
 /* harmony import */ var _auth_auth_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth/auth.reducer */ "pja6");
 
@@ -6772,7 +7289,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
 /* harmony import */ var _shared_services_ui_lib_icon_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/services/ui-lib-icon.service */ "72Mu");
 /* harmony import */ var _app_socket__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.socket */ "rGZO");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngrx/store */ "l7P3");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngrx/store */ "tqRt");
 /* harmony import */ var _store_auth_auth_actions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./store/auth/auth.actions */ "C9XJ");
 
 
@@ -7960,12 +8477,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_interceptors_token_interceptor__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./shared/interceptors/token.interceptor */ "Sc0o");
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/select */ "ZTz/");
 /* harmony import */ var _socket_socket_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./socket/socket.module */ "1lqc");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ngrx/store */ "l7P3");
-/* harmony import */ var _ngrx_router_store__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ngrx/router-store */ "99NH");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ngrx/store */ "tqRt");
+/* harmony import */ var _ngrx_router_store__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ngrx/router-store */ "dBJ5");
 /* harmony import */ var _store_app_reducer__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./store/app.reducer */ "S3+y");
-/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ngrx/store-devtools */ "agSv");
+/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ngrx/store-devtools */ "yQ3t");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../environments/environment */ "AytR");
-/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ngrx/effects */ "9jGm");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ngrx/effects */ "7bNT");
 /* harmony import */ var _store_auth_auth_effects__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./store/auth/auth.effects */ "nMA2");
 
 
@@ -8119,15 +8636,11 @@ class FooterComponent {
     }
 }
 FooterComponent.ɵfac = function FooterComponent_Factory(t) { return new (t || FooterComponent)(); };
-FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 7, vars: 0, consts: [[1, "main-footer"], [1, "container-dynamic", "d-flex"], [1, "m-auto"], ["href", "https://ui-lib.com"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
+FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 4, vars: 0, consts: [[1, "main-footer"], [1, "container-dynamic", "d-flex"], [1, "m-auto"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "footer", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " ABU/ ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "span", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " Design & Developed by ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Lexington Technologies");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJmb290ZXIuY29tcG9uZW50LnNjc3MifQ== */"] });
@@ -8205,12 +8718,14 @@ SharedPipesModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootRouterConfig", function() { return rootRouterConfig; });
 /* harmony import */ var _admin_components_about_about_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./admin/components/about/about.component */ "k7p9");
-/* harmony import */ var _admin_components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./admin/components/buildings/buildings.component */ "3slX");
-/* harmony import */ var _admin_components_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin/components/home/home.component */ "gTBF");
-/* harmony import */ var _admin_components_reports_reports_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./admin/components/reports/reports.component */ "OE/m");
-/* harmony import */ var _admin_components_settings_settings_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin/components/settings/settings.component */ "+Iyy");
-/* harmony import */ var _shared_components_layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/components/layouts/admin-layout/admin-layout.component */ "hOig");
-/* harmony import */ var _shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/guards/auth.guard */ "LjFu");
+/* harmony import */ var _admin_components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./admin/components/building-summary/building-summary.component */ "25rQ");
+/* harmony import */ var _admin_components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin/components/buildings/buildings.component */ "3slX");
+/* harmony import */ var _admin_components_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./admin/components/home/home.component */ "gTBF");
+/* harmony import */ var _admin_components_reports_reports_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin/components/reports/reports.component */ "OE/m");
+/* harmony import */ var _admin_components_settings_settings_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./admin/components/settings/settings.component */ "+Iyy");
+/* harmony import */ var _shared_components_layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/components/layouts/admin-layout/admin-layout.component */ "hOig");
+/* harmony import */ var _shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/guards/auth.guard */ "LjFu");
+
 
 
 
@@ -8227,12 +8742,12 @@ const rootRouterConfig = [
     },
     {
         path: '',
-        loadChildren: () => __webpack_require__.e(/*! import() | auth-auth-module */ "auth-auth-module").then(__webpack_require__.bind(null, /*! ./auth/auth.module */ "Yj9t")).then(mod => mod.AuthModule)
+        loadChildren: () => Promise.all(/*! import() | auth-auth-module */[__webpack_require__.e("common"), __webpack_require__.e("auth-auth-module")]).then(__webpack_require__.bind(null, /*! ./auth/auth.module */ "Yj9t")).then(mod => mod.AuthModule)
     },
     {
         path: 'dashboard1',
-        loadChildren: () => __webpack_require__.e(/*! import() | admin-admin-module */ "admin-admin-module").then(__webpack_require__.bind(null, /*! ./admin/admin.module */ "jkDv")).then(mod => mod.AdminModule),
-        canActivate: [_shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_6__["AuthGuard"]]
+        loadChildren: () => Promise.all(/*! import() | admin-admin-module */[__webpack_require__.e("common"), __webpack_require__.e("admin-admin-module")]).then(__webpack_require__.bind(null, /*! ./admin/admin.module */ "jkDv")).then(mod => mod.AdminModule),
+        canActivate: [_shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_7__["AuthGuard"]]
     },
     {
         path: '**',
@@ -8240,20 +8755,20 @@ const rootRouterConfig = [
     },
     {
         path: 'dashboard',
-        component: _shared_components_layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_5__["AdminLayoutComponent"],
-        canActivate: [_shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_6__["AuthGuard"]],
+        component: _shared_components_layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_6__["AdminLayoutComponent"],
+        canActivate: [_shared_guards_auth_guard__WEBPACK_IMPORTED_MODULE_7__["AuthGuard"]],
         children: [
             {
                 path: '',
-                component: _admin_components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
+                component: _admin_components_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
             },
             {
                 path: 'report',
-                component: _admin_components_reports_reports_component__WEBPACK_IMPORTED_MODULE_3__["ReportsComponent"]
+                component: _admin_components_reports_reports_component__WEBPACK_IMPORTED_MODULE_4__["ReportsComponent"]
             },
             {
                 path: 'settings',
-                component: _admin_components_settings_settings_component__WEBPACK_IMPORTED_MODULE_4__["SettingsComponent"]
+                component: _admin_components_settings_settings_component__WEBPACK_IMPORTED_MODULE_5__["SettingsComponent"]
             },
             {
                 path: 'about',
@@ -8261,7 +8776,11 @@ const rootRouterConfig = [
             },
             {
                 path: 'buildings',
-                component: _admin_components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_1__["BuildingsComponent"]
+                component: _admin_components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_2__["BuildingsComponent"]
+            },
+            {
+                path: 'building/:id',
+                component: _admin_components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_1__["BuildingSummaryComponent"]
             }
         ]
     },
@@ -8387,10 +8906,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const _c0 = function () { return { delay: "600ms", scale: ".9" }; };
+const _c0 = function () { return { delay: "100ms", scale: ".9" }; };
 const _c1 = function (a1) { return { value: "*", params: a1 }; };
-const _c2 = function () { return { scale: ".9", delay: "300ms" }; };
-const _c3 = function () { return { delay: "300ms", scale: ".9" }; };
+const _c2 = function () { return { delay: "150ms", scale: ".9" }; };
+const _c3 = function () { return { delay: "200ms", scale: ".9" }; };
+const _c4 = function () { return { delay: "250ms", scale: ".9" }; };
+const _c5 = function () { return { delay: "300ms", scale: ".9" }; };
+const _c6 = function () { return { delay: "350ms", scale: ".9" }; };
+const _c7 = function () { return { delay: "400ms", scale: ".9" }; };
+const _c8 = function () { return { delay: "450ms", scale: ".9" }; };
+const _c9 = function () { return { scale: ".9", delay: "300ms" }; };
 class HomeComponent {
     constructor(themeService) {
         this.themeService = themeService;
@@ -9109,7 +9634,7 @@ class HomeComponent {
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_theme_service__WEBPACK_IMPORTED_MODULE_2__["ThemeService"])); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 135, vars: 20, consts: [["fxLayout", "row wrap"], ["fxFlex", "100", "fxFlex.gt-sm", "25", "fxFlex.sm", "50"], ["fxLayout", "row wrap", "fxLayoutAlign", "start center", 1, "rounded-circle"], ["src", "assets/FEIMS_icons/sites.png", "alt", "", 1, "avatar-md", "rounded-circle"], [2, "width", "20px"], [1, "m-0", "text-14", "text-muted", "line-height-1"], [1, "text-18", "font-weight-bold", "text-green"], ["src", "assets/FEIMS_icons/buildings.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/hve.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/lve.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/obsolete.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/abandoned.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/repairable.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/good_condition.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["fxLayoutAlign", "start center"], [1, "text-muted"], ["fxFlex", ""], ["color", "primary", "selected", "true", 1, "icon-chip"], [1, "m-0", "font-normal"], ["color", "accent", "selected", "true", 1, "icon-chip"], ["color", "warn", "selected", "true", 1, "icon-chip"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 135, vars: 48, consts: [["fxLayout", "row wrap"], ["fxFlex", "100", "fxFlex.gt-sm", "25", "fxFlex.sm", "50"], ["fxLayout", "row wrap", "fxLayoutAlign", "start center", 1, "rounded-circle"], ["src", "assets/FEIMS_icons/sites.png", "alt", "", 1, "avatar-md", "rounded-circle"], [2, "width", "20px"], [1, "m-0", "text-14", "text-muted", "line-height-1"], [1, "text-18", "font-weight-bold", "text-green"], ["src", "assets/FEIMS_icons/buildings.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/hve.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/lve.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/obsolete.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/abandoned.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/repairable.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["src", "assets/FEIMS_icons/good_condition.png", "alt", "", 1, "avatar-md", "rounded-circle"], ["fxLayoutAlign", "start center"], [1, "text-muted"], ["fxFlex", ""], ["color", "primary", "selected", "true", 1, "icon-chip"], [1, "m-0", "font-normal"], ["color", "accent", "selected", "true", 1, "icon-chip"], ["color", "warn", "selected", "true", 1, "icon-chip"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-card", 2);
@@ -9324,15 +9849,30 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](6, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c0)));
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](75);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](9, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](8, _c2)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](13, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](12, _c0)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](16, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](15, _c2)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](19, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](18, _c3)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](22, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](21, _c4)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](25, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](24, _c5)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](28, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](27, _c6)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](31, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](30, _c7)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](34, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](33, _c8)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](37, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](36, _c9)));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](12, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](11, _c3)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](40, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](39, _c5)));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](15, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](14, _c3)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](43, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](42, _c5)));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](18, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](17, _c3)));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@animate", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](46, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](45, _c5)));
     } }, directives: [_angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultLayoutDirective"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultFlexDirective"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCard"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultLayoutAlignDirective"], _views_charts_charts_component__WEBPACK_IMPORTED_MODULE_6__["ChartsComponent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardTitle"], _angular_material_chips__WEBPACK_IMPORTED_MODULE_7__["MatChip"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIcon"], _angular_material_card__WEBPACK_IMPORTED_MODULE_5__["MatCardContent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJob21lLmNvbXBvbmVudC5zY3NzIn0= */"], data: { animation: _shared_animations_egret_animations__WEBPACK_IMPORTED_MODULE_1__["egretAnimations"] } });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HomeComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -10631,7 +11171,7 @@ ErrorHandlerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthEffect", function() { return AuthEffect; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
-/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/effects */ "9jGm");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/effects */ "7bNT");
 /* harmony import */ var app_app_socket__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/app.socket */ "rGZO");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
 /* harmony import */ var _auth_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./auth.actions */ "C9XJ");
@@ -10823,7 +11363,7 @@ JwtAuthService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineIn
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authReducer", function() { return authReducer; });
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ngrx/store */ "l7P3");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ngrx/store */ "tqRt");
 /* harmony import */ var _auth_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.actions */ "C9XJ");
 /* harmony import */ var _auth_state__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth.state */ "eL2y");
 
