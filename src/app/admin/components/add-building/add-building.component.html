@@ -78,7 +78,7 @@
             Description
           </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Input field</mat-label>
           <input type="text" matInput>
         </mat-form-field>
@@ -137,42 +137,42 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Structure type</mat-label>
             <input type="text" matInput formControlName="structureType">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility name</mat-label>
             <input matInput type="text" formControlName="facilityName">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility code</mat-label>
             <input matInput type="text" formControlName="facilityCode">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility description</mat-label>
             <input matInput type="text" formControlName="facilityDescription">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility structure</mat-label>
             <input matInput type="text" formControlName="facilityStructure">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility purpose</mat-label>
             <input matInput type="text" formControlName="facilityPurpose">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Number of storeys</mat-label>
             <input matInput type="number" formControlName="numberOfStoreys">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility status</mat-label>
             <mat-select formControlName="facilityStatus" name="facilityStatus">
               <mat-option focus value="good">Good</mat-option>
@@ -181,27 +181,27 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Date built</mat-label>
             <input matInput type="date" formControlName="facilityDateBuilt">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Date purchased</mat-label>
             <input matInput type="date" formControlName="facilityDatePurchased">
           </mat-form-field>
 
-          <mat-form-field fxFlex="22%">
+          <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Year last decorated</mat-label>
             <input matInput type="number" formControlName="yearLastDecorated">
           </mat-form-field>
 
-          <mat-form-field fxFlex="30%">
+          <mat-form-field fxFlex="30%" appearance="outline">
             <mat-label>Longitude</mat-label>
             <input matInput type="number" formControlName="facilityLongitude">
           </mat-form-field>
 
-          <mat-form-field fxFlex="30%">
+          <mat-form-field fxFlex="30%" appearance="outline">
             <mat-label>Latitude</mat-label>
             <input matInput type="number" formControlName="facilityLatitude">
           </mat-form-field>
@@ -230,19 +230,19 @@
         
         <legend>Dimensions</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Floor area</mat-label>
           <span matSuffix>m<sup>2</sup></span>
           <input matInput type="number" formControlName="buildingFloorArea" required>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Headroom</mat-label>
           <span matSuffix>m</span>
           <input matInput type="number" formControlName="buildingHeadroom" required>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Number of floors</mat-label>
           <input matInput type="number" formControlName="numberOfFloors" required>
         </mat-form-field>
@@ -253,7 +253,7 @@
         
         <legend>Materials</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Super structure</mat-label>
           <mat-select formControlName="superStructure" required>
             <mat-option></mat-option>
@@ -268,7 +268,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Floor structure</mat-label>
           <mat-select formControlName="floorStructure" required>
             <mat-option></mat-option>
@@ -279,7 +279,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline"> 
           <mat-label>Floor covering</mat-label>
           <mat-select formControlName="floorCovering" required>
             <mat-option></mat-option>
@@ -291,7 +291,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Windows</mat-label>
           <mat-select formControlName="windows" required>
             <mat-option></mat-option>
@@ -325,17 +325,17 @@
           
           <legend>Partitions</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="partitionsMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="partitionsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="partitionsCondition" name="partitionsCondition">
               <mat-option value="good">Good</mat-option>
@@ -356,17 +356,17 @@
           
           <legend>Foundation</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="foundationMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="foundationFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="foundationCondition" name="foundationCondition">
               <mat-option value="good">Good</mat-option>
@@ -376,7 +376,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.foundationCondition == 'repairable'"> 
+          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.foundationCondition == 'repairable'" appearance="outline"> 
             <mat-label>Estimated cost</mat-label>
             <input formControlName="foundationRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -387,17 +387,17 @@
           
           <legend>Floor slabs</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="floorSlabsMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="floorSlabsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="floorSlabsCondition" name="floorSlabsCondition">
               <mat-option value="good">Good</mat-option>
@@ -407,7 +407,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.floorSlabsCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.floorSlabsCondition == 'repairable'" appearance="outline">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="floorSlabsRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -418,17 +418,17 @@
           
           <legend>Floor joints</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="floorJointsMaterials" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="%">
+          <mat-form-field fxFlex="%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="floorJointsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="floorJointsCondition" name="floorJointsCondition">
               <mat-option value="good">Good</mat-option>
@@ -438,7 +438,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.floorJointsCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.floorJointsCondition == 'repairable'" appearance="outline">
             <mat-label>Estimated cost</mat-label>
             <input matInput formControlName="floorJointsRepairCost" type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -449,7 +449,7 @@
           
           <legend>Surface</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Exterior wall</mat-label>
             <mat-select formControlName="exteriorWall" required>
               <mat-option value="">-----</mat-option>
@@ -460,7 +460,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Paint condition</mat-label>
             <mat-select formControlName="paintCondition" required>
               <mat-option value="good">good</mat-option>
@@ -469,7 +469,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Mortar condition</mat-label>
             <mat-select formControlName="mortarCondition" required>
               <mat-option value="good">good</mat-option>
@@ -500,7 +500,7 @@
         
           <legend>Roof details</legend>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Roof style/shape</mat-label>
             <mat-select formControlName="roofStyleShape">
               <mat-option></mat-option>
@@ -519,12 +519,12 @@
             </mat-select>
           </mat-form-field>
     
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Truss type</mat-label>
             <input formControlName="roofTrussType" matInput type="text">
           </mat-form-field>
     
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Decking material</mat-label>
             <mat-select formControlName="roofDeckingMaterial">
               <mat-option></mat-option>
@@ -540,18 +540,18 @@
           
           <legend>Roof Openings</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
-          <mat-select formControlName="roofOpeningsCondition">
-            <mat-option></mat-option>
-            <mat-option value="working">Working</mat-option>
-            <mat-option value="repairable">Incomplete/Repairable</mat-option>
-            <mat-option value="not_working">Not working</mat-option>
-            <mat-option value="obsolete">Obsolete</mat-option>
-          </mat-select>
+            <mat-select formControlName="roofOpeningsCondition">
+              <mat-option></mat-option>
+              <mat-option value="working">Working</mat-option>
+              <mat-option value="repairable">Incomplete/Repairable</mat-option>
+              <mat-option value="not_working">Not working</mat-option>
+              <mat-option value="obsolete">Obsolete</mat-option>
+            </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="fifthFormGroup.value.roofOpeningsCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="fifthFormGroup.value.roofOpeningsCondition == 'repairable'" appearance="outline">
             <mat-label>Cost of repair</mat-label>
             <input formControlName="roofOpeningsRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -563,17 +563,17 @@
         
         <legend>Ceiling</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Materials</mat-label>
           <input formControlName="ceilingMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Finishes</mat-label>
           <input formControlName="ceilingFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="ceilingCondition" name="ceilingCondition">
             <mat-option value="good">Good</mat-option>
@@ -583,7 +583,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="fifthFormGroup.value.ceilingCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="fifthFormGroup.value.ceilingCondition == 'repairable'" appearance="outline">
           <mat-label>Estimated cost</mat-label>
           <input matInput formControlName="ceilingRepairCost" type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -612,17 +612,17 @@
         <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Doors</legend>
         
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Materials</mat-label>
           <input formControlName="doorsMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Finishes</mat-label>
           <input formControlName="doorsFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="doorsCondition" name="doorsCondition">
             <mat-option value="good">Good</mat-option>
@@ -632,7 +632,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.doorsCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.doorsCondition == 'repairable'" appearance="outline"> 
           <mat-label>Estimated cost</mat-label>
           <input formControlName="doorsRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -642,17 +642,17 @@
         <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Windows</legend>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Materials</mat-label>
           <input formControlName="buildingWindowsMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Finishes</mat-label>
           <input formControlName="buildingWindowsFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="buildingWindowsCondition" name="buildingWindowsCondition">
             <mat-option value="good">Good</mat-option>
@@ -674,17 +674,17 @@
         <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Glazing</legend>
         
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Materials</mat-label>
           <input formControlName="glazingMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="glazingFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="glazingCondition" name="glazingCondition">
               <mat-option value="good">Good</mat-option>
@@ -705,7 +705,7 @@
 
           <legend>Burglar Proof</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="burglarProofCondition">
             <mat-option value="working">Working</mat-option>
@@ -716,7 +716,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.burglarProofCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.burglarProofCondition == 'repairable'" appearance="outline">
             <mat-label>Cost of repair</mat-label>
             <input formControlName="burglarProofRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -728,7 +728,7 @@
 
           <legend>Gates</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="gatesCondition">
             <mat-option value="none">none</mat-option>
@@ -740,7 +740,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.gatesCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.gatesCondition == 'repairable'" appearance="outline">
             <mat-label>Cost of repair</mat-label>
             <input formControlName="gatesRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -767,7 +767,7 @@
           
           <legend>Roof lights</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
           <mat-select formControlName="roofLightsCondition">
             <mat-option value="working">Working</mat-option>
@@ -778,7 +778,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.roofLightsCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.roofLightsCondition == 'repairable'" appearance="outline">
             <mat-label>Cost of repair</mat-label>
             <input matInput type="number" formControlName="roofLightsRepairCost">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -789,17 +789,17 @@
         <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">       
         <legend>Fan lights</legend>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Fan light material</mat-label>
           <input type="text" matInput formControlName="fanLightMaterial">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Fan light finishes</mat-label>
           <input type="text" matInput formControlName="fanLightFinishes">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="fanLightCondition">
           <mat-option value="working">Working</mat-option>
@@ -822,7 +822,7 @@
         
         <legend>Air quality and Handling</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="airQualityCondition">
           <mat-option value="working">Working</mat-option>
@@ -833,7 +833,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.airQualityCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.airQualityCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input matInput type="number" formControlName="airQualityRepairCost">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -845,7 +845,7 @@
         
         <legend>Ventilation System</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="ventilationSystemCondition">
           <mat-option value="working">Working</mat-option>
@@ -856,7 +856,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.ventilationSystemCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.ventilationSystemCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="ventilationSystemRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -868,7 +868,7 @@
 
         <legend>Air Conditioning</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="airConditioningCondition">
           <mat-option value="working">Working</mat-option>
@@ -878,7 +878,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.airConditioningCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.airConditioningCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input matInput type="number" formControlName="airConditioningRepairCost">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -889,17 +889,17 @@
       <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         <legend>Furniture</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Materials</mat-label>
           <input formControlName="furnitureMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Finishes</mat-label>
           <input formControlName="furnitureFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="furnitureCondition" name="furnitureCondition">
             <mat-option value="good">Good</mat-option>
@@ -909,7 +909,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.furnitureCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.furnitureCondition == 'repairable'" appearance="outline">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="furnitureRepairCost" matInput type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -921,7 +921,7 @@
         
         <legend>Material Handling & Transportation System</legend>
         
-        <mat-form-field fxFlex="24">
+        <mat-form-field fxFlex="24" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="materialHandlingSystemCondition">
           <mat-option value="working">Working</mat-option>
@@ -932,7 +932,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.materialHandlingSystemCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.materialHandlingSystemCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="materialHandlingSystemRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -946,7 +946,7 @@
 
         <legend>Temperature & Humidity Control</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="temperatureControlCondition">
           <mat-option value="working">Working</mat-option>
@@ -957,7 +957,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.temperatureControlCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.temperatureControlCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="temperatureControlRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -968,7 +968,7 @@
       <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <legend>Hot Water</legend>
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="hotWaterCondition">
           <mat-option value="working">Working</mat-option>
@@ -979,7 +979,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.hotWaterCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.hotWaterCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="hotWaterRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -991,7 +991,7 @@
 
         <legend>Cold Water</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="coldWaterCondition">
             <mat-option value="working">Working</mat-option>
@@ -1002,7 +1002,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.coldWaterCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.coldWaterCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="coldWaterRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1014,7 +1014,7 @@
        
         <legend>Gas Tanks</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="gasTanksCondition">
           <mat-option value="working">Working</mat-option>
@@ -1025,7 +1025,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.gasTanksCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.gasTanksCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="gasTanksRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1037,7 +1037,7 @@
 
         <legend>Gas Piping</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="gasPipingCondition">
           <mat-option value="working">Working</mat-option>
@@ -1048,7 +1048,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.gasPipingCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.gasPipingCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="gasPipingRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1060,7 +1060,7 @@
 
         <legend>Air Compressed</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="compressedAirCondition">
           <mat-option value="working">Working</mat-option>
@@ -1071,7 +1071,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.compressedAirCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="seventhFormGroup.value.compressedAirCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="compressedAirRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1097,17 +1097,17 @@
         <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Trim</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="trimMaterial" matInput type="text">
           </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Finishes</mat-label>
           <input formControlName="trimFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="trimCondition" name="trimCondition">
             <mat-option value="good">Good</mat-option>
@@ -1117,7 +1117,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.trimCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.trimCondition == 'repairable'" appearance="outline">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="trimRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1127,17 +1127,17 @@
         <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
           <legend>Frame</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="frameMaterial" matInput type="text">
           </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Finishes</mat-label>
           <input formControlName="frameFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="frameCondition" name="frameCondition">
             <mat-option value="good">Good</mat-option>
@@ -1147,7 +1147,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.frameCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.frameCondition == 'repairable'" appearance="outline">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="frameRepairCost" matInput type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1158,17 +1158,17 @@
           
           <legend>Building facade</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="buildingFacadeMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="buildingFacadeFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="buildingFacadeCondition" name="buildingFacadeCondition">
               <mat-option value="good">Good</mat-option>
@@ -1178,7 +1178,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.buildingFacadeCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.buildingFacadeCondition == 'repairable'" appearance="outline">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="buildingFacadeRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1189,17 +1189,17 @@
           
           <legend>Corridors</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="corridorsMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="corridorsFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="corridorsCondition" name="corridorsCondition">
               <mat-option></mat-option>
@@ -1209,7 +1209,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.corridorsCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.corridorsCondition == 'repairable'" appearance="outline">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="corridorsRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1220,17 +1220,17 @@
           
           <legend>Entrance</legend>
           
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Materials</mat-label>
             <input formControlName="entrancesMaterial" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="entrancesFinishes" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="entrancesCondition" name="entrancesCondition">
               <mat-option></mat-option>
@@ -1240,7 +1240,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.entranceCondition == 'repairable'">
+          <mat-form-field fxFlex="24%" *ngIf="eighthFormGroup.value.entranceCondition == 'repairable'" appearance="outline">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="entrancesRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1263,7 +1263,7 @@
       
       <div fxLayout="column" fxLayoutGap="10px">
       
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Number of elevators</mat-label>
         <input formControlName="elevatorsCount" matInput type="number">
       </mat-form-field>
@@ -1291,33 +1291,33 @@
       </ul>
       </div>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Key location</mat-label>
         <input formControlName="elevatorKeyLocation" matInput type="text" required>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Brand name</mat-label>
         <input formControlName="elevatorBrandName" matInput type="text" required>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Service company</mat-label>
         <input formControlName="elevatorServiceCompany" matInput type="text" required>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Phone number</mat-label>
         <input formControlName="elevatorServicePhoneNumber" matInput type="tel" required>
         <mat-icon matSuffix>phone</mat-icon>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Emergency shutoff location</mat-label>
         <input formControlName="elevatorEmergencyShutoffLocation" matInput type="text" required>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Exit</mat-label>
         <mat-select formControlName="elevatorExit">
           <mat-option></mat-option>
@@ -1414,17 +1414,17 @@
         
         <legend>Service ducts</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Materials</mat-label>
           <input formControlName="serviceDuctMaterial" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Finishes</mat-label>
           <input formControlName="serviceDuctFinishes" matInput type="text">
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="serviceDuctCondition" name="serviceDuctCondition">
             <mat-option value="good">Good</mat-option>
@@ -1434,7 +1434,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="tenthFormGroup.value.serviceDuctCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="tenthFormGroup.value.serviceDuctCondition == 'repairable'" appearance="outline">
           <mat-label>Estimated cost</mat-label>
           <input formControlName="serviceDuctRepairCost" matInput type="text">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1445,7 +1445,7 @@
 
         <legend>Drainage</legend>
         
-        <mat-form-field fxFlex="24%">
+        <mat-form-field fxFlex="24%" appearance="outline">
           <mat-label>Condition</mat-label>
         <mat-select formControlName="drainageCondition">
           <mat-option value="working">Working</mat-option>
@@ -1456,7 +1456,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="tenthFormGroup.value.drainageCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="tenthFormGroup.value.drainageCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="drainageRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1470,7 +1470,7 @@
       
         <mat-label>Condition</mat-label>
         
-        <mat-form-field fxFlex="24%"> 
+        <mat-form-field fxFlex="24%" appearance="outline"> 
         <mat-select formControlName="distributionCondition">
           <mat-option value="working">Working</mat-option>
           <mat-option value="repairable">Incomplete/Repairable</mat-option>
@@ -1480,7 +1480,7 @@
         </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex="24%" *ngIf="tenthFormGroup.value.distributionCondition == 'repairable'">
+        <mat-form-field fxFlex="24%" *ngIf="tenthFormGroup.value.distributionCondition == 'repairable'" appearance="outline">
           <mat-label>Cost of repair</mat-label>
           <input formControlName="distributionRepairCost" matInput type="number">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -1491,7 +1491,7 @@
       <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
         <legend>Material handling system</legend>
 
-        <mat-form-field fxFlex="24">
+        <mat-form-field fxFlex="24" appearance="outline">
           <mat-label>Material handling system</mat-label> 
           <mat-select formControlName="materialHandlingSystemCondition">
             <mat-option value="working">Working</mat-option>
@@ -1502,7 +1502,7 @@
           </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Cost of repair</mat-label>
             <input formControlName="materialHandlingSystemRepairCost" matInput type="number">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
