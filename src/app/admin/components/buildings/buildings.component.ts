@@ -78,7 +78,7 @@ export class BuildingsComponent implements OnInit {
 
   openAddDialog(): void{
     const dialogRef = this.dialog.open(AddBuildingComponent, {
-      minWidth: '400px',
+      width: '90%',
       height: '90%',
       data: {},
       disableClose: true

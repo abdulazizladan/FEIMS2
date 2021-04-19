@@ -54,6 +54,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { BuildingSummaryComponent } from './components/building-summary/building-summary.component';
+import { SiteSurveyComponent } from './components/site-survey/site-survey.component';
 
 
 @NgModule({
@@ -70,7 +71,7 @@ import { BuildingSummaryComponent } from './components/building-summary/building
     SidenavComponent, 
     ToolbarComponent, 
     AboutComponent, 
-    BuildingSummaryComponent
+    BuildingSummaryComponent, SiteSurveyComponent
   ],
   imports: [
     CommonModule,
