@@ -10,7 +10,7 @@
   
   </span>
 
-  <button mat-icon-button color="warn" aria-label="close dialog" mat-dialog-close>
+  <button mat-icon-button aria-label="close dialog" mat-dialog-close>
     <mat-icon>close</mat-icon>
   </button>
 </h2>
@@ -25,17 +25,10 @@
       <mat-expansion-panel [expanded]="expansion1Step === 0" (opened)="set1Step(0)" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
-            Step 1
+            Building Dimensions
           </mat-panel-title>
-          <mat-panel-description>
-            Description
-          </mat-panel-description>
         </mat-expansion-panel-header>
         <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
-          
-          <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
-  
-            <legend>Basic info</legend>
   
             <mat-form-field fxFlex="30%" appearance="outline">
               <mat-label>Facility type</mat-label>
@@ -56,10 +49,6 @@
               <mat-label>Facility name</mat-label>
               <input matInput type="text">
             </mat-form-field>
-  
-
-  
-          </fieldset> 
               
               
         </div>
@@ -74,9 +63,6 @@
           <mat-panel-title>
             Step 2
           </mat-panel-title>
-          <mat-panel-description>
-            Description
-          </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-form-field appearance="outline">
           <mat-label>Input field</mat-label>
@@ -94,9 +80,6 @@
           <mat-panel-title>
             Step 3
           </mat-panel-title>
-          <mat-panel-description>
-            Description
-          </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-action-row>
           <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
