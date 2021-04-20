@@ -35,7 +35,7 @@ export class AddBuildingComponent implements OnInit {
     this.expansion1Step--; 
   }
 
-  previousStep(){
+  resetForm(){
 
   }
 

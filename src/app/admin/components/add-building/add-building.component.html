@@ -10,6 +10,7 @@
   
   </span>
 
+  <button mat-flat-button (click)="resetForm()">Reset form</button> 
   <button mat-icon-button aria-label="close dialog" mat-dialog-close>
     <mat-icon>close</mat-icon>
   </button>
@@ -28,7 +29,8 @@
             Building Dimensions
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
+        
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
   
             <mat-form-field fxFlex="30%" appearance="outline">
               <mat-label>Facility type</mat-label>
@@ -40,12 +42,12 @@
               </mat-select>
             </mat-form-field>
   
-            <mat-form-field fxFlex="22%" appearance="outline">
+            <mat-form-field fxFlex="30%" appearance="outline">
               <mat-label>Structure type</mat-label>
               <input type="text" matInput>
             </mat-form-field>
   
-            <mat-form-field fxFlex="22%" appearance="outline">
+            <mat-form-field fxFlex="30%" appearance="outline">
               <mat-label>Facility name</mat-label>
               <input matInput type="text">
             </mat-form-field>
