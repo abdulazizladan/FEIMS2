@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SiteService } from '../../services/site.service';
 
 interface siteSurveyData{
   institutionName: string;
@@ -9,7 +11,21 @@ interface siteSurveyData{
   overallSiteMeasurement: number;
   siteTriangulation: number;
   siteLevel: number;
-  
+  sitePosition: {
+    longitude: number;
+    latitude: number
+  };
+  changeOfLevels: number;
+  siteCondition: {
+    hasErosion: boolean;
+    isFlooded: boolean;
+    wood2oomAboveGround: boolean;
+    trees3mFromFoundation: boolean;
+    hasWeedOnWalls: boolean;
+    sitePlan: string;
+    generalComments: string;
+  } 
+
 }
 
 @Component({
@@ -19,12 +35,16 @@ interface siteSurveyData{
 })
 export class SiteSurveyComponent implements OnInit {
 
-  constructor( ) { 
+  siteSurveyForm: FormGroup;
+
+  constructor( private siteService: SiteService, private fb: FormBuilder ) { 
 
   }
 
   ngOnInit(): void {
-
+    this.siteSurveyForm = this.fb.group({
+      institutionName: [ '', [Validators.required]]
+    })
   }
 
   addSiteData(): boolean {
