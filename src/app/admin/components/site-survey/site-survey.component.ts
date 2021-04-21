@@ -43,12 +43,17 @@ export class SiteSurveyComponent implements OnInit {
 
   ngOnInit(): void {
     this.siteSurveyForm = this.fb.group({
-      institutionName: [ '', [Validators.required]]
+      institutionName: [ '', [Validators.required]],
+
     })
   }
 
-  addSiteData(): boolean {
+  addSiteData(): boolean{
     return true;
+  }
+
+  resetForm(): void{
+
   }
 
 }

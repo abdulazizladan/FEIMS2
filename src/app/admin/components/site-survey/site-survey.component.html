@@ -5,3 +5,31 @@
       <mat-icon>close</mat-icon>
     </button>
   </h2>
+
+  <mat-dialog-content>
+    <div fxLayout="row wrap">
+        
+        <mat-form-field appearance="outline">
+            <mat-label>
+                
+            </mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>
+                
+            </mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+
+    </div>
+    
+  </mat-dialog-content>
+
+  <!--Actions -->
+  <mat-dialog-actions>
+    <button mat-flat-button (click)="resetForm()">Reset form</button>
+    <span></span>
+    <button mat-flat-button color="primary" (click)="addSiteData()">Submit</button>
+  </mat-dialog-actions>
