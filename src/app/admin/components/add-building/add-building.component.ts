@@ -21,18 +21,20 @@ export class AddBuildingComponent implements OnInit {
   public ninthFormGroup: FormGroup;//Elevators
   public tenthFormGroup: FormGroup;//Services
 
-  expansion1Step: number = 0;
+  expansionPanel1Step: number = 0;
+  expansionPanel2Step: number = 0;
+  expansionPanel3Step: number = 0;
 
-  set1Step( index: number){
-    this.expansion1Step = index;
+  setPanel1Step( index: number){
+    this.expansionPanel1Step = index;
   }
 
   nextStep(){
-    this.expansion1Step++; 
+    this.expansionPanel1Step++; 
   }
 
   prevStep(){
-    this.expansion1Step--; 
+    this.expansionPanel1Step--; 
   }
 
   resetForm(){
@@ -97,8 +99,8 @@ export class AddBuildingComponent implements OnInit {
     this.fifthFormGroup = this.fb.group({
       roofStyleShape: ['', [Validators.required]],
       roofTrussType: ['', []],
-      roofDeckingMaterial: ['', []],
-      roofOpeningsCondition: ['good', [Validators.required]],
+      roofDeckingMaterial: ['wood', []],
+      roofOpeningsCondition: ['working', [Validators.required]],
       roofOpeningsRepairCost: [0, [Validators.required]],
       ceilingMaterial: ['', [Validators.required]],
       ceilingFinishes: ['', [Validators.required]],

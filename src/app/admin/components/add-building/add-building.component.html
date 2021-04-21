@@ -42,7 +42,7 @@
 
       <!--panel 001 -->
       
-      <mat-expansion-panel [expanded]="expansion1Step === 0" (opened)="set1Step(0)" hideToggle>
+      <mat-expansion-panel [expanded]="expansionPanel1Step === 0" (opened)="setPanel1Step(0)" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Basic Information
@@ -139,7 +139,7 @@
 
       <!-- panel 002 --> 
       <form [formGroup]="secondFormGroup">
-      <mat-expansion-panel  [expanded]="expansion1Step === 1" (opened)="set1Step(1)" hideToggle>
+      <mat-expansion-panel  [expanded]="expansionPanel1Step === 1" (opened)="setPanel1Step(1)" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Building dimensions
@@ -175,7 +175,7 @@
       </mat-expansion-panel>
 
       <!-- panel 003 -->
-      <mat-expansion-panel [expanded]="expansion1Step === 2" (opened)="set1Step(2)" hideToggle>
+      <mat-expansion-panel [expanded]="expansionPanel1Step === 2" (opened)="setPanel1Step(2)" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Building materials
@@ -306,7 +306,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.partitionsCondition == 'repairable' || thirdFormGroup.value.partitionsCondition == 'replaceable'">
+          <mat-form-field fxFlex="24%" *ngIf="thirdFormGroup.value.partitionsCondition == 'repairable' || thirdFormGroup.value.partitionsCondition == 'replaceable'" appearance="outline">
             <mat-label>Estimated cost</mat-label>
             <input formControlName="partitionsRepairCost" matInput type="text">
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -464,7 +464,6 @@
           <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Roof style/shape</mat-label>
             <mat-select formControlName="roofStyleShape">
-              <mat-option></mat-option>
               <mat-option value="flat">Flat</mat-option>
               <mat-option value="pitched">Pitched</mat-option>
               <mat-option value="arched">Arched</mat-option>
@@ -488,7 +487,6 @@
           <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Decking material</mat-label>
             <mat-select formControlName="roofDeckingMaterial">
-              <mat-option></mat-option>
               <mat-option value="wood">Wood</mat-option>
               <mat-option value="concrete">Concrete</mat-option>
               <mat-option value="other">Other</mat-option>
@@ -504,7 +502,6 @@
           <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="roofOpeningsCondition">
-              <mat-option></mat-option>
               <mat-option value="working">Working</mat-option>
               <mat-option value="repairable">Incomplete/Repairable</mat-option>
               <mat-option value="not_working">Not working</mat-option>
