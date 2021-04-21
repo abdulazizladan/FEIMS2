@@ -10,7 +10,7 @@
   
   </span>
 
-  <button mat-flat-button (click)="resetForm()">Reset form</button> 
+  <button mat-stroked-button (click)="resetForm()">Reset form</button> 
   <button mat-icon-button aria-label="close dialog" mat-dialog-close>
     <mat-icon>close</mat-icon>
   </button>
@@ -55,7 +55,6 @@
           <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility type</mat-label>
             <mat-select formControlName="facilityType" name="facilityType">
-              <mat-option></mat-option>
               <mat-option value="lab">Laboratory</mat-option>
               <mat-option value="lt">Lecture Theatre</mat-option>
               <mat-option value="fclt">Faculty Complex</mat-option>
@@ -186,7 +185,6 @@
           <mat-form-field fxFlex="24%" appearance="outline">
                 <mat-label>Super structure</mat-label>
                 <mat-select formControlName="superStructure" required>
-                  <mat-option></mat-option>
                   <mat-option value="metal">Metal</mat-option>
                   <mat-option value="wood">Wood</mat-option>
                   <mat-option value="sheetrock">Sheetrock</mat-option>
@@ -201,7 +199,6 @@
               <mat-form-field fxFlex="24%" appearance="outline">
                 <mat-label>Floor structure</mat-label>
                 <mat-select formControlName="floorStructure" required>
-                  <mat-option></mat-option>
                   <mat-option value="metal">Metal</mat-option>
                   <mat-option value="wood">Wood</mat-option>
                   <mat-option value="concrete">Concrete</mat-option>
@@ -212,7 +209,6 @@
               <mat-form-field fxFlex="24%" appearance="outline"> 
                 <mat-label>Floor covering</mat-label>
                 <mat-select formControlName="floorCovering" required>
-                  <mat-option></mat-option>
                   <mat-option value="wood">metal</mat-option>
                   <mat-option value="concrete">wood</mat-option>
                   <mat-option value="carpet">concrete</mat-option>
@@ -224,7 +220,6 @@
               <mat-form-field fxFlex="24%" appearance="outline">
                 <mat-label>Windows</mat-label>
                 <mat-select formControlName="windows" required>
-                  <mat-option></mat-option>
                   <mat-option value="wire_glass">Wire glass</mat-option>
                   <mat-option value="glass_block">Glass block</mat-option>
                   <mat-option value="plate">Plate</mat-option>
@@ -271,7 +266,7 @@
     </div>-->
   </mat-step> 
 
-  <!-- 02 Building Dimension -->
+  <!-- 02 Building Dimension 
   <mat-step label="Building Dimensions" [stepControl]="secondFormGroup">
 
     <div style="margin-top: 50px;">
@@ -279,7 +274,7 @@
       <span fxFlex="1 1 auto"></span>
       <button mat-flat-button matStepperNext color="primary">Next</button>
     </div>
-  </mat-step>
+  </mat-step>-->
 
   <!-- 03 Walls  and Floors -->
   <mat-step label="Walls & Floor" [stepControl]="thirdFormGroup">
@@ -389,7 +384,7 @@
             <input formControlName="floorJointsMaterials" matInput type="text">
           </mat-form-field>
 
-          <mat-form-field fxFlex="%" appearance="outline">
+          <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Finishes</mat-label>
             <input formControlName="floorJointsFinishes" matInput type="text">
           </mat-form-field>
@@ -1169,7 +1164,6 @@
           <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="corridorsCondition" name="corridorsCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
@@ -1200,7 +1194,6 @@
           <mat-form-field fxFlex="24%" appearance="outline">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="entrancesCondition" name="entrancesCondition">
-              <mat-option></mat-option>
               <mat-option value="good">Good</mat-option>
               <mat-option value="abandoned">Abandoned</mat-option>
               <mat-option value="repairable">Repairable</mat-option>
