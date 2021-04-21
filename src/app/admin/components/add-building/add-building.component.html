@@ -19,99 +19,39 @@
 <mat-dialog-content>
 <mat-horizontal-stepper labelPosition="bottom" #stepper linear>
 
-  <mat-step label="faux step">
+  <!--<mat-step label="faux step">
     
     <mat-accordion>
-      <!--panel 001 -->
-      <mat-expansion-panel [expanded]="expansion1Step === 0" (opened)="set1Step(0)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Building Dimensions
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
-  
-            <mat-form-field fxFlex="30%" appearance="outline">
-              <mat-label>Facility type</mat-label>
-              <mat-select>
-                <mat-option></mat-option>
-                <mat-option value="lab">Laboratory</mat-option>
-                <mat-option value="lt">Lecture Theatre</mat-option>
-                <mat-option value="fclt">Faculty Complex</mat-option>
-              </mat-select>
-            </mat-form-field>
-  
-            <mat-form-field fxFlex="30%" appearance="outline">
-              <mat-label>Structure type</mat-label>
-              <input type="text" matInput>
-            </mat-form-field>
-  
-            <mat-form-field fxFlex="30%" appearance="outline">
-              <mat-label>Facility name</mat-label>
-              <input matInput type="text">
-            </mat-form-field>
-              
-              
-        </div>
-        <mat-action-row>
-          <button mat-flat-button color="primary" (click)="nextStep()">Next</button>
-        </mat-action-row>
-      </mat-expansion-panel>
+      
+      
 
-      <!-- panel 002 -->
-      <mat-expansion-panel  [expanded]="expansion1Step === 1" (opened)="set1Step(1)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Step 2
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <mat-form-field appearance="outline">
-          <mat-label>Input field</mat-label>
-          <input type="text" matInput>
-        </mat-form-field>
-        <mat-action-row>
-          <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
-          <button mat-flat-button color="primary" (click)="nextStep()">Next</button>
-        </mat-action-row>
-      </mat-expansion-panel>
-
-      <!-- panel 003 -->
-      <mat-expansion-panel [expanded]="expansion1Step === 2" (opened)="set1Step(2)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Step 3
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <mat-action-row>
-          <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
-          <button mat-flat-button color="primary" matStepperNext>Next</button>
-        </mat-action-row>
-      </mat-expansion-panel>
+      
       
     </mat-accordion>
 
     <div style="margin-top: 50px;">
       <span fxFlex="1 1 auto"></span>
-      <!--<button mat-flat-button matStepperNext color="primary">Next</button>-->
+      <button mat-flat-button matStepperNext color="primary">Next</button>
     </div>
 
-  </mat-step>
+  </mat-step>-->
 
   <!-- 1 Building survey -->
   <mat-step label="Building survey" [stepControl]="firstFormGroup">
+    <mat-accordion>
 
-    
-    <div fxLayout="column">
-
-    <form [formGroup]="firstFormGroup" fxFlex="1 1 auto">  
-
-      <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
+      <!--panel 001 -->
+      
+      <mat-expansion-panel [expanded]="expansion1Step === 0" (opened)="set1Step(0)" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Basic Information
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div>
           
-        <fieldset fxLayout="row wrap" fxLayoutGap="10px grid">
-
-          <legend>Basic info</legend>
-
+          <form [formGroup]="firstFormGroup" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
           <mat-form-field fxFlex="22%" appearance="outline">
             <mat-label>Facility type</mat-label>
             <mat-select formControlName="facilityType" name="facilityType">
@@ -190,6 +130,132 @@
             <mat-label>Latitude</mat-label>
             <input matInput type="number" formControlName="facilityLatitude">
           </mat-form-field>
+              
+          </form>    
+        </div>
+        <mat-action-row>
+          <button mat-flat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- panel 002 --> 
+      <form [formGroup]="secondFormGroup">
+      <mat-expansion-panel  [expanded]="expansion1Step === 1" (opened)="set1Step(1)" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Building dimensions
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+            <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+              
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Floor area</mat-label>
+                <span matSuffix>m<sup>2</sup></span>
+                <input matInput type="number" formControlName="buildingFloorArea" required>
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Headroom</mat-label>
+                <span matSuffix>m</span>
+                <input matInput type="number" formControlName="buildingHeadroom" required>
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Number of floors</mat-label>
+                <input matInput type="number" formControlName="numberOfFloors" required>
+              </mat-form-field>
+      
+            </div>
+        
+        
+        <mat-action-row>
+          <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
+          <button mat-flat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- panel 003 -->
+      <mat-expansion-panel [expanded]="expansion1Step === 2" (opened)="set1Step(2)" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Building materials
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+          <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Super structure</mat-label>
+                <mat-select formControlName="superStructure" required>
+                  <mat-option></mat-option>
+                  <mat-option value="metal">Metal</mat-option>
+                  <mat-option value="wood">Wood</mat-option>
+                  <mat-option value="sheetrock">Sheetrock</mat-option>
+                  <mat-option value="plaster">Plaster</mat-option>
+                  <mat-option value="concrete">Concrete</mat-option>
+                  <mat-option value="brick">Brick</mat-option>
+                  <mat-option value="paneling">Paneling</mat-option>
+                  <mat-option value="other">Other</mat-option>
+                </mat-select>
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Floor structure</mat-label>
+                <mat-select formControlName="floorStructure" required>
+                  <mat-option></mat-option>
+                  <mat-option value="metal">Metal</mat-option>
+                  <mat-option value="wood">Wood</mat-option>
+                  <mat-option value="concrete">Concrete</mat-option>
+                  <mat-option value="other">Other</mat-option>
+                </mat-select>
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" appearance="outline"> 
+                <mat-label>Floor covering</mat-label>
+                <mat-select formControlName="floorCovering" required>
+                  <mat-option></mat-option>
+                  <mat-option value="wood">metal</mat-option>
+                  <mat-option value="concrete">wood</mat-option>
+                  <mat-option value="carpet">concrete</mat-option>
+                  <mat-option value="vinyl">vinyl</mat-option>
+                  <mat-option value="other">Other</mat-option>
+                </mat-select>
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Windows</mat-label>
+                <mat-select formControlName="windows" required>
+                  <mat-option></mat-option>
+                  <mat-option value="wire_glass">Wire glass</mat-option>
+                  <mat-option value="glass_block">Glass block</mat-option>
+                  <mat-option value="plate">Plate</mat-option>
+                  <mat-option value="tempered">Tempered</mat-option>
+                  <mat-option value="operating">Operating</mat-option>
+                  <mat-option value="fixed">Fixed</mat-option>
+                  <mat-option value="other">Other</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+        <mat-action-row>
+          <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
+          <button mat-flat-button color="primary" matStepperNext>Next</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      </form>
+
+    </mat-accordion>
+    
+    <!--<div fxLayout="column">
+
+    <form  fxFlex="1 1 auto">  
+
+      <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
+          
+        <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+
+          <legend>Basic info</legend>
+
+          
 
         </fieldset> 
             
@@ -197,101 +263,16 @@
       </div>
     </form>
 
-    </div>
+    </div>-->
     
-    <div style="margin-top: 50px;">
+    <!--<div style="margin-top: 50px;">
       <span fxFlex="1 1 auto"></span>
       <button mat-flat-button matStepperNext color="primary">Next</button>
-    </div>
+    </div>-->
   </mat-step> 
 
   <!-- 02 Building Dimension -->
   <mat-step label="Building Dimensions" [stepControl]="secondFormGroup">
-    
-    <form [formGroup]="secondFormGroup">
-      <div fxLayout="column" fxLayoutGap="10px">
-        
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
-        
-        <legend>Dimensions</legend>
-        
-        <mat-form-field fxFlex="24%" appearance="outline">
-          <mat-label>Floor area</mat-label>
-          <span matSuffix>m<sup>2</sup></span>
-          <input matInput type="number" formControlName="buildingFloorArea" required>
-        </mat-form-field>
-
-        <mat-form-field fxFlex="24%" appearance="outline">
-          <mat-label>Headroom</mat-label>
-          <span matSuffix>m</span>
-          <input matInput type="number" formControlName="buildingHeadroom" required>
-        </mat-form-field>
-
-        <mat-form-field fxFlex="24%" appearance="outline">
-          <mat-label>Number of floors</mat-label>
-          <input matInput type="number" formControlName="numberOfFloors" required>
-        </mat-form-field>
-
-      </fieldset>
-
-      <fieldset fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
-        
-        <legend>Materials</legend>
-        
-        <mat-form-field fxFlex="24%" appearance="outline">
-          <mat-label>Super structure</mat-label>
-          <mat-select formControlName="superStructure" required>
-            <mat-option></mat-option>
-            <mat-option value="metal">Metal</mat-option>
-            <mat-option value="wood">Wood</mat-option>
-            <mat-option value="sheetrock">Sheetrock</mat-option>
-            <mat-option value="plaster">Plaster</mat-option>
-            <mat-option value="concrete">Concrete</mat-option>
-            <mat-option value="brick">Brick</mat-option>
-            <mat-option value="paneling">Paneling</mat-option>
-            <mat-option value="other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field fxFlex="24%" appearance="outline">
-          <mat-label>Floor structure</mat-label>
-          <mat-select formControlName="floorStructure" required>
-            <mat-option></mat-option>
-            <mat-option value="metal">Metal</mat-option>
-            <mat-option value="wood">Wood</mat-option>
-            <mat-option value="concrete">Concrete</mat-option>
-            <mat-option value="other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field fxFlex="24%" appearance="outline"> 
-          <mat-label>Floor covering</mat-label>
-          <mat-select formControlName="floorCovering" required>
-            <mat-option></mat-option>
-            <mat-option value="wood">metal</mat-option>
-            <mat-option value="concrete">wood</mat-option>
-            <mat-option value="carpet">concrete</mat-option>
-            <mat-option value="vinyl">vinyl</mat-option>
-            <mat-option value="other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field fxFlex="24%" appearance="outline">
-          <mat-label>Windows</mat-label>
-          <mat-select formControlName="windows" required>
-            <mat-option></mat-option>
-            <mat-option value="wire_glass">Wire glass</mat-option>
-            <mat-option value="glass_block">Glass block</mat-option>
-            <mat-option value="plate">Plate</mat-option>
-            <mat-option value="tempered">Tempered</mat-option>
-            <mat-option value="operating">Operating</mat-option>
-            <mat-option value="fixed">Fixed</mat-option>
-            <mat-option value="other">Other</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </fieldset>
-      </div>
-    </form>
 
     <div style="margin-top: 50px;">
       <button mat-flat-button matStepperPrevious color="primary">Previous</button>
