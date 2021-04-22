@@ -25,16 +25,40 @@ export class AddBuildingComponent implements OnInit {
   expansionPanel2Step: number = 0;
   expansionPanel3Step: number = 0;
 
-  setPanel1Step( index: number){
+  setPanel1Step( index: number ){
     this.expansionPanel1Step = index;
+  }
+
+  setPanel2Step( index: number ){
+    this.expansionPanel2Step = index;
+  }
+
+  setPanel3Step( index: number ){
+    this.expansionPanel3Step = index;
   }
 
   nextStep(){
     this.expansionPanel1Step++; 
   }
 
+  nextStep2(){
+    this.expansionPanel2Step++; 
+  }
+
+  nextStep3(){
+    this.expansionPanel3Step++; 
+  }
+
   prevStep(){
     this.expansionPanel1Step--; 
+  }
+
+  prevStep2(){
+    this.expansionPanel2Step--;
+  }
+
+  prevStep3(){
+    this.expansionPanel3Step--;
   }
 
   resetForm(){
