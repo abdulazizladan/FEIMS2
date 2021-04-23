@@ -61,6 +61,7 @@ export class AddBuildingComponent implements OnInit {
     this.expansionPanel3Step--;
   }
 
+  //Reset all input fields to default value
   resetForm(){
 
   }
