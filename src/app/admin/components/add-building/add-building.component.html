@@ -642,8 +642,223 @@
           </mat-expansion-panel>
       </form>
 
+      <form [formGroup]="sixthFormGroup">
+
+        <!-- Doors -->
+        <mat-expansion-panel [expanded]="expansionPanel2Step === 8" (opened)="setPanel2Step(8)" hideToggle>
+            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Doors
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+            
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Materials</mat-label>
+              <input formControlName="doorsMaterial" matInput type="text">
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Finishes</mat-label>
+              <input formControlName="doorsFinishes" matInput type="text">
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Condition</mat-label>
+              <mat-select formControlName="doorsCondition" name="doorsCondition">
+                <mat-option value="good">Good</mat-option>
+                <mat-option value="abandoned">Abandoned</mat-option>
+                <mat-option value="repairable">Repairable</mat-option>
+                <mat-option value="replaceable">Replaceable</mat-option>
+              </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.doorsCondition == 'repairable' || sixthFormGroup.value.doorsCondition == 'replaceable'" appearance="outline"> 
+              <mat-label>Estimated cost</mat-label>
+              <input formControlName="doorsRepairCost" matInput type="number">
+              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+            </mat-form-field>
+            
+          </div>
+          <mat-action-row>
+            <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+            <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Windows -->
+        <mat-expansion-panel [expanded]="expansionPanel2Step === 9" (opened)="setPanel2Step(9)" hideToggle>
+            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Windows
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+            
+  
+          <mat-form-field fxFlex="24%" appearance="outline">
+            <mat-label>Materials</mat-label>
+            <input formControlName="buildingWindowsMaterial" matInput type="text">
+          </mat-form-field>
+  
+          <mat-form-field fxFlex="24%" appearance="outline">
+            <mat-label>Finishes</mat-label>
+            <input formControlName="buildingWindowsFinishes" matInput type="text">
+          </mat-form-field>
+  
+          <mat-form-field fxFlex="24%" appearance="outline">
+            <mat-label>Condition</mat-label>
+            <mat-select formControlName="buildingWindowsCondition" name="buildingWindowsCondition">
+              <mat-option value="good">Good</mat-option>
+              <mat-option value="abandoned">Abandoned</mat-option>
+              <mat-option value="repairable">Repairable</mat-option>
+              <mat-option value="replaceable">Replaceable</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.buildingWindowsCondition == 'repairable' || sixthFormGroup.value.buildingWindowsCondition == 'replaceable'">
+            <mat-label>Estimated cost</mat-label>
+            <input formControlName="buildingWindowsRepairCost" matInput type="number">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
+  
+        </div>
+
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+
+            
+          </div>
+          <mat-action-row>
+            <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+            <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Glazing -->
+        <mat-expansion-panel [expanded]="expansionPanel2Step === 10" (opened)="setPanel2Step(10)" hideToggle>
+            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Glazing
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Materials</mat-label>
+              <input formControlName="glazingMaterial" matInput type="text">
+              </mat-form-field>
+    
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Finishes</mat-label>
+                <input formControlName="glazingFinishes" matInput type="text">
+              </mat-form-field>
+    
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Condition</mat-label>
+                <mat-select formControlName="glazingCondition" name="glazingCondition">
+                  <mat-option value="good">Good</mat-option>
+                  <mat-option value="abandoned">Abandoned</mat-option>
+                  <mat-option value="repairable">Repairable</mat-option>
+                  <mat-option value="replaceable">Replaceable</mat-option>
+                </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.glazingCondition == 'repairable' || sixthFormGroup.value.glazingCondition == 'replaceable'">
+              <mat-label>Estimated cost</mat-label>
+              <input formControlName="glazingRepairCost" matInput type="number">
+              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+            </mat-form-field>
+            
+          </div>
+          <mat-action-row>
+            <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+            <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Burglar proof -->
+        <mat-expansion-panel [expanded]="expansionPanel2Step === 11" (opened)="setPanel2Step(11)" hideToggle>
+            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Burglar proof
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Condition</mat-label>
+            <mat-select formControlName="burglarProofCondition">
+              <mat-option value="working">Working</mat-option>
+              <mat-option value="repairable">Incomplete/Repairable</mat-option>
+              <mat-option value="replaceable">Replaceable</mat-option>
+              <mat-option value="not_working">Not working</mat-option>
+              <mat-option value="obsolete">Obsolete</mat-option>
+            </mat-select>
+            </mat-form-field>
+  
+            <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.burglarProofCondition == 'repairable' || sixthFormGroup.value.burglarProofCondition == 'replaceable'" appearance="outline">
+              <mat-label>Cost of repair</mat-label>
+              <input formControlName="burglarProofRepairCost" matInput type="number">
+              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+            </mat-form-field>
+            
+          </div>
+          <mat-action-row>
+            <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+            <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Gate -->
+        <mat-expansion-panel [expanded]="expansionPanel2Step === 12" (opened)="setPanel2Step(12)" hideToggle>
+            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Gate
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Condition</mat-label>
+            <mat-select formControlName="gatesCondition">
+              <mat-option value="none">none</mat-option>
+              <mat-option value="working">Working</mat-option>
+              <mat-option value="repairable">Incomplete/Repairable</mat-option>
+              <mat-option value="replaceable">Replaceable</mat-option>
+              <mat-option value="not_working">Not working</mat-option>
+              <mat-option value="obsolete">Obsolete</mat-option>
+            </mat-select>
+            </mat-form-field>
+  
+            <mat-form-field fxFlex="24%" *ngIf="sixthFormGroup.value.gatesCondition == 'repairable' || sixthFormGroup.value.gatesCondition == 'replaceable'" appearance="outline">
+              <mat-label>Cost of repair</mat-label>
+              <input formControlName="gatesRepairCost" matInput type="number">
+              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+            </mat-form-field>
+            
+          </div>
+          <mat-action-row>
+            <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+            <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+      </form>
+
     </mat-accordion>
   </mat-step>
+
+
 
   <!--Step 3 Building services -->
   <mat-step label="Building services">
