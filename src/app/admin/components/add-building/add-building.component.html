@@ -501,6 +501,147 @@
         </mat-expansion-panel>
       </form>
 
+      <!-- Fifth form group -->
+
+      <form [formGroup]="fifthFormGroup">
+
+        <!-- Roof -->
+        <mat-expansion-panel [expanded]="expansionPanel2Step === 5" (opened)="setPanel2Step(5)" hideToggle>
+        
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Roof
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+  
+          <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+  
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Roof style/shape</mat-label>
+              <mat-select formControlName="roofStyleShape">
+                <mat-option value="flat">Flat</mat-option>
+                <mat-option value="pitched">Pitched</mat-option>
+                <mat-option value="arched">Arched</mat-option>
+                <mat-option value="butterfly">Butterfly</mat-option>
+                <mat-option value="hip">Hip</mat-option>
+                <mat-option value="gambrel">Gambrel</mat-option>
+                <mat-option value="mansard">Mansard</mat-option>
+                <mat-option value="monitor">Monitor</mat-option>
+                <mat-option value="shed">Shed</mat-option>
+                <mat-option value="dome">Dome</mat-option>
+                <mat-option value="gable">Gable</mat-option>
+                <mat-option value="other">Other</mat-option>
+              </mat-select>
+            </mat-form-field>
+      
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Truss type</mat-label>
+              <input formControlName="roofTrussType" matInput type="text">
+            </mat-form-field>
+      
+            <mat-form-field fxFlex="24%" appearance="outline">
+              <mat-label>Decking material</mat-label>
+              <mat-select formControlName="roofDeckingMaterial">
+                <mat-option value="wood">Wood</mat-option>
+                <mat-option value="concrete">Concrete</mat-option>
+                <mat-option value="other">Other</mat-option>
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+  
+          <mat-action-row>
+            <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+            <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+          </mat-action-row>
+          
+          </mat-expansion-panel>
+  
+          <!-- Roof openings-->
+  
+          <mat-expansion-panel [expanded]="expansionPanel2Step === 6" (opened)="setPanel2Step(6)" hideToggle>
+  
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Roof openings
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+  
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Condition</mat-label>
+                <mat-select formControlName="roofOpeningsCondition">
+                  <mat-option value="working">Working</mat-option>
+                  <mat-option value="repairable">Incomplete/Repairable</mat-option>
+                  <mat-option value="not_working">Not working</mat-option>
+                  <mat-option value="obsolete">Obsolete</mat-option>
+                </mat-select>
+              </mat-form-field>
+    
+              <mat-form-field fxFlex="24%" *ngIf="fifthFormGroup.value.roofOpeningsCondition == 'repairable'" appearance="outline">
+                <mat-label>Cost of repair</mat-label>
+                <input formControlName="roofOpeningsRepairCost" matInput type="number">
+                <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+    
+              </mat-form-field>
+
+            </div>
+  
+            <mat-action-row>
+              <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+              <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+            </mat-action-row>
+  
+          </mat-expansion-panel>
+  
+          <!--Ceiling -->
+          <mat-expansion-panel [expanded]="expansionPanel2Step === 7" (opened)="setPanel2Step(7)" hideToggle>
+            
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Ceiling
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+  
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Materials</mat-label>
+                <input formControlName="ceilingMaterial" matInput type="text">
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Finishes</mat-label>
+                <input formControlName="ceilingFinishes" matInput type="text">
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" appearance="outline">
+                <mat-label>Condition</mat-label>
+                <mat-select formControlName="ceilingCondition" name="ceilingCondition">
+                  <mat-option value="good">Good</mat-option>
+                  <mat-option value="abandoned">Abandoned</mat-option>
+                  <mat-option value="repairable">Repairable</mat-option>
+                  <mat-option value="replaceable">Replaceable</mat-option>
+                </mat-select>
+              </mat-form-field>
+      
+              <mat-form-field fxFlex="24%" *ngIf="fifthFormGroup.value.ceilingCondition == 'repairable' || fifthFormGroup.value.ceilingCondition == 'replaceable'" appearance="outline">
+                <mat-label>Estimated cost</mat-label>
+                <input matInput formControlName="ceilingRepairCost" type="text">
+                <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+              </mat-form-field>
+            
+            </div>
+  
+            <mat-action-row>
+              <button mat-flat-button color="primary" (click)="prevStep2()">Previous</button>
+              <button mat-flat-button color="primary" (click)="nextStep2()">Next</button>
+            </mat-action-row>
+  
+          </mat-expansion-panel>
+      </form>
+
     </mat-accordion>
   </mat-step>
 
@@ -508,22 +649,10 @@
   <mat-step label="Building services">
     <mat-accordion>
 
-      <mat-expansion-panel [expanded]="expansionPanel3Step === 0" (opened)="setPanel3Step(0)" hideToggle>
-        
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Walls
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-
-        <mat-action-row>
-          <button mat-flat-button color="primary" (click)="prevStep()">Previous</button>
-          <button mat-flat-button color="primary" matStepperNext>Next</button>
-        </mat-action-row>
-        
-        </mat-expansion-panel>
+      
 
     </mat-accordion>
+
   </mat-step>
 
   <!-- 02 Building Dimension 
