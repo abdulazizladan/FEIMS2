@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { egretAnimations } from '../../../shared/animations/egret-animations';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { AddSiteComponent } from '../add-site/add-site.component';
 import { ThemeService } from '../../../shared/services/theme.service';
 import tinyColor from 'tinycolor2';
 
@@ -28,7 +30,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   countryTrafficStats: any[];
 
   constructor(
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private dialog: MatDialog
   ) {}
 
   ngAfterViewInit() {}
@@ -758,6 +761,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       ]
     };
+  }
+
+  openAddSiteDialog(): void{
+    const dialogRef = this.dialog.open(AddSiteComponent, {
+      width: '90%',
+      height: '90%',
+      data: {},
+      disableClose: true
+    });
   }
 
 }

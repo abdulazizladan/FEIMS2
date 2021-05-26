@@ -1,6 +1,14 @@
 
 <!-- SECOND ROW -->
 
+<div fxLayout="row">
+  <span fxFlex="1 1 auto"></span>
+  <button mat-flat-button color="primary" (click)="openAddSiteDialog()">
+    <mat-icon>add</mat-icon>
+    Add site
+  </button>
+</div>
+
 <div fxLayout="row wrap">
     <!-- Sites -->
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'100ms',scale:'.9'}}">

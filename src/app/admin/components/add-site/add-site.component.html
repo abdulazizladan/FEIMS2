@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>
+    Add site
+    <span fxFlex="1 1 auto">
+    
+    </span>
+  
+    <button mat-stroked-button (click)="resetForm()">Reset form</button> 
+    <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </h2>
+
+  <mat-dialog-content>
+
+    <div fxLayout="row wrap" class="Gate">
+
+        <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+
+        <input type="range" min="0" max="75">
+
+    </div>
+
+    <mat-horizontal-stepper labelPosition="bottom">
+        ABCD
+    </mat-horizontal-stepper>
+
+  </mat-dialog-content>
