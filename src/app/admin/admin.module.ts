@@ -35,6 +35,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatRadioModule } from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 //Flex-layout
@@ -103,6 +104,7 @@ import { AddSiteComponent } from './components/add-site/add-site.component';
     MatRadioModule,
     MatChipsModule,
     MatDividerModule,
+    MatSliderModule,
     FlexLayoutModule,
     AdminRoutingModule,
     NgxEchartsModule.forRoot({

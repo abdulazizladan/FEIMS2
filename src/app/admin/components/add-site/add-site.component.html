@@ -4,7 +4,7 @@
     
     </span>
   
-    <button mat-stroked-button (click)="resetForm()">Reset form</button> 
+    <!--<button mat-stroked-button (click)="resetForm()">Reset form</button> -->
     <button mat-icon-button aria-label="close dialog" mat-dialog-close>
       <mat-icon>close</mat-icon>
     </button>
@@ -12,7 +12,125 @@
 
   <mat-dialog-content>
 
-    <div fxLayout="row wrap" class="Gate">
+    <div fxLayout="column">
+      <h1>Site survey</h1>
+      <div fxLayout="row wrap">
+        
+        <mat-form-field appearance="outline">
+          <mat-label>Site name</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Site code</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+
+      </div> 
+    </div>
+
+    <div fxLayout="column">
+      <h1>Gate</h1> 
+      <div fxLayout="row wrap" fxLayoutGap="10px">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Descripton</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Size</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Thickness</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Quantity</mat-label>
+          <input type="number" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Condition</mat-label>
+          <mat-select>
+            <mat-option value="working">
+              Working
+            </mat-option>
+            <mat-option value="not_working">
+              Not working
+            </mat-option>
+            <mat-option value="repairable">
+              Repairable
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div>
+          <mat-label>Damage</mat-label>
+          <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Cost of repair</mat-label>
+          <input type="number" matInput>
+        </mat-form-field>
+
+      </div> 
+    </div>
+
+    <div fxLayout="column">
+      <h1>Fence</h1> 
+      <div fxLayout="column">
+
+      </div> 
+    </div>
+
+    <div fxLayout="column">
+      <h1>Roads</h1> 
+      <div fxLayout="row wrap">
+
+      </div> 
+    </div>
+
+    <div fxLayout="column">
+      <h1>Paths & Pavements</h1> 
+    </div>
+
+    <div fxLayout="column">
+      <h1>Driveway</h1> 
+      <div fxLayout="row wrap">
+
+      </div> 
+    </div>
+
+    <div fxLayout="column" class="Gate">
+      <h1>Drainage</h1> 
+      <div fxLayout="row wrap">
+
+      </div> 
+    </div>
+
+    <div fxLayout="column" class="Gate">
+      <h1>Electricity</h1> 
+      <div fxLayout="row wrap">
+
+      </div> 
+    </div>
+
+    <div fxLayout="column" class="Gate">
+      <h1>Water</h1> 
+      <div fxLayout="row wrap">
+
+      </div> 
+    </div>
+
+
+      
+
+      <h1>Gate</h1>
 
         <mat-form-field appearance="outline">
             <mat-label></mat-label>
@@ -21,7 +139,7 @@
 
         <input type="range" min="0" max="75">
 
-    </div>
+    
 
     <mat-horizontal-stepper labelPosition="bottom">
         ABCD
