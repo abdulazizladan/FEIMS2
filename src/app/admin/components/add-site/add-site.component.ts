@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SiteService } from '../../services/site.service'
 
 @Component({
   selector: 'app-add-site',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddSiteComponent implements OnInit {
 
-  constructor() { }
+  constructor( private siteService: SiteService) { }
 
   ngOnInit(): void {
+  }
+
+  addSit() {
+
   }
 
   resetForm() {
