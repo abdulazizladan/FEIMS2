@@ -12,7 +12,7 @@
 
   <mat-dialog-content>
 
-    <div fxLayout="column">
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Site survey</h1>
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
         
@@ -83,7 +83,9 @@
       </div> 
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Gate</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -124,6 +126,12 @@
           </mat-select>
         </mat-form-field>
 
+        <mat-button-toggle-group name="damage" aria-label="damage">
+          <mat-button-toggle value="25">25%</mat-button-toggle>
+          <mat-button-toggle value="50">50%</mat-button-toggle>
+          <mat-button-toggle value="75">75%</mat-button-toggle>
+        </mat-button-toggle-group>
+
         <div>
           <mat-label>Damage</mat-label>
           <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
@@ -138,7 +146,9 @@
       </div> 
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Fence</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -230,7 +240,9 @@
       </div> 
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Roads</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -297,7 +309,9 @@
       </div> 
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Paths & Pavements</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -364,7 +378,9 @@
       </div> 
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Driveway</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -431,7 +447,9 @@
       </div>
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       
       <h1>Drainage</h1>
         <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -517,7 +535,9 @@
         </div>
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Electricity</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -577,7 +597,9 @@
       </div>
     </div>
 
-    <div fxLayout="column">
+    <mat-divider></mat-divider>
+
+    <div fxLayout="column" fxLayoutGap="20px">
       <h1>Water</h1> 
       
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -635,7 +657,7 @@
 
     <div fxLayout="column" fxLayoutGap="10px grid">
       <h1>Others</h1>
-      <div fxLayout="row wrap" fxLayoutGap="10px">
+      <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
         <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Steps</button>
         <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Gas Tanks</button>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SiteService } from '../../services/site.service'
 
 @Component({
@@ -8,7 +9,7 @@ import { SiteService } from '../../services/site.service'
 })
 export class AddSiteComponent implements OnInit {
 
-  constructor( private siteService: SiteService) { }
+  constructor( private siteService: SiteService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }

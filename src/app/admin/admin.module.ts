@@ -35,8 +35,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatRadioModule } from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatSliderModule} from '@angular/material/slider';
-
+import { MatSliderModule}  from '@angular/material/slider';
+import { MatButtonToggleModule } from '@angular/material/button-toggle'
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -105,6 +105,7 @@ import { AddSiteComponent } from './components/add-site/add-site.component';
     MatChipsModule,
     MatDividerModule,
     MatSliderModule,
+    MatButtonToggleModule,
     FlexLayoutModule,
     AdminRoutingModule,
     NgxEchartsModule.forRoot({
