@@ -9,6 +9,7 @@ export class SiteService {
 
   private sitesUrl : string;
   private siteUrl : string;
+  private addSiteUrl: string;
 
   constructor( private _http : HttpClient ){
     this.sitesUrl = "./assets/sites.json";
@@ -20,5 +21,9 @@ export class SiteService {
 
   getSingleSite(){
     return 0;
+  }
+
+  addSite(site: Site) {
+    return this._http.post<any>(this.addSiteUrl, site);
   }
 }
