@@ -8,5 +8,6 @@ export interface Site{
     site_level: number,
     site_longitude: number,
     site_latitude: number,
-    comment: string
+    comment: string,
+    gate_description: string
 }
