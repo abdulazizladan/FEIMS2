@@ -20,7 +20,7 @@ export class SiteService {
   }
 
   getSingleSite(){
-    return 0;
+    return this._http.get<any>(this.siteUrl);
   }
 
   addSite(site: Site) {
