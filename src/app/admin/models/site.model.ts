@@ -60,4 +60,19 @@ export interface Site{
     driveway_condition: string,
     driveway_damage: number,
     driveway_cost_of_repair: number,
+    /* Drainage */
+    drainage_description: string,
+    drainage_depth: number,
+    drainage_length: number,
+    drainage_quantity: number,
+    drainage_concrete_work: number,
+    drainage_block_work, number,
+    drainage_form_work: number,
+    drainage_reinforcement: number,
+    drainage_rendering: number,
+    drainage_condition: string,
+    drainage_damage: number,
+    drainage_cost_of_repair: number,
+    /* Electricity */
+    
 }
