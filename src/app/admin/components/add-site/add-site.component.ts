@@ -14,7 +14,7 @@ export class AddSiteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addSit() {
+  addSite() {
 
   }
 

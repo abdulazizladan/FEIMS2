@@ -1,93 +1,153 @@
 /* Site form data */
 export interface Site{
-    /* Site general data */
-    name : string,
-    code : string,
-    state: string,
-    lga: string,
-    street_address: string,
-    site_measurement: number,
-    site_level: number,
-    site_longitude: number,
-    site_latitude: number,
-    site_comment: string,
+    /* Site description */
+        name : string,
+        code : string,
+        state: string,
+        lga: string,
+        street_address: string,
+        measurement: number, //meters
+        level: number, //meters above sea level
+        position: {
+            longitude: number,
+            latitude: number
+        },
+        comment: string,
     /* Gate */
-    gate_description: string,
-    gate_size: number,
-    gate_thickness: number,
-    gate_quantity: number,
-    gate_condition: string,
-    gate_damage: number,
-    gate_cost_of_repair: number,
+    gate: {
+        description: string,
+        size: number, //meter
+        thickness: number, //millimeters
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number, //naira
+    },
     /* Fence */
-    fence_descriptio: string,
-    fence_height: number,
-    perimeter: number,
-    fence_quantity: number,
-    fence_concrete_work: number,
-    fence_block_work: number,
-    fence_form_work: number,
-    fence_reinforcement_work: number,
-    fence_rendering: number,
-    fence_barb_wire: number,
-    fence_condition: string,
-    fence_damage: number,
-    fence_cost_of_repair: number,
+    fence: {
+        descriptio: string,
+        fence_height: number, //metres
+        perimeter: number, //metres
+        concrete_work: number, //cubic meters
+        block_work: number, //square meters
+        form_work: number, //square meters
+        reinforcement: number, //kilogram
+        rendering: number, //square meters
+        barb_wire: number, //meters
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number,
+    },    
     /* Roads */
-    roads_description: string,
-    roads_width: number,
-    roads_length: number,
-    roads_quantity: number,
-    roads_surface_dressing: number,
-    roads_condition: string,
-    roads_damage: number,
-    roads_cost_of_repair: number
+    roads: {
+        description: string,
+        width: number, //meters
+        length: number, //meters
+        surface_dressing: number, //square meters
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number //naira
+    },    
     /* Paths & pavement */
-    paths_description: string,
-    paths_width: number,
-    paths_length: number,
-    paths_quantity: number,
-    paths_surface_dressing: number,
-    paths_condition: string,
-    paths_damage: number,
-    paths_cost_of_repair: number,
+    paths: {
+        description: string,
+        width: number, //meters
+        length: number, //meters
+        surface_dressing: number, //square meters
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number, //naira
+    },    
     /* Driveway */
-    driveway_description: string,
-    driveway_width: number,
-    driveway_length: number,
-    driveway_quantity: number,
-    driveway_surface_dressing: number,
-    driveway_condition: string,
-    driveway_damage: number,
-    driveway_cost_of_repair: number,
+    driveway: {
+        description: string,
+        width: number, //meters
+        length: number, //meters
+        surface_dressing: number, //square meters
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number, //naira
+    },    
     /* Drainage */
-    drainage_description: string,
-    drainage_depth: number,
-    drainage_length: number,
-    drainage_quantity: number,
-    drainage_concrete_work: number,
-    drainage_block_work, number,
-    drainage_form_work: number,
-    drainage_reinforcement: number,
-    drainage_rendering: number,
-    drainage_condition: string,
-    drainage_damage: number,
-    drainage_cost_of_repair: number,
+    drainage: {
+        description: string,
+        depth: number, //meters
+        length: number, //meters
+        concrete_work: number, //cubic meters
+        block_work: number, //square meters
+        form_work: number, //square meters
+        reinforcement: number, //kilogram
+        rendering: number, //square meters
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number //naira
+    },    
     /* Electricity */
-    electricity_description: string,
-    electricity_piping_and_accessories: number,
-    electricity_cabling: number,
-    electricity_quantity: number,
-    electricity_sources: string,
-    electricity_condition: string,
-    electricity_damage: number,
-    electricity_cost_of_repair,
+    electricity: {
+        description: string,
+        piping_and_accessories: number, //meters
+        cabling: number, //meters
+        sources: string, 
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number //naira
+    },    
     /* Water */
-    water_description: string,
-    water_piping_and_accessories: number,
-    water_cabling: number,
-    water_sources: string,
-    water_condition: string,
-    water_damage: number,
-    water_cost_of_repair,
+    water: {
+        description: string,
+        piping_and_accessories: number, //meters
+        cabling: number, //meters
+        sources: string, 
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number //naira
+    },
+    /* Steps */
+    steps: null| {
+        description: string,
+        concrete_work: number,
+        width: number,
+        length: number,
+        quantity: number,
+        surface_dressing: number,
+        condition: string //tarred|untarred|graded|potholes|bad_patches
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number //naira
+    },
+    /* Gas tanks */
+    gas_tanks: null|{
+        description: string,
+        quantity: number 
+        condition: string, //working|not_working|repairable
+        damage: number, //percentage 25|50|75
+        cost_of_repair: number //naira
+    },
+    /* Ramps */
+    ramps: null|{
+        description: string,
+        width: number,
+        sloping_length: number,
+        concrete_work: number, //cubic meters
+        condition: string //tarred|untarred|graded|potholes|bad_patches
+        cost_of_repair: number //naira
+    },
+    /* Street lights */
+    street_lights: null|{
+        description: string,
+        quantity: number,
+        height: number,
+        condition: string, //working|not_working|incomplete/repairable|obsolete
+        cost_of_repair: number //naira
+    },
+    /* Waste site */
+    waste_site: null|{
+        description: string,
+        length: number,
+        width: number,
+        position: {
+            longitude: number,
+            latitude: number
+        },
+        condition: string //working|not_working|incomplete/repairable|obsolete
+
+    }
 }

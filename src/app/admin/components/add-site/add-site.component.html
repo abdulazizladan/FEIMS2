@@ -84,7 +84,8 @@
     </div>
 
     <mat-divider></mat-divider>
-
+    
+    <!-- Gate -->
     <div fxLayout="column" fxLayoutGap="20px">
       <h1>Gate</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -107,11 +108,6 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input type="number" matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
           <mat-label>Condition</mat-label>
           <mat-select>
             <mat-option value="working">
@@ -126,7 +122,16 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-button-toggle-group name="damage" aria-label="damage">
+        <mat-form-field appearance="outline">
+          <mat-label>Damage</mat-label>
+          <mat-select>
+            <mat-option value=25> 25% </mat-option>
+            <mat-option value=50> 50% </mat-option>
+            <mat-option value=25> 75% </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!--<mat-button-toggle-group name="damage" aria-label="damage">
           <mat-button-toggle value="25">25%</mat-button-toggle>
           <mat-button-toggle value="50">50%</mat-button-toggle>
           <mat-button-toggle value="75">75%</mat-button-toggle>
@@ -135,7 +140,7 @@
         <div>
           <mat-label>Damage</mat-label>
           <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-        </div>
+        </div>-->
 
         <mat-form-field appearance="outline">
           <mat-label>Cost of repair</mat-label>
@@ -148,6 +153,7 @@
 
     <mat-divider></mat-divider>
 
+    <!-- Fence -->
     <div fxLayout="column" fxLayoutGap="20px">
       <h1>Fence</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -167,11 +173,6 @@
           <mat-label>Perimeter</mat-label>
           <input type="text" matInput>
           <span matSuffix>m</span>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input type="number" matInput>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -226,10 +227,14 @@
           </mat-select>
         </mat-form-field>
 
-        <div>
+        <mat-form-field appearance="outline">
           <mat-label>Damage</mat-label>
-          <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-        </div>
+          <mat-select>
+            <mat-option value=25> 25% </mat-option>
+            <mat-option value=50> 50% </mat-option>
+            <mat-option value=25> 75% </mat-option>
+          </mat-select>
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Cost of repair</mat-label>
@@ -242,6 +247,7 @@
 
     <mat-divider></mat-divider>
 
+    <!-- Roads -->
     <div fxLayout="column" fxLayoutGap="20px">
       <h1>Roads</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -264,11 +270,6 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input type="text" matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
           <mat-label>Surface dressing</mat-label>
           <input type="text" matInput>
           <span matSuffix>m<sup>2</sup></span>
@@ -295,10 +296,14 @@
           </mat-select>          
         </mat-form-field>
 
-        <div>
+        <mat-form-field appearance="outline">
           <mat-label>Damage</mat-label>
-          <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-        </div>
+          <mat-select>
+            <mat-option value=25> 25% </mat-option>
+            <mat-option value=50> 50% </mat-option>
+            <mat-option value=25> 75% </mat-option>
+          </mat-select>
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Cost of repair</mat-label>
@@ -311,6 +316,7 @@
 
     <mat-divider></mat-divider>
 
+    <!-- Paths & pavement-->
     <div fxLayout="column" fxLayoutGap="20px">
       <h1>Paths & Pavements</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -333,11 +339,6 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input type="text" matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
           <mat-label>Surface dressing</mat-label>
           <input type="text" matInput>
           <span matSuffix>m<sup>2</sup></span>
@@ -364,10 +365,14 @@
           </mat-select>          
         </mat-form-field>
 
-        <div>
+        <mat-form-field appearance="outline">
           <mat-label>Damage</mat-label>
-          <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-        </div>
+          <mat-select>
+            <mat-option value=25> 25% </mat-option>
+            <mat-option value=50> 50% </mat-option>
+            <mat-option value=25> 75% </mat-option>
+          </mat-select>
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Cost of repair</mat-label>
@@ -380,6 +385,7 @@
 
     <mat-divider></mat-divider>
 
+    <!-- Driveway -->
     <div fxLayout="column" fxLayoutGap="20px">
       <h1>Driveway</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -402,11 +408,6 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input type="text" matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
           <mat-label>Surface dressing</mat-label>
           <input type="text" matInput>
           <span matSuffix>m<sup>2</sup></span>
@@ -433,10 +434,14 @@
           </mat-select>          
         </mat-form-field>
 
-        <div>
+        <mat-form-field appearance="outline">
           <mat-label>Damage</mat-label>
-          <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-        </div>
+          <mat-select>
+            <mat-option value=25> 25% </mat-option>
+            <mat-option value=50> 50% </mat-option>
+            <mat-option value=25> 75% </mat-option>
+          </mat-select>
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Cost of repair</mat-label>
@@ -449,6 +454,7 @@
 
     <mat-divider></mat-divider>
 
+    <!-- Drainage -->
     <div fxLayout="column" fxLayoutGap="20px">
       
       <h1>Drainage</h1>
@@ -469,11 +475,6 @@
             <mat-label>Length</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
-          </mat-form-field>
-  
-          <mat-form-field appearance="outline">
-            <mat-label>Quantity</mat-label>
-            <input type="text" matInput>
           </mat-form-field>
   
           <mat-form-field appearance="outline">
@@ -521,10 +522,14 @@
             </mat-select>          
           </mat-form-field>
   
-          <div>
+          <mat-form-field appearance="outline">
             <mat-label>Damage</mat-label>
-            <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-          </div>
+            <mat-select>
+              <mat-option value=25> 25% </mat-option>
+              <mat-option value=50> 50% </mat-option>
+              <mat-option value=25> 75% </mat-option>
+            </mat-select>
+          </mat-form-field>
   
           <mat-form-field appearance="outline">
             <mat-label>Cost of repair</mat-label>
@@ -537,6 +542,7 @@
 
     <mat-divider></mat-divider>
 
+    <!-- Electricity-->
     <div fxLayout="column" fxLayoutGap="20px">
       <h1>Electricity</h1> 
       <div fxLayout="row wrap" fxLayoutGap="10px grid">
@@ -559,11 +565,6 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input type="text" matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
           <mat-label>Sources</mat-label>
           <input type="text" matInput>
         </mat-form-field>
@@ -583,10 +584,14 @@
           </mat-select>          
         </mat-form-field>
 
-        <div>
+        <mat-form-field appearance="outline">
           <mat-label>Damage</mat-label>
-          <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-        </div>
+          <mat-select>
+            <mat-option value=25> 25% </mat-option>
+            <mat-option value=50> 50% </mat-option>
+            <mat-option value=25> 75% </mat-option>
+          </mat-select>
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Cost of repair</mat-label>
@@ -599,6 +604,7 @@
 
     <mat-divider></mat-divider>
 
+    <!-- Water -->
     <div fxLayout="column" fxLayoutGap="20px">
       <h1>Water</h1> 
       
@@ -616,11 +622,6 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input type="text" matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
           <mat-label>Sources</mat-label>
           <input type="text" matInput>
         </mat-form-field>
@@ -640,10 +641,14 @@
           </mat-select>          
         </mat-form-field>
 
-        <div>
+        <mat-form-field appearance="outline">
           <mat-label>Damage</mat-label>
-          <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
-        </div>
+          <mat-select>
+            <mat-option value=25> 25% </mat-option>
+            <mat-option value=50> 50% </mat-option>
+            <mat-option value=25> 75% </mat-option>
+          </mat-select>
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Cost of repair</mat-label>
@@ -657,7 +662,7 @@
 
     <div fxLayout="column" fxLayoutGap="10px grid">
       <h1>Others</h1>
-      <div fxLayout="row wrap" fxLayoutGap="10px grid">
+      <div fxLayout="row wrap" fxLayoutGap="10px">
 
         <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Steps</button>
         <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Gas Tanks</button>
@@ -668,7 +673,8 @@
     </div>
 
  <div fxLayout="row">
-  <span fxFlex="1 1 auto"></span><button mat-flat-button color="primary">Add site</button>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-flat-button color="primary" (click)="addSite()">Add site</button>
  </div>     
 
  
