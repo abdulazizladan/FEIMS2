@@ -33,5 +33,13 @@ export interface Site{
     fence_condition: string,
     fence_damage: number,
     fence_cost_of_repair: number,
-    /* */
+    /* Roads */
+    roads_description: string,
+    roads_width: number,
+    roads_length: number,
+    roads_quantity: number,
+    roads_surface_dressing: number,
+    roads_condition: string,
+    roads_damage: number,
+    roads_cost_of_repair: number
 }
