@@ -74,5 +74,14 @@ export interface Site{
     drainage_damage: number,
     drainage_cost_of_repair: number,
     /* Electricity */
+    electricity_description: string,
+    electricity_piping_and_accessories: number,
+    electricity_cabling: number,
+    electricity_quantity: number,
+    electricity_sources: string,
+    electricity_condition: string,
+    electricity_damage: number,
+    electricity_cost_of_repair,
+    /* Water */
     
 }
