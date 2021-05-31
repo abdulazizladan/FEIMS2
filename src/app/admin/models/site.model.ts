@@ -52,5 +52,12 @@ export interface Site{
     paths_damage: number,
     paths_cost_of_repair: number,
     /* Driveway */
-    
+    driveway_description: string,
+    driveway_width: number,
+    driveway_length: number,
+    driveway_quantity: number,
+    driveway_surface_dressing: number,
+    driveway_condition: string,
+    driveway_damage: number,
+    driveway_cost_of_repair: number,
 }
