@@ -42,4 +42,15 @@ export interface Site{
     roads_condition: string,
     roads_damage: number,
     roads_cost_of_repair: number
+    /* Paths & pavement */
+    paths_description: string,
+    paths_width: number,
+    paths_length: number,
+    paths_quantity: number,
+    paths_surface_dressing: number,
+    paths_condition: string,
+    paths_damage: number,
+    paths_cost_of_repair: number,
+    /* Driveway */
+    
 }
