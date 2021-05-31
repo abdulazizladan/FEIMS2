@@ -83,5 +83,11 @@ export interface Site{
     electricity_damage: number,
     electricity_cost_of_repair,
     /* Water */
-    
+    water_description: string,
+    water_piping_and_accessories: number,
+    water_cabling: number,
+    water_sources: string,
+    water_condition: string,
+    water_damage: number,
+    water_cost_of_repair,
 }
