@@ -75,7 +75,75 @@ export interface building{
         quantity: number, //count
         condition: string, //excellent|good|fair|poor
         cost_of_repair: number //naira
+      },
+
+      /*--- Walls ---*/
+      walls: {
+        wall_type: string, //concrete_wall|150mm_block_wall|225mm_block_wall|other
+        description: string,
+        quantity: number, //cubic meter
+        last_decorated: number, //year
+        has_stain: boolean, //mildew|discoloration
+        concrete_wall: {
+          condition: string, //excellent|good|fair|poor
+          quantity: number, //square meter
+          cost_of_repair: number, //naira
+        },
+        paint: { 
+          condition: string, //excellent|good|fair|poor
+          description: string,
+          quantity: number, //square meter
+          cost_of_repair: number //naira
+        },
+        mortar: {
+          condition: string, //excellent|good|fair|poor
+          description: string,
+          quantity: number, //square meter
+          cost_of_repair: number //naira
+        },
+        structure: {
+          type: string, //frame_structure, load_bearing
+          description: string,
+          quantity: number, //cubic meter
+          damage: number, //percentage 25|50|75
+          condition: string, //excellent|good|fair|poor
+          cost_of_repair: number //naira
+        }
+      },
+
+      /*-- Floor --*/
+      floor: {
+        joints_and_beams: {
+          description: string,
+          concrete_work: number, //cubic meter
+          finishes: number, //square meter
+          form_work: number, //square meter
+          quantity: number, //square meter
+          damage: number, //percentage 25|50|75,
+          cost_of_repair: number //naira
+        },
+        slabs: {
+          description: string,
+          concrete_work: number, //cubic meter
+          finishes: number, //square meter
+          form_work: number, //square meter
+          quantity: number, //cubic meter
+          reinforcement: number, //kilogram
+          damage: number, //percentage 25|50|75,
+          cost_of_repair: number //naira
+        }
+      },
+
+      /*-- Ceilings --*/
+      ceiling: {
+        description: string,
+        type: string,
+        size: number, //square meter
+        quantity: number, //count
+        damage: number, //percentage 25|50|75,
+        cost_of_repair: number //naira
       }
     }
   }
 }
+
