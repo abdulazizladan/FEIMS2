@@ -25,11 +25,56 @@ export interface building{
         under_alucobond: {
           size: number, //square meter
           type: string,
-          accessories: string,
+          accessories: string[],
           quantity: number
         },
         condition: string, //excellent|good|fair|poor
-        cost_of_repair
+        cost_of_repair: number //naira
+      },
+      
+      /*--- Interior wall ---*/
+      interior_wall: {
+        finishing: string, //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
+        size: number, //square meter
+        type: string, 
+        accessories: string[],
+        quantity: number, //count
+        condition: string, //excellent|good|fair|poor
+        cost_of_repair: number //naira
+      },
+
+      /*--- Floor structure ---*/
+      floor_structure: {
+        material: string, //metal|wood|concrete|other
+        size: number, //square meter
+        type: string,
+        accessories: string[],
+        qauntity: number,
+        condition: string, //excellent|good|fair|poor
+        cost_of_repair: number //naira
+      },
+
+      /*--- Floor covering ---*/
+      floor_covering: {
+        material: string, //metal|wood|concrete|vinyl|other
+        description: string,
+        size: number, //square meter
+        type: string,
+        accessories: string[],
+        qauntity: number,
+        condition: string, //excellent|good|fair|poor
+        cost_of_repair: number //naira
+      },
+
+      /*--- Windows ---*/
+      windows: {
+        material: string, //wire_glass|glass_block|plate|tempered|operating|fixed|other
+        description: string,
+        size: number, //square meter
+        type: string,
+        quantity: number, //count
+        condition: string, //excellent|good|fair|poor
+        cost_of_repair: number //naira
       }
     }
   }
