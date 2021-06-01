@@ -1,8 +1,10 @@
 export interface building{
-  name : string;
-  type : string;
-  image : string;
-  description : string;
-  repair_cost : number;
-  id : number;
+  structure: {
+    dimension: {
+      floor_area: number,
+      wall_area: number,
+      ceiling_area: number,
+      floors: number
+    }
+  }
 }
