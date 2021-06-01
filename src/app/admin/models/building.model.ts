@@ -131,6 +131,21 @@ export interface building{
           reinforcement: number, //kilogram
           damage: number, //percentage 25|50|75,
           cost_of_repair: number //naira
+        },
+        foundation: {
+          description: string,
+          type: string,
+          depth: number, //meters
+          filling: number, //cubic meters
+          excavation: number, //cubic meter
+          concrete_work: number, //cubic meters
+          block_work: number, //square meters
+          formwork: number, //square_meters
+          reinforcement: number, //kilograms
+          rendering: number, //square meters
+          dpm: number, //square meters of damp proof membrane
+          damage: number, //percentage 25|50|75,
+          cost_of_repair: number //naira
         }
       },
 
@@ -142,6 +157,51 @@ export interface building{
         quantity: number, //count
         damage: number, //percentage 25|50|75,
         cost_of_repair: number //naira
+      },
+
+      /*-- Roof --*/
+      roof: {
+        style: string, //flat|pitched|arched|butterfly|hip|gambrel|mansard|monitor|shed|dome|gable|other
+        description: string,
+        size: number, //square meter
+        //quantity: number,
+        damage: number, //percentage 25|50|75,
+        condition: string, //excellent|good|fair|poor,
+        cost_of_repair: number, //naira
+        support: {
+          type: string, //joist|truss|ridge_frame|arch|dome|cable|other
+          description: string,
+          size: number, //meter
+          quantity: number,
+          damage: number, //percentage 25|50|75,
+          condition: string, //excellent|good|fair|poor,
+          cost_of_repair: number, //naira
+        },
+        steel_truss: {
+          type: string, //joist|truss|z-purlins|cleats|bolts|cables
+          size: number, //kilograms,
+          quantity: number,
+          damage: number, //percentage 25|50|75,
+          condition: string, //excellent|good|fair|poor,
+          cost_of_repair: number, //naira
+        },
+        decking: {
+          type: string, //metal|wood|concrete|other
+          description: string,
+          size: number, //cubic meter
+          quantity: number,
+          damage: number, //percentage 25|50|75,
+          condition: string, //excellent|good|fair|poor,
+          cost_of_repair: number, //naira
+        },
+        covering: {
+          type: string, //asbestos|zinc|aluminium|stone_coated_tiles|other
+          size: number, //square meter
+          quantity: number,
+          damage: number, //percentage 25|50|75,
+          condition: string, //excellent|good|fair|poor,
+          cost_of_repair: number, //naira
+        }
       }
     }
   }
