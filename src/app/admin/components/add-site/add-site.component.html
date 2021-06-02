@@ -24,19 +24,19 @@
       </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
 
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
           
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site name</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site code</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>State select</mat-label>
             <mat-select>
               <mat-option value="abia">
@@ -45,7 +45,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>LGA select</mat-label>
             <mat-select>
               <mat-option value="lg1">
@@ -54,30 +54,30 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="48%">
             <mat-label>Street address</mat-label>
             <textarea matInput></textarea>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Overall site measurement</mat-label>
             <input type="number" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site level</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site position</mat-label>
             <input type="number" matInput>
             <span matSuffix>Longitude</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site position</mat-label>
             <input type="number" matInput>
             <span matSuffix>Latitude</span>
@@ -85,7 +85,7 @@
 
             <input type="file" size="60" placeholder="Site plan">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="100%">
             <mat-label>General comments</mat-label>
             <textarea matInput></textarea>
           </mat-form-field>
