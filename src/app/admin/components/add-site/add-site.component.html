@@ -19,7 +19,7 @@
           Site survey
         </mat-panel-title>
         <mat-panel-description>
-          Site survey
+          
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
@@ -94,7 +94,10 @@
 
         <div fxLayout="row">
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
       </div>
       </mat-expansion-panel>
@@ -108,7 +111,7 @@
             Gate 
           </mat-panel-title>
           <mat-panel-description>
-            Gate
+            
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
@@ -176,9 +179,15 @@
         </div>
         
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
 
       </div>
@@ -193,7 +202,7 @@
             Fence
           </mat-panel-title>
           <mat-panel-description>
-            Fence
+            
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
@@ -287,9 +296,15 @@
         </div> 
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
         
       </div>
@@ -303,7 +318,7 @@
             Roads
           </mat-panel-title>
           <mat-panel-description>
-            Site survey
+            
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
@@ -372,9 +387,15 @@
         </div> 
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
 
       </div>
@@ -388,7 +409,7 @@
             Paths & Pavements
           </mat-panel-title>
           <mat-panel-description>
-            Paths & Pavements
+            
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">        
@@ -457,9 +478,15 @@
         </div> 
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
 
       </div>
@@ -474,7 +501,7 @@
             Driveway
           </mat-panel-title>
           <mat-panel-description>
-            Driveway
+
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
@@ -543,9 +570,15 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
 
       </div>
@@ -560,7 +593,7 @@
             Drainage
           </mat-panel-title>
           <mat-panel-description>
-            Drainage
+
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">        
@@ -647,10 +680,17 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
+
       </div>
       </mat-expansion-panel>
       <mat-divider></mat-divider>
@@ -662,7 +702,7 @@
             Electricity
           </mat-panel-title>
           <mat-panel-description>
-            Electricity
+            
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
@@ -724,9 +764,15 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
 
       </div>
@@ -741,7 +787,7 @@
             Water 
           </mat-panel-title>
           <mat-panel-description>
-            Water
+            
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">        
@@ -797,9 +843,15 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary"> Previous </button>
+          <button mat-flat-button color="primary" (click)="prevStep()"> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary"> Next </button>
+          <button mat-flat-button color="primary" (click)="nextStep()"> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
         </div>
         
       </div>
@@ -814,7 +866,7 @@
             Others
           </mat-panel-title>
           <mat-panel-description>
-            Site survey
+            
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="10px grid">
@@ -831,7 +883,10 @@
 
     <div fxLayout="row">
       <span fxFlex="1 1 auto"></span>
-      <button mat-flat-button color="primary" (click)="addSite()">Add site</button>
+      <button mat-flat-button color="primary" (click)="addSite()">
+        <mat-icon>check</mat-icon>
+        Add site
+      </button>
     </div>
     </mat-expansion-panel>
   </mat-accordion>

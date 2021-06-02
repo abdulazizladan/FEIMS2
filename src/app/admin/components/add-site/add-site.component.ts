@@ -20,6 +20,14 @@ export class AddSiteComponent implements OnInit {
     this.expansionPanelStep = index;
   }
 
+  prevStep() {
+    this.expansionPanelStep--;
+  }
+
+  nextStep() {
+    this.expansionPanelStep++;
+  }
+
   addSite() {
 
   }
