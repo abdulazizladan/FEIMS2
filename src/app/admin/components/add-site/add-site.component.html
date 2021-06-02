@@ -91,6 +91,11 @@
           </mat-form-field>
 
         </div> 
+
+        <div fxLayout="row">
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
       </div>
       </mat-expansion-panel>
 
@@ -168,7 +173,14 @@
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
 
-        </div> 
+        </div>
+        
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
+
       </div>
       </mat-expansion-panel>
 
@@ -273,6 +285,13 @@
           </mat-form-field>
 
         </div> 
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
+        
       </div>
       </mat-expansion-panel>
       <mat-divider></mat-divider>
@@ -351,6 +370,13 @@
           </mat-form-field>
 
         </div> 
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
+
       </div>
       </mat-expansion-panel>
       <mat-divider></mat-divider>
@@ -366,6 +392,7 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">        
+        
         <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
           <mat-form-field appearance="outline">
@@ -428,6 +455,13 @@
           </mat-form-field>
 
         </div> 
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
+
       </div>
       </mat-expansion-panel>
 
@@ -507,6 +541,13 @@
           </mat-form-field>
 
         </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
+
       </div>
       </mat-expansion-panel>
       <mat-divider></mat-divider>
@@ -522,89 +563,94 @@
             Drainage
           </mat-panel-description>
         </mat-expansion-panel-header>
-      <div fxLayout="column" fxLayoutGap="20px">
+      <div fxLayout="column" fxLayoutGap="20px">        
         
-        
-          <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
-            <mat-form-field appearance="outline">
-              <mat-label>Descripton</mat-label>
-              <input type="text" matInput>
-            </mat-form-field>
-    
-            <mat-form-field appearance="outline">
-              <mat-label>Depth</mat-label>
-              <input type="text" matInput>
-              <span matSuffix>m</span>
-            </mat-form-field>
-    
-            <mat-form-field appearance="outline">
-              <mat-label>Length</mat-label>
-              <input type="number" matInput>
-              <span matSuffix>m</span>
-            </mat-form-field>
-    
-            <mat-form-field appearance="outline">
-              <mat-label>Concrete work</mat-label>
-              <input type="text" matInput>
-              <span matSuffix>m<sup>3</sup></span>
-            </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Descripton</mat-label>
+            <input type="text" matInput>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Depth</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m</span>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Length</mat-label>
+            <input type="number" matInput>
+            <span matSuffix>m</span>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Concrete work</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>3</sup></span>
+          </mat-form-field>
 
-            <mat-form-field appearance="outline">
-              <mat-label>Block work</mat-label>
-              <input type="text" matInput>
-              <span matSuffix>m<sup>2</sup></span>
-            </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Block work</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
 
-            <mat-form-field appearance="outline">
-              <mat-label>Form work</mat-label>
-              <input type="text" matInput>
-              <span matSuffix>m<sup>2</sup></span>
-            </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Form work</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
 
-            <mat-form-field appearance="outline">
-              <mat-label>Reinforcement</mat-label>
-              <input type="text" matInput>
-              <span matSuffix>kg</span>
-            </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Reinforcement</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>kg</span>
+          </mat-form-field>
 
-            <mat-form-field appearance="outline">
-              <mat-label>Rendering</mat-label>
-              <input type="text" matInput>
-              <span matSuffix>m<sup>2</sup></span>
-            </mat-form-field>
-    
-            <mat-form-field appearance="outline">
-              <mat-label>Condition</mat-label>
-              <mat-select>
-                <mat-option value="working">
-                  Working
-                </mat-option>
-                <mat-option value="not_working">
-                  Not working
-                </mat-option>
-                <mat-option value="repairable">
-                  Repairable
-                </mat-option>       
-              </mat-select>          
-            </mat-form-field>
-    
-            <mat-form-field appearance="outline">
-              <mat-label>Damage</mat-label>
-              <mat-select>
-                <mat-option value=25> 25% </mat-option>
-                <mat-option value=50> 50% </mat-option>
-                <mat-option value=25> 75% </mat-option>
-              </mat-select>
-            </mat-form-field>
-    
-            <mat-form-field appearance="outline">
-              <mat-label>Cost of repair</mat-label>
-              <input type="number" matInput>
-              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-            </mat-form-field>
-    
-          </div>
+          <mat-form-field appearance="outline">
+            <mat-label>Rendering</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Condition</mat-label>
+            <mat-select>
+              <mat-option value="working">
+                Working
+              </mat-option>
+              <mat-option value="not_working">
+                Not working
+              </mat-option>
+              <mat-option value="repairable">
+                Repairable
+              </mat-option>       
+            </mat-select>          
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Damage</mat-label>
+            <mat-select>
+              <mat-option value=25> 25% </mat-option>
+              <mat-option value=50> 50% </mat-option>
+              <mat-option value=25> 75% </mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Cost of repair</mat-label>
+            <input type="number" matInput>
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
+  
+        </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
       </div>
       </mat-expansion-panel>
       <mat-divider></mat-divider>
@@ -676,6 +722,13 @@
           </mat-form-field>
 
         </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
+        </div>
+
       </div>
       </mat-expansion-panel>
 
@@ -691,8 +744,7 @@
             Water
           </mat-panel-description>
         </mat-expansion-panel-header>
-      <div fxLayout="column" fxLayoutGap="20px">
-        
+      <div fxLayout="column" fxLayoutGap="20px">        
         
         <div fxLayout="row wrap" fxLayoutGap="10px grid">
 
@@ -742,6 +794,12 @@
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
           </mat-form-field>
 
+        </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary"> Previous </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary"> Next </button>
         </div>
         
       </div>
