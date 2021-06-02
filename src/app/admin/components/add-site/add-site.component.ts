@@ -9,9 +9,15 @@ import { SiteService } from '../../services/site.service'
 })
 export class AddSiteComponent implements OnInit {
 
+  expansionPanelStep: number = 0;
+
   constructor( private siteService: SiteService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  setPanelStep( index: number) {
+    this.expansionPanelStep = index;
   }
 
   addSite() {

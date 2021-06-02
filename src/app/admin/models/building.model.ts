@@ -108,6 +108,38 @@ export interface building{
           damage: number, //percentage 25|50|75
           condition: string, //excellent|good|fair|poor
           cost_of_repair: number //naira
+        },
+        trimming: {
+          quantity: number, //square meter
+          finishes: string, 
+          condition: string, //excellent|good|fair|poor,
+          cost_of_repair: number //naira
+        },
+        frame: {
+          description: string,
+          concrete_work: number, //cubic meter
+          finishes: number, //square meters
+          form_work: number, //square meters
+          quantity: number,
+          reinforceemnt: number, //kilogram
+          damage: number, //percentage 25|50|75
+          cost_of_repair: number //naira
+        },
+        facade: {
+          description: string,
+          concrete_work: number, //cubic meter
+          finishes: number, //square meters
+          form_work: number, //square meters
+          type: string,
+          quantity: number, //square meters
+          damage: number, //percentage 25|50|75
+          cost_of_repair: number //naira
+        },
+        corridors: {
+          quantity: number,
+          type: string,
+          condition: string, //excellent|good|fair|poor
+          cost_of_repair: number //naira
         }
       },
 
