@@ -72,7 +72,21 @@ export class AddSiteComponent implements OnInit {
 
     //
     this.tenthFormGroup = this.fb.group({
+      steps: this.fb.group({
 
+      }),
+      gas_tanks: this.fb.group({
+
+      }),
+      ramps: this.fb.group({
+
+      }),
+      street_lights: this.fb.group({
+
+      }),
+      waste_site: this.fb.group({
+        
+      })
     })
   }
 
