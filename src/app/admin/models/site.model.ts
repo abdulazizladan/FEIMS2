@@ -24,7 +24,7 @@ export interface Site{
     },
     /* Fence */
     fence: {
-        descriptio: string,
+        description: string,
         fence_height: number, //metres
         perimeter: number, //metres
         concrete_work: number, //cubic meters

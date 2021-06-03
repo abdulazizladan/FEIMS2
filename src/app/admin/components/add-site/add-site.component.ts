@@ -42,10 +42,21 @@ export class AddSiteComponent implements OnInit {
         thickness: [0, [Validators.required]],
         condition: ['', [Validators.required]],
         damage: [0, [Validators.required]],
-        cost_of_repair: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
       fence: this.fb.group({
-
+        description: ['', [Validators.required]],
+        fence_height: [0, [Validators.required]],
+        perimeter: [0, [Validators.required]],
+        concrete_work: [0, [Validators.required]],
+        block_work: [0, [Validators.required]],
+        form_work: [0, [Validators.required]],
+        reinforcement: [0, [Validators.required]],
+        rendering: [0, [Validators.required]],
+        barb_wire: [0, [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
       roads: this.fb.group({
 
