@@ -68,7 +68,13 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, [Validators.required]],
       }),
       paths: this.fb.group({
-        
+        description: ['', [Validators.required]],
+        width: [0, [Validators.required]],
+        length: [0, [Validators.required]],
+        surface_dressing: [0, [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]],
       }),
       driveway: this.fb.group({
 
