@@ -10,8 +10,10 @@
     </button>
   </h2>
 
-  <mat-dialog-content>
+  <mat-dialog-content fxLayout="column">
+    <div  fxFlex="1 1 auto">
     <mat-accordion>
+      <form [formGroup]="siteForm">
       
       <mat-expansion-panel [expanded]="expansionPanelStep === 0" (opened)="setPanelStep(0)" hideToggle fxLayoutGap="20px">
       <mat-expansion-panel-header>
@@ -116,26 +118,26 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Size</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Thickness</mat-label>
             <input type="text" matInput>
             <span matSuffix>mm</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Condition</mat-label>
             <mat-select>
               <mat-option value="working">
@@ -150,7 +152,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Damage</mat-label>
             <mat-select>
               <mat-option value=25> 25% </mat-option>
@@ -170,7 +172,7 @@
             <mat-slider min="0" max="100" step="25" value="0"></mat-slider>
           </div>-->
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cost of repair</mat-label>
             <input type="number" matInput>
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -207,63 +209,63 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Height</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Perimeter</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Concrete work</mat-label>
             <input type="number" matInput>
             <span matSuffix>m<sup>3</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Block work</mat-label>
             <input type="number" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Form work</mat-label>
             <input type="number" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Reinforcement</mat-label>
             <input type="number" matInput>
             <span matSuffix>kg</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Rendering</mat-label>
             <input type="number" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Barb wire</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Condition</mat-label>
             <mat-select>
               <mat-option value="working">
@@ -278,7 +280,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Damage</mat-label>
             <mat-select>
               <mat-option value=25> 25% </mat-option>
@@ -287,7 +289,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cost of repair</mat-label>
             <input type="number" matInput>
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -323,32 +325,32 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Width</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Length</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Surface dressing</mat-label>
             <input type="text" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Condition</mat-label>
             <mat-select>
               <mat-option value="tarred">
@@ -369,7 +371,7 @@
             </mat-select>          
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Damage</mat-label>
             <mat-select>
               <mat-option value=25> 25% </mat-option>
@@ -378,7 +380,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cost of repair</mat-label>
             <input type="number" matInput>
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -414,32 +416,32 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">        
         
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Width</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>length</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Surface dressing</mat-label>
             <input type="text" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Condition</mat-label>
             <mat-select>
               <mat-option value="tarred">
@@ -460,7 +462,7 @@
             </mat-select>          
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Damage</mat-label>
             <mat-select>
               <mat-option value=25> 25% </mat-option>
@@ -469,7 +471,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cost of repair</mat-label>
             <input type="number" matInput>
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -506,32 +508,32 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Width</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>length</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Surface dressing</mat-label>
             <input type="text" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Condition</mat-label>
             <mat-select>
               <mat-option value="tarred">
@@ -552,7 +554,7 @@
             </mat-select>          
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Damage</mat-label>
             <mat-select>
               <mat-option value=25> 25% </mat-option>
@@ -561,7 +563,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cost of repair</mat-label>
             <input type="number" matInput>
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -598,56 +600,56 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">        
         
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
             <input type="text" matInput>
           </mat-form-field>
   
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Depth</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
   
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Length</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
   
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Concrete work</mat-label>
             <input type="text" matInput>
             <span matSuffix>m<sup>3</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Block work</mat-label>
             <input type="text" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Form work</mat-label>
             <input type="text" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Reinforcement</mat-label>
             <input type="text" matInput>
             <span matSuffix>kg</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Rendering</mat-label>
             <input type="text" matInput>
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
   
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Condition</mat-label>
             <mat-select>
               <mat-option value="working">
@@ -662,7 +664,7 @@
             </mat-select>          
           </mat-form-field>
   
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Damage</mat-label>
             <mat-select>
               <mat-option value=25> 25% </mat-option>
@@ -671,7 +673,7 @@
             </mat-select>
           </mat-form-field>
   
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cost of repair</mat-label>
             <input type="number" matInput>
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -707,46 +709,46 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">
          
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Piping/Accessories</mat-label>
             <input type="text" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cabling</mat-label>
             <input type="number" matInput>
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Sources</mat-label>
             <input type="text" matInput>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Condition</mat-label>
             <mat-select>
-              <mat-option value="working">
+              <mat-option value="working" fxFlex.gt-xs="23%">
                 Working
               </mat-option>
-              <mat-option value="not_working">
+              <mat-option value="not_working" fxFlex.gt-xs="23%">
                 Not working
               </mat-option>
-              <mat-option value="repairable">
+              <mat-option value="repairable" fxFlex.gt-xs="23%">
                 Repairable
               </mat-option>       
             </mat-select>          
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Damage</mat-label>
             <mat-select>
               <mat-option value=25> 25% </mat-option>
@@ -755,7 +757,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field appearance="outline">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Cost of repair</mat-label>
             <input type="number" matInput>
             <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -792,7 +794,7 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="20px">        
         
-        <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline">
             <mat-label>Descripton</mat-label>
@@ -871,23 +873,25 @@
         </mat-expansion-panel-header>
       <div fxLayout="column" fxLayoutGap="10px grid">
         
-        <div fxLayout="row wrap" fxLayoutGap="10px">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
 
-          <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Steps</button>
-          <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Gas Tanks</button>
-          <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Ramps</button>
-          <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Street lights</button>
-          <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Waste site</button>
+          <button mat-flat-button color="primary" (click)="addSteps()"><mat-icon>add</mat-icon> Add Steps</button>
+          <button mat-flat-button color="primary" (click)="addGasTanks()"><mat-icon>add</mat-icon> Add Gas Tanks</button>
+          <button mat-flat-button color="primary" (click)="addRamps()"><mat-icon>add</mat-icon> Add Ramps</button>
+          <button mat-flat-button color="primary" (click)="addStreetLamps()"><mat-icon>add</mat-icon> Add Street lights</button>
+          <button mat-flat-button color="primary" (click)="addWasteSites()"><mat-icon>add</mat-icon> Add Waste site</button>
         </div> 
       </div>
 
     <div fxLayout="row">
       <span fxFlex="1 1 auto"></span>
-      <button mat-flat-button color="primary" (click)="addSite()">
+      <button mat-flat-button color="primary" (click)="submit()">
         <mat-icon>check</mat-icon>
         Add site
       </button>
     </div>
     </mat-expansion-panel>
+    </form>
   </mat-accordion>
+  </div>
 </mat-dialog-content>

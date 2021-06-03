@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SiteService } from '../../services/site.service'
 
 @Component({
@@ -11,83 +11,75 @@ export class AddSiteComponent implements OnInit {
 
   expansionPanelStep: number = 0;
 
-  public firstFormGroup: FormGroup;//Site Survey
-  public secondFormGroup: FormGroup;//Gate
-  public thirdFormGroup: FormGroup;//Fence
-  public fourthFormGroup: FormGroup;//Roads
-  public fifthFormGroup: FormGroup;//Paths & Pavements
-  public sixthFormGroup: FormGroup;//Driveway
-  public seventhFormGroup: FormGroup;//Drainage
-  public eighthFormGroup: FormGroup;//Electricity
-  public ninthFormGroup: FormGroup;//Water
-  public tenthFormGroup: FormGroup;//Others
+  public siteForm: FormGroup;//Site form
 
   constructor( private siteService: SiteService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    //
-    this.firstFormGroup = this.fb.group({
+    this.initializeForm();
+  }
 
+  initializeForm():void {
+
+    this.siteForm = this.fb.group({
+      site: this.fb.group({
+        name: String,
+        code: String,
+        state: String,
+        lga: String,
+        street_address: String
+      }),
+      gate: this.fb.group({
+
+      }),
+      fence: this.fb.group({
+
+      }),
+      roads: this.fb.group({
+
+      }),
+      paths: this.fb.group({
+
+      }),
+      driveway: this.fb.group({
+
+      }),
+      drainage: this.fb.group({
+
+      }),
+      electricity: this.fb.group({
+
+      }),
+      water: this.fb.group({
+
+      }),
+      steps: this.fb.array([this.fb.control('')]),
+      gas_tanks: this.fb.array([this.fb.control('')]),
+      ramps: this.fb.array([this.fb.control('')]),
+      street_lights: this.fb.array([this.fb.control('')]),
+      waste_site: this.fb.array([this.fb.control('')])
     })
+
+  }
+
+  addSteps():void {
+    this.steps.push(this.fb.control(''))
+  }
+
+  addGasTanks():void {
     
-    //
-    this.secondFormGroup = this.fb.group({
+  }
 
-    })
+  addRamps() {
 
-    //
-    this.thirdFormGroup = this.fb.group({
+  }
 
-    })
+  addStreetLamps() {
 
-    //
-    this.fourthFormGroup = this.fb.group({
+  }
 
-    })
+  addWasteSites() {
 
-    //
-    this.fifthFormGroup = this.fb.group({
-
-    })
-
-    //
-    this.sixthFormGroup = this.fb.group({
-
-    })
-
-    //
-    this.seventhFormGroup = this.fb.group({
-
-    })
-
-    //
-    this.eighthFormGroup = this.fb.group({
-
-    })
-
-    //
-    this.ninthFormGroup = this.fb.group({
-
-    })
-
-    //
-    this.tenthFormGroup = this.fb.group({
-      steps: this.fb.group({
-
-      }),
-      gas_tanks: this.fb.group({
-
-      }),
-      ramps: this.fb.group({
-
-      }),
-      street_lights: this.fb.group({
-
-      }),
-      waste_site: this.fb.group({
-        
-      })
-    })
   }
 
   setPanelStep( index: number) {
@@ -102,8 +94,12 @@ export class AddSiteComponent implements OnInit {
     this.expansionPanelStep++;
   }
 
-  addSite() {
+  get steps(): FormArray {
+    return this.siteForm.get('steps') as FormArray;
+  }
 
+  submit() {
+    console.log(this.siteForm)
   }
 
   resetForm() {
