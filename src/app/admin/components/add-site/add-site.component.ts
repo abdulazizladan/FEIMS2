@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { number } from 'ngx-custom-validators/src/app/number/validator';
 import { SiteService } from '../../services/site.service'
 
 @Component({
@@ -23,11 +24,18 @@ export class AddSiteComponent implements OnInit {
 
     this.siteForm = this.fb.group({
       site: this.fb.group({
-        name: String,
-        code: String,
-        state: String,
-        lga: String,
-        street_address: String
+        name: ['', [Validators.required]],
+        code: ['', [Validators.required]],
+        state: ['', [Validators.required]],
+        lga: ['', [Validators.required]],
+        street_address: ['', [Validators.required]],
+        measurement: [0, [Validators.required]],
+        level: [0, [Validators.required]],
+        position: this.fb.group({
+          longitude: [0, [Validators.required]],
+          latitude: [0, [Validators.required]]
+        }),
+        comment: ['', [Validators.required]]
       }),
       gate: this.fb.group({
 
