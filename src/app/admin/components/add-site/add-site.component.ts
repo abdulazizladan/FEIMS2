@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { number } from 'ngx-custom-validators/src/app/number/validator';
 import { SiteService } from '../../services/site.service'
 
 @Component({
@@ -38,7 +37,12 @@ export class AddSiteComponent implements OnInit {
         comment: ['', [Validators.required]]
       }),
       gate: this.fb.group({
-
+        description: ['', [Validators.required]],
+        size: [0, [Validators.required]],
+        thickness: [0, [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]],
       }),
       fence: this.fb.group({
 
