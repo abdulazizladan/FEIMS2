@@ -74,7 +74,7 @@ export class AddSiteComponent implements OnInit {
         surface_dressing: [0, [Validators.required]],
         condition: ['', [Validators.required]],
         damage: [0, [Validators.required]],
-        cost_of_repair: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
       driveway: this.fb.group({
         description: ['', [Validators.required]],
@@ -83,10 +83,20 @@ export class AddSiteComponent implements OnInit {
         surface_dressing: [0, [Validators.required]],
         condition: ['', [Validators.required]],
         damage: [0, [Validators.required]],
-        cost_of_repair: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
       drainage: this.fb.group({
-
+        description: ['', [Validators.required]],
+        depth: [0, [Validators.required]],
+        length: [0, [Validators.required]],
+        concrete_work: [0, [Validators.required]],
+        block_work: [0, [Validators.required]],
+        form_work: [0, [Validators.required]],
+        reinforcement: [0, [Validators.required]],
+        rendering: [0, [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
       electricity: this.fb.group({
 
