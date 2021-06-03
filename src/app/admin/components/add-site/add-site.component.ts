@@ -99,7 +99,13 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, [Validators.required]]
       }),
       electricity: this.fb.group({
-
+        description: ['', [Validators.required]],
+        piping_and_accessories: [0, [Validators.required]],
+        cabling: [0, [Validators.required]],
+        sources: ['', [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]],
       }),
       water: this.fb.group({
 
