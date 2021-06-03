@@ -125,33 +125,61 @@ export class AddSiteComponent implements OnInit {
 
   }
 
-  addSteps(): FormGroup {
+  addSteps(): null | FormGroup {
     return this.fb.group({
-
+      description: ['', [Validators.required]],
+      concrete_work: [0, [Validators.required]],
+        width: [0, [Validators.required]],
+        length: [0, [Validators.required]],
+        quantity: [0, [Validators.required]],
+        surface_dressing: [0, [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+      cost_of_repair: [0, [Validators.required]]
     })
   }
 
   addGasTanks(): FormGroup {
     return this.fb.group({
-
+      description: ['', [Validators.required]],
+      quantity: [0, [Validators.required]],
+      condition: ['', [Validators.required]],
+      damage: [0, [Validators.required]],
+      cost_of_repair: [0, [Validators.required]]
     })
   }
 
   addRamps(): FormGroup {
     return this.fb.group({
-
+      description: ['', [Validators.required]],
+      width: [0, [Validators.required]],
+      sloping_length: [0, [Validators.required]],
+      concrete_work: [0, [Validators.required]],
+      condition: ['', [Validators.required]],
+      cost_of_repair: [0, [Validators.required]]
     })
   }
 
   addStreetLights(): FormGroup {
     return this.fb.group({
-
+      description: ['', [Validators.required]],
+      quantity: [0, [Validators.required]],
+      height: [0, [Validators.required]],
+      condition: ['', [Validators.required]],
+      cost_of_repair: [0, [Validators.required]]
     })
   }
 
   addWasteSites(): FormGroup {
     return this.fb.group({
-
+      description: ['', [Validators.required]],
+      length: [0, [Validators.required]],
+      width: ['', [Validators.required]],
+      position: this.fb.group({
+        longitude: [0, [Validators.required]],
+        latitude: [0, [Validators.required]]
+      }),
+      cost_of_repair: [0, [Validators.required]]
     })
   }
 
