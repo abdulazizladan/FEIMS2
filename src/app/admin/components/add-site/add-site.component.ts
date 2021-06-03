@@ -105,38 +105,54 @@ export class AddSiteComponent implements OnInit {
         sources: ['', [Validators.required]],
         condition: ['', [Validators.required]],
         damage: [0, [Validators.required]],
-        cost_of_repair: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
       water: this.fb.group({
-
+        description: ['', [Validators.required]],
+        piping_and_accessories: [0, [Validators.required]],
+        cabling: [0, [Validators.required]],
+        sources: ['', [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
-      steps: this.fb.array([this.fb.control('')]),
-      gas_tanks: this.fb.array([this.fb.control('')]),
-      ramps: this.fb.array([this.fb.control('')]),
-      street_lights: this.fb.array([this.fb.control('')]),
-      waste_site: this.fb.array([this.fb.control('')])
+      steps: this.fb.array([this.addSteps()]),
+      gas_tanks: this.fb.array([this.addGasTanks()]),
+      ramps: this.fb.array([this.addRamps()]),
+      street_lights: this.fb.array([this.addStreetLights()]),
+      waste_site: this.fb.array([this.addWasteSites()])
     })
 
   }
 
-  addSteps():void {
-    this.steps.push(this.fb.control(''))
+  addSteps(): FormGroup {
+    return this.fb.group({
+
+    })
   }
 
-  addGasTanks():void {
-    
+  addGasTanks(): FormGroup {
+    return this.fb.group({
+
+    })
   }
 
-  addRamps() {
+  addRamps(): FormGroup {
+    return this.fb.group({
 
+    })
   }
 
-  addStreetLamps() {
+  addStreetLights(): FormGroup {
+    return this.fb.group({
 
+    })
   }
 
-  addWasteSites() {
+  addWasteSites(): FormGroup {
+    return this.fb.group({
 
+    })
   }
 
   setPanelStep( index: number) {
