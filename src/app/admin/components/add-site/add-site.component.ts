@@ -59,10 +59,16 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, [Validators.required]]
       }),
       roads: this.fb.group({
-
+        description: ['', [Validators.required]],
+        width: [0, [Validators.required]],
+        length: [0, [Validators.required]],
+        surface_dressing: [0, [Validators.required]],
+        condition: ['', [Validators.required]],
+        damage: [0, [Validators.required]],
+        cost_of_repair: [0, [Validators.required]],
       }),
       paths: this.fb.group({
-
+        
       }),
       driveway: this.fb.group({
 
@@ -122,7 +128,7 @@ export class AddSiteComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.siteForm)
+    console.log(this.siteForm.value)
   }
 
   resetForm() {
