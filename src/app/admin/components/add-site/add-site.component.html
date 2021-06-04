@@ -22,17 +22,17 @@
           
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site name</mat-label>
-            <input type="text" matInput  name="siteName" formControlName="name">
+            <input type="text" matInput formControlName="name">
           </mat-form-field>
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site code</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput formControlName="code">
           </mat-form-field>
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>State select</mat-label>
-            <mat-select>
+            <mat-select formControlName="state">
               <mat-option value="abia">
                 Abia
               </mat-option>
@@ -41,7 +41,7 @@
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>LGA select</mat-label>
-            <mat-select>
+            <mat-select formControlName="lga">
               <mat-option value="lg1">
                 lg1
               </mat-option>
@@ -50,32 +50,34 @@
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="48%">
             <mat-label>Street address</mat-label>
-            <textarea style="resize:none;" matInput></textarea>
+            <textarea style="resize:none;" matInput formControlName="street_address"></textarea>
           </mat-form-field>
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Overall site measurement</mat-label>
-            <input type="number" matInput>
+            <input type="number" matInput formControlName="measurement">
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site level</mat-label>
-            <input type="number" matInput>
+            <input type="number" matInput formControlName="level">
             <span matSuffix>m</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-            <mat-label>Site position</mat-label>
-            <input type="number" matInput>
-            <span matSuffix>Longitude</span>
-          </mat-form-field>
+          <div [formGroup]="siteForm.controls.site.controls.position">
+            <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+              <mat-label>Site position</mat-label>
+              <input type="number" matInput formControlName="longitude">
+              <span matSuffix>Longitude</span>
+            </mat-form-field>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-            <mat-label>Site position</mat-label>
-            <input type="number" matInput>
-            <span matSuffix>Latitude</span>
-          </mat-form-field>
+            <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+              <mat-label>Site position</mat-label>
+              <input type="number" matInput formControlName="latitude">
+              <span matSuffix>Latitude</span>
+            </mat-form-field>
+          </div>
 
             <input type="file" size="60" placeholder="Site plan">
 
@@ -103,7 +105,7 @@
         <ng-template matStepLabel>Gate</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div [formGroup]="siteForm.controls.gate" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
@@ -187,7 +189,7 @@
         <ng-template matStepLabel>Fence</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+        <div [formGroup]="siteForm.controls.fence" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
@@ -296,7 +298,7 @@
         <ng-template matStepLabel>Roads</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div [formGroup]="siteForm.controls.roads" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
@@ -380,7 +382,7 @@
         <ng-template matStepLabel>Paths & Pavements</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">        
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div [formGroup]="siteForm.controls.paths" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
@@ -463,7 +465,7 @@
         <ng-template matStepLabel>Driveway</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div [formGroup]="siteForm.controls.driveway" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
@@ -548,7 +550,7 @@
         <ng-template matStepLabel>Drainage</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">        
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div [formGroup]="siteForm.controls.drainage" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
@@ -650,7 +652,7 @@
         <ng-template matStepLabel>Electricity</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
          
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div [formGroup]="siteForm.controls.electricity" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Descripton</mat-label>
@@ -728,7 +730,7 @@
         <ng-template matStepLabel>Water</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">        
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div [formGroup]="siteForm.controls.water" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
           <mat-form-field appearance="outline">
             <mat-label>Descripton</mat-label>
@@ -798,7 +800,7 @@
         <ng-template matStepLabel>Others</ng-template>
       <div fxLayout="column" fxLayoutGap="10px">
         
-        <div fxLayout="column"  fxLayoutGap="10px">
+        <div [formGroup]="siteForm.controls.others" fxLayout="column"  fxLayoutGap="10px">
 
           <button mat-flat-button color="primary" (click)="addSteps()"><mat-icon>add</mat-icon> Add Steps</button>
           <button mat-flat-button color="primary" (click)="addGasTanks()"><mat-icon>add</mat-icon> Add Gas Tanks</button>
