@@ -766,7 +766,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   openAddSiteDialog(): void{
     const dialogRef = this.dialog.open(AddSiteComponent, {
       width: '90%',
-      height: '80%',
+      minHeight: '650px',
       data: {},
       disableClose: true
     });

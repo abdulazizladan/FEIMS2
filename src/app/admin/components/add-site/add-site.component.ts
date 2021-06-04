@@ -34,6 +34,7 @@ export class AddSiteComponent implements OnInit {
           longitude: [0, [Validators.required]],
           latitude: [0, [Validators.required]]
         }),
+        map: ['', [Validators.required]],
         comment: ['', [Validators.required]]
       }),
       gate: this.fb.group({
