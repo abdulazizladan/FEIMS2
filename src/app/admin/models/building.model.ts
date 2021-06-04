@@ -235,7 +235,41 @@ export interface building{
           cost_of_repair: number, //naira
         }
       }
+    },
+    elevator: null| {
+      count: {
+        passenger: number,
+        freight: number,
+        fire_service: number,
+        independent: number
+      },
+      type: {
+        electric: number,
+        hydraulic: number
+      },
+      electric_eye: boolean,
+      heat_sensor: boolean,
+      key_location: string,
+      brand_name: string,
+      service_company: string,
+      phone: string,
+      emergency_shotoff_location: string,
+      elevator_exits: {
+        top: number,
+        side: number,
+        dumb_waiter: number,
+        laundry_chute: number,
+        trash_chute: number,
+        other: number,
+      },
+
     }
+  },
+  services: {
+    roof_lights: {
+
+    },
+
   }
 }
 
