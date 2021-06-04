@@ -1,29 +1,21 @@
 <h2 mat-dialog-title>
-    Add site
-    <span fxFlex="1 1 auto">
-    
-    </span>
+  Add site
+  <span fxFlex="1 1 auto">
   
-    <!--<button mat-stroked-button (click)="resetForm()">Reset form</button> -->
-    <button mat-icon-button aria-label="close dialog" mat-dialog-close>
-      <mat-icon>close</mat-icon>
-    </button>
-  </h2>
+  </span>
 
-  <mat-dialog-content fxLayout="column">
-    <div  fxFlex="1 1 auto">
-    <mat-accordion>
+  <!--<button mat-stroked-button (click)="resetForm()">Reset form</button> -->
+  <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</h2>
+
+  <mat-dialog-content>
+    <mat-horizontal-stepper linear labelPosition="bottom">
       <form [formGroup]="siteForm">
       
-      <mat-expansion-panel [expanded]="expansionPanelStep === 0" (opened)="setPanelStep(0)" hideToggle fxLayoutGap="20px">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Site survey
-        </mat-panel-title>
-        <mat-panel-description>
-          
-        </mat-panel-description>
-      </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Basic data</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
 
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
@@ -96,26 +88,19 @@
 
         <div fxLayout="row">
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
       </div>
-      </mat-expansion-panel>
+      </mat-step>
 
       <mat-divider></mat-divider>
       
       <!-- Gate -->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 1" (opened)="setPanelStep(1)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Gate 
-          </mat-panel-title>
-          <mat-panel-description>
-            
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Gate</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
@@ -181,32 +166,25 @@
         </div>
         
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
 
       </div>
-      </mat-expansion-panel>
+      </mat-step>
 
       <mat-divider></mat-divider>
 
       <!-- Fence -->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 2" (opened)="setPanelStep(3)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Fence
-          </mat-panel-title>
-          <mat-panel-description>
-            
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Fence</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
@@ -298,31 +276,24 @@
         </div> 
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
         
       </div>
-      </mat-expansion-panel>
+      </mat-step>
       <mat-divider></mat-divider>
 
       <!-- Roads -->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 3" (opened)="setPanelStep(3)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Roads
-          </mat-panel-title>
-          <mat-panel-description>
-            
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Roads</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
@@ -389,31 +360,24 @@
         </div> 
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
 
       </div>
-      </mat-expansion-panel>
+      </mat-step>
       <mat-divider></mat-divider>
 
       <!-- Paths & pavement-->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 4" (opened)="setPanelStep(4)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Paths & Pavements
-          </mat-panel-title>
-          <mat-panel-description>
-            
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Paths & Pavements</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">        
         
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
@@ -480,32 +444,23 @@
         </div> 
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
 
       </div>
-      </mat-expansion-panel>
-
-      <mat-divider></mat-divider>
+      </mat-step>
 
       <!-- Driveway -->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 5" (opened)="setPanelStep(5)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Driveway
-          </mat-panel-title>
-          <mat-panel-description>
-
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Driveway</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
         
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
@@ -572,32 +527,25 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
 
       </div>
-      </mat-expansion-panel>
+      </mat-step>
       <mat-divider></mat-divider>
 
       <!-- Drainage -->
 
-      <mat-expansion-panel [expanded]="expansionPanelStep === 6" (opened)="setPanelStep(6)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Drainage
-          </mat-panel-title>
-          <mat-panel-description>
-
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Drainage</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">        
         
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
@@ -682,31 +630,24 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
 
       </div>
-      </mat-expansion-panel>
+      </mat-step>
       <mat-divider></mat-divider>
 
       <!-- Electricity-->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 7" (opened)="setPanelStep(7)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Electricity
-          </mat-panel-title>
-          <mat-panel-description>
-            
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Electricity</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
          
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
@@ -766,32 +707,25 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
 
       </div>
-      </mat-expansion-panel>
+      </mat-step>
 
       <mat-divider></mat-divider>
 
       <!-- Water -->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 8" (opened)="setPanelStep(8)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Water 
-          </mat-panel-title>
-          <mat-panel-description>
-            
-          </mat-panel-description>
-        </mat-expansion-panel-header>
+      <mat-step>
+        <ng-template matStepLabel>Water</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">        
         
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
@@ -845,53 +779,45 @@
         </div>
 
         <div fxLayout="row">
-          <button mat-flat-button color="primary" (click)="prevStep()"> 
+          <button mat-flat-button color="primary" matStepperPrevious> 
             <mat-icon>chevron_left</mat-icon>
             Previous 
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary" (click)="nextStep()"> 
+          <button mat-flat-button color="primary" matStepperNext> 
             Next
             <mat-icon>chevron_right</mat-icon> 
           </button>
         </div>
         
       </div>
-      </mat-expansion-panel>
-
-      <mat-divider></mat-divider>
+      </mat-step>
 
       <!-- Others -->
-      <mat-expansion-panel [expanded]="expansionPanelStep === 9" (opened)="setPanelStep(9)" hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Others
-          </mat-panel-title>
-          <mat-panel-description>
-            
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-      <div fxLayout="column" fxLayoutGap="10px grid">
+      <mat-step>
+        <ng-template matStepLabel>Others</ng-template>
+      <div fxLayout="column" fxLayoutGap="10px">
         
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+        <div fxLayout="column"  fxLayoutGap="10px">
 
           <button mat-flat-button color="primary" (click)="addSteps()"><mat-icon>add</mat-icon> Add Steps</button>
           <button mat-flat-button color="primary" (click)="addGasTanks()"><mat-icon>add</mat-icon> Add Gas Tanks</button>
           <button mat-flat-button color="primary" (click)="addRamps()"><mat-icon>add</mat-icon> Add Ramps</button>
           <button mat-flat-button color="primary" (click)="addStreetLights()"><mat-icon>add</mat-icon> Add Street lights</button>
           <button mat-flat-button color="primary" (click)="addWasteSites()"><mat-icon>add</mat-icon> Add Waste site</button>
+          <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Others</button>
         </div> 
       </div>
 
-    <div fxLayout="row">
-      <span fxFlex="1 1 auto"></span>
-      <button mat-flat-button color="primary" (click)="submit()">
-        <mat-icon>check</mat-icon>
-        Add site
-      </button>
-    </div>
-    </mat-expansion-panel>
+      <div fxLayout="row">
+        <button mat-flat-button color="primary" matStepperPrevious>Previous</button>
+        <span fxFlex="1 1 auto"></span>
+        <button mat-flat-button color="primary" (click)="submit()">
+          <mat-icon>check</mat-icon>
+          Add site
+        </button>
+      </div>
+    </mat-step>
     </form>
-  </mat-accordion>
-  </div>
+  </mat-horizontal-stepper>
 </mat-dialog-content>
