@@ -18,11 +18,11 @@
         <ng-template matStepLabel>Basic data</ng-template>
       <div fxLayout="column" fxLayoutGap="20px">
 
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
+        <div [formGroup]="siteForm.controls.site" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
           
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site name</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput  name="siteName" formControlName="name">
           </mat-form-field>
 
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">

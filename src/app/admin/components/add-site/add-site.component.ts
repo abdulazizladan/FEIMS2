@@ -22,6 +22,7 @@ export class AddSiteComponent implements OnInit {
   initializeForm():void {
 
     this.siteForm = this.fb.group({
+      name: [''],
       site: this.fb.group({
         name: ['', [Validators.required]],
         code: ['', [Validators.required]],
