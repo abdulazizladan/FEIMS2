@@ -109,24 +109,24 @@
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
-          <input type="text" matInput>
+          <input type="text" matInput formControlName="description">
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Size</mat-label>
-          <input type="text" matInput>
+          <input type="text" matInput formControlName="size">
           <span matSuffix>m</span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Thickness</mat-label>
-          <input type="text" matInput>
+          <input type="text" matInput formControlName="thickness">
           <span matSuffix>mm</span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Condition</mat-label>
-          <mat-select>
+          <mat-select formControlName="condition">
             <mat-option value="working">
               Working
             </mat-option>
@@ -141,7 +141,7 @@
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Damage</mat-label>
-          <mat-select>
+          <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
             <mat-option value=50> 50% </mat-option>
             <mat-option value=25> 75% </mat-option>
@@ -161,7 +161,7 @@
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Cost of repair</mat-label>
-          <input type="number" matInput formControlName="cost_of_repair">
+          <input type="number" matInput formControlName="cost_of_repair" formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
 
@@ -193,61 +193,61 @@
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
-          <input type="text" matInput>
+          <input type="text" matInput formControlName="description">
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Height</mat-label>
-          <input type="text" matInput>
+          <input type="text" matInput formControlName="height">
           <span matSuffix>m</span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Perimeter</mat-label>
-          <input type="text" matInput>
+          <input type="text" matInput formControlName="perimeter">
           <span matSuffix>m</span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Concrete work</mat-label>
-          <input type="number" matInput>
+          <input type="number" matInput formControlName="concrete_work">
           <span matSuffix>m<sup>3</sup></span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Block work</mat-label>
-          <input type="number" matInput>
+          <input type="number" matInput formControlName="block_work">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Form work</mat-label>
-          <input type="number" matInput>
+          <input type="number" matInput formControlName="form_work">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Reinforcement</mat-label>
-          <input type="number" matInput>
+          <input type="number" matInput formControlName="reinforcement">
           <span matSuffix>kg</span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Rendering</mat-label>
-          <input type="number" matInput>
+          <input type="number" matInput formControlName="rendering">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Barb wire</mat-label>
-          <input type="number" matInput>
+          <input type="number" matInput formControlName="barb_wire">
           <span matSuffix>m</span>
         </mat-form-field>
 
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Condition</mat-label>
-          <mat-select>
+          <mat-select formControlName="condition">
             <mat-option value="working">
               Working
             </mat-option>
@@ -262,7 +262,7 @@
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Damage</mat-label>
-          <mat-select>
+          <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
             <mat-option value=50> 50% </mat-option>
             <mat-option value=25> 75% </mat-option>
