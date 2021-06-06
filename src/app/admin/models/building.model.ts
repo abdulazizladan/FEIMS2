@@ -236,6 +236,7 @@ export interface building{
         }
       }
     },
+    /*-- Elevator --*/
     elevator: null| {
       count: {
         passenger: number,
