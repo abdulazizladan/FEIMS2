@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SiteService } from '../../services/site.service'
 
 @Component({
@@ -12,6 +12,7 @@ export class AddSiteComponent implements OnInit {
   expansionPanelStep: number = 0;
 
   public siteForm: FormGroup;//Site form
+  public hasSteps: boolean;
 
   constructor( private siteService: SiteService, private fb: FormBuilder) { }
 
@@ -117,30 +118,44 @@ export class AddSiteComponent implements OnInit {
         damage: [0, []],
         cost_of_repair: [0, []]
       }),
-      //steps: this.fb.array([this.addSteps()]),
       steps:this.fb.group({
 
       }),
-      gas_tanks: this.fb.array([this.addGasTanks()]),
-      ramps: this.fb.array([this.addRamps()]),
-      street_lights: this.fb.array([this.addStreetLights()]),
-      waste_site: this.fb.array([this.addWasteSites()])
-    })
+      gas_tanks: this.fb.group({
+
+      }),
+      ramps: this.fb.group({
+
+      }),
+      street_lights:this.fb.group({
+
+      }),
+      waste_site: this.fb.group({
+
+      })      
+    });
+    this.hasSteps = false;
 
   }
 
-  addSteps(): null | FormGroup {
+  addSteps():  void{
+    this.hasSteps = true;
+    /*this.siteForm.addControl("steps", new FormControl('abc'))
     return this.fb.group({
       description: ['', [Validators.required]],
       concrete_work: [0, [Validators.required]],
-        width: [0, [Validators.required]],
-        length: [0, [Validators.required]],
-        quantity: [0, [Validators.required]],
-        surface_dressing: [0, [Validators.required]],
-        condition: ['', [Validators.required]],
-        damage: [0, [Validators.required]],
+      width: [0, [Validators.required]],
+      length: [0, [Validators.required]],
+      quantity: [0, [Validators.required]],
+      surface_dressing: [0, [Validators.required]],
+      condition: ['', [Validators.required]],
+      damage: [0, [Validators.required]],
       cost_of_repair: [0, [Validators.required]]
-    })
+    })*/
+  }
+
+  removeSteps(): void {
+    this.hasSteps = false;
   }
 
   addGasTanks(): FormGroup {
