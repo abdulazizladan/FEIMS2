@@ -16,6 +16,11 @@ export class AddSiteComponent implements OnInit {
 
   public siteForm: FormGroup;//Site form
   public hasSteps: boolean;
+  public hasGasTanks: boolean;
+  public hasRamps: boolean;
+  public hasStreetLights: boolean;
+  public hasWasteSite: boolean;
+  public hasOthers: boolean;
 
   constructor(private fb: FormBuilder, private store: Store<{ admin: AdminState }>) { }
 
@@ -120,58 +125,58 @@ export class AddSiteComponent implements OnInit {
         condition: ['', []],
         damage: [0, []],
         cost_of_repair: [0, []]
-      }),
-      steps:this.fb.group({
-
-      }),
-      gas_tanks: this.fb.group({
-
-      }),
-      ramps: this.fb.group({
-
-      }),
-      street_lights:this.fb.group({
-
-      }),
-      waste_site: this.fb.group({
-
-      })      
+      })    
     });
     this.hasSteps = false;
+    this.hasGasTanks = false;
+    this.hasRamps = false;
+    this.hasStreetLights = false;
+    this.hasWasteSite = false;
+    this.hasOthers = false;
 
   }
 
+  stepsForm: FormGroup = this.fb.group({
+    description: ['', []],
+    concrete_work: [0, []],
+    width: [0, ],
+    length: [0, []],
+    quantity: [0, []],
+    surface_dressing: [0, []],
+    condition: ['', []],
+    damage: [0, []],
+    cost_of_repair: [0, []]
+  })
+
   addSteps():  void{
     this.hasSteps = true;
-    /*this.siteForm.addControl("steps", new FormControl('abc'))
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      concrete_work: [0, [Validators.required]],
-      width: [0, [Validators.required]],
-      length: [0, [Validators.required]],
-      quantity: [0, [Validators.required]],
-      surface_dressing: [0, [Validators.required]],
-      condition: ['', [Validators.required]],
-      damage: [0, [Validators.required]],
-      cost_of_repair: [0, [Validators.required]]
-    })*/
+    this.siteForm.addControl("steps", this.stepsForm)
   }
 
   removeSteps(): void {
     this.hasSteps = false;
+    this.siteForm.removeControl('steps');
   }
 
-  addGasTanks(): FormGroup {
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      quantity: [0, [Validators.required]],
-      condition: ['', [Validators.required]],
-      damage: [0, [Validators.required]],
-      cost_of_repair: [0, [Validators.required]]
-    })
+  gasTanksForm: FormGroup = this.fb.group({
+    description: ['', [Validators.required]],
+    quantity: [0, [Validators.required]],
+    condition: ['', [Validators.required]],
+    damage: [0, [Validators.required]],
+    cost_of_repair: [0, [Validators.required]]
+  })
+
+  addGasTanks(): void {
+    this.hasGasTanks = true;
+    this.siteForm.addControl('gas_tanks', this.gasTanksForm)
   }
 
+  removeGasTanks(): void {
+    this.hasGasTanks = false;
+    this.siteForm.removeControl('gas_tanks');
+  }
   addRamps(): FormGroup {
+    this.hasRamps = true;
     return this.fb.group({
       description: ['', [Validators.required]],
       width: [0, [Validators.required]],
@@ -182,7 +187,12 @@ export class AddSiteComponent implements OnInit {
     })
   }
 
+  removeRamps(): void {
+    this.hasRamps = false;
+  }
+
   addStreetLights(): FormGroup {
+    this.hasStreetLights = true;
     return this.fb.group({
       description: ['', [Validators.required]],
       quantity: [0, [Validators.required]],
@@ -192,7 +202,12 @@ export class AddSiteComponent implements OnInit {
     })
   }
 
-  addWasteSites(): FormGroup {
+  removeStreetLights(): void {
+    this.hasStreetLights = false;
+  }
+
+  addWasteSite(): FormGroup {
+    this.hasWasteSite = true;
     return this.fb.group({
       description: ['', [Validators.required]],
       length: [0, [Validators.required]],
@@ -203,6 +218,10 @@ export class AddSiteComponent implements OnInit {
       }),
       cost_of_repair: [0, [Validators.required]]
     })
+  }
+
+  removeWasteSite(): void {
+    this.hasWasteSite = false;
   }
 
   setPanelStep( index: number) {
