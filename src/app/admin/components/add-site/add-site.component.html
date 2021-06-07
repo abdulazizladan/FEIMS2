@@ -65,7 +65,7 @@
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <!--<div [formGroup]="siteForm.controls.site.controls.position">
+        <div formGroupName="position">
           <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
             <mat-label>Site position</mat-label>
             <input type="number" matInput formControlName="longitude">
@@ -77,7 +77,7 @@
             <input type="number" matInput formControlName="latitude">
             <span matSuffix>Latitude</span>
           </mat-form-field>
-        </div>-->
+        </div>
 
           <input formControlName="map" type="file" size="60" placeholder="Site plan">
 
@@ -198,7 +198,7 @@
 
         <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Height</mat-label>
-          <input type="text" matInput formControlName="height">
+          <input type="text" matInput formControlName="fence_height">
           <span matSuffix>m</span>
         </mat-form-field>
 
@@ -798,18 +798,30 @@
     <!-- Others -->
     <mat-step>
       <ng-template matStepLabel>Others</ng-template>
-    <div fxLayout="column" fxLayoutGap="10px">
+    <div fxLayout="column" fxLayoutGap="10px" class="padding: 20px;">
       
       <div fxLayout="column"  fxLayoutGap="10px">
-        <!--<div [formGroup]="siteForm.controls.others" fxLayout="column"  fxLayoutGap="10px">-->
+        <!--<div [formGroup]="siteForm.controls.others" fxLayout="column"  fxLayoutGap="10px">-->        
+        <div>
+          <button mat-flat-button color="primary" (click)="addSteps()"><mat-icon>add</mat-icon> Add Steps</button>
+        </div>
+        <div>
+          <button mat-flat-button color="primary" (click)="addGasTanks()"><mat-icon>add</mat-icon> Add Gas Tanks</button>
+        </div>
+        <div>
+          <button mat-flat-button color="primary" (click)="addRamps()"><mat-icon>add</mat-icon> Add Ramps</button>
+        </div>
+        <div>
+          <button mat-flat-button color="primary" (click)="addStreetLights()"><mat-icon>add</mat-icon> Add Street lights</button>
+        </div>
+        <div>
+          <button mat-flat-button color="primary" (click)="addWasteSites()"><mat-icon>add</mat-icon> Add Waste site</button>
+        </div>
+        <div>
+          <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Others</button>
+        </div>
+      </div>
 
-        <button mat-flat-button color="primary" (click)="addSteps()"><mat-icon>add</mat-icon> Add Steps</button>
-        <button mat-flat-button color="primary" (click)="addGasTanks()"><mat-icon>add</mat-icon> Add Gas Tanks</button>
-        <button mat-flat-button color="primary" (click)="addRamps()"><mat-icon>add</mat-icon> Add Ramps</button>
-        <button mat-flat-button color="primary" (click)="addStreetLights()"><mat-icon>add</mat-icon> Add Street lights</button>
-        <button mat-flat-button color="primary" (click)="addWasteSites()"><mat-icon>add</mat-icon> Add Waste site</button>
-        <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Others</button>
-      </div> 
     </div>
 
     <div fxLayout="row">
