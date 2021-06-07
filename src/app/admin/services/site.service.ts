@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Site } from '../models/site.model';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class SiteService {
     return this._http.get<any>(this.siteUrl);
   }
 
-  addSite(site: Site) {
-    return this._http.post<any>(this.addSiteUrl, site);
+  addSite(site: Site): Observable<Site> {
+    return of(site);
   }
 }

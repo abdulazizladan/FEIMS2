@@ -33,6 +33,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AuthEffect } from './store/auth/auth.effects';
+import { AdminEffect } from './store/admin/admin.effects';
 
 
 // AoT requires an exported function for factories
@@ -68,7 +69,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       routerState: RouterState.Minimal
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([AuthEffect])
+    EffectsModule.forRoot([AuthEffect, AdminEffect])
   ],
   declarations: [AppComponent],
   providers: [

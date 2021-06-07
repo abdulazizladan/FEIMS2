@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { SiteService } from '../../services/site.service'
+import { Store } from '@ngrx/store';
+import { Site } from 'app/admin/models/site.model';
+import { addSite } from 'app/store/admin/admin.actions';
+import { AdminState } from '../../../store/admin/admin.state';
 
 @Component({
   selector: 'app-add-site',
@@ -14,7 +17,7 @@ export class AddSiteComponent implements OnInit {
   public siteForm: FormGroup;//Site form
   public hasSteps: boolean;
 
-  constructor( private siteService: SiteService, private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private store: Store<{ admin: AdminState }>) { }
 
   ngOnInit(): void {
     this.initializeForm();
@@ -218,8 +221,8 @@ export class AddSiteComponent implements OnInit {
     return this.siteForm.get('steps') as FormArray;
   }
 
-  submit() {
-    console.log(this.siteForm.value)
+  submit(site: Site) {
+    this.store.dispatch(addSite({site}));
   }
 
   resetForm() {
