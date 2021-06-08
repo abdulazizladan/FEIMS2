@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginData } from '../models/loginData.model';
-import { environment } from '../../environment';
+import { environment } from '../../../environment.dev';
 import { ApiPaths } from '../../ApiPaths';
 import { AppSocket } from '../../app.socket';
 
@@ -22,9 +22,12 @@ export class AuthService {
   private baseUrl= environment.baseUrl;
 
   //private loginUrl: string = '${this.baseUrl}/${this.apiPaths.signinUrl}';
-  //private registerUrl: string = '${this.baseUrl}/${this.apiPaths.signupUrl}';
-  private readonly loginUrl: string = "https://app.narr.ng/api/v1/auth/login";
-  private readonly registerUrl: string = "https://app.narr.ng/api/v1/auth/register";
+  //private registerUrl: string = `${this.baseUrl}/${this.apiPaths.signupUrl}`;
+  //private readonly loginUrl: string = "https://app.narr.ng/api/v1/auth/login";
+  //private readonly registerUrl: string = "https://app.narr.ng/api/v1/auth/register";
+  private readonly loginUrl: string = `${this.baseUrl}/${ApiPaths.signin}`;
+  private readonly registerUrl: string = `${this.baseUrl}/${ApiPaths.signup}`;
+  
 
   constructor( private _http: HttpClient, private appSocket: AppSocket) {
 
