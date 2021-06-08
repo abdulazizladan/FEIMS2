@@ -244,8 +244,14 @@ export class AddSiteComponent implements OnInit {
     return this.siteForm.get('steps') as FormArray;
   }
 
-  submit(site: Site) {
-    this.store.dispatch(addSite({site}));
+  //submit(site: Site) {
+  //  this.store.dispatch(addSite({site}));
+  //  console.log(this.siteForm.value)
+  //}
+
+  submit() {
+    let site = this.siteForm.value;
+    this.store.dispatch(addSite({site}))
   }
 
   resetForm() {
