@@ -44,7 +44,7 @@ export class AddSiteComponent implements OnInit {
         comment: ['', [Validators.required]]
       }),
       gate: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         size: [0, []],
         thickness: [0, []],
         condition: ['', []],
@@ -52,7 +52,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       fence: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         fence_height: [0, []],
         perimeter: [0, []],
         concrete_work: [0, []],
@@ -66,7 +66,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       roads: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         width: [0, []],
         length: [0, []],
         surface_dressing: [0, []],
@@ -75,7 +75,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []],
       }),
       paths: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         width: [0, []],
         length: [0, []],
         surface_dressing: [0, []],
@@ -84,7 +84,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       driveway: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         width: [0, []],
         length: [0, []],
         surface_dressing: [0, []],
@@ -93,7 +93,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       drainage: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         depth: [0, []],
         length: [0, []],
         concrete_work: [0, []],
@@ -106,7 +106,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       electricity: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         piping_and_accessories: [0, []],
         cabling: [0, []],
         sources: ['', []],
@@ -115,7 +115,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       water: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         piping_and_accessories: [0, []],
         cabling: [0, []],
         sources: ['', []],
@@ -134,7 +134,7 @@ export class AddSiteComponent implements OnInit {
   }
 
   stepsForm: FormGroup = this.fb.group({
-    description: ['', []],
+    //description: ['', []],
     concrete_work: [0, []],
     width: [0, ],
     length: [0, []],
@@ -156,7 +156,7 @@ export class AddSiteComponent implements OnInit {
   }
 
   gasTanksForm: FormGroup = this.fb.group({
-    description: ['', [Validators.required]],
+    //description: ['', [Validators.required]],
     quantity: [0, [Validators.required]],
     condition: ['', [Validators.required]],
     damage: [0, [Validators.required]],
@@ -172,49 +172,53 @@ export class AddSiteComponent implements OnInit {
     this.hasGasTanks = false;
     this.siteForm.removeControl('gas_tanks');
   }
-  addRamps(): FormGroup {
+
+  rampsForm: FormGroup = this.fb.group({
+    //description: ['', [Validators.required]],
+    width: [0, [Validators.required]],
+    sloping_length: [0, [Validators.required]],
+    concrete_work: [0, [Validators.required]],
+    condition: ['', [Validators.required]],
+    cost_of_repair: [0, [Validators.required]]
+  })
+  addRamps(): void {
     this.hasRamps = true;
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      width: [0, [Validators.required]],
-      sloping_length: [0, [Validators.required]],
-      concrete_work: [0, [Validators.required]],
-      condition: ['', [Validators.required]],
-      cost_of_repair: [0, [Validators.required]]
-    })
+    this.siteForm.addControl('ramps', this.rampsForm);
   }
 
   removeRamps(): void {
     this.hasRamps = false;
   }
 
-  addStreetLights(): FormGroup {
+  streetLights: FormGroup = this.fb.group({
+    //description: ['', [Validators.required]],
+    quantity: [0, [Validators.required]],
+    height: [0, [Validators.required]],
+    condition: ['', [Validators.required]],
+    cost_of_repair: [0, [Validators.required]]
+  })
+
+  addStreetLights(): void {
     this.hasStreetLights = true;
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      quantity: [0, [Validators.required]],
-      height: [0, [Validators.required]],
-      condition: ['', [Validators.required]],
-      cost_of_repair: [0, [Validators.required]]
-    })
   }
 
   removeStreetLights(): void {
     this.hasStreetLights = false;
   }
 
-  addWasteSite(): FormGroup {
+  wasteSite: FormGroup = this.fb.group({
+    //description: ['', [Validators.required]],
+    length: [0, [Validators.required]],
+    width: ['', [Validators.required]],
+    position: this.fb.group({
+      longitude: [0, [Validators.required]],
+      latitude: [0, [Validators.required]]
+    }),
+    cost_of_repair: [0, [Validators.required]]
+  })
+
+  addWasteSite(): void {
     this.hasWasteSite = true;
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      length: [0, [Validators.required]],
-      width: ['', [Validators.required]],
-      position: this.fb.group({
-        longitude: [0, [Validators.required]],
-        latitude: [0, [Validators.required]]
-      }),
-      cost_of_repair: [0, [Validators.required]]
-    })
   }
 
   removeWasteSite(): void {
