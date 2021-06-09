@@ -21,10 +21,6 @@ export class AuthService {
 
   private baseUrl= environment.baseUrl;
 
-  //private loginUrl: string = '${this.baseUrl}/${this.apiPaths.signinUrl}';
-  //private registerUrl: string = `${this.baseUrl}/${this.apiPaths.signupUrl}`;
-  //private readonly loginUrl: string = "https://app.narr.ng/api/v1/auth/login";
-  //private readonly registerUrl: string = "https://app.narr.ng/api/v1/auth/register";
   private readonly loginUrl: string = `${this.baseUrl}/${ApiPaths.signin}`;
   private readonly registerUrl: string = `${this.baseUrl}/${ApiPaths.signup}`;
   
@@ -63,7 +59,7 @@ export class AuthService {
 
   isAuthenticated(): boolean{
     //if(local storage credentials are validated){
-    //  return tru
+    //  return true
     //}
     return true;
   }
