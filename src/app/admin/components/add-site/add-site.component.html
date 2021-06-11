@@ -102,7 +102,7 @@
     <mat-divider></mat-divider>
     
     <!-- Gate -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.gate">
       <ng-template matStepLabel>Gate</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
       
@@ -175,7 +175,7 @@
     <mat-divider></mat-divider>
 
     <!-- Fence -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.fence">
       <ng-template matStepLabel>Fence</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
       
@@ -284,7 +284,7 @@
     <mat-divider></mat-divider>
 
     <!-- Roads -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.roads">
       <ng-template matStepLabel>Roads</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
       
@@ -368,7 +368,7 @@
     <mat-divider></mat-divider>
 
     <!-- Paths & pavement-->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.paths">
       <ng-template matStepLabel>Paths & Pavements</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">        
       
@@ -451,7 +451,7 @@
     </mat-step>
 
     <!-- Driveway -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.driveway">
       <ng-template matStepLabel>Driveway</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
       
@@ -536,7 +536,7 @@
 
     <!-- Drainage -->
 
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.drainage">
       <ng-template matStepLabel>Drainage</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">        
       
@@ -638,7 +638,7 @@
     <mat-divider></mat-divider>
 
     <!-- Electricity-->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.electricity">
       <ng-template matStepLabel>Electricity</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
         
@@ -716,7 +716,7 @@
     <mat-divider></mat-divider>
 
     <!-- Water -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.water">
       <ng-template matStepLabel>Water</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">        
       
@@ -998,5 +998,5 @@
 
 <div mat-dialog-actions align="end">
   <button mat-button>Preview</button>
-  <button [disabled]="siteForm.invalid" mat-flat-button color="primary">Submit</button>
+  <button [disabled]="siteForm.invalid" mat-flat-button color="primary" (click)="submit()">Submit</button>
 </div>
