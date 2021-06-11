@@ -11,10 +11,10 @@
 </h2>
 
 <div mat-dialog-content>
-  <mat-vertical-stepper linear labelPosition="bottom"> 
+  <mat-vertical-stepper linear labelPosition="end"> 
     <form [formGroup]="siteForm">
     
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.site">
       <ng-template matStepLabel>Basic data</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
 
@@ -791,8 +791,7 @@
     <div fxLayout="column" fxLayoutGap="10px">
       
       <div fxLayout="column"  fxLayoutGap="10px">
-        <div fxLayout="column"  fxLayoutGap="10px">        
-          <div>
+        <div fxLayout="column"  fxLayoutGap="10px">
             <div fxLayout="row">
             <span fxFlex="1 1 auto"></span>
             <button mat-flat-button color="primary" (click)="addSteps()" *ngIf="!hasSteps">
@@ -898,8 +897,6 @@
               </mat-form-field>
 
             </div>
-
-          </div>
 
           <div fxLayout="column">
             <div fxLayout="row">
