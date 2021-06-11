@@ -232,17 +232,17 @@ export class AddSiteComponent implements OnInit {
     this.expansionPanelStep = index;
   }
 
-  prevStep() {
-    this.expansionPanelStep--;
-  }
+  //prevStep() {
+  //  this.expansionPanelStep--;
+  //}
 
-  nextStep() {
-    this.expansionPanelStep++;
-  }
+  //nextStep() {
+  //  this.expansionPanelStep++;
+  //}
 
-  get steps(): FormArray {
-    return this.siteForm.get('steps') as FormArray;
-  }
+  //get steps(): FormArray {
+  //  return this.siteForm.get('steps') as FormArray;
+  //}
 
   //submit(site: Site) {
   //  this.store.dispatch(addSite({site}));

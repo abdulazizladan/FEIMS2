@@ -916,6 +916,12 @@
                 </mat-icon> 
                 Remove gas tanks
               </button>
+              <h1 *ngIf="hasGasTanks">
+                Gas tanks
+              </h1>
+              <mat-divider *ngIf="hasGasTanks"></mat-divider>
+              <div fxLayout.gt-xs="row wrap" *ngIf="hasGasTanks" [formGroup]="siteForm.controls.gas_tanks" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+              </div>  
             </div>
           </div>
 
