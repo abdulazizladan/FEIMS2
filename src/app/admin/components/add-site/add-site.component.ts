@@ -32,19 +32,19 @@ export class AddSiteComponent implements OnInit {
 
     this.siteForm = this.fb.group({
       site: this.fb.group({
-        name: ['', [Validators.required]],
-        code: ['', [Validators.required]],
-        state: ['', [Validators.required]],
-        lga: ['', [Validators.required]],
-        street_address: ['', [Validators.required]],
-        measurement: [0, [Validators.required]],
-        level: [0, [Validators.required]],
+        name: ['', []],
+        code: ['', []],
+        state: ['', []],
+        lga: ['', []],
+        street_address: ['', []],
+        measurement: [0, []],
+        level: [0, []],
         position: this.fb.group({
           longitude: [0, []],
           latitude: [0, []]
         }),
         map: ['', []],
-        comment: ['', [Validators.required]]
+        comment: ['', []]
       }),
       gate: this.fb.group({
         //description: ['', []],
@@ -191,22 +191,25 @@ export class AddSiteComponent implements OnInit {
 
   removeRamps(): void {
     this.hasRamps = false;
+    this.siteForm.removeControl('ramps');
   }
 
   streetLights: FormGroup = this.fb.group({
     //description: ['', [Validators.required]],
-    quantity: [0, [Validators.required]],
-    height: [0, [Validators.required]],
-    condition: ['', [Validators.required]],
-    cost_of_repair: [0, [Validators.required]]
+    quantity: [0, []],
+    height: [0, []],
+    condition: ['', []],
+    cost_of_repair: [0, []]
   })
 
   addStreetLights(): void {
     this.hasStreetLights = true;
+    this.siteForm.addControl('street_lights', this.streetLights);
   }
 
   removeStreetLights(): void {
     this.hasStreetLights = false;
+    this.siteForm.removeControl('street_lights');
   }
 
   wasteSite: FormGroup = this.fb.group({
@@ -222,10 +225,12 @@ export class AddSiteComponent implements OnInit {
 
   addWasteSite(): void {
     this.hasWasteSite = true;
+    this.siteForm.addControl('waste_site', this.wasteSite);
   }
 
   removeWasteSite(): void {
     this.hasWasteSite = false;
+    this.siteForm.removeControl('waste_site');
   }
 
   setPanelStep( index: number) {
