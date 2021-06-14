@@ -918,6 +918,43 @@
               </h1>
               <mat-divider *ngIf="hasGasTanks"></mat-divider>
               <div fxLayout.gt-xs="row wrap" *ngIf="hasGasTanks" [formGroup]="siteForm.controls.gas_tanks" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+                
+                <mat-form-field appearance="outline" fxFlex="23%">
+                  <mat-label>
+                    Quantity
+                  </mat-label>
+                  <input matInput formControlName="quantity">
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                  <mat-label>Condition</mat-label>
+                  <mat-select formControlName="condition">
+                    <mat-option value="tarred">
+                      working
+                    </mat-option>
+                    <mat-option value="untarred">
+                      not working
+                    </mat-option>
+                    <mat-option value="graded">
+                      repairable
+                    </mat-option>            
+                  </mat-select>          
+                </mat-form-field>
+        
+                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                  <mat-label>Damage</mat-label>
+                  <mat-select formControlName="damage">
+                    <mat-option value=25> 25% </mat-option>
+                    <mat-option value=50> 50% </mat-option>
+                    <mat-option value=25> 75% </mat-option>
+                  </mat-select>
+                </mat-form-field>
+        
+                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                  <mat-label>Cost of repair</mat-label>
+                  <input matInput formControlName="cost_of_repair">
+                  <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+                </mat-form-field>
               </div>  
             </div>
           </div>
