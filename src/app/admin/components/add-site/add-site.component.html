@@ -791,8 +791,10 @@
     <div fxLayout="column" fxLayoutGap="10px">
       
       <div fxLayout="column"  fxLayoutGap="10px">
+        
         <div fxLayout="column"  fxLayoutGap="10px">
-            <div fxLayout="row">
+            
+          <div fxLayout="row">
             <span fxFlex="1 1 auto"></span>
             <button mat-flat-button color="primary" (click)="addSteps()" *ngIf="!hasSteps">
               <mat-icon>
@@ -807,6 +809,7 @@
               Remove Steps
             </button>
             </div>
+
             <h1 *ngIf="hasSteps">
               Steps
             </h1>
@@ -899,6 +902,7 @@
             </div>
 
           <div fxLayout="column">
+            
             <div fxLayout="row">
               <span fxFlex="1 1 auto"></span>
               <button mat-flat-button color="primary" *ngIf="!hasGasTanks" (click)="addGasTanks()">
@@ -913,68 +917,68 @@
                 </mat-icon> 
                 Remove gas tanks
               </button>
-              <h1 *ngIf="hasGasTanks">
-                Gas tanks
-              </h1>
-              <mat-divider *ngIf="hasGasTanks"></mat-divider>
-              <div fxLayout.gt-xs="row wrap" *ngIf="hasGasTanks" [formGroup]="siteForm.controls.gas_tanks" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
-                
-                <mat-form-field appearance="outline" fxFlex="23%">
-                  <mat-label>
-                    Quantity
-                  </mat-label>
-                  <input matInput formControlName="quantity">
-                </mat-form-field>
-    
-                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-                  <mat-label>Condition</mat-label>
-                  <mat-select formControlName="condition">
-                    <mat-option value="tarred">
-                      working
-                    </mat-option>
-                    <mat-option value="untarred">
-                      not working
-                    </mat-option>
-                    <mat-option value="graded">
-                      repairable
-                    </mat-option>            
-                  </mat-select>          
-                </mat-form-field>
-        
-                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-                  <mat-label>Damage</mat-label>
-                  <mat-select formControlName="damage">
-                    <mat-option value=25> 25% </mat-option>
-                    <mat-option value=50> 50% </mat-option>
-                    <mat-option value=25> 75% </mat-option>
-                  </mat-select>
-                </mat-form-field>
-        
-                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-                  <mat-label>Cost of repair</mat-label>
-                  <input matInput formControlName="cost_of_repair">
-                  <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-                </mat-form-field>
-              </div>  
             </div>
+            <h1 *ngIf="hasGasTanks">
+              Gas tanks
+            </h1>
+            <mat-divider *ngIf="hasGasTanks"></mat-divider>
+            <div fxLayout.gt-xs="row wrap" *ngIf="hasGasTanks" [formGroup]="siteForm.controls.gas_tanks" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+              
+              <mat-form-field appearance="outline" fxFlex="23%">
+                <mat-label>
+                  Quantity
+                </mat-label>
+                <input matInput formControlName="quantity">
+              </mat-form-field>
+  
+              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                <mat-label>Condition</mat-label>
+                <mat-select formControlName="condition">
+                  <mat-option value="tarred">
+                    working
+                  </mat-option>
+                  <mat-option value="untarred">
+                    not working
+                  </mat-option>
+                  <mat-option value="graded">
+                    repairable
+                  </mat-option>            
+                </mat-select>          
+              </mat-form-field>
+      
+              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                <mat-label>Damage</mat-label>
+                <mat-select formControlName="damage">
+                  <mat-option value=25> 25% </mat-option>
+                  <mat-option value=50> 50% </mat-option>
+                  <mat-option value=25> 75% </mat-option>
+                </mat-select>
+              </mat-form-field>
+      
+              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                <mat-label>Cost of repair</mat-label>
+                <input matInput formControlName="cost_of_repair">
+                <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+              </mat-form-field>
+            </div>  
           </div>
+        </div>
 
-          <div fxLayout="column">
-            <div fxLayout="row">
-              <span fxFlex="1 1 auto"></span>
-              <button mat-flat-button color="primary" *ngIf="!hasRamps" (click)="addRamps()">
-                <mat-icon>
-                  add
-                </mat-icon> 
-                Add Ramps
-              </button>
-              <button mat-flat-button color="warn" *ngIf="hasRamps" (click)="removeRamps()">
-                <mat-icon>
-                  cancel
-                </mat-icon> 
-                Remove Ramps
-              </button>
-            </div>
+        <div fxLayout="column">
+          <div fxLayout="row">
+            <span fxFlex="1 1 auto"></span>
+            <button mat-flat-button color="primary" *ngIf="!hasRamps" (click)="addRamps()">
+              <mat-icon>
+                add
+              </mat-icon> 
+              Add Ramps
+            </button>
+            <button mat-flat-button color="warn" *ngIf="hasRamps" (click)="removeRamps()">
+              <mat-icon>
+                cancel
+              </mat-icon> 
+              Remove Ramps
+            </button>
           </div>
           
           <div fxLayout="column">
