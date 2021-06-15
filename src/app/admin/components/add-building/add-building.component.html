@@ -11,11 +11,34 @@
 </h2>
 
 <mat-dialog-content>
-<mat-horizontal-stepper labelPosition="bottom" #stepper linear>
 
-  
+  <mat-horizontal-stepper labelPosition="bottom" #stepper linear [formGroup]="buildingForm">
+    
 
+    <mat-step label="Basic data">
+      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+
+        <mat-form-field appearance="outline" fxFlex.gt-xs="25%">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name">
+        </mat-form-field>
+
+      </div>
+    </mat-step>
+
+    <mat-step label="Basic data">
+      
+    </mat-step>
+
+    
   
- 
-</mat-horizontal-stepper>
+  </mat-horizontal-stepper>
+
 </mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-flat-button color="primary">
+    <mat-icon>add</mat-icon>
+    Add building
+  </button>
+</mat-dialog-actions>

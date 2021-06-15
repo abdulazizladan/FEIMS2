@@ -11,6 +11,7 @@ import { building } from '../../models/building.model';
 })
 export class AddBuildingComponent implements OnInit {
 
+  public buildingForm: FormGroup;
  
   resetForm(){
 
@@ -21,7 +22,13 @@ export class AddBuildingComponent implements OnInit {
   }
 
   ngOnInit(): void{
-    
+    this.initForm();
+  }
+
+  initForm(): void{
+    this.buildingForm = this.fb.group({
+      name: ['', [Validators.required]]
+    })
   }
 
   ngOnDestroy(){

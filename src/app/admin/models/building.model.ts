@@ -1,4 +1,13 @@
 export interface building{
+  name: string, //given name
+  code: null | string, //3 to 4 length string used to identify the building
+  year_built: number, //Year building was completed
+  position: {
+    longitude: number,
+    latitude: number 
+  },
+  purpose: string, //residential, academic, theater, multipurpose
+  comment: string, //
   structure: {
     dimension: {
       floor_area: number, //square meters
@@ -43,28 +52,7 @@ export interface building{
         cost_of_repair: number //naira
       },
 
-      /*--- Floor structure ---*/
-      floor_structure: {
-        material: string, //metal|wood|concrete|other
-        size: number, //square meter
-        type: string,
-        accessories: string[],
-        qauntity: number,
-        condition: string, //excellent|good|fair|poor
-        cost_of_repair: number //naira
-      },
-
-      /*--- Floor covering ---*/
-      floor_covering: {
-        material: string, //metal|wood|concrete|vinyl|other
-        description: string,
-        size: number, //square meter
-        type: string,
-        accessories: string[],
-        qauntity: number,
-        condition: string, //excellent|good|fair|poor
-        cost_of_repair: number //naira
-      },
+      
 
       /*--- Windows ---*/
       windows: {
@@ -178,7 +166,30 @@ export interface building{
           dpm: number, //square meters of damp proof membrane
           damage: number, //percentage 25|50|75,
           cost_of_repair: number //naira
-        }
+        },
+        /*--- Floor structure ---*/
+        floor_structure: {
+          material: string, //metal|wood|concrete|other
+          size: number, //square meter
+          type: string,
+          accessories: string[],
+          qauntity: number,
+          condition: string, //excellent|good|fair|poor
+          cost_of_repair: number //naira
+        },
+
+        /*--- Floor covering ---*/
+        floor_covering: {
+          material: string, //metal|wood|concrete|vinyl|other
+          description: string,
+          size: number, //square meter
+          type: string,
+          accessories: string[],
+          qauntity: number,
+          condition: string, //excellent|good|fair|poor
+          cost_of_repair: number //naira
+        },
+        
       },
 
       /*-- Ceilings --*/
