@@ -255,8 +255,9 @@ export class AddSiteComponent implements OnInit {
   //}
 
   submit() {
-    let site = this.siteForm.value;
-    this.store.dispatch(addSite({site}))
+    //let site = this.siteForm.value;
+    //this.store.dispatch(addSite({site}));
+    console.log(this.siteForm.value)
   }
 
   resetForm() {

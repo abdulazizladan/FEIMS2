@@ -11,7 +11,7 @@
 </h2>
 
 <div mat-dialog-content>
-  <mat-vertical-stepper labelPosition="end"> 
+  <mat-horizontal-stepper linear labelPosition="bottom"> 
     <form [formGroup]="siteForm">
     
     <mat-step [stepControl]="siteForm.controls.site">
@@ -791,7 +791,8 @@
     <div fxLayout="column" fxLayoutGap="10px">
       
       <div fxLayout="column"  fxLayoutGap="10px">
-        
+
+        <!-- Steps -->        
         <div fxLayout="column"  fxLayoutGap="10px">
             
           <div fxLayout="row">
@@ -901,70 +902,72 @@
 
             </div>
 
-          <div fxLayout="column">
-            
-            <div fxLayout="row">
-              <span fxFlex="1 1 auto"></span>
-              <button mat-flat-button color="primary" *ngIf="!hasGasTanks" (click)="addGasTanks()">
-                <mat-icon>
-                  add
-                </mat-icon> 
-                Add Gas Tanks
-              </button>
-              <button mat-flat-button color="warn" *ngIf="hasGasTanks" (click)="removeGasTanks()">
-                <mat-icon>
-                  cancel
-                </mat-icon> 
-                Remove gas tanks
-              </button>
-            </div>
-            <h1 *ngIf="hasGasTanks">
-              Gas tanks
-            </h1>
-            <mat-divider *ngIf="hasGasTanks"></mat-divider>
-            <div fxLayout.gt-xs="row wrap" *ngIf="hasGasTanks" [formGroup]="siteForm.controls.gas_tanks" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+            <div fxLayout="column">
               
-              <mat-form-field appearance="outline" fxFlex="23%">
-                <mat-label>
-                  Quantity
-                </mat-label>
-                <input matInput formControlName="quantity">
-              </mat-form-field>
-  
-              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-                <mat-label>Condition</mat-label>
-                <mat-select formControlName="condition">
-                  <mat-option value="tarred">
-                    working
-                  </mat-option>
-                  <mat-option value="untarred">
-                    not working
-                  </mat-option>
-                  <mat-option value="graded">
-                    repairable
-                  </mat-option>            
-                </mat-select>          
-              </mat-form-field>
-      
-              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-                <mat-label>Damage</mat-label>
-                <mat-select formControlName="damage">
-                  <mat-option value=25> 25% </mat-option>
-                  <mat-option value=50> 50% </mat-option>
-                  <mat-option value=25> 75% </mat-option>
-                </mat-select>
-              </mat-form-field>
-      
-              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-                <mat-label>Cost of repair</mat-label>
-                <input matInput formControlName="cost_of_repair">
-                <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-              </mat-form-field>
-            </div>  
-          </div>
-        </div>
+              <div fxLayout="row">
+                <span fxFlex="1 1 auto"></span>
+                <button mat-flat-button color="primary" *ngIf="!hasGasTanks" (click)="addGasTanks()">
+                  <mat-icon>
+                    add
+                  </mat-icon> 
+                  Add Gas Tanks
+                </button>
+                <button mat-flat-button color="warn" *ngIf="hasGasTanks" (click)="removeGasTanks()">
+                  <mat-icon>
+                    cancel
+                  </mat-icon> 
+                  Remove gas tanks
+                </button>
+              </div>
+              <h1 *ngIf="hasGasTanks">
+                Gas tanks
+              </h1>
+              <mat-divider *ngIf="hasGasTanks"></mat-divider>
+              <div fxLayout.gt-xs="row wrap" *ngIf="hasGasTanks" [formGroup]="siteForm.controls.gas_tanks" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+                
+                <mat-form-field appearance="outline" fxFlex="23%">
+                  <mat-label>
+                    Quantity
+                  </mat-label>
+                  <input matInput formControlName="quantity">
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                  <mat-label>Condition</mat-label>
+                  <mat-select formControlName="condition">
+                    <mat-option value="working">
+                      working
+                    </mat-option>
+                    <mat-option value="not_working">
+                      not working
+                    </mat-option>
+                    <mat-option value="repairable">
+                      repairable
+                    </mat-option>            
+                  </mat-select>          
+                </mat-form-field>
+        
+                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                  <mat-label>Damage</mat-label>
+                  <mat-select formControlName="damage">
+                    <mat-option value=25> 25% </mat-option>
+                    <mat-option value=50> 50% </mat-option>
+                    <mat-option value=25> 75% </mat-option>
+                  </mat-select>
+                </mat-form-field>
+        
+                <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+                  <mat-label>Cost of repair</mat-label>
+                  <input matInput formControlName="cost_of_repair">
+                  <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+                </mat-form-field>
+              </div>  
+            </div>
+            <!-- /Steps -->
 
+            <!-- Ramps -->
         <div fxLayout="column">
+          
           <div fxLayout="row">
             <span fxFlex="1 1 auto"></span>
             <button mat-flat-button color="primary" *ngIf="!hasRamps" (click)="addRamps()">
@@ -981,7 +984,7 @@
             </button>
           </div>
 
-          <h1 *ngIf="hasGasTanks">
+          <h1 *ngIf="hasRamps">
             Ramps
           </h1>
           <mat-divider *ngIf="hasRamps"></mat-divider>
@@ -1029,6 +1032,11 @@
               <span matPrefix>&#8358;</span><span matSuffix>.00</span>
             </mat-form-field>
           </div>
+        </div>
+
+        
+          
+          <!-- Street lights -->
           
           <div fxLayout="column">
             <div fxLayout="row">
@@ -1097,6 +1105,8 @@
 
           </div>
           
+          <!-- Waste site -->
+          
           <div fxLayout="column">
             <div fxLayout="row">
               <span fxFlex="1 1 auto"></span>
@@ -1157,12 +1167,14 @@
             </div>
 
           </div>
+          
+          
           <!--<div>
             <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Others</button>
           </div>-->
         </div>
+      
       </div>
-
     </div>
 
     <div fxLayout="row">
@@ -1175,10 +1187,10 @@
     </div>
   </mat-step>
   </form>
-</mat-vertical-stepper>
+</mat-horizontal-stepper>
 </div>
-
+<!--
 <div mat-dialog-actions align="end">
   <button mat-button>Preview</button>
   <button [disabled]="siteForm.invalid" mat-flat-button color="primary" (click)="submit()">Submit</button>
-</div>
+</div>-->
