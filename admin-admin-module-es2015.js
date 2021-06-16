@@ -81733,6 +81733,100 @@ module.exports = _default;
 
 /***/ }),
 
+/***/ "ff4t":
+/*!***********************************************************************!*\
+  !*** ./src/app/admin/components/site-survey/site-survey.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: SiteSurveyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SiteSurveyComponent", function() { return SiteSurveyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "8Y7J");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "s7LF");
+/* harmony import */ var _services_site_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/site.service */ "t+W8");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/dialog */ "iELJ");
+/* harmony import */ var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/flex-layout/flex */ "VDRc");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/button */ "Dxy4");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/icon */ "Tj54");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/form-field */ "Q2Ze");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/input */ "e6WT");
+
+
+
+
+
+
+
+
+
+
+
+
+class SiteSurveyComponent {
+    constructor(siteService, fb) {
+        this.siteService = siteService;
+        this.fb = fb;
+    }
+    ngOnInit() {
+        this.siteSurveyForm = this.fb.group({
+            institutionName: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]],
+        });
+    }
+    addSiteData() {
+        return true;
+    }
+    resetForm() {
+    }
+}
+SiteSurveyComponent.ɵfac = function SiteSurveyComponent_Factory(t) { return new (t || SiteSurveyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_site_service__WEBPACK_IMPORTED_MODULE_2__["SiteService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"])); };
+SiteSurveyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SiteSurveyComponent, selectors: [["app-site-survey"]], decls: 20, vars: 0, consts: [["mat-dialog-title", ""], ["fxFlex", "1 1 auto"], ["mat-icon-button", "", "aria-label", "close dialog", "mat-dialog-close", ""], ["fxLayout", "row wrap"], ["appearance", "outline"], ["matInput", "", "type", "text"], ["mat-flat-button", "", 3, "click"], ["mat-flat-button", "", "color", "primary", 3, "click"]], template: function SiteSurveyComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h2", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Site survey ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "close");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-dialog-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-form-field", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "input", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-form-field", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "input", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-dialog-actions");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "button", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SiteSurveyComponent_Template_button_click_15_listener() { return ctx.resetForm(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Reset form");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "span");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SiteSurveyComponent_Template_button_click_18_listener() { return ctx.addSiteData(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Submit");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogTitle"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultFlexDirective"], _angular_material_button__WEBPACK_IMPORTED_MODULE_5__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogClose"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIcon"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogContent"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__["DefaultLayoutDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_7__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_7__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInput"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialogActions"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzaXRlLXN1cnZleS5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SiteSurveyComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-site-survey',
+                templateUrl: './site-survey.component.html',
+                styleUrls: ['./site-survey.component.scss']
+            }]
+    }], function () { return [{ type: _services_site_service__WEBPACK_IMPORTED_MODULE_2__["SiteService"] }, { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "fjKi":
 /*!********************************************************!*\
   !*** ./node_modules/echarts/lib/component/markArea.js ***!
@@ -87991,20 +88085,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/radio */ "zQhy");
 /* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material/chips */ "f44v");
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/divider */ "BSbQ");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/flex-layout */ "u9T3");
-/* harmony import */ var _admin_routing_module__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./admin-routing.module */ "0Em7");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/home/home.component */ "gTBF");
-/* harmony import */ var _components_add_building_add_building_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/add-building/add-building.component */ "6QsB");
-/* harmony import */ var _components_building_building_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/building/building.component */ "8ypg");
-/* harmony import */ var _components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/buildings/buildings.component */ "3slX");
-/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "eEfz");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/footer/footer.component */ "7rVD");
-/* harmony import */ var _components_reports_reports_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./components/reports/reports.component */ "OE/m");
-/* harmony import */ var _components_settings_settings_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/settings/settings.component */ "+Iyy");
-/* harmony import */ var _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/sidenav/sidenav.component */ "M98J");
-/* harmony import */ var _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/toolbar/toolbar.component */ "aDZX");
-/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/about/about.component */ "k7p9");
-/* harmony import */ var _components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/building-summary/building-summary.component */ "25rQ");
+/* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material/slider */ "mPVK");
+/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/material/button-toggle */ "Ynp+");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/flex-layout */ "u9T3");
+/* harmony import */ var _admin_routing_module__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./admin-routing.module */ "0Em7");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/home/home.component */ "gTBF");
+/* harmony import */ var _components_add_building_add_building_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/add-building/add-building.component */ "6QsB");
+/* harmony import */ var _components_building_building_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/building/building.component */ "8ypg");
+/* harmony import */ var _components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/buildings/buildings.component */ "3slX");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "eEfz");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/footer/footer.component */ "7rVD");
+/* harmony import */ var _components_reports_reports_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/reports/reports.component */ "OE/m");
+/* harmony import */ var _components_settings_settings_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/settings/settings.component */ "+Iyy");
+/* harmony import */ var _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/sidenav/sidenav.component */ "M98J");
+/* harmony import */ var _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/toolbar/toolbar.component */ "aDZX");
+/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/about/about.component */ "k7p9");
+/* harmony import */ var _components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/building-summary/building-summary.component */ "25rQ");
+/* harmony import */ var _components_site_survey_site_survey_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/site-survey/site-survey.component */ "ff4t");
+/* harmony import */ var _components_add_site_add_site_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./components/add-site/add-site.component */ "h8ct");
 
 
 
@@ -88017,6 +88115,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //Material Modules
+
+
 
 
 
@@ -88056,6 +88156,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 class AdminModule {
 }
 AdminModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AdminModule });
@@ -88082,7 +88184,7 @@ AdminModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
             _angular_material_menu__WEBPACK_IMPORTED_MODULE_16__["MatMenuModule"],
             _angular_material_button__WEBPACK_IMPORTED_MODULE_17__["MatButtonModule"],
             _angular_material_icon__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"],
-            _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__["FlexLayoutModule"],
+            _angular_flex_layout__WEBPACK_IMPORTED_MODULE_32__["FlexLayoutModule"],
             _angular_material_card__WEBPACK_IMPORTED_MODULE_20__["MatCardModule"],
             _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelectModule"],
             _angular_material_input__WEBPACK_IMPORTED_MODULE_19__["MatInputModule"],
@@ -88094,25 +88196,27 @@ AdminModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
             _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__["MatRadioModule"],
             _angular_material_chips__WEBPACK_IMPORTED_MODULE_28__["MatChipsModule"],
             _angular_material_divider__WEBPACK_IMPORTED_MODULE_29__["MatDividerModule"],
-            _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__["FlexLayoutModule"],
-            _admin_routing_module__WEBPACK_IMPORTED_MODULE_31__["AdminRoutingModule"],
+            _angular_material_slider__WEBPACK_IMPORTED_MODULE_30__["MatSliderModule"],
+            _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_31__["MatButtonToggleModule"],
+            _angular_flex_layout__WEBPACK_IMPORTED_MODULE_32__["FlexLayoutModule"],
+            _admin_routing_module__WEBPACK_IMPORTED_MODULE_33__["AdminRoutingModule"],
             ngx_echarts__WEBPACK_IMPORTED_MODULE_4__["NgxEchartsModule"].forRoot({
                 echarts: echarts__WEBPACK_IMPORTED_MODULE_5__
             })
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AdminModule, { declarations: [_components_home_home_component__WEBPACK_IMPORTED_MODULE_32__["HomeComponent"],
-        _components_add_building_add_building_component__WEBPACK_IMPORTED_MODULE_33__["AddBuildingComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AdminModule, { declarations: [_components_home_home_component__WEBPACK_IMPORTED_MODULE_34__["HomeComponent"],
+        _components_add_building_add_building_component__WEBPACK_IMPORTED_MODULE_35__["AddBuildingComponent"],
         //SummaryComponent, 
-        _components_building_building_component__WEBPACK_IMPORTED_MODULE_34__["BuildingComponent"],
-        _components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_35__["BuildingsComponent"],
-        _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_36__["DashboardComponent"],
-        _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_37__["FooterComponent"],
-        _components_reports_reports_component__WEBPACK_IMPORTED_MODULE_38__["ReportsComponent"],
-        _components_settings_settings_component__WEBPACK_IMPORTED_MODULE_39__["SettingsComponent"],
-        _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_40__["SidenavComponent"],
-        _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_41__["ToolbarComponent"],
-        _components_about_about_component__WEBPACK_IMPORTED_MODULE_42__["AboutComponent"],
-        _components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_43__["BuildingSummaryComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _components_building_building_component__WEBPACK_IMPORTED_MODULE_36__["BuildingComponent"],
+        _components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_37__["BuildingsComponent"],
+        _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_38__["DashboardComponent"],
+        _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_39__["FooterComponent"],
+        _components_reports_reports_component__WEBPACK_IMPORTED_MODULE_40__["ReportsComponent"],
+        _components_settings_settings_component__WEBPACK_IMPORTED_MODULE_41__["SettingsComponent"],
+        _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_42__["SidenavComponent"],
+        _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_43__["ToolbarComponent"],
+        _components_about_about_component__WEBPACK_IMPORTED_MODULE_44__["AboutComponent"],
+        _components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_45__["BuildingSummaryComponent"], _components_site_survey_site_survey_component__WEBPACK_IMPORTED_MODULE_46__["SiteSurveyComponent"], _components_add_site_add_site_component__WEBPACK_IMPORTED_MODULE_47__["AddSiteComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
         _shared_components_shared_components_module__WEBPACK_IMPORTED_MODULE_7__["SharedComponentsModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
@@ -88128,7 +88232,7 @@ AdminModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
         _angular_material_menu__WEBPACK_IMPORTED_MODULE_16__["MatMenuModule"],
         _angular_material_button__WEBPACK_IMPORTED_MODULE_17__["MatButtonModule"],
         _angular_material_icon__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"],
-        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__["FlexLayoutModule"],
+        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_32__["FlexLayoutModule"],
         _angular_material_card__WEBPACK_IMPORTED_MODULE_20__["MatCardModule"],
         _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelectModule"],
         _angular_material_input__WEBPACK_IMPORTED_MODULE_19__["MatInputModule"],
@@ -88140,25 +88244,27 @@ AdminModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
         _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__["MatRadioModule"],
         _angular_material_chips__WEBPACK_IMPORTED_MODULE_28__["MatChipsModule"],
         _angular_material_divider__WEBPACK_IMPORTED_MODULE_29__["MatDividerModule"],
-        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__["FlexLayoutModule"],
-        _admin_routing_module__WEBPACK_IMPORTED_MODULE_31__["AdminRoutingModule"], ngx_echarts__WEBPACK_IMPORTED_MODULE_4__["NgxEchartsModule"]] }); })();
+        _angular_material_slider__WEBPACK_IMPORTED_MODULE_30__["MatSliderModule"],
+        _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_31__["MatButtonToggleModule"],
+        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_32__["FlexLayoutModule"],
+        _admin_routing_module__WEBPACK_IMPORTED_MODULE_33__["AdminRoutingModule"], ngx_echarts__WEBPACK_IMPORTED_MODULE_4__["NgxEchartsModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AdminModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
                 declarations: [
-                    _components_home_home_component__WEBPACK_IMPORTED_MODULE_32__["HomeComponent"],
-                    _components_add_building_add_building_component__WEBPACK_IMPORTED_MODULE_33__["AddBuildingComponent"],
+                    _components_home_home_component__WEBPACK_IMPORTED_MODULE_34__["HomeComponent"],
+                    _components_add_building_add_building_component__WEBPACK_IMPORTED_MODULE_35__["AddBuildingComponent"],
                     //SummaryComponent, 
-                    _components_building_building_component__WEBPACK_IMPORTED_MODULE_34__["BuildingComponent"],
-                    _components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_35__["BuildingsComponent"],
-                    _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_36__["DashboardComponent"],
-                    _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_37__["FooterComponent"],
-                    _components_reports_reports_component__WEBPACK_IMPORTED_MODULE_38__["ReportsComponent"],
-                    _components_settings_settings_component__WEBPACK_IMPORTED_MODULE_39__["SettingsComponent"],
-                    _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_40__["SidenavComponent"],
-                    _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_41__["ToolbarComponent"],
-                    _components_about_about_component__WEBPACK_IMPORTED_MODULE_42__["AboutComponent"],
-                    _components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_43__["BuildingSummaryComponent"]
+                    _components_building_building_component__WEBPACK_IMPORTED_MODULE_36__["BuildingComponent"],
+                    _components_buildings_buildings_component__WEBPACK_IMPORTED_MODULE_37__["BuildingsComponent"],
+                    _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_38__["DashboardComponent"],
+                    _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_39__["FooterComponent"],
+                    _components_reports_reports_component__WEBPACK_IMPORTED_MODULE_40__["ReportsComponent"],
+                    _components_settings_settings_component__WEBPACK_IMPORTED_MODULE_41__["SettingsComponent"],
+                    _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_42__["SidenavComponent"],
+                    _components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_43__["ToolbarComponent"],
+                    _components_about_about_component__WEBPACK_IMPORTED_MODULE_44__["AboutComponent"],
+                    _components_building_summary_building_summary_component__WEBPACK_IMPORTED_MODULE_45__["BuildingSummaryComponent"], _components_site_survey_site_survey_component__WEBPACK_IMPORTED_MODULE_46__["SiteSurveyComponent"], _components_add_site_add_site_component__WEBPACK_IMPORTED_MODULE_47__["AddSiteComponent"]
                 ],
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -88177,7 +88283,7 @@ AdminModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
                     _angular_material_menu__WEBPACK_IMPORTED_MODULE_16__["MatMenuModule"],
                     _angular_material_button__WEBPACK_IMPORTED_MODULE_17__["MatButtonModule"],
                     _angular_material_icon__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"],
-                    _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__["FlexLayoutModule"],
+                    _angular_flex_layout__WEBPACK_IMPORTED_MODULE_32__["FlexLayoutModule"],
                     _angular_material_card__WEBPACK_IMPORTED_MODULE_20__["MatCardModule"],
                     _angular_material_select__WEBPACK_IMPORTED_MODULE_21__["MatSelectModule"],
                     _angular_material_input__WEBPACK_IMPORTED_MODULE_19__["MatInputModule"],
@@ -88189,8 +88295,10 @@ AdminModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
                     _angular_material_radio__WEBPACK_IMPORTED_MODULE_27__["MatRadioModule"],
                     _angular_material_chips__WEBPACK_IMPORTED_MODULE_28__["MatChipsModule"],
                     _angular_material_divider__WEBPACK_IMPORTED_MODULE_29__["MatDividerModule"],
-                    _angular_flex_layout__WEBPACK_IMPORTED_MODULE_30__["FlexLayoutModule"],
-                    _admin_routing_module__WEBPACK_IMPORTED_MODULE_31__["AdminRoutingModule"],
+                    _angular_material_slider__WEBPACK_IMPORTED_MODULE_30__["MatSliderModule"],
+                    _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_31__["MatButtonToggleModule"],
+                    _angular_flex_layout__WEBPACK_IMPORTED_MODULE_32__["FlexLayoutModule"],
+                    _admin_routing_module__WEBPACK_IMPORTED_MODULE_33__["AdminRoutingModule"],
                     ngx_echarts__WEBPACK_IMPORTED_MODULE_4__["NgxEchartsModule"].forRoot({
                         echarts: echarts__WEBPACK_IMPORTED_MODULE_5__
                     })

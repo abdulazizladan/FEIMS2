@@ -7,6 +7,63 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"], {
     /***/
+    "Btxb":
+    /*!*****************************!*\
+      !*** ./src/app/ApiPaths.ts ***!
+      \*****************************/
+
+    /*! exports provided: ApiPaths */
+
+    /***/
+    function Btxb(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ApiPaths", function () {
+        return ApiPaths;
+      });
+
+      var ApiPaths;
+
+      (function (ApiPaths) {
+        ApiPaths["signin"] = "auth/login";
+        ApiPaths["signup"] = "auth/register";
+      })(ApiPaths || (ApiPaths = {}));
+      /***/
+
+    },
+
+    /***/
+    "E0/Y":
+    /*!********************************!*\
+      !*** ./src/environment.dev.ts ***!
+      \********************************/
+
+    /*! exports provided: environment */
+
+    /***/
+    function E0Y(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "environment", function () {
+        return environment;
+      });
+
+      var environment = {
+        production: false,
+        baseUrl: 'https://app.narr.ng/api/v1'
+      };
+      /***/
+    },
+
+    /***/
     "N/25":
     /*!***********************************************!*\
       !*** ./src/app/auth/services/auth.service.ts ***!
@@ -40,13 +97,19 @@
       /* harmony import */
 
 
-      var _environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ../../environment */
-      "bXO7");
+      var _environment_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../../../environment.dev */
+      "E0/Y");
       /* harmony import */
 
 
-      var _app_socket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _ApiPaths__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ../../ApiPaths */
+      "Btxb");
+      /* harmony import */
+
+
+      var _app_socket__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ../../app.socket */
       "rGZO");
 
@@ -64,11 +127,9 @@
 
           this._http = _http;
           this.appSocket = appSocket;
-          this.baseUrl = _environment__WEBPACK_IMPORTED_MODULE_2__["environment"].baseUrl; //private loginUrl: string = '${this.baseUrl}/${this.apiPaths.signinUrl}';
-          //private registerUrl: string = '${this.baseUrl}/${this.apiPaths.signupUrl}';
-
-          this.loginUrl = "https://api.narr.ng/api/v1/auth/login";
-          this.registerUrl = "https://api.narr.ng/api/v1/auth/register";
+          this.baseUrl = _environment_dev__WEBPACK_IMPORTED_MODULE_2__["environment"].baseUrl;
+          this.loginUrl = "".concat(this.baseUrl, "/").concat(_ApiPaths__WEBPACK_IMPORTED_MODULE_3__["ApiPaths"].signin);
+          this.registerUrl = "".concat(this.baseUrl, "/").concat(_ApiPaths__WEBPACK_IMPORTED_MODULE_3__["ApiPaths"].signup);
         }
 
         _createClass(AuthService, [{
@@ -106,7 +167,7 @@
           key: "isAuthenticated",
           value: function isAuthenticated() {
             //if(local storage credentials are validated){
-            //  return tru
+            //  return true
             //}
             return true;
           }
@@ -116,7 +177,7 @@
       }();
 
       AuthService.ɵfac = function AuthService_Factory(t) {
-        return new (t || AuthService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_app_socket__WEBPACK_IMPORTED_MODULE_3__["AppSocket"]));
+        return new (t || AuthService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_app_socket__WEBPACK_IMPORTED_MODULE_4__["AppSocket"]));
       };
 
       AuthService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
@@ -136,39 +197,12 @@
           return [{
             type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
           }, {
-            type: _app_socket__WEBPACK_IMPORTED_MODULE_3__["AppSocket"]
+            type: _app_socket__WEBPACK_IMPORTED_MODULE_4__["AppSocket"]
           }];
         }, null);
       })();
       /***/
 
-    },
-
-    /***/
-    "bXO7":
-    /*!********************************!*\
-      !*** ./src/app/environment.ts ***!
-      \********************************/
-
-    /*! exports provided: environment */
-
-    /***/
-    function bXO7(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "environment", function () {
-        return environment;
-      });
-
-      var environment = {
-        production: false,
-        baseUrl: 'https://api.narr.ng/api/v1'
-      };
-      /***/
     }
   }]);
 })();
