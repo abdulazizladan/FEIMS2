@@ -63,7 +63,7 @@ export class NavigationService {
     },
     {
       type: 'separator',
-      name: 'Select separtment'
+      name: 'Select department'
     },
     {
       name: 'Kongo',

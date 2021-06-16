@@ -27,7 +27,15 @@ export class AddBuildingComponent implements OnInit {
 
   initForm(): void{
     this.buildingForm = this.fb.group({
-      name: ['', [Validators.required]]
+      name: ['', [Validators.required]],
+      code: ['', [Validators.required]],
+      year_built: [0, [Validators.required]],
+      position: this.fb.group({
+        longitude: [0, []],
+        latitude: [0, []]
+      }),
+      purpose: ['', [Validators.required]],
+      comment: ['', [Validators.required]],
     })
   }
 

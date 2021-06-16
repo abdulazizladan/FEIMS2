@@ -10,9 +10,9 @@
   </button>
 </h2>
 
-<mat-dialog-content>
+<mat-dialog-content [formGroup]="buildingForm">
 
-  <mat-horizontal-stepper labelPosition="bottom" #stepper linear [formGroup]="buildingForm">
+  <mat-horizontal-stepper labelPosition="bottom" #stepper linear>
     
 
     <mat-step label="Basic data">
@@ -22,6 +22,42 @@
           <mat-label>Name</mat-label>
           <input matInput type="text" formControlName="name">
         </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+          <mat-label>Code</mat-label>
+          <input matInput type="text" formControlName="code">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+          <mat-label>Year built</mat-label>
+          <input matInput type="text" formControlName="year_built">
+        </mat-form-field>
+
+        <div formGroupName="position" fxFlex="1 1 auto" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
+
+          <mat-form-field appearance="outline" fxFlex.gt-xs="25%">
+            <mat-label>Longitude</mat-label>
+            <input matInput type="text" formControlName="longitude">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" fxFlex.gt-xs="25%">
+            <mat-label>Latitude</mat-label>
+            <input matInput type="text" formControlName="latitude">
+          </mat-form-field>
+
+        </div>
+
+          <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+            <mat-label>Purpose</mat-label>
+            <input matInput type="text" formControlName="purpose">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+            <mat-label>Comment</mat-label>
+            <input matInput type="text" formControlName="comment">
+          </mat-form-field>
+
+       
 
       </div>
     </mat-step>
