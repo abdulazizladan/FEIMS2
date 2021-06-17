@@ -36,22 +36,138 @@ export class AddSiteComponent implements OnInit {
   initializeForm():void {
 
     this.states = [
-      {"name": "abia"},
-      {"name": "adamawa"},
-      {"name": "akwa-ibom"},
-      {"name": "anambra"},
-      {"name": "bauchi"},
-      {"name": "borno"},
-      {"name": "cross-river"},
-      {"name": "delta"},
-      {"name": "edo"},
-      {"name": "enugu"},
-      {"name": "gombe"},
-      {"name": "imo"},
-      {"name": "jigawa"},
-      {"name": "kaduna"},
-      {"name": "kano"},
-      {"name": "katsina"}
+      {
+        "name": "abia",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "adamawa",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "akwa-ibom",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "anambra",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "bauchi",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "borno",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "cross-river",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "delta",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "edo",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "enugu",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "gombe",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "imo",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "jigawa",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "kaduna",
+        "lgas": [
+          {
+            "name": "zaria"
+          },
+          {
+            "name": "igabi"
+          },
+
+        ]
+      },
+      {
+        "name": "kano",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "katsina",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      }
     ]
 
     this.siteForm = this.fb.group({

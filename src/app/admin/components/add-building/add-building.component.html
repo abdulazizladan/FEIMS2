@@ -19,30 +19,30 @@
       
       <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="58%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="58%">
           <mat-label>Name</mat-label>
           <input matInput type="text" formControlName="name">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="20%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Code</mat-label>
           <input matInput type="text" formControlName="code">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="20%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Year built</mat-label>
           <input matInput type="text" formControlName="year_built">
         </mat-form-field>
 
         <div formGroupName="position" fxFlex.gt-xs="1 1 auto" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="50%">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
             <mat-label>position</mat-label>
             <input matInput type="text" formControlName="longitude">
             <span matSuffix>Longitude</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="50%">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
             <mat-label>position</mat-label>
             <input matInput type="text" formControlName="latitude">
             <span matSuffix>Latitude</span>
@@ -50,12 +50,12 @@
 
         </div>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="200px">
             <mat-label>Purpose</mat-label>
             <input matInput type="text" formControlName="purpose">
           </mat-form-field>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="100%">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="100%">
             <mat-label>Comment</mat-label>
             <input matInput type="text" formControlName="comment">
           </mat-form-field>
@@ -65,8 +65,117 @@
       </div>
     </mat-step>
 
-    <mat-step label="Structure">
+    <mat-step label="Super structure">
+      <!-- under_concrete, under_block, under_crack_tiles, under_alocobond, condition & cost of repair -->
+      <div fxLayout="column">
+        
+        <!--under concrete -->
+        <h2>Under concrete</h2>
+        <mat-divider></mat-divider>
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+          
+          <mat-form-field appearance={{appearance}}>
+            <mat-label>
+              Type
+            </mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+        
+        <!--under block-->
+        <h2>Under block</h2>
+        <mat-divider></mat-divider>
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+          
+          <mat-form-field appearance={{appearance}}>
+            <mat-label>
+              Type
+            </mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <!--under crack tiles-->
+        <h2>Under crack tiles</h2>
+        <mat-divider></mat-divider>
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+          
+          <mat-form-field appearance={{appearance}}>
+            <mat-label>
+              Type
+            </mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <!--under alucobond-->
+        <h2>Under alucobond</h2>
+        <mat-divider></mat-divider>
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+          
+          <mat-form-field appearance={{appearance}}>
+            <mat-label>
+              Type
+            </mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <!--Condition-->
+        <h2>Condition</h2>
+        <mat-divider></mat-divider>
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+          
+          <mat-form-field appearance={{appearance}}>
+            <mat-label>
+              Type
+            </mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
       
+      </div>
+
+    </mat-step>
+
+    <mat-step label="Interior wall">
+      
+      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+
+      </div>
+
+    </mat-step>
+
+    <mat-step label="Windows">
+      
+      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+
+      </div>
+
+    </mat-step>
+
+    <mat-step label="Walls">
+      
+      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+
+      </div>
+
+    </mat-step>
+
+    <mat-step label="Floor">
+      
+      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+
+      </div>
+
+    </mat-step>
+
+    <mat-step label="Roof & Ceiling">
+      
+      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+
+      </div>
+
     </mat-step>
 
     
