@@ -14,6 +14,15 @@ export class AddSiteComponent implements OnInit {
 
   expansionPanelStep: number = 0;
 
+  public states: [
+    {
+      name: string
+    }
+  ]
+
+
+  public appearance="outline";
+
   public siteForm: FormGroup;//Site form
   public hasSteps: boolean;
   public hasGasTanks: boolean;
@@ -29,6 +38,25 @@ export class AddSiteComponent implements OnInit {
   }
 
   initializeForm():void {
+
+    this.states = [
+      {name: 'abia'}
+      /*{name: 'adamawa'},
+      {name: 'akwa-ibom'},
+      {name: 'anambra'},
+      {name: 'bauchi'},
+      {name: 'borno'},
+      {name: 'cross-river'},
+      {name: 'delta'},
+      {name: 'edo'},
+      {name: 'enugu'},
+      {name: 'gombe'},
+      {name: 'imo'},
+      {name: 'jigawa'},
+      {name: 'kaduna'},
+      {name: 'kano'},
+      {name: 'katsina'}*/
+    ]
 
     this.siteForm = this.fb.group({
       site: this.fb.group({

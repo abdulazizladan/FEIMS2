@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BuildingService } from '../../services/building.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { building } from '../../models/building.model';
 
 @Component({
@@ -34,8 +33,16 @@ export class AddBuildingComponent implements OnInit {
         longitude: [0, []],
         latitude: [0, []]
       }),
-      purpose: ['', [Validators.required]],
-      comment: ['', [Validators.required]],
+      purpose: ['', [Validators.required]], //residential/office/multiple
+      comment: ['', [Validators.required]], //any other detail not captured
+      structure: this.fb.group({
+        dimensions: this.fb.group({
+          floor_area: [0, []],//square meters
+          wall_area: [0, []], //square meters
+          ceiling_area: [0, []], //square meters
+          floors: [0, []] //floor count
+        })
+      })
     })
   }
 
@@ -44,6 +51,7 @@ export class AddBuildingComponent implements OnInit {
   }
 
   submit (){
+    this.buildingService.addBuilding('').subscribe()
   }
 
 }

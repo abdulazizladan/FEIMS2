@@ -16,33 +16,36 @@
     
 
     <mat-step label="Basic data">
+      
       <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="25%">
+        <mat-form-field appearance="outline" fxFlex.gt-xs="58%">
           <mat-label>Name</mat-label>
           <input matInput type="text" formControlName="name">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+        <mat-form-field appearance="outline" fxFlex.gt-xs="20%">
           <mat-label>Code</mat-label>
           <input matInput type="text" formControlName="code">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+        <mat-form-field appearance="outline" fxFlex.gt-xs="20%">
           <mat-label>Year built</mat-label>
           <input matInput type="text" formControlName="year_built">
         </mat-form-field>
 
-        <div formGroupName="position" fxFlex="1 1 auto" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
+        <div formGroupName="position" fxFlex.gt-xs="1 1 auto" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="25%">
-            <mat-label>Longitude</mat-label>
+          <mat-form-field appearance="outline" fxFlex.gt-xs="50%">
+            <mat-label>position</mat-label>
             <input matInput type="text" formControlName="longitude">
+            <span matSuffix>Longitude</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="25%">
-            <mat-label>Latitude</mat-label>
+          <mat-form-field appearance="outline" fxFlex.gt-xs="50%">
+            <mat-label>position</mat-label>
             <input matInput type="text" formControlName="latitude">
+            <span matSuffix>Latitude</span>
           </mat-form-field>
 
         </div>
@@ -52,7 +55,7 @@
             <input matInput type="text" formControlName="purpose">
           </mat-form-field>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="200px">
+          <mat-form-field appearance="outline" fxFlex.gt-xs="100%">
             <mat-label>Comment</mat-label>
             <input matInput type="text" formControlName="comment">
           </mat-form-field>
