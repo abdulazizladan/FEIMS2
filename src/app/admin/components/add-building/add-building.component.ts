@@ -27,22 +27,22 @@ export class AddBuildingComponent implements OnInit {
   }
 
   initForm(): void{
-    this.buildingForm = this.fb.group({
-      name: ['', [Validators.required]],
-      code: ['', [Validators.required]],
-      year_built: [0, [Validators.required]],
-      position: this.fb.group({
-        longitude: [0, []],
-        latitude: [0, []]
-      }),
-      purpose: ['', [Validators.required]], //residential/office/multiple
-      comment: ['', [Validators.required]], //any other detail not captured
+    this.buildingForm = this.fb.group({      
       structure: this.fb.group({
+        name: ['', [Validators.required]],
+        code: ['', [Validators.required]],
+        year_built: [0, [Validators.required]],
+        position: this.fb.group({
+          longitude: [0, []],
+          latitude: [0, []]
+        }),
+        purpose: ['', [Validators.required]], //residential/office/multiple
+        comment: ['', [Validators.required]], //any other detail not captured
         dimensions: this.fb.group({
           floor_area: [0, []],//square meters
           wall_area: [0, []], //square meters
           ceiling_area: [0, []], //square meters
-          floors: [0, []] //floor count
+          floors: [1, [Validators.min(1)]] //floor count
         })
       })
     })

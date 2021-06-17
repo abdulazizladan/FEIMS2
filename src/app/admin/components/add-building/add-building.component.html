@@ -15,40 +15,45 @@
   <mat-horizontal-stepper labelPosition="bottom" #stepper linear>
     
 
-    <mat-step label="Basic data">
+    <mat-step label="Basic data" [formGroup]="buildingForm.controls.structure">
+
+      <div fxLayout="column">
+
+        <h2>Basic info</h2>
+        <mat-divider></mat-divider>
       
-      <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="58%">
-          <mat-label>Name</mat-label>
-          <input matInput type="text" formControlName="name">
-        </mat-form-field>
-
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
-          <mat-label>Code</mat-label>
-          <input matInput type="text" formControlName="code">
-        </mat-form-field>
-
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
-          <mat-label>Year built</mat-label>
-          <input matInput type="text" formControlName="year_built">
-        </mat-form-field>
-
-        <div formGroupName="position" fxFlex.gt-xs="1 1 auto" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
-
-          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
-            <mat-label>position</mat-label>
-            <input matInput type="text" formControlName="longitude">
-            <span matSuffix>Longitude</span>
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="58%">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name">
           </mat-form-field>
 
-          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
-            <mat-label>position</mat-label>
-            <input matInput type="text" formControlName="latitude">
-            <span matSuffix>Latitude</span>
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+            <mat-label>Code</mat-label>
+            <input matInput type="text" formControlName="code">
           </mat-form-field>
 
-        </div>
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+            <mat-label>Year built</mat-label>
+            <input matInput type="text" formControlName="year_built">
+          </mat-form-field>
+
+          <div formGroupName="position" fxFlex.gt-xs="1 1 auto" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
+
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
+              <mat-label>position</mat-label>
+              <input matInput type="text" formControlName="longitude">
+              <span matSuffix>Longitude</span>
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
+              <mat-label>position</mat-label>
+              <input matInput type="text" formControlName="latitude">
+              <span matSuffix>Latitude</span>
+            </mat-form-field>
+
+          </div>
 
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="200px">
             <mat-label>Purpose</mat-label>
@@ -61,6 +66,36 @@
           </mat-form-field>
 
        
+        </div>
+        <h2>Dimensions</h2>
+        <mat-divider></mat-divider>
+        <div formGroupName="dimensions" fxLayout.xs="column" fxLayou.gt-xs="row wrap" fxLayoutGap="10px">
+
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="24%">
+            <mat-label>floor area</mat-label>
+            <input matInput type="text" formControlName="floor_area">
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="24%">
+            <mat-label>wall area</mat-label>
+            <input matInput type="text" formControlName="wall_area">
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="24%">
+            <mat-label>ceiling area</mat-label>
+            <input matInput type="text" formControlName="ceiling_area">
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="24%">
+            <mat-label>Number of floors</mat-label>
+            <input matInput type="text" formControlName="floors">
+            <span matSuffix>floors</span>
+          </mat-form-field>
+
+        </div>
 
       </div>
     </mat-step>

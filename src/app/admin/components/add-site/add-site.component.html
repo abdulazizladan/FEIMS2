@@ -12,8 +12,7 @@
 
 <div mat-dialog-content>
   <mat-horizontal-stepper linear labelPosition="bottom"> 
-    <form [formGroup]="siteForm">
-    
+    <form [formGroup]="siteForm">    
     <mat-step [stepControl]="siteForm.controls.site">
       <ng-template matStepLabel>Basic data</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
