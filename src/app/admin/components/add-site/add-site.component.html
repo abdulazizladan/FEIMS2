@@ -17,7 +17,7 @@
       <ng-template matStepLabel>Basic data</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
 
-      <div [formGroup]="siteForm.controls.site" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
+      <div [formGroup]="siteForm.controls.site" fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
         
         <mat-form-field appearance={{appearance}} fxFlex.gt-xs="35%">
           <mat-label>Site name</mat-label>
@@ -542,7 +542,7 @@
       <ng-template matStepLabel>Drainage</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">        
       
-      <div [formGroup]="siteForm.controls.drainage" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div [formGroup]="siteForm.controls.drainage" fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
         <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>

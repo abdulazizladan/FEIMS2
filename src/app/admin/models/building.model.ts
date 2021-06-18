@@ -42,31 +42,6 @@ export interface building{
       cost_of_repair: number //naira
     },
       
-      /*--- Interior wall ---*/
-    interior_wall: {
-      finishing: string, //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
-      size: number, //square meter
-      type: string, 
-      accessories: string[],
-      quantity: number, //count
-      condition: string, //excellent|good|fair|poor
-      cost_of_repair: number //naira
-    },
-
-      
-
-      /*--- Windows ---*/
-    windows: {
-      material: string, //wire_glass|glass_block|plate|tempered|operating|fixed|other
-      //description: string,
-      size: number, //square meter
-      type: string,
-      quantity: number, //count
-      condition: string, //excellent|good|fair|poor
-      cost_of_repair: number //naira
-    },
-
-      /*--- Walls ---*/
     walls: {
       wall_type: string, //concrete_wall|150mm_block_wall|225mm_block_wall|other
       //description: string,
@@ -129,8 +104,30 @@ export interface building{
         type: string,
         condition: string, //excellent|good|fair|poor
         cost_of_repair: number //naira
-      }
+      },
+        /*--- Interior wall ---*/
+      interior_wall: {
+        finishing: string, //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
+        size: number, //square meter
+        type: string, 
+        accessories: string[],
+        quantity: number, //count
+        condition: string, //excellent|good|fair|poor
+        cost_of_repair: number //naira
+      },
     },
+      /*--- Windows ---*/
+    windows: {
+      material: string, //wire_glass|glass_block|plate|tempered|operating|fixed|other
+      //description: string,
+      size: number, //square meter
+      type: string,
+      quantity: number, //count
+      condition: string, //excellent|good|fair|poor
+      cost_of_repair: number //naira
+    },
+
+      /*--- Walls ---*/
 
       /*-- Floor --*/
     floor: {

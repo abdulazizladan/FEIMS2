@@ -44,6 +44,12 @@ export class AddBuildingComponent implements OnInit {
           ceiling_area: [0, []], //square meters
           floors: [1, [Validators.min(1)]] //floor count
         })
+      }),
+      super_structure: this.fb.group({
+        type: String,
+        under_concrete: this.fb.group({
+          
+        })
       })
     })
   }
