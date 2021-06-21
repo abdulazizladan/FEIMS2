@@ -17,21 +17,25 @@
 
     <mat-step label="Basic data" [formGroup]="buildingForm.controls.structure">
 
-      <div fxLayout="column">
+      <div fxLayout="column" fxLayoutGap="20px">
 
         <span class="mat-title">Building information</span>
       
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutAlign.gt-xs="space-between" fxLayoutGap="10px">
 
-          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="58%">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="75%">
             <mat-label>Name</mat-label>
             <input matInput type="text" formControlName="name">
           </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
 
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
             <mat-label>Code</mat-label>
             <input matInput type="text" formControlName="code">
           </mat-form-field>
+
+          
 
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
             <mat-label>Year built</mat-label>
@@ -98,12 +102,20 @@
 
         </div>
 
+        <div fxLayout="row">
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary" matStepperNext>
+            Next
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+
       </div>
     </mat-step>
 
     <mat-step label="Super structure">
       <!-- under_concrete, under_block, under_crack_tiles, under_alocobond, condition & cost of repair -->
-      <div fxLayout="column">
+      <div fxLayout="column" fxLayoutGap="20px">
 
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
           
@@ -160,6 +172,8 @@
             <input matInput type="text">
             <span matSuffix>kg</span>
           </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
         </div>
         
         <!--under block-->
@@ -204,6 +218,8 @@
             </mat-label>
             <input matInput type="text">
           </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
 
         </div>
 
@@ -279,6 +295,20 @@
             <span matSuffix>.00</span>
           </mat-form-field>
 
+          <span fxFlex.gt-xs></span>
+
+        </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary" matStepperPrevious>
+            <mat-icon>chevron_left</mat-icon>
+            Previous            
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary" matStepperNext>
+            Next
+            <mat-icon>chevron_right</mat-icon>
+          </button>
         </div>
       
       </div>
@@ -288,7 +318,7 @@
     <!-- Wall -->
     <mat-step label="Walls & Windows">
 
-      <div fxLayout="column"> 
+      <div fxLayout="column" fxLayoutGap="20px"> 
         
         <span class="mat-title">Basic wall details</span>  
         
@@ -760,6 +790,18 @@
           </mat-form-field>
 
         </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary" matStepperPrevious>
+            <mat-icon>chevron_left</mat-icon>
+            Previous            
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary" matStepperNext>
+            Next
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
         
       </div>
 
@@ -767,7 +809,7 @@
 
     <mat-step label="Floor">
       
-      <div fxLayout="column"> 
+      <div fxLayout="column" fxLayoutGap="20px"> 
         
         <!-- Joints and beams -->
         <span class="mat-title">Joints & Beams</span>   
@@ -1121,13 +1163,512 @@
 
         </div>
 
+        <div fxLayout="row">
+          <button mat-flat-button color="primary" matStepperPrevious>
+            <mat-icon>chevron_left</mat-icon>
+            Previous            
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary" matStepperNext>
+            Next
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+
       </div>
 
     </mat-step>
 
     <mat-step label="Roof & Ceiling">
       
-      <div fxLayout="column"> 
+      <div fxLayout="column" fxLayoutGap="20px"> 
+
+        <!-- Basic roof information -->
+        <span class="mat-title">Basic roof information</span>   
+        
+        <div fxLayout.xs="column" fxLayoutAlign="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">          
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Roof style</mat-label>
+            <mat-select>
+              <mat-option value="flat">
+                Flat
+              </mat-option>
+              <mat-option value="pitched">
+                Pitched
+              </mat-option>
+              <mat-option value="arched">
+                Arched
+              </mat-option>
+              <mat-option value="butterfly">
+                Butterfly
+              </mat-option>
+              <mat-option value="hip">
+                Hip
+              </mat-option>
+              <mat-option value="gambrel">
+                Gambrel
+              </mat-option>
+              <mat-option value="mansard">
+                Mansard
+              </mat-option>
+              <mat-option value="monitor">
+                Monitor
+              </mat-option>
+              <mat-option value="shed">
+                Shed
+              </mat-option>
+              <mat-option value="dome">
+                Dome
+              </mat-option>
+              <mat-option value="gable">
+                Gamle
+              </mat-option>
+              <mat-option value="other">
+                Other
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Size</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Damage</mat-label>
+            <mat-select>
+              <mat-option value="25">
+                25%
+              </mat-option>
+              <mat-option value="50">
+                50%
+              </mat-option>
+              <mat-option value="75">
+                75%
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>condition</mat-label>
+            <mat-select>
+              <mat-option value="excellent">
+                Excellent
+              </mat-option>
+              <mat-option value="good">
+                Good
+              </mat-option>
+              <mat-option value="fair">
+                Fair
+              </mat-option>
+              <mat-option value="poor">
+                Poor
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="40%" appearance={{appearance}}>
+            <mat-label>Cost of repair</mat-label>
+            <input type="text" matInput>
+            <span matPrefix>&#8358;</span>
+          </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
+
+
+        </div>
+
+        <!-- Roof support -->
+        <mat-divider></mat-divider>
+        <span class="mat-title">Roof support</span>   
+        
+        <div fxLayout.xs="column" fxLayoutAlign="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">          
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Support type</mat-label>
+            <mat-select>
+              <mat-option value="joist">
+                Joist
+              </mat-option>
+              <mat-option value="truss">
+                Truss
+              </mat-option>
+              <mat-option value="ridge_frame">
+                Ridge frame
+              </mat-option>
+              <mat-option value="arch">
+                Arch
+              </mat-option>
+              <mat-option value="dome">
+                Dome
+              </mat-option>
+              <mat-option value="cable">
+                Cable
+              </mat-option>
+              <mat-option value="other">
+                Other
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Size</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m</span>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>quantity</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m</span>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Damage</mat-label>
+            <mat-select>
+              <mat-option value="25">
+                25%
+              </mat-option>
+              <mat-option value="50">
+                50%
+              </mat-option>
+              <mat-option value="75">
+                75%
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>condition</mat-label>
+            <mat-select>
+              <mat-option value="excellent">
+                Excellent
+              </mat-option>
+              <mat-option value="good">
+                Good
+              </mat-option>
+              <mat-option value="fair">
+                Fair
+              </mat-option>
+              <mat-option value="poor">
+                Poor
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="40%" appearance={{appearance}}>
+            <mat-label>Cost of repair</mat-label>
+            <input type="text" matInput>
+            <span matPrefix>&#8358;</span>
+          </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
+
+        </div>
+
+        <!-- Roof steel struss -->
+        <mat-divider></mat-divider>
+        <span class="mat-title">Roof steel struss</span>   
+        
+        <div fxLayout.xs="column" fxLayoutAlign="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">          
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Type</mat-label>
+            <mat-select>
+              <mat-option value="joist">
+                Joist
+              </mat-option>
+              <mat-option value="truss">
+                Truss
+              </mat-option>
+              <mat-option value="z-purlins">
+                Z-purlins
+              </mat-option>
+              <mat-option value="cleats">
+                Cleats
+              </mat-option>
+              <mat-option value="bolts">
+                Bolts
+              </mat-option>
+              <mat-option value="cables">
+                Cables
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Size</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>kg</span>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Quantity</mat-label>
+            <input type="text" matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Damage</mat-label>
+            <mat-select>
+              <mat-option value="25">
+                25%
+              </mat-option>
+              <mat-option value="50">
+                50%
+              </mat-option>
+              <mat-option value="75">
+                75%
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>condition</mat-label>
+            <mat-select>
+              <mat-option value="excellent">
+                Excellent
+              </mat-option>
+              <mat-option value="good">
+                Good
+              </mat-option>
+              <mat-option value="fair">
+                Fair
+              </mat-option>
+              <mat-option value="poor">
+                Poor
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="40%" appearance={{appearance}}>
+            <mat-label>Cost of repair</mat-label>
+            <input type="text" matInput>
+            <span matPrefix>&#8358;</span>
+          </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
+
+        </div>
+
+        <!-- Roof decking -->
+        <mat-divider></mat-divider>
+        <span class="mat-title">Roof decking</span>   
+        
+        <div fxLayout.xs="column" fxLayoutAlign="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">          
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Type</mat-label>
+            <mat-select>
+              <mat-option value="metal">
+                Metal
+              </mat-option>
+              <mat-option value="wood">
+                Wood
+              </mat-option>
+              <mat-option value="concrete">
+                Concrete
+              </mat-option>
+              <mat-option value="other">
+                Other
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Size</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>3</sup></span>
+          </mat-form-field>
+          
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Quantity</mat-label>
+            <input type="text" matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Damage</mat-label>
+            <mat-select>
+              <mat-option value="25">
+                25%
+              </mat-option>
+              <mat-option value="50">
+                50%
+              </mat-option>
+              <mat-option value="75">
+                75%
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>condition</mat-label>
+            <mat-select>
+              <mat-option value="excellent">
+                Excellent
+              </mat-option>
+              <mat-option value="good">
+                Good
+              </mat-option>
+              <mat-option value="fair">
+                Fair
+              </mat-option>
+              <mat-option value="poor">
+                Poor
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="40%" appearance={{appearance}}>
+            <mat-label>Cost of repair</mat-label>
+            <input type="text" matInput>
+            <span matPrefix>&#8358;</span>
+          </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
+        </div>
+
+        <!-- Roof covering -->
+        <mat-divider></mat-divider>
+        <span class="mat-title">Roof covering</span>   
+        
+        <div fxLayout.xs="column" fxLayoutAlign="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">          
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Type</mat-label>
+            <mat-select>
+              <mat-option value="asbestos">
+                Asbestos
+              </mat-option>
+              <mat-option value="zinc">
+                Zinc
+              </mat-option>
+              <mat-option value="aluminium">
+                Aluminum
+              </mat-option>
+              <mat-option value="stone_coated_tiles">
+                Stone coated tiles
+              </mat-option>
+              <mat-option value="other">
+                Other
+              </mat-option>
+            </mat-select>
+          </mat-form-field> 
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Size</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Quantity</mat-label>
+            <input type="text" matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Damage</mat-label>
+            <mat-select>
+              <mat-option value="25">
+                25%
+              </mat-option>
+              <mat-option value="50">
+                50%
+              </mat-option>
+              <mat-option value="75">
+                75%
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>condition</mat-label>
+            <mat-select>
+              <mat-option value="excellent">
+                Excellent
+              </mat-option>
+              <mat-option value="good">
+                Good
+              </mat-option>
+              <mat-option value="fair">
+                Fair
+              </mat-option>
+              <mat-option value="poor">
+                Poor
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="40%" appearance={{appearance}}>
+            <mat-label>Cost of repair</mat-label>
+            <input type="text" matInput>
+            <span matPrefix>&#8358;</span>
+          </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
+        </div>
+
+        <!-- Ceiling -->
+        <mat-divider></mat-divider>
+        <span class="mat-title">Ceiling</span>   
+        
+        <div fxLayout.xs="column" fxLayoutAlign="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">          
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Ceiling type</mat-label>
+            <input type="text" matInput>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Size</mat-label>
+            <input type="text" matInput>
+            <span matSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="20%" appearance={{appearance}}>
+            <mat-label>Damage</mat-label>
+            <mat-select>
+              <mat-option value="25">
+                25%
+              </mat-option>
+              <mat-option value="50">
+                50%
+              </mat-option>
+              <mat-option value="75">
+                75%
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-xs="40%" appearance={{appearance}}>
+            <mat-label>Cost of repair</mat-label>
+            <input type="text" matInput>
+            <span matPrefix>&#8358;</span>
+          </mat-form-field>
+
+          <span fxFlex.gt-xs></span>
+        </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary" matStepperPrevious>
+            <mat-icon>chevron_left</mat-icon>
+            Previous            
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary" matStepperNext>
+            Next
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+
+      </div>
+
+    </mat-step>
+
+    <mat-step label="Others">
+      
+      <div fxLayout="column" fxLayoutGap="20px"> 
         
         <span class="mat-title">Basic wall details</span>
         <mat-divider></mat-divider>   
@@ -1137,20 +1678,15 @@
 
         </div>
 
-      </div>
-
-    </mat-step>
-
-    <mat-step label="Others">
-      
-      <div fxLayout="column"> 
-        
-        <span class="mat-title">Basic wall details</span>
-        <mat-divider></mat-divider>   
-        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
-
-          
-
+        <div fxLayout="row">
+          <button mat-flat-button color="primary" matStepperPrevious>
+            <mat-icon>chevron_left</mat-icon>
+            Previous            
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary">
+            Complete
+          </button>
         </div>
 
       </div>

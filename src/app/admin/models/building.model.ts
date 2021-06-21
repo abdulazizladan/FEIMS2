@@ -202,7 +202,7 @@ export interface building{
       cost_of_repair: number, //naira
       support: {
         type: string, //joist|truss|ridge_frame|arch|dome|cable|other
-        description: string,
+        //description: string,
         size: number, //meter
         quantity: number,
         damage: number, //percentage 25|50|75,

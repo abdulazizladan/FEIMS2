@@ -17,7 +17,7 @@ export class AddSiteComponent implements OnInit {
   public states: any;
 
 
-  public appearance="outline";
+  public appearance="fill";
 
   public siteForm: FormGroup;//Site form
   public hasSteps: boolean;

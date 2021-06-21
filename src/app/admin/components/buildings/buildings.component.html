@@ -7,8 +7,9 @@
     </button>
   </div>
   
-  <div  style="padding: 20px" fxLayout.xs="column" fxLayoutGap="5px grid" fxLayout.gt-xs="row wrap">
+  <div  style="padding: 20px" fxLayoutAlign="space-between" fxLayout.xs="column" fxLayoutGap="5px grid" fxLayout.gt-xs="row wrap">
   
     <app-building fxFlexAlign.gt-xs="stretch" fxFlex.xs="100%" fxFlex.gt-xs="400px" *ngFor="let a of A" [data]="a"></app-building>
+    <span fxFlex.gt-xs="1 1 auto"></span>
   
   </div>
