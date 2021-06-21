@@ -115,24 +115,23 @@ export interface building{
         condition: string, //excellent|good|fair|poor
         cost_of_repair: number //naira
       },
-    },
       /*--- Windows ---*/
-    windows: {
-      material: string, //wire_glass|glass_block|plate|tempered|operating|fixed|other
-      //description: string,
-      size: number, //square meter
-      type: string,
-      quantity: number, //count
-      condition: string, //excellent|good|fair|poor
-      cost_of_repair: number //naira
+      windows: {
+        material: string, //wire_glass|glass_block|plate|tempered|operating|fixed|other
+        //description: string,
+        size: number, //square meter
+        type: string,
+        quantity: number, //count
+        condition: string, //excellent|good|fair|poor
+        cost_of_repair: number //naira
+      },
     },
-
-      /*--- Walls ---*/
+      
 
       /*-- Floor --*/
     floor: {
       joints_and_beams: {
-        description: string,
+        //description: string,
         concrete_work: number, //cubic meter
         finishes: number, //square meter
         form_work: number, //square meter
@@ -158,7 +157,7 @@ export interface building{
         excavation: number, //cubic meter
         concrete_work: number, //cubic meters
         block_work: number, //square meters
-        formwork: number, //square_meters
+        form_work: number, //square_meters
         reinforcement: number, //kilograms
         rendering: number, //square meters
         dpm: number, //square meters of damp proof membrane
@@ -190,15 +189,7 @@ export interface building{
       
     },
 
-      /*-- Ceilings --*/
-    ceiling: {
-      //description: string,
-      type: string,
-      size: number, //square meter
-      quantity: number, //count
-      damage: number, //percentage 25|50|75,
-      cost_of_repair: number //naira
-    },
+    
 
       /*-- Roof --*/
     roof: {
@@ -242,7 +233,16 @@ export interface building{
         damage: number, //percentage 25|50|75,
         condition: string, //excellent|good|fair|poor,
         cost_of_repair: number, //naira
-      }
+      },
+      /*-- Ceilings --*/
+      ceiling: {
+        //description: string,
+        type: string,
+        size: number, //square meter
+        quantity: number, //count
+        damage: number, //percentage 25|50|75,
+        cost_of_repair: number //naira
+      },
     },
     /*-- Elevator --*/
     elevator: null| {

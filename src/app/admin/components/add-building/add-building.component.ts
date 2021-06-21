@@ -10,7 +10,7 @@ import { building } from '../../models/building.model';
 })
 export class AddBuildingComponent implements OnInit {
 
-  public appearance: string = "outline";
+  public appearance: string = "fill";
 
   public buildingForm: FormGroup;
  
