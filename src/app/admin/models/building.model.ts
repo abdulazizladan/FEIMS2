@@ -9,7 +9,7 @@ export interface building{
     },
     purpose: string, //residential, academic, theater, multipurpose
     comment: string, //
-    dimension: {
+    dimensions: {
       floor_area: number, //square meters
       wall_area: number, //square meters
       ceiling_area: number, //square meters

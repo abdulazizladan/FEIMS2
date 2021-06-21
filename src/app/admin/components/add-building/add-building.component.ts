@@ -46,10 +46,28 @@ export class AddBuildingComponent implements OnInit {
         })
       }),
       super_structure: this.fb.group({
-        type: String,
+        type: ['', []],
         under_concrete: this.fb.group({
-          
-        })
+          concrete_work: [0, []],
+          form_work: [0, []],
+          reinforcement: [0, []]
+        }),
+        under_block: this.fb.group({
+          brick_work: [0, []]
+        }),
+        under_crack_tiles: this.fb.group({
+          size: [0, []],
+          type: ['', []],
+          quantity: [0, []]
+        }),
+        under_alucobond: this.fb.group({
+          size: [0, []],
+          type: ['', []],
+          accessories: ['', []],
+          quantity: [0, []]
+        }),
+        condition: ['', []],
+        cost_of_repair: [0, []]
       })
     })
   }
