@@ -138,11 +138,11 @@ export class AddBuildingComponent implements OnInit {
         }),
         windows: this.fb.group({
           material: ['', []], //wire_glass|glass_block|plate|tempered|operating|fixed|other
-        size: [0, []], //square meter
-        type: ['', []],
-        quantity: [0, []], //count
-        condition: ['', []], //excellent|good|fair|poor
-        cost_of_repair: [0, []] //naira
+          size: [0, []], //square meter
+          type: ['', []],
+          quantity: [0, []], //count
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []] //naira
         })
       }),
       floor: this.fb.group({
@@ -182,7 +182,7 @@ export class AddBuildingComponent implements OnInit {
           size: [0, []], //square meter
           type: ['', ''],
           accessories: ['', []],
-          qauntity: [0, []],
+          quantity: [0, []],
           condition: ['', []], //excellent|good|fair|poor
           cost_of_repair: [0, []] //naira
         }),
@@ -191,7 +191,7 @@ export class AddBuildingComponent implements OnInit {
           size: [0, ''], //square meter
           type: ['', []],
           accessories: ['', []],
-          qauntity: [0, []],
+          quantity: [0, []],
           condition: ['', []], //excellent|good|fair|poor
           cost_of_repair: [0, []] //naira
         })
