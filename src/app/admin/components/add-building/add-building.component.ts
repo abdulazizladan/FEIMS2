@@ -68,6 +68,81 @@ export class AddBuildingComponent implements OnInit {
         }),
         condition: ['', []],
         cost_of_repair: [0, []]
+      }),
+      walls: this.fb.group({
+        wall_type: ['', []],
+        quantity: [0, []],
+        last_decorated: [0, []],
+        has_stain:[false, []],
+        concrete_wall: this.fb.group({
+          condition: ['', []],
+          quantity: [0, []],
+          cost_of_repair: [0, []]
+        }),
+        paint: this.fb.group({
+          condition: ['', []],
+          quantity: [0, []],
+          cost_of_repair: [0, []]
+        }),
+        mortar: this.fb.group({
+          condition: ['', []],
+          quantity: [0, []],
+          cost_of_repair: [0, []]
+        }),
+        structure: this.fb.group({
+          type: ['', []],
+          quantity: [0, []],
+          damage: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+        }),
+        trimming: this.fb.group({
+          quantity: [0, []],
+          finishes: ['', []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+        }),
+        frame: this.fb.group({
+          concrete_work: [0, ''], //cubic meter
+          finishes: [0, []], //square meters
+          form_work: [0, []], //square meters
+          quantity: [0, []],
+          reinforceemnt: [0, []], //kilogram
+          damage: [0, []], //percentage 25|50|75
+          cost_of_repair: [0, []] //naira
+        }),
+        facade: this.fb.group({
+          concrete_work: [0, []], //cubic meter
+          finishes: [0, []], //square meters
+          form_work: [0, []], //square meters
+          type: ['', []],
+          quantity: [0, []], //square meters
+          damage: [0, []], //percentage 25|50|75
+          cost_of_repair: [0, []] //naira,
+        }),
+        corridors: this.fb.group({
+          quantity: [0, []],
+          type: ['', []],
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []]//naira
+        }),
+        interior_wall: this.fb.group({
+          finishing: ['', []], //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
+          size: [0, []], //square meter
+          type: ['', []], 
+          accessories: ['', []],
+          quantity: [0, []], //count
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []] //naira
+        }),
+        windows: this.fb.group({
+          material: ['', []], //wire_glass|glass_block|plate|tempered|operating|fixed|other
+        size: [0, []], //square meter
+        type: ['', []],
+        quantity: [0, []], //count
+        condition: ['', []], //excellent|good|fair|poor
+        cost_of_repair: [0, []] //naira
+        })
       })
     })
   }

@@ -110,7 +110,7 @@ export interface building{
         finishing: string, //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
         size: number, //square meter
         type: string, 
-        accessories: string[],
+        accessories: string,
         quantity: number, //count
         condition: string, //excellent|good|fair|poor
         cost_of_repair: number //naira
