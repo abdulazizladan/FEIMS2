@@ -3,6 +3,7 @@ import { BuildingService } from '../../services/building.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { building } from '../../models/building.model';
 
+/** Add-building component */
 @Component({
   selector: 'app-add-building',
   templateUrl: './add-building.component.html',
@@ -98,7 +99,7 @@ export class AddBuildingComponent implements OnInit {
         }),
         trimming: this.fb.group({
           quantity: [0, []],
-          finishes: ['', []],
+          finishes: [0, []],
           condition: ['', []],
           cost_of_repair: [0, []]
         }),
@@ -107,7 +108,7 @@ export class AddBuildingComponent implements OnInit {
           finishes: [0, []], //square meters
           form_work: [0, []], //square meters
           quantity: [0, []],
-          reinforceemnt: [0, []], //kilogram
+          reinforcement: [0, []], //kilogram
           damage: [0, []], //percentage 25|50|75
           cost_of_repair: [0, []] //naira
         }),
@@ -248,6 +249,9 @@ export class AddBuildingComponent implements OnInit {
 
   }
 
+  /**
+   * Submits building data form
+   */
   submit (){
     console.log(this.buildingForm.value)
     //this.buildingService.addBuilding('').subscribe()
