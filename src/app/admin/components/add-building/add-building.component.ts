@@ -249,7 +249,8 @@ export class AddBuildingComponent implements OnInit {
   }
 
   submit (){
-    this.buildingService.addBuilding('').subscribe()
+    console.log(this.buildingForm.value)
+    //this.buildingService.addBuilding('').subscribe()
   }
 
 }

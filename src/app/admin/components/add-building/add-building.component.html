@@ -113,7 +113,7 @@
       </div>
     </mat-step>
 
-    <mat-step label="Super structure">
+    <mat-step label="Super structure" [formGroup]="buildingForm.controls.super_structure">
       <!-- under_concrete, under_block, under_crack_tiles, under_alocobond, condition & cost of repair -->
       <div fxLayout="column" fxLayoutGap="20px">
 
@@ -123,7 +123,7 @@
           
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%"> 
             <mat-label>Superstructure type</mat-label>
-            <mat-select>
+            <mat-select formControlName="type">
               <mat-option value="metal">
                 Metal
               </mat-option>
@@ -147,13 +147,13 @@
         <mat-divider></mat-divider>
         <span class="mat-title">Under concrete</span>
         
-        <div fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+        <div formGroupName="under_concrete" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
           
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
             <mat-label>
               Concrete work
             </mat-label>
-            <input matInput type="text">
+            <input matInput type="text" formControlName="concrete_work">
             <span matSuffix>m<sup>3</sup></span>
           </mat-form-field>
 
@@ -161,7 +161,7 @@
             <mat-label>
               Form work
             </mat-label>
-            <input matInput type="text">
+            <input matInput type="text" formControlName="form_work">
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
@@ -169,7 +169,7 @@
             <mat-label>
               Reinforcement
             </mat-label>
-            <input matInput type="text">
+            <input matInput type="text" formControlName="reinforcement">
             <span matSuffix>kg</span>
           </mat-form-field>
 
@@ -180,13 +180,13 @@
         <mat-divider></mat-divider>
         <span class="mat-title">Under block</span>
       
-        <div fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+        <div formGroupName="under_block" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
           
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
             <mat-label>
               Brick work
             </mat-label>
-            <input matInput type="text">
+            <input matInput type="text" formControlName="brick_work">
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
@@ -195,13 +195,13 @@
         <!--under crack tiles-->
         <mat-divider></mat-divider>
         <span class="mat-title">Under crack tiles</span>
-        <div fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+        <div formGroupName="under_crack_tiles" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
           
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
             <mat-label>
               Size
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="size" matInput type="text">
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
@@ -209,14 +209,14 @@
             <mat-label>
               Type
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="type" matInput type="text">
           </mat-form-field>
 
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
             <mat-label>
               Quantity
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="quantity" matInput type="text">
           </mat-form-field>
 
           <span fxFlex.gt-xs></span>
@@ -226,13 +226,13 @@
         <!--under alucobond-->
         <mat-divider></mat-divider>
         <span class="mat-title">Under alucobond</span>
-        <div fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+        <div formGroupName="under_alucobond" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
           
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
             <mat-label>
               Size
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="size" matInput type="text">
             <span matSuffix>m<sup>2</sup></span>
           </mat-form-field>
 
@@ -240,14 +240,14 @@
             <mat-label>
               Type
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="type" matInput type="text">
           </mat-form-field>
 
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
             <mat-label>
               Accessories
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="accessories" matInput type="text">
             <mat-hint color="warn">*make reactive(dynamically add accessories)</mat-hint>
           </mat-form-field>
 
@@ -255,7 +255,7 @@
             <mat-label>
               Quantity
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="quantity" matInput type="text">
             <span matSuffix>kg</span>
           </mat-form-field>
 
@@ -270,7 +270,7 @@
             <mat-label>
               Condition
             </mat-label>
-            <mat-select>
+            <mat-select formControlName="condition">
               <mat-option value="excellent">
                 Excellent
               </mat-option>
@@ -290,7 +290,7 @@
             <mat-label>
               Cost of repair
             </mat-label>
-            <input matInput type="text">
+            <input formControlName="cost_of_repair" matInput type="text">
             <span matPrefix>&#8358;</span>
             <span matSuffix>.00</span>
           </mat-form-field>
@@ -1684,7 +1684,7 @@
             Previous            
           </button>
           <span fxFlex="1 1 auto"></span>
-          <button mat-flat-button color="primary">
+          <button mat-flat-button color="primary" (click)="submit()">
             Complete
           </button>
         </div>
