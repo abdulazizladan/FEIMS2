@@ -143,6 +143,57 @@ export class AddBuildingComponent implements OnInit {
         condition: ['', []], //excellent|good|fair|poor
         cost_of_repair: [0, []] //naira
         })
+      }),
+      floor: this.fb.group({
+        joints_and_beams: this.fb.group({
+          concrete_work: [0, []], //cubic meter
+          finishes: [0, []], //square meter
+          form_work: [0, []], //square meter
+          quantity: [0, []], //square meter
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        }), 
+        slabs: this.fb.group({
+          concrete_work: [0, []], //cubic meter
+          finishes: [0, []], //square meter
+          form_work: [0, []], //square meter
+          quantity: [0, []], //cubic meter
+          reinforcement: [0, []], //kilogram
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        }),
+        foundation: this.fb.group({
+          type: ['', []],
+          depth: [0, []], //meters
+          filling: [0, []], //cubic meters
+          excavation: [0, []], //cubic meter
+          concrete_work: [0, []], //cubic meters
+          block_work: [0, []], //square meters
+          form_work: [0, []], //square_meters
+          reinforcement: [0, []], //kilograms
+          rendering: [0, []], //square meters
+          dpm: [0, []], //square meters of damp proof membrane
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        }),
+        floor_structure: this.fb.group({
+          material: ['', []], //metal|wood|concrete|other
+          size: [0, []], //square meter
+          type: ['', ''],
+          accessories: ['', []],
+          qauntity: [0, []],
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []] //naira
+        }),
+        floor_covering: this.fb.group({
+          material: ['', []], //metal|wood|concrete|vinyl|other
+          size: [0, ''], //square meter
+          type: ['', []],
+          accessories: ['', []],
+          qauntity: [0, []],
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []] //naira
+        })
       })
     })
   }

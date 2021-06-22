@@ -169,7 +169,7 @@ export interface building{
         material: string, //metal|wood|concrete|other
         size: number, //square meter
         type: string,
-        accessories: string[],
+        accessories: string,
         qauntity: number,
         condition: string, //excellent|good|fair|poor
         cost_of_repair: number //naira
@@ -181,7 +181,7 @@ export interface building{
         //description: string,
         size: number, //square meter
         type: string,
-        accessories: string[],
+        accessories: string,
         qauntity: number,
         condition: string, //excellent|good|fair|poor
         cost_of_repair: number //naira
