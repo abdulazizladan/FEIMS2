@@ -194,6 +194,52 @@ export class AddBuildingComponent implements OnInit {
           condition: ['', []], //excellent|good|fair|poor
           cost_of_repair: [0, []] //naira
         })
+      }),
+      roof: this.fb.group({
+        style: ['', [Validators.required]],
+        size: [0, []],
+        damage: [0, []],
+        condition: ['', []],
+        cost_of_repair: [0, []],
+        support: this.fb.group({
+          type: ['', []], //joist|truss|ridge_frame|arch|dome|cable|other
+          size: [0, []], //meter
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', []], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        steel_truss: this.fb.group({
+          type: ['', []], //joist|truss|z-purlins|cleats|bolts|cables
+          size: [0, []], //kilograms,
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', ''], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        decking: this.fb.group({
+          type: ['', []], //metal|wood|concrete|other
+          size: [0, []], //cubic meter
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', ''], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        covering: this.fb.group({
+          type: ['', ''], //asbestos|zinc|aluminium|stone_coated_tiles|other
+          size: [0, []], //square meter
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', []], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        ceiling: this.fb.group({
+          type: ['', []],
+          size: [0, []], //square meter
+          quantity: [0, []], //count
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        })
       })
     })
   }
