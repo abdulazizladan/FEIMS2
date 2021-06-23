@@ -1805,11 +1805,38 @@
 
     </mat-step>
 
+    <mat-step label="Services">
+      
+      <div fxLayout="column" fxLayoutGap="20px"> 
+        
+        <span class="mat-title">Services</span>
+        <mat-divider></mat-divider>   
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
+
+          
+
+        </div>
+
+        <div fxLayout="row">
+          <button mat-flat-button color="primary" matStepperPrevious>
+            <mat-icon>chevron_left</mat-icon>
+            Previous            
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary" (click)="submit()">
+            Complete
+          </button>
+        </div>
+
+      </div>
+
+    </mat-step>
+
     <mat-step label="Others">
       
       <div fxLayout="column" fxLayoutGap="20px"> 
         
-        <span class="mat-title">Basic wall details</span>
+        <span class="mat-title">Others</span>
         <mat-divider></mat-divider>   
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px">
 
@@ -1837,10 +1864,9 @@
   </mat-horizontal-stepper>
 
 </mat-dialog-content>
-
-<mat-dialog-actions align="end">
-  <!--<button mat-flat-button color="primary">
-    <mat-icon>add</mat-icon>
-    Add building
-  </button>-->
+<mat-dialog-actions>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-flat-button color="primary" disbaled="buildingForm.invalid">
+    Submit
+  </button>
 </mat-dialog-actions>

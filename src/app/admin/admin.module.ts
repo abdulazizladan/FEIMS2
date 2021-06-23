@@ -36,7 +36,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSliderModule}  from '@angular/material/slider';
-import { MatButtonToggleModule } from '@angular/material/button-toggle'
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -108,6 +109,7 @@ import { AdminEffect } from 'app/store/admin/admin.effects';
     MatDividerModule,
     MatSliderModule,
     MatButtonToggleModule,
+    MatTooltipModule,
     FlexLayoutModule,
     AdminRoutingModule,
     NgxEchartsModule.forRoot({
