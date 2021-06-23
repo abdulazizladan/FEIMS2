@@ -245,6 +245,33 @@ export class AddBuildingComponent implements OnInit {
     })
   }
 
+  elevatorForm: FormGroup = this.fb.group({
+    count: this.fb.group({
+      passenger: [0, []],
+      freight: [0, []],
+      fire_service: [0, []]
+    }),
+    type: this.fb.group({
+      electric: [0, []],
+      hydraulic: [0, []]
+    }),
+    electric_eye: [false, []],
+    heat_sensor: [false, []],
+    key_location: ['', []],
+    brand_name: ['', []],
+    service_company: ['', []],
+    phone: ['', []],
+    smergency_shutoff_location: ['', []],
+    elevator_exits: this.fb.group({
+      top: [0, []],
+      side: [0, []],
+      dumb_waiter: [0, []],
+      laundry_chute: [0, []],
+      trash_chute: [0, []],
+      other: [0, []]
+    })
+  });
+
   ngOnDestroy(){
 
   }
