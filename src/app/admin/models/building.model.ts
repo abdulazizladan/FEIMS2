@@ -276,7 +276,51 @@ export interface building{
   },
   services: {
     roof_lights: {
+      size: number, //metres
+      thickness: number,//meters
+      quantity: number,
+      condition: string,
+      damage: number,
+      cost_of_repair
 
+    },
+    air_conditioning: {
+      piping_length: number,
+      quantity: number,
+      condition: string,
+      damage: number,
+      cost_of_repair: number
+    },
+    roof_covering: {
+      height: number,
+      sloping_length: number,
+      quantity: number,
+      condition: string,
+      damage: number,
+      cost_of_repair: number
+    },
+    burglar_proof: {
+      type: string,
+      quantity: number,
+      location: string,
+      condition: string,
+      damage: number,
+      cost_of_repair: number
+    },
+    gates: {
+      quantity: number,
+      condition: string,
+      cost_of_repair: number
+    },
+    drainage: {
+      quantity: number,
+      condition: string,
+      cost_of_repair: number
+    },
+    distribution: {
+      quantity: number,
+      condition: string,
+      cost_of_repair: number
     },
 
   }

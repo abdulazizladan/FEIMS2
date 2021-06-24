@@ -14,6 +14,8 @@ export class AddBuildingComponent implements OnInit {
   public appearance: string = "fill";
 
   public buildingForm: FormGroup;
+
+  public hasElevator: boolean = false;
  
   resetForm(){
 
@@ -271,6 +273,16 @@ export class AddBuildingComponent implements OnInit {
       other: [0, []]
     })
   });
+
+  addElevator(): void {
+    this.hasElevator = true;
+    this.buildingForm.addControl('elevator', this.elevatorForm)
+  }
+
+  removeElevator(): void {
+    this.hasElevator = false
+    this.buildingForm.removeControl('elevator')
+  }
 
   ngOnDestroy(){
 
