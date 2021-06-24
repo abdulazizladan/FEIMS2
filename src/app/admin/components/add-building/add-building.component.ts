@@ -34,22 +34,22 @@ export class AddBuildingComponent implements OnInit {
       structure: this.fb.group({
         name: ['', [Validators.required]],
         code: ['', [Validators.required]],
-        year_built: [0, [Validators.required]],
+        year_built: [0, []],
         position: this.fb.group({
           longitude: [0, []],
           latitude: [0, []]
         }),
         purpose: ['', [Validators.required]], //residential/office/multiple
-        comment: ['', [Validators.required]], //any other detail not captured
+        comment: ['', []], //any other detail not captured
         dimensions: this.fb.group({
-          floor_area: [0, []],//square meters
+          floor_area: [0, [Validators.required]],//square meters
           wall_area: [0, []], //square meters
           ceiling_area: [0, []], //square meters
-          floors: [1, [Validators.min(1)]] //floor count
+          floors: [1, [Validators.min(1), Validators.required]] //floor count
         })
       }),
       super_structure: this.fb.group({
-        type: ['', []],
+        type: ['', [Validators.required]],
         under_concrete: this.fb.group({
           concrete_work: [0, []],
           form_work: [0, []],
@@ -69,12 +69,12 @@ export class AddBuildingComponent implements OnInit {
           accessories: ['', []],
           quantity: [0, []]
         }),
-        condition: ['', []],
-        cost_of_repair: [0, []]
+        condition: ['', [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
       }),
       walls: this.fb.group({
-        wall_type: ['', []],
-        quantity: [0, []],
+        wall_type: ['', [Validators.required]],
+        quantity: [0, [Validators.required]],
         last_decorated: [0, []],
         has_stain:[false, []],
         concrete_wall: this.fb.group({
@@ -166,8 +166,8 @@ export class AddBuildingComponent implements OnInit {
           cost_of_repair: [0, []] //naira
         }),
         foundation: this.fb.group({
-          type: ['', []],
-          depth: [0, []], //meters
+          type: ['', [Validators.required]],
+          depth: [0, [Validators.required]], //meters
           filling: [0, []], //cubic meters
           excavation: [0, []], //cubic meter
           concrete_work: [0, []], //cubic meters
@@ -180,13 +180,13 @@ export class AddBuildingComponent implements OnInit {
           cost_of_repair: [0, []] //naira
         }),
         floor_structure: this.fb.group({
-          material: ['', []], //metal|wood|concrete|other
+          material: ['', [Validators.required]], //metal|wood|concrete|other
           size: [0, []], //square meter
           type: ['', ''],
           accessories: ['', []],
-          quantity: [0, []],
-          condition: ['', []], //excellent|good|fair|poor
-          cost_of_repair: [0, []] //naira
+          quantity: [0, [Validators.required]],
+          condition: ['', [Validators.required]], //excellent|good|fair|poor
+          cost_of_repair: [0, [Validators.required, Validators.min(0)]] //naira
         }),
         floor_covering: this.fb.group({
           material: ['', []], //metal|wood|concrete|vinyl|other
@@ -205,11 +205,11 @@ export class AddBuildingComponent implements OnInit {
         condition: ['', []],
         cost_of_repair: [0, []],
         support: this.fb.group({
-          type: ['', []], //joist|truss|ridge_frame|arch|dome|cable|other
+          type: ['', [Validators.required]], //joist|truss|ridge_frame|arch|dome|cable|other
           size: [0, []], //meter
           quantity: [0, []],
           damage: [0, []], //percentage 25|50|75,
-          condition: ['', []], //excellent|good|fair|poor,
+          condition: ['', [Validators.required]], //excellent|good|fair|poor,
           cost_of_repair: [0, []], //naira
         }),
         steel_truss: this.fb.group({
@@ -243,19 +243,73 @@ export class AddBuildingComponent implements OnInit {
           damage: [0, []], //percentage 25|50|75,
           cost_of_repair: [0, []] //naira
         })
+      }),
+      services: this.fb.group({
+        roof_lights: this.fb.group({
+          size: [0, []],
+          thickness: [0, []],
+          quantity: [0, []],
+          condition: ['', []],
+          damage: [0, []],
+          cost_of_repair: [0, []]
+
+        }), 
+        air_conditioning: this.fb.group({
+          piping_length: [0, []],
+          quantity: [0, []],
+          condition: ['', []],
+          damage: ['', []],
+          cost_of_repair: [0, []]
+
+        }),
+        roof_covering: this.fb.group({
+          height: [0, []],
+          sloping_length: [0, []],
+          quantity: [0, []],
+          condition: ['', []],
+          damage: [0, []],
+          cost_of_repair: [0, []]
+
+        }),
+        burglar_proof: this.fb.group({
+          type: ['', []],
+          quantity: [0, []],
+          location: ['', []],
+          condition: ['', []],
+          damage: [0, []],
+          cost_of_repair: [0, []]
+
+        }),
+        gates: this.fb.group({
+          quantity: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+
+        }),
+        drainage: this.fb.group({
+          quantity: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+
+        }),
+        distribution: this.fb.group({
+          quantity: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+        })
       })
     })
   }
 
   elevatorForm: FormGroup = this.fb.group({
     count: this.fb.group({
-      passenger: [0, []],
-      freight: [0, []],
-      fire_service: [0, []]
+      passenger: [0, [Validators.required]],
+      freight: [0, [Validators.required]],
+      fire_service: [0, [Validators.required]]
     }),
     type: this.fb.group({
-      electric: [0, []],
-      hydraulic: [0, []]
+      electric: [0, [Validators.required]],
+      hydraulic: [0, [Validators.required]]
     }),
     electric_eye: [false, []],
     heat_sensor: [false, []],

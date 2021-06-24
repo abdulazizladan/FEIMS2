@@ -281,7 +281,7 @@ export interface building{
       quantity: number,
       condition: string,
       damage: number,
-      cost_of_repair
+      cost_of_repair: number
 
     },
     air_conditioning: {

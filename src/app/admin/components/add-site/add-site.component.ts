@@ -1,3 +1,4 @@
+import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -35,140 +36,7 @@ export class AddSiteComponent implements OnInit {
 
   initializeForm():void {
 
-    this.states = [
-      {
-        "name": "abia",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "adamawa",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "akwa-ibom",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "anambra",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "bauchi",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "borno",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "cross-river",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "delta",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "edo",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "enugu",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "gombe",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "imo",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "jigawa",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "kaduna",
-        "lgas": [
-          {
-            "name": "zaria"
-          },
-          {
-            "name": "igabi"
-          },
-
-        ]
-      },
-      {
-        "name": "kano",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      },
-      {
-        "name": "katsina",
-        "lgas": [
-          {
-            "name": ""
-          },
-        ]
-      }
-    ]
+    this.getStates();
 
     this.siteForm = this.fb.group({
       site: this.fb.group({
@@ -377,27 +245,147 @@ export class AddSiteComponent implements OnInit {
     this.expansionPanelStep = index;
   }
 
-  //prevStep() {
-  //  this.expansionPanelStep--;
-  //}
-
-  //nextStep() {
-  //  this.expansionPanelStep++;
-  //}
-
-  //get steps(): FormArray {
-  //  return this.siteForm.get('steps') as FormArray;
-  //}
-
-  //submit(site: Site) {
-  //  this.store.dispatch(addSite({site}));
-  //  console.log(this.siteForm.value)
-  //}
-
   submit() {
     //let site = this.siteForm.value;
     //this.store.dispatch(addSite({site}));
     console.log(this.siteForm.value)
+  }
+
+  getStates() {
+    this.states = [
+      {
+        "name": "abia",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "adamawa",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "akwa-ibom",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "anambra",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "bauchi",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "borno",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "cross-river",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "delta",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "edo",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "enugu",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "gombe",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "imo",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "jigawa",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "kaduna",
+        "lgas": [
+          {
+            "name": "zaria"
+          },
+          {
+            "name": "igabi"
+          },
+  
+        ]
+      },
+      {
+        "name": "kano",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "katsina",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      }
+    ]
   }
 
   resetForm() {
@@ -405,3 +393,4 @@ export class AddSiteComponent implements OnInit {
   }
 
 }
+
