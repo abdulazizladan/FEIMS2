@@ -15,9 +15,10 @@
     <form [formGroup]="siteForm">    
     <mat-step [stepControl]="siteForm.controls.site">
       <ng-template matStepLabel>Basic data</ng-template>
-    <div fxLayout="column" fxLayoutGap="20px">
+    
+      <div fxLayout="column" fxLayoutGap="20px">
 
-      <div [formGroup]="siteForm.controls.site" fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
+      <div fxFlex.gt-xs="100%" [formGroup]="siteForm.controls.site" fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
         
         <mat-form-field appearance={{appearance}} fxFlex.gt-xs="35%">
           <mat-label>Site name</mat-label>
@@ -106,9 +107,9 @@
     <!-- Gate -->
     <mat-step [stepControl]="siteForm.controls.gate">
       <ng-template matStepLabel>Gate</ng-template>
-    <div fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="column" fxLayoutGap="20px" style="height: 100%">
       
-      <div [formGroup]="siteForm.controls.gate" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div fxFlex.gt-xs="100%" [formGroup]="siteForm.controls.gate" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
         <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>

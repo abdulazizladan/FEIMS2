@@ -195,7 +195,7 @@ export class AddBuildingComponent implements OnInit {
           accessories: ['', []],
           quantity: [0, []],
           condition: ['', []], //excellent|good|fair|poor
-          cost_of_repair: [0, []] //naira
+          cost_of_repair: [0, [Validators.required, Validators.min(0)]] //naira
         })
       }),
       roof: this.fb.group({
