@@ -9,13 +9,15 @@ import { building } from '../../models/building.model';
   templateUrl: './add-building.component.html',
   styleUrls: ['./add-building.component.scss']
 })
-export class AddBuildingComponent implements OnInit {
+export class AddBuildingComponent implements OnInit, OnDestroy {
 
   public appearance: string = "fill";
 
   public buildingForm: FormGroup;
 
   public hasElevator: boolean = false;
+
+  private subscription: any;
  
   resetForm(){
 
@@ -27,6 +29,10 @@ export class AddBuildingComponent implements OnInit {
 
   ngOnInit(): void{
     this.initForm();
+  }
+
+  ngOnDestroy(): void{
+
   }
 
   initForm(): void{
@@ -336,10 +342,6 @@ export class AddBuildingComponent implements OnInit {
   removeElevator(): void {
     this.hasElevator = false
     this.buildingForm.removeControl('elevator')
-  }
-
-  ngOnDestroy(){
-
   }
 
   /**

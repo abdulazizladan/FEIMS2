@@ -1,9 +1,10 @@
 import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Site } from 'app/admin/models/site.model';
 import { addSite } from 'app/store/admin/admin.actions';
+import { Subscription } from 'rxjs';
 import { AdminState } from '../../../store/admin/admin.state';
 
 @Component({
@@ -17,6 +18,7 @@ export class AddSiteComponent implements OnInit {
 
   public states: any;
 
+  private subscription: Subscription;
 
   public appearance="fill";
 
@@ -32,6 +34,10 @@ export class AddSiteComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeForm();
+  }
+
+  ngOnDestroy() : void {
+    
   }
 
   initializeForm():void {
