@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BuildingService } from '../../services/building.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { building } from '../../models/building.model';
+import { Subscription } from 'rxjs';
 
 /** Add-building component */
 @Component({
@@ -17,7 +18,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
 
   public hasElevator: boolean = false;
 
-  private subscription: any;
+  private subscription: Subscription;
  
   resetForm(){
 
@@ -348,8 +349,14 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
    * Submits building data form
    */
   submit (){
-    console.log(this.buildingForm.value)
-    //this.buildingService.addBuilding('').subscribe()
+    //console.log(this.buildingForm.value)
+    this.subscription = this.buildingService.addBuilding(this.buildingForm.value).subscribe(
+      res => {
+        console.log('Yaay')
+      }, err => {
+        console.log("Error")
+      }
+    )
   }
 
 }

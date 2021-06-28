@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { egretAnimations } from '../../../shared/animations/egret-animations';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddSiteComponent } from '../add-site/add-site.component';
@@ -200,6 +200,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       ]
     };
+  }
+
+  ngOnDestroy() {
+    
   }
 
   initTrafficVsSaleChart(theme) {
