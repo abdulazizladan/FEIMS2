@@ -1,6 +1,7 @@
 FROM nginx:alpine
 
-COPY ./dist/FEIMS2.0/. /app
+COPY nginx.conf /etc/nginx.conf
+COPY ./dist/ /usr/share/nginx/html
 
 EXPOSE 80
 
