@@ -1,4 +1,8 @@
 FROM nginx:alpine
 
-COPY ./dist/. ./app
+COPY ./dist/FEIMS2.0/. /app
+
+EXPOSE 80
+
+
 
