@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Site } from 'app/admin/models/site.model';
+import { SiteService } from 'app/admin/services/site.service';
 import { addSite } from 'app/store/admin/admin.actions';
 import { Subscription } from 'rxjs';
 import { AdminState } from '../../../store/admin/admin.state';
@@ -30,7 +31,7 @@ export class AddSiteComponent implements OnInit {
   public hasWasteSite: boolean;
   public hasOthers: boolean;
 
-  constructor(private fb: FormBuilder, private store: Store<{ admin: AdminState }>) { }
+  constructor( private siteService: SiteService, private fb: FormBuilder, private store: Store<{ admin: AdminState }>) { }
 
   ngOnInit(): void {
     this.initializeForm();
@@ -46,11 +47,11 @@ export class AddSiteComponent implements OnInit {
 
     this.siteForm = this.fb.group({
       site: this.fb.group({
-        name: ['', []],
-        code: ['', []],
-        state: ['', []],
-        lga: ['', []],
-        street_address: ['', []],
+        name: ['', [Validators.required]],
+        code: ['', [Validators.required]],
+        state: ['', [Validators.required]],
+        lga: ['', [Validators.required]],
+        street_address: ['', [Validators.required]],
         measurement: [0, []],
         level: [0, []],
         position: this.fb.group({
@@ -252,9 +253,8 @@ export class AddSiteComponent implements OnInit {
   }
 
   submit() {
-    //let site = this.siteForm.value;
-    //this.store.dispatch(addSite({site}));
     console.log(this.siteForm.value)
+    
   }
 
   getStates() {

@@ -38,6 +38,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSliderModule}  from '@angular/material/slider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTabsModule } from '@angular/material/tabs'
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -110,6 +111,7 @@ import { AdminEffect } from 'app/store/admin/admin.effects';
     MatSliderModule,
     MatButtonToggleModule,
     MatTooltipModule,
+    MatTabsModule,
     FlexLayoutModule,
     AdminRoutingModule,
     NgxEchartsModule.forRoot({
