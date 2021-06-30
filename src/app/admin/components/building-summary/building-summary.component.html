@@ -5,24 +5,36 @@
     Status: [Good, Repairable, Damaged, Abandoned]
 
 -->
-<mat-card [@animate]="{value:'*',params:{delay:'600ms',scale:'.9'}}">
+<div fxLayout="column" fxLayoutGap="20px" style="height: 100%;">
+<mat-card [@animate]="{value:'*',params:{delay:'200ms',scale:'.9'}}">
     
-    <mat-card-header>
-        <mat-card-title>
-            Building: name
-        </mat-card-title>
-
-        <mat-card-subtitle>
-
-        </mat-card-subtitle>
-    </mat-card-header>
-
-    <mat-card-content>
-        <mat-list>
+    <mat-card-content fxLayout.gt-xs="row">
+        <mat-list fxFlex.gt-xs="70%">
             <mat-list-item>
-
+                <span class="mat-headline">Building name: </span>
+            </mat-list-item>
+            <mat-list-item>
+                <span class="mat-h3">Code:</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span class="mat-h4">Purpose:</span>
+            </mat-list-item>
+            <mat-list-item>
+                <span class="mat-title">GPS Position: [Longitude, Latitude] </span>
+            </mat-list-item>
+            <mat-list-item>
+                <span class="mat-title">Year built: 19XX </span>
             </mat-list-item>
         </mat-list>
+        <div fxFlex.gt-xs="30%">
+            <mat-list>
+                <mat-list-item>
+                    <span class="mat-title">Estimated repair cost:</span> 
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <span fxFlex="1 1 auto"></span>
+        <div style="background-color: cadetblue;"></div>
     </mat-card-content>
 
     <mat-card-actions>
@@ -30,3 +42,63 @@
     </mat-card-actions>
 
 </mat-card>
+
+<mat-card [@animate]="{value:'*',params:{delay:'400ms',scale:'.9'}}" fxFlex="1 1 auto">
+    <mat-tab-group>
+        
+        <mat-tab label="Building Structure">
+            <span class="mat-headline">Building Structure</span>
+            <mat-list>
+                <mat-list-item>
+                    Floor 
+                </mat-list-item>
+            </mat-list>
+        </mat-tab>
+
+        <mat-tab label="Building Services">
+            <span class="mat-headline">Building Services</span>
+            <mat-list>
+                <mat-list-item>
+                    Floor 
+                </mat-list-item>
+            </mat-list>
+        </mat-tab>
+
+        <mat-tab label="High Value Equipment">
+            <span class="mat-headline">High Value Equipment</span>
+            <mat-list>
+                <mat-list-item>
+                    
+                </mat-list-item>
+            </mat-list>
+        </mat-tab>
+
+        <mat-tab label="Low value">
+            <span class="mat-headline">Low Value Equipment</span>
+            <mat-list>
+                <mat-list-item>
+                    
+                </mat-list-item>
+            </mat-list>
+        </mat-tab>
+
+        <mat-tab label="Maintenance History">
+            <span class="mat-headline">Building Maintenance History</span>
+            <mat-list>
+                <mat-list-item>
+                    Activity<span fxFlex></span>Cost (&#8358;) <span fxFlex></span>Date
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    Activity<span fxFlex></span>Cost (&#8358;) <span fxFlex></span>Date
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    Activity<span fxFlex></span>Cost (&#8358;) <span fxFlex></span>Date
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
+        </mat-tab>
+    </mat-tab-group>
+</mat-card>
+</div>
