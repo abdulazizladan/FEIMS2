@@ -24,10 +24,10 @@ export class BuildingService {
   }
 
   getBuildings(){
-    return this._http.get<any>(this.buildingsUrl);
+    return this._http.get<any>(`${baseUrl}/buildings`);
   }
 
   getSingleBuilding( id: string){
-    return this._http.get<any>(this.singleBuildingUrl);
+    return this._http.get<any>(`${baseUrl}/buildings/${id}`);
   }
 }

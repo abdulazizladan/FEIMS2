@@ -58,7 +58,8 @@ export class AddSiteComponent implements OnInit {
         
       },
       error => {
-        console.log(data)
+        this.error = true;
+        console.log(error)
       }
     )
   }

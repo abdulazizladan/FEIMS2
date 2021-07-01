@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BuildingService } from '../../services/building.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { building } from '../../models/building.model';
 import { Subscription } from 'rxjs';
 
@@ -11,6 +12,9 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./add-building.component.scss']
 })
 export class AddBuildingComponent implements OnInit, OnDestroy {
+
+  submitted: boolean = false;
+  error: boolean = false;
 
   public appearance: string = "fill";
 
@@ -24,7 +28,27 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
 
   }
 
-  constructor( private buildingService: BuildingService, private fb: FormBuilder) { 
+  submit (){
+    //console.log(this.buildingForm.value)
+    this.subscription = this.buildingService.addBuilding(this.buildingForm.value).subscribe(
+      esponse => {
+        this.submitted = true;
+        setTimeout(
+          () => {
+            this.dialogRef.close()
+          },
+          2000
+        )
+        
+      },
+      error => {
+        this.error = true;
+        console.log(error)
+      }
+    )
+  }
+
+  constructor( private buildingService: BuildingService, private fb: FormBuilder, private dialogRef: MatDialogRef<any>) { 
     
   }
 
@@ -41,13 +65,13 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
       structure: this.fb.group({
         name: ['', [Validators.required]],
         code: ['', [Validators.required]],
-        year_built: [0, []],
+        year_built: [1900, [Validators.required, Validators.max(2022)]],
         position: this.fb.group({
           longitude: [0, []],
           latitude: [0, []]
         }),
         purpose: ['', [Validators.required]], //residential/office/multiple
-        comment: ['', []], //any other detail not captured
+        comment: ['', [Validators.required]], //any other detail not captured
         dimensions: this.fb.group({
           floor_area: [0, [Validators.required]],//square meters
           wall_area: [0, []], //square meters
@@ -348,15 +372,6 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   /**
    * Submits building data form
    */
-  submit (){
-    //console.log(this.buildingForm.value)
-    this.subscription = this.buildingService.addBuilding(this.buildingForm.value).subscribe(
-      res => {
-        console.log('Yaay')
-      }, err => {
-        console.log("Error")
-      }
-    )
-  }
+  
 
 }

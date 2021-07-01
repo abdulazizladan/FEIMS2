@@ -1194,8 +1194,7 @@
   </form>
 </mat-horizontal-stepper>
 </div>
-<!--
-<div mat-dialog-actions align="end">
-  <button mat-button>Preview</button>
-  <button [disabled]="siteForm.invalid" mat-flat-button color="primary" (click)="submit()">Submit</button>
-</div>-->
+
+<div mat-dialog-actions align="end" *ngIf="error">
+  <span color="warn" style="color:red" class="mat-h4">Unable to complete action.</span>
+</div>
