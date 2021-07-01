@@ -19,6 +19,7 @@ export class AddSiteComponent implements OnInit {
 
   public states: any;
 
+  submitted: boolean = false;
   private subscription: Subscription;
 
   public appearance="fill";
@@ -253,8 +254,16 @@ export class AddSiteComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.siteForm.value)
-    
+    const data = this.siteForm.value;
+    this.siteService.addSite(data).subscribe(
+      response => {
+        console.log(response)
+        this.submitted = true;
+      },
+      error => {
+        console.log(error)
+      }
+    )
   }
 
   getStates() {

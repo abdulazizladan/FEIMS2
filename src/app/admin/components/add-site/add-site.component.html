@@ -1173,7 +1173,10 @@
       </div>
 
       <div fxLayout="row">
-        <button mat-flat-button color="primary" matStepperPrevious>Previous</button>
+        <button mat-flat-button color="primary" matStepperPrevious>
+          <mat-icon>chevron_left</mat-icon>
+          Previous
+        </button>
         <span fxFlex="1 1 auto"></span>
         <button mat-flat-button color="primary" (click)="submit()">
           <mat-icon>check</mat-icon>

@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    baseUrl: 'https://app.narr.ng/api/v1'  
+    baseUrl: 'https://127.0.0.1:3000'  
   };
