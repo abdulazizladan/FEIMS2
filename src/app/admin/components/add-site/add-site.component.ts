@@ -1,6 +1,7 @@
 import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { Site } from 'app/admin/models/site.model';
 import { SiteService } from 'app/admin/services/site.service';
@@ -32,14 +33,14 @@ export class AddSiteComponent implements OnInit {
   public hasWasteSite: boolean;
   public hasOthers: boolean;
 
-  constructor( private siteService: SiteService, private fb: FormBuilder, private store: Store<{ admin: AdminState }>) { }
+  constructor( private siteService: SiteService, private fb: FormBuilder, private store: Store<{ admin: AdminState }>, private dialogRef: MatDialogRef<any>) { }
 
   ngOnInit(): void {
     this.initializeForm();
   }
 
   ngOnDestroy() : void {
-    
+    this.subscription.unsubscribe();
   }
 
   initializeForm():void {
@@ -47,21 +48,19 @@ export class AddSiteComponent implements OnInit {
     this.getStates();
 
     this.siteForm = this.fb.group({
-      site: this.fb.group({
-        name: ['', [Validators.required]],
-        code: ['', [Validators.required]],
-        state: ['', [Validators.required]],
-        lga: ['', [Validators.required]],
-        street_address: ['', [Validators.required]],
-        measurement: [0, []],
-        level: [0, []],
-        position: this.fb.group({
-          longitude: [0, []],
-          latitude: [0, []]
-        }),
-        map: ['', []],
-        comment: ['', []]
+      name: ['', [Validators.required]],
+      code: ['', [Validators.required]],
+      state: ['', [Validators.required]],
+      lga: ['', [Validators.required]],
+      street_address: ['', [Validators.required]],
+      measurement: [0, []],
+      level: [0, []],
+      position: this.fb.group({
+        longitude: [0, []],
+        latitude: [0, []]
       }),
+      map: ['', []],
+      comment: ['', []],
       gate: this.fb.group({
         //description: ['', []],
         size: [0, []],
@@ -255,13 +254,14 @@ export class AddSiteComponent implements OnInit {
 
   submit() {
     const data = this.siteForm.value;
-    this.siteService.addSite(data).subscribe(
+    this.subscription = this.siteService.addSite(data).subscribe(
       response => {
-        console.log(response)
+        //console.log(data)
         this.submitted = true;
+        this.dialogRef.close()
       },
       error => {
-        console.log(error)
+        console.log(data)
       }
     )
   }
