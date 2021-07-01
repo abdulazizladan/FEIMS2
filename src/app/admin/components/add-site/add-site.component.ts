@@ -16,11 +16,12 @@ import { AdminState } from '../../../store/admin/admin.state';
 })
 export class AddSiteComponent implements OnInit {
 
-  expansionPanelStep: number = 0;
+  //expansionPanelStep: number = 0;
 
   public states: any;
 
   submitted: boolean = false;
+  error: boolean = false;
   private subscription: Subscription;
 
   public appearance="fill";
@@ -41,6 +42,25 @@ export class AddSiteComponent implements OnInit {
 
   ngOnDestroy() : void {
     this.subscription.unsubscribe();
+  }
+
+  submit() {
+    const data = this.siteForm.value;
+    this.subscription = this.siteService.addSite(data).subscribe(
+      response => {
+        this.submitted = true;
+        setTimeout(
+          () => {
+            this.dialogRef.close()
+          },
+          2000
+        )
+        
+      },
+      error => {
+        console.log(data)
+      }
+    )
   }
 
   initializeForm():void {
@@ -249,21 +269,7 @@ export class AddSiteComponent implements OnInit {
   }
 
   setPanelStep( index: number) {
-    this.expansionPanelStep = index;
-  }
-
-  submit() {
-    const data = this.siteForm.value;
-    this.subscription = this.siteService.addSite(data).subscribe(
-      response => {
-        //console.log(data)
-        this.submitted = true;
-        this.dialogRef.close()
-      },
-      error => {
-        console.log(data)
-      }
-    )
+    //this.expansionPanelStep = index;
   }
 
   getStates() {

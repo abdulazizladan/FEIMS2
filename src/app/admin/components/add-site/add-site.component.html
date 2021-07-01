@@ -10,7 +10,11 @@
   </button>
 </h2>
 
-<div mat-dialog-content>
+<button mat-flat-button mat-dialog-close color="primary" *ngIf="submitted">
+  Site details added successfully!!
+</button>
+
+<div mat-dialog-content *ngIf="!submitted">
   <mat-horizontal-stepper linear labelPosition="bottom"> 
     <form [formGroup]="siteForm">    
     <mat-step [stepControl]="siteForm">
@@ -49,13 +53,13 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="48%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="45%">
           <mat-label>Street address</mat-label>
           <textarea style="resize:none;" matInput formControlName="street_address"></textarea>
         </mat-form-field>
 
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="100px%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="23%">
           <mat-label>Overall site measurement</mat-label>
           <input type="text" matInput class="right-align" formControlName="measurement">
           <span matSuffix> m<sup>2</sup></span>
