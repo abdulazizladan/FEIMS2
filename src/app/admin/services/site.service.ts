@@ -13,7 +13,6 @@ export class SiteService {
 
   private sitesUrl : string;
   private siteUrl : string;
-  private addSiteUrl: string = 'sites';
 
   constructor( private _http : HttpClient ){
     this.sitesUrl = "./assets/sites.json";

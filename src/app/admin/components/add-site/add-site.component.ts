@@ -53,14 +53,14 @@ export class AddSiteComponent implements OnInit {
       state: ['', [Validators.required]],
       lga: ['', [Validators.required]],
       street_address: ['', [Validators.required]],
-      measurement: [0, []],
+      measurement: [0, [Validators.required]],
       level: [0, []],
       position: this.fb.group({
         longitude: [0, []],
         latitude: [0, []]
       }),
       map: ['', []],
-      comment: ['', []],
+      comment: ['', [Validators.required]],
       gate: this.fb.group({
         //description: ['', []],
         size: [0, []],
@@ -153,14 +153,14 @@ export class AddSiteComponent implements OnInit {
 
   stepsForm: FormGroup = this.fb.group({
     //description: ['', []],
-    concrete_work: [0, []],
-    width: [0, ],
-    length: [0, []],
-    quantity: [0, []],
+    concrete_work: [0, [Validators.required]],
+    width: [0, [Validators.required, Validators.min(1)]],
+    length: [0, [Validators.required, Validators.min(1)]],
+    quantity: [0, [Validators.required, Validators.min(1)]],
     surface_dressing: [0, []],
-    condition: ['', []],
+    condition: ['', [Validators.required]],
     damage: [0, []],
-    cost_of_repair: [0, []]
+    cost_of_repair: [0, [Validators.required]]
   })
 
   addSteps():  void{
@@ -211,10 +211,10 @@ export class AddSiteComponent implements OnInit {
 
   streetLights: FormGroup = this.fb.group({
     //description: ['', [Validators.required]],
-    quantity: [0, []],
-    height: [0, []],
-    condition: ['', []],
-    cost_of_repair: [0, []]
+    quantity: [0, [Validators.required]],
+    height: [0, [Validators.required]],
+    condition: ['', [Validators.required]],
+    cost_of_repair: [0, [Validators.required]]
   })
 
   addStreetLights(): void {
@@ -232,8 +232,8 @@ export class AddSiteComponent implements OnInit {
     length: [0, [Validators.required]],
     width: ['', [Validators.required]],
     position: this.fb.group({
-      longitude: [0, [Validators.required]],
-      latitude: [0, [Validators.required]]
+      longitude: [0, []],
+      latitude: [0, []]
     }),
     cost_of_repair: [0, [Validators.required]]
   })
