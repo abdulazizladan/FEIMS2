@@ -31,7 +31,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   submit (){
     //console.log(this.buildingForm.value)
     this.subscription = this.buildingService.addBuilding(this.buildingForm.value).subscribe(
-      esponse => {
+      response => {
         this.submitted = true;
         setTimeout(
           () => {
