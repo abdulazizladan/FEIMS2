@@ -42,8 +42,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     
   ) {}
 
-  private buildings: any;
-  private sites: any;
+  private buildings: building[];
+  private sites: Site[];
 
   public sitesSubscription: Subscription;
   buildingsSubscription: Subscription;
