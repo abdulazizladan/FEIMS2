@@ -3,7 +3,12 @@ import { egretAnimations } from '../../../shared/animations/egret-animations';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddSiteComponent } from '../add-site/add-site.component';
 import { ThemeService } from '../../../shared/services/theme.service';
+import { BuildingService } from 'app/admin/services/building.service';
 import tinyColor from 'tinycolor2';
+import { building } from 'app/admin/models/building.model';
+import { Site } from 'app/admin/models/site.model';
+import { SiteService } from 'app/admin/services/site.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +16,7 @@ import tinyColor from 'tinycolor2';
   styleUrls: ['./home.component.scss'],
   animations: egretAnimations
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   
   trafficVsSaleOptions: any;
   trafficVsSale: any;
@@ -31,11 +36,48 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(
     private themeService: ThemeService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private buildingService: BuildingService,
+    private siteService: SiteService,
+    
   ) {}
 
+  private buildings: any;
+  private sites: any;
+
+  public sitesSubscription: Subscription;
+  buildingsSubscription: Subscription;
+  //get sites
+    getSites(): void {
+      this.sitesSubscription = this.siteService.getSites().subscribe(
+        response => {
+          this.sites = response;
+        },
+        error => {
+          console.log(error)
+        }
+      )
+    }
+  //get buildings
+  getBuildings(): void {
+    this.buildingsSubscription = this.buildingService.getBuildings().subscribe(
+      response => {
+        this.buildings = response;
+      },
+      error => {
+        console.log(error)
+      }
+    )
+  }
+
   ngAfterViewInit() {}
+  ngOnDestroy() {
+    this.sitesSubscription.unsubscribe();
+    this.buildingsSubscription.unsubscribe();
+  }
   ngOnInit() {
+    this.getSites();
+    this.getBuildings();
     this.themeService.onThemeChange.subscribe(activeTheme => {
       this.initTrafficVsSaleChart(activeTheme);
       this.initSessionsChart(activeTheme);
@@ -200,10 +242,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       ]
     };
-  }
-
-  ngOnDestroy() {
-    
   }
 
   initTrafficVsSaleChart(theme) {
