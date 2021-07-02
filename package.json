@@ -84,6 +84,7 @@
     "@types/hopscotch": "0.2.30",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "@types/tinycolor2": "^1.4.2",
     "codelyzer": "^6.0.0",
     "copy-webpack-plugin": "^8.1.0",
     "enhanced-resolve": "3.3.0",

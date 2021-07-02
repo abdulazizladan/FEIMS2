@@ -61,8 +61,8 @@ export const addBuildingSuccess = createAction(
 )
 
 export const addBuildingFail = createAction(
-	AdminActions.LOAD_BUILDINGS_FAIL,
-	props<{reason: string}>()
+	AdminActions.ADD_BUILDING_FAIL,
+	props<{reason: String}>()
 )
 
 export const loadBuildings = createAction(
