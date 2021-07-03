@@ -25,5 +25,9 @@ export class AdminEffect {
     ))
   ));
 
-  constructor(private actions$: Actions, private siteService: SiteService, private buildingService: BuildingService) {}
+  constructor(
+    private actions$: Actions, 
+    private siteService: SiteService, 
+    private buildingService: BuildingService
+  ) {}
 }

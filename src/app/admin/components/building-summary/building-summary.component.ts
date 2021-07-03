@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { egretAnimations } from '../../../shared/animations/egret-animations';
 import { ThemeService } from '../../../shared/services/theme.service';
-import tinyColor from 'tinycolor2';
+import * as tinyColor from 'tinycolor2';
 
 @Component({
   selector: 'app-building-summary',

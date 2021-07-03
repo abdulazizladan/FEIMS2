@@ -34,7 +34,11 @@ export class AddSiteComponent implements OnInit {
   public hasWasteSite: boolean;
   public hasOthers: boolean;
 
-  constructor( private siteService: SiteService, private fb: FormBuilder, private store: Store<{ admin: AdminState }>, private dialogRef: MatDialogRef<any>) { }
+  constructor( 
+    private siteService: SiteService, 
+    private fb: FormBuilder, 
+    private store: Store<{ admin: AdminState }>, 
+    private dialogRef: MatDialogRef<any>) { }
 
   ngOnInit(): void {
     this.initializeForm();
@@ -49,6 +53,7 @@ export class AddSiteComponent implements OnInit {
     this.subscription = this.siteService.addSite(data).subscribe(
       response => {
         this.submitted = true;
+        this.store.dispatch(addSite({site: data}))
         setTimeout(
           () => {
             this.dialogRef.close()
