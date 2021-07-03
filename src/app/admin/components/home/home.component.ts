@@ -4,11 +4,13 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialo
 import { AddSiteComponent } from '../add-site/add-site.component';
 import { ThemeService } from '../../../shared/services/theme.service';
 import { BuildingService } from 'app/admin/services/building.service';
-import tinyColor from 'tinycolor2';
+import  * as tinyColor  from "tinycolor2";
 import { building } from 'app/admin/models/building.model';
 import { Site } from 'app/admin/models/site.model';
 import { SiteService } from 'app/admin/services/site.service';
 import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { AdminState } from 'app/store/admin/admin.state';
 
 @Component({
   selector: 'app-home',
@@ -39,7 +41,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private dialog: MatDialog,
     private buildingService: BuildingService,
     private siteService: SiteService,
-    
+    private store: Store<AdminState>    
   ) {}
 
   private buildings: building[];

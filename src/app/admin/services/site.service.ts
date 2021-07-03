@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Site } from '../models/site.model';
 import { environment } from 'environment.dev';
 import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 const baseUrl = environment.baseUrl;
 
@@ -19,15 +20,15 @@ export class SiteService {
   }
 
   getSites(){
-    return this._http.get<any>(this.sitesUrl);
+    return this._http.get<any>(this.sitesUrl).pipe(delay(500));
   }
 
   getSingleSite(){
-    return this._http.get<any>(this.siteUrl);
+    return this._http.get<any>(this.siteUrl).pipe(delay(500));
   }
 
   addSite( site: Site): Observable<any> {
-    return this._http.post(`${baseUrl}/sites`, site)
+    return this._http.post(`${baseUrl}/sites`, site).pipe(delay(500))
   }
 
 }

@@ -3445,6 +3445,7 @@
     "fastparse" "^1.1.2"
 
 "css-star-rating@git+https://git@github.com/uilibrary/css-star-rating.git":
+  "integrity" "sha512-oe7ySUse8qa6y69yvQGXqZ8VXnMzxEO+Xzn0IjRkaGkoL2kRgyhHAAt6tQEsAl0ZpJ7ClAleLF/p95kzIqCvsw=="
   "resolved" "git+https://git@github.com/uilibrary/css-star-rating.git#7348c70cad1a35f526494fef184b128a01af65b8"
   "version" "1.2.5"
 

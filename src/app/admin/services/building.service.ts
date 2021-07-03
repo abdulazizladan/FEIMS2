@@ -3,6 +3,7 @@ import { building } from '../models/building.model';
 import { environment } from 'environment.dev';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 const baseUrl = environment.baseUrl;
 
@@ -20,14 +21,14 @@ export class BuildingService {
   }
 
   addBuilding( building: building ): Observable<any>{
-    return this._http.post<any>(`${baseUrl}/buildings`, building)
+    return this._http.post<any>(`${baseUrl}/buildings`, building).pipe(delay(500));
   }
 
   getBuildings(){
-    return this._http.get<any>(`${baseUrl}/buildings`);
+    return this._http.get<any>(`${baseUrl}/buildings`).pipe(delay(500));
   }
 
   getSingleBuilding( id: string){
-    return this._http.get<any>(`${baseUrl}/buildings/${id}`);
+    return this._http.get<any>(`${baseUrl}/buildings/${id}`).pipe(delay(500));
   }
 }
