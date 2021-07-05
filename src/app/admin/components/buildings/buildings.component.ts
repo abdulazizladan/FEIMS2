@@ -40,7 +40,7 @@ export class BuildingsComponent implements OnInit {
   ngOnInit(): void {
   }
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    //this.subscription.unsubscribe();
   }
 
   openAddDialog(): void{
@@ -53,7 +53,7 @@ export class BuildingsComponent implements OnInit {
   getBuildings( ): void{
     this.subscription = this.buildingService.getBuildings().subscribe(
       result => {
-        this
+        this.buildings = result;
       }, 
       error => {
 

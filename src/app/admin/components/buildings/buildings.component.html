@@ -8,7 +8,7 @@
   </div>
   
   <div style="padding: 20px" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
-    <div *ngIf="buildings">
+    <div >
     <app-building fxFlex.xs="100%" fxFlex.gt-xs="400px" *ngFor="let a of A" [data]="a"></app-building>
     <span fxFlex.gt-xs></span>    
     </div>
