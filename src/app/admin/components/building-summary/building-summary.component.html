@@ -37,49 +37,141 @@
         <div style="background-color: cadetblue;"></div>
     </mat-card-content>
 
-    <mat-card-actions>
-
-    </mat-card-actions>
-
 </mat-card>
 
 <mat-card [@animate]="{value:'*',params:{delay:'400ms',scale:'.9'}}" fxFlex="1 1 auto">
     <mat-tab-group>
         
         <mat-tab label="Building Structure">
-            <span class="mat-h4">Building Structure</span>
-            <mat-list>
-                <mat-list-item>
-                    Floor 
-                </mat-list-item>
-            </mat-list>
+            <div fxLayout="column">
+                <span class="mat-headline">Dimensions</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Total floor area : 
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Wall area : 
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area : 
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors : 
+                    </mat-list-item>
+                </mat-list>
+                <mat-divider></mat-divider>
+                <span class="mat-headline">Superstructure</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Type : 
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors
+                    </mat-list-item>
+                </mat-list>
+                <mat-divider></mat-divider>
+                <span class="mat-headline">Walls & Windows</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Type : 
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors
+                    </mat-list-item>
+                </mat-list>
+                <mat-divider></mat-divider>
+                <span class="mat-headline">Floor</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Type : 
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors
+                    </mat-list-item>
+                </mat-list>
+                <mat-divider></mat-divider>
+                <span class="mat-headline">Roof & Ceiling</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Type : 
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors
+                    </mat-list-item>
+                </mat-list>
+            </div>
         </mat-tab>
 
         <mat-tab label="Building Services">
-            <span class="mat-h4">Building Services</span>
-            <mat-list>
-                <mat-list-item>
-                    Floor 
-                </mat-list-item>
-            </mat-list>
+            <div fxLayout="column">
+                <span class="mat-headline">Dimensions</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Total floor area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Wall area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors
+                    </mat-list-item>
+                </mat-list>
+            </div>
         </mat-tab>
 
         <mat-tab label="High Value Equipment">
-            <span class="mat-h4">High Value Equipment</span>
-            <mat-list>
-                <mat-list-item>
-                    
-                </mat-list-item>
-            </mat-list>
+            <div fxLayout="column">
+                <span class="mat-headline">Dimensions</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Total floor area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Wall area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors
+                    </mat-list-item>
+                </mat-list>
+            </div>
         </mat-tab>
 
-        <mat-tab label="Low value">
-            <span class="mat-h4">Low Value Equipment</span>
-            <mat-list>
-                <mat-list-item>
-                    
-                </mat-list-item>
-            </mat-list>
+        <mat-tab label="Low Value Equipment">
+            <div fxLayout="column">
+                <span class="mat-headline">Dimensions</span>
+                <mat-list dense>
+                    <mat-list-item class="mat-h4">
+                        Total floor area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Wall area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Total Ceiling area
+                    </mat-list-item>
+                    <mat-list-item class="mat-h4">
+                        Number of floors
+                    </mat-list-item>
+                </mat-list>
+            </div>
         </mat-tab>
 
         <mat-tab label="Maintenance History">

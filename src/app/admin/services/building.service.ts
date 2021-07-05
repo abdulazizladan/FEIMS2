@@ -28,7 +28,7 @@ export class BuildingService {
     return this._http.get<any>(`${baseUrl}/buildings`).pipe(delay(500));
   }
 
-  getSingleBuilding( id: string){
+  getSingleBuilding( id: number){
     return this._http.get<any>(`${baseUrl}/buildings/${id}`).pipe(delay(500));
   }
 }

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddBuildingComponent } from '../add-building/add-building.component';
+import { BuildingService } from 'app/admin/services/building.service';
+import { Subscription } from 'rxjs';
 
 export interface building{
   id: number,
@@ -18,6 +20,8 @@ export interface building{
 })
 export class BuildingsComponent implements OnInit {
 
+  subscription: Subscription;
+
   A : building[]= [
     {
       "name" : "Mech001",
@@ -26,63 +30,35 @@ export class BuildingsComponent implements OnInit {
       "description" : "Mechanical Engineering's departmental complex.",
       "repair_cost" : 5000000,
       "id" : 1
-    },
-    {
-      "name" : "LAB 001",
-      "type" : "Laboratory",
-      "image" : "./assets/img/02.jpg",
-      "description" : "Materials laboratory",
-      "repair_cost" : 5000,
-      "id" : 2
-    }
-    ,{
-      "name" : "LAB01",
-      "type" : "Laboratory",
-      "image" : "./assets/img/01.jpg",
-      "description" : "string",
-      "repair_cost" : 5000,
-      "id" : 3
-    },
-    {
-      "name" : "LAB01",
-      "type" : "Laboratory",
-      "image" : "./assets/img/04.png",
-      "description" : "string",
-      "repair_cost" : 5000,
-      "id" : 4
-    },
-    {
-    "name" : "LAB01",
-    "type" : "Laboratory",
-    "image" : "./assets/img/01.jpg",
-    "description" : "string",
-    "repair_cost" : 5000,
-    "id" : 5
-    },
-    {
-      "name" : "LAB01",
-      "type" : "Laboratory",
-      "image" : "./assets/img/01.jpg",
-      "description" : "string",
-      "repair_cost" : 5000,
-      "id" : 6
     }
   ];
 
   buildings : building[];
 
-  constructor( public dialog: MatDialog ) { }
+  constructor( public dialog: MatDialog, private buildingService: BuildingService ) { }
 
   ngOnInit(): void {
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   openAddDialog(): void{
     const dialogRef = this.dialog.open(AddBuildingComponent, {
-      //width: '90%',
-      //height: '100%',
       data: {},
       disableClose: true
     });
+  }
+
+  getBuildings( ): void{
+    this.subscription = this.buildingService.getBuildings().subscribe(
+      result => {
+        this
+      }, 
+      error => {
+
+      }
+    )
   }
 
 }
