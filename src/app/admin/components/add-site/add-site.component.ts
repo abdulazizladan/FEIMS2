@@ -14,6 +14,7 @@ import { AdminState } from '../../../store/admin/admin.state';
   templateUrl: './add-site.component.html',
   styleUrls: ['./add-site.component.scss']
 })
+/** Component that adds new site. */
 export class AddSiteComponent implements OnInit {
 
   //expansionPanelStep: number = 0;
@@ -44,10 +45,16 @@ export class AddSiteComponent implements OnInit {
     this.initializeForm();
   }
 
+  /**
+   * OnDestroy lifecycle hook
+   */
   ngOnDestroy() : void {
     this.subscription.unsubscribe();
   }
 
+  /**
+   * POSTs request to store new site
+   */
   submit() {
     const data = this.siteForm.value;
     this.subscription = this.siteService.addSite(data).subscribe(
@@ -243,11 +250,17 @@ export class AddSiteComponent implements OnInit {
     cost_of_repair: [0, [Validators.required]]
   })
 
+  /**
+   * 
+   */
   addStreetLights(): void {
     this.hasStreetLights = true;
     this.siteForm.addControl('street_lights', this.streetLights);
   }
 
+  /**
+   * 
+   */
   removeStreetLights(): void {
     this.hasStreetLights = false;
     this.siteForm.removeControl('street_lights');
@@ -264,11 +277,17 @@ export class AddSiteComponent implements OnInit {
     cost_of_repair: [0, [Validators.required]]
   })
 
+  /**
+   * 
+   */
   addWasteSite(): void {
     this.hasWasteSite = true;
     this.siteForm.addControl('waste_site', this.wasteSite);
   }
 
+  /**
+   * 
+   */
   removeWasteSite(): void {
     this.hasWasteSite = false;
     this.siteForm.removeControl('waste_site');
