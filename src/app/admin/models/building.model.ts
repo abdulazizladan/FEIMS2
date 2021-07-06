@@ -99,14 +99,14 @@ export interface building{
         damage: number, //percentage 25|50|75
         cost_of_repair: number //naira
       },
-      corridors: {
+      corridors: { //make array
         quantity: number,
         type: string,
         condition: string, //excellent|good|fair|poor
         cost_of_repair: number //naira
       },
         /*--- Interior wall ---*/
-      interior_wall: {
+      interior_wall: { //make array
         finishing: string, //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
         size: number, //square meter
         type: string, 
@@ -116,7 +116,7 @@ export interface building{
         cost_of_repair: number //naira
       },
       /*--- Windows ---*/
-      windows: {
+      windows: { //make array
         material: string, //wire_glass|glass_block|plate|tempered|operating|fixed|other
         //description: string,
         size: number, //square meter
@@ -307,7 +307,7 @@ export interface building{
       damage: number,
       cost_of_repair: number
     },
-    gates: {
+    gates: { //make array
       quantity: number,
       condition: string,
       cost_of_repair: number
