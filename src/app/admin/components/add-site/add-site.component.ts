@@ -41,6 +41,9 @@ export class AddSiteComponent implements OnInit {
     private store: Store<{ admin: AdminState }>, 
     private dialogRef: MatDialogRef<any>) { }
 
+    /**
+     * Init lifecycle
+     */
   ngOnInit(): void {
     this.initializeForm();
   }
@@ -75,6 +78,10 @@ export class AddSiteComponent implements OnInit {
       }
     )
   }
+
+  /**
+   * Initialize form controls
+   */
 
   initializeForm():void {
 
@@ -184,6 +191,9 @@ export class AddSiteComponent implements OnInit {
 
   }
 
+  /**
+   * 
+   */
   stepsForm: FormGroup = this.fb.group({
     //description: ['', []],
     concrete_work: [0, [Validators.required]],
@@ -196,16 +206,25 @@ export class AddSiteComponent implements OnInit {
     cost_of_repair: [0, [Validators.required]]
   })
 
+  /**
+   * 
+   */
   addSteps():  void{
     this.hasSteps = true;
     this.siteForm.addControl("steps", this.stepsForm)
   }
 
+  /**
+   * 
+   */
   removeSteps(): void {
     this.hasSteps = false;
     this.siteForm.removeControl('steps');
   }
 
+  /**
+   * 
+   */
   gasTanksForm: FormGroup = this.fb.group({
     //description: ['', [Validators.required]],
     quantity: [0, [Validators.required]],
@@ -214,16 +233,25 @@ export class AddSiteComponent implements OnInit {
     cost_of_repair: [0, [Validators.required]]
   })
 
+  /**
+   * 
+   */
   addGasTanks(): void {
     this.hasGasTanks = true;
     this.siteForm.addControl('gas_tanks', this.gasTanksForm)
   }
 
+  /**
+   * 
+   */
   removeGasTanks(): void {
     this.hasGasTanks = false;
     this.siteForm.removeControl('gas_tanks');
   }
 
+  /**
+   * 
+   */
   rampsForm: FormGroup = this.fb.group({
     //description: ['', [Validators.required]],
     width: [0, [Validators.required]],
@@ -232,16 +260,26 @@ export class AddSiteComponent implements OnInit {
     condition: ['', [Validators.required]],
     cost_of_repair: [0, [Validators.required]]
   })
+
+  /**
+   * 
+   */
   addRamps(): void {
     this.hasRamps = true;
     this.siteForm.addControl('ramps', this.rampsForm);
   }
 
+  /**
+   * 
+   */
   removeRamps(): void {
     this.hasRamps = false;
     this.siteForm.removeControl('ramps');
   }
 
+  /**
+   * 
+   */
   streetLights: FormGroup = this.fb.group({
     //description: ['', [Validators.required]],
     quantity: [0, [Validators.required]],
@@ -293,10 +331,9 @@ export class AddSiteComponent implements OnInit {
     this.siteForm.removeControl('waste_site');
   }
 
-  setPanelStep( index: number) {
-    //this.expansionPanelStep = index;
-  }
-
+  /**
+   * 
+   */
   getStates() {
     this.states = [
       {
@@ -434,6 +471,9 @@ export class AddSiteComponent implements OnInit {
     ]
   }
 
+  /**
+   * 
+   */
   resetForm() {
     
   }
