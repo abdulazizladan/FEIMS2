@@ -38,6 +38,7 @@ export class BuildingsComponent implements OnInit {
   constructor( public dialog: MatDialog, private buildingService: BuildingService ) { }
 
   ngOnInit(): void {
+    
   }
   ngOnDestroy() {
     //this.subscription.unsubscribe();

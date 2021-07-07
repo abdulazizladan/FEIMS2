@@ -14,7 +14,9 @@ import { AdminState } from '../../../store/admin/admin.state';
   templateUrl: './add-site.component.html',
   styleUrls: ['./add-site.component.scss']
 })
-/** Component that adds new site. */
+/** 
+ * Component that adds new site. 
+ * */
 export class AddSiteComponent implements OnInit {
 
   //expansionPanelStep: number = 0;
@@ -41,9 +43,9 @@ export class AddSiteComponent implements OnInit {
     private store: Store<{ admin: AdminState }>, 
     private dialogRef: MatDialogRef<any>) { }
 
-    /**
-     * Init lifecycle
-     */
+  /**
+   * First lifecycle hook
+   */
   ngOnInit(): void {
     this.initializeForm();
   }
@@ -69,8 +71,7 @@ export class AddSiteComponent implements OnInit {
             this.dialogRef.close()
           },
           2000
-        )
-        
+        )        
       },
       error => {
         this.error = true;
