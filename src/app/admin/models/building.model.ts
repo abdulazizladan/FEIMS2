@@ -99,7 +99,11 @@ export interface building{
         damage: number, //percentage 25|50|75
         cost_of_repair: number //naira
       },
+<<<<<<< HEAD
       corridors: [{ //make array
+=======
+      corridors: { //make array
+>>>>>>> 92375c2b4e71a959eaf1e7865aec3fa53b877133
         quantity: number,
         type: string,
         condition: string, //excellent|good|fair|poor
