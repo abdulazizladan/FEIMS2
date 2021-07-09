@@ -54,7 +54,7 @@ export class BuildingsComponent implements OnInit {
   getBuildings( ): void{
     this.subscription = this.buildingService.getBuildings().subscribe(
       result => {
-        this.buildings = result;
+        //this.buildings = result;
       }, 
       error => {
 

@@ -10,7 +10,9 @@ import { Site } from 'app/admin/models/site.model';
 import { SiteService } from 'app/admin/services/site.service';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { AdminState } from 'app/store/admin/admin.state';
+import { AdminState, getBuildings, getSites } from 'app/store/admin/admin.state';
+import * as actions from '../../../store/admin/admin.actions';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -44,33 +46,33 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private store: Store<AdminState>    
   ) {}
 
-  private buildings: building[];
-  private sites: Site[];
+  private buildings: Observable<building[]>;
+  private sites: Observable<Site[]>;
 
   public sitesSubscription: Subscription;
   buildingsSubscription: Subscription;
   //get sites
-    getSites(): void {
-      this.sitesSubscription = this.siteService.getSites().subscribe(
-        response => {
-          this.sites = response;
-        },
-        error => {
-          console.log(error)
-        }
-      )
-    }
+    //getSites(): void {
+    //  this.sitesSubscription = this.siteService.getSites().subscribe(
+    //    response => {
+    //      this.sites = response;
+    //    },
+    //    error => {
+    //      console.log(error)
+    //    }
+    //  )
+    //}
   //get buildings
-  getBuildings(): void {
-    this.buildingsSubscription = this.buildingService.getBuildings().subscribe(
-      response => {
-        this.buildings = response;
-      },
-      error => {
-        console.log(error)
-      }
-    )
-  }
+  //getBuildings(): void {
+  //  this.buildingsSubscription = this.buildingService.getBuildings().subscribe(
+  //    response => {
+  //      this.buildings = response;
+  //    },
+  //    error => {
+  //      console.log(error)
+  //    }
+  //  )
+  //}
 
   ngAfterViewInit() {}
   
@@ -79,9 +81,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.buildingsSubscription.unsubscribe();
   }
   ngOnInit() {
-    this.store.dispatch({})
-    this.getSites();
-    this.getBuildings();
+    //this.store.dispatch({})
+    this.sites = this.store.select(getSites);
+    this.buildings = this.store.select(getBuildings)
+    //this.getSites();
+    //this.getBuildings();
     this.themeService.onThemeChange.subscribe(activeTheme => {
       this.initTrafficVsSaleChart(activeTheme);
       this.initSessionsChart(activeTheme);
