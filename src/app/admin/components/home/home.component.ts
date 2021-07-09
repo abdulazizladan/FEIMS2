@@ -3,11 +3,9 @@ import { egretAnimations } from '../../../shared/animations/egret-animations';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddSiteComponent } from '../add-site/add-site.component';
 import { ThemeService } from '../../../shared/services/theme.service';
-import { BuildingService } from 'app/admin/services/building.service';
 import  * as tinyColor  from "tinycolor2";
 import { building } from 'app/admin/models/building.model';
 import { Site } from 'app/admin/models/site.model';
-import { SiteService } from 'app/admin/services/site.service';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AdminState, getBuildings, getSites } from 'app/store/admin/admin.state';
@@ -41,16 +39,14 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private themeService: ThemeService,
     private dialog: MatDialog,
-    private buildingService: BuildingService,
-    private siteService: SiteService,
     private store: Store<AdminState>    
   ) {}
 
-  private buildings: Observable<building[]>;
-  private sites: Observable<Site[]>;
+  public buildings: Observable<building[]>;
+  public sites: Observable<Site[]>;
 
-  public sitesSubscription: Subscription;
-  buildingsSubscription: Subscription;
+  //public sitesSubscription: Subscription;
+  //buildingsSubscription: Subscription;
   //get sites
     //getSites(): void {
     //  this.sitesSubscription = this.siteService.getSites().subscribe(
@@ -77,15 +73,14 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit() {}
   
   ngOnDestroy() {
-    this.sitesSubscription.unsubscribe();
-    this.buildingsSubscription.unsubscribe();
+    //this.sitesSubscription.unsubscribe();
+    //this.buildingsSubscription.unsubscribe();
   }
   ngOnInit() {
-    //this.store.dispatch({})
     this.sites = this.store.select(getSites);
     this.buildings = this.store.select(getBuildings)
-    //this.getSites();
-    //this.getBuildings();
+    console.log(this.sites)
+    console.log(this.buildings)
     this.themeService.onThemeChange.subscribe(activeTheme => {
       this.initTrafficVsSaleChart(activeTheme);
       this.initSessionsChart(activeTheme);
