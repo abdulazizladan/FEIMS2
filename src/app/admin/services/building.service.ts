@@ -37,7 +37,7 @@ export class BuildingService {
    * get a list of buildings
    * @returns buildings array
    */
-  getBuildings(){
+  getBuildings(): Observable<building[]>{
     return this._http.get<any>(`${baseUrl}/buildings`).pipe(delay(500));
   }
 

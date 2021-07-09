@@ -73,11 +73,13 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {}
+  
   ngOnDestroy() {
     this.sitesSubscription.unsubscribe();
     this.buildingsSubscription.unsubscribe();
   }
   ngOnInit() {
+    this.store.dispatch({})
     this.getSites();
     this.getBuildings();
     this.themeService.onThemeChange.subscribe(activeTheme => {
