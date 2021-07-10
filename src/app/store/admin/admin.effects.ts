@@ -20,6 +20,9 @@ export class AdminEffect {
     //))
   //));
 
+  /**
+   * Load buildings
+   */
   loadBuildings$ = createEffect(() => {
     return this.actions$
       .pipe(
@@ -33,6 +36,9 @@ export class AdminEffect {
     )
   });
 
+  /**
+   * Load sites
+   */
   loadSites$ = createEffect(() => {
     return this.actions$
       .pipe(
@@ -46,6 +52,9 @@ export class AdminEffect {
     )
   });
 
+  /**
+   * Add site
+   */
   addSite$ = createEffect(() => this.actions$.pipe(
     ofType(addSite),
     exhaustMap(({site}) => this.siteService$.addSite(site).pipe(
@@ -54,6 +63,9 @@ export class AdminEffect {
     ))
   ));
 
+  /**
+   * Add building
+   */
   addBuilding$ = createEffect(() => this.actions$.pipe(
     ofType(addBuilding),
     exhaustMap(({building}) => this.buildingService$.addBuilding(building).pipe(
