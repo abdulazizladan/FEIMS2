@@ -70,12 +70,22 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   //  )
   //}
 
+  /**
+   * AfterViewInit lifecycle hook
+   */
   ngAfterViewInit() {}
   
+  /**
+   * OnDestroy lifecycle hook
+   */
   ngOnDestroy() {
     //this.sitesSubscription.unsubscribe();
     //this.buildingsSubscription.unsubscribe();
   }
+
+  /**
+   * OnInit lifecycle hook
+   */
   ngOnInit() {
     this.sites = this.store.select(getSites);
     this.buildings = this.store.select(getBuildings)
