@@ -4,6 +4,13 @@ import { LoginData } from '../models/loginData.model';
 import { environment } from '../../../environment.dev';
 import { ApiPaths } from '../../ApiPaths';
 import { AppSocket } from '../../app.socket';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+export interface User{
+  email: string,
+  token: string,
+}
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,13 +26,14 @@ const httpOptions = {
 })
 export class AuthService {
 
+  public user: Observable<any>;
   private baseUrl= environment.baseUrl;
 
   private readonly loginUrl: string = `${this.baseUrl}/${ApiPaths.signin}`;
   private readonly registerUrl: string = `${this.baseUrl}/${ApiPaths.signup}`;
   
   /**
-   * 
+   * Constructor
    * @param _http 
    * @param appSocket 
    */
@@ -34,13 +42,20 @@ export class AuthService {
    }
 
    /**
+    * Login
     * @param credentials
     */
   login(credentials: LoginData){
-    return this._http.post<any>( this.loginUrl, credentials, httpOptions)
+    return this._http.post<any>( this.loginUrl, credentials, httpOptions).pipe(
+      map(user => {
+        localStorage.setItem('user', JSON.stringify(user));
+        return user;
+      })
+    )
   }
 
   /**
+   * Register
    * @param value
    */
   register(value: {email: string, password: string}){
@@ -56,7 +71,7 @@ export class AuthService {
   }
 
   /**
-   * is logged in?
+   * is user logged in?
    */
   isLoggedIn(): boolean{
     return !!localStorage.getItem('token');

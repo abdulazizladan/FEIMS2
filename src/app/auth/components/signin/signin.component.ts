@@ -41,6 +41,9 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     this._unsubscribeAll = new Subject();
   }
 
+  /**
+   * Init lifecycle hook
+   */
   ngOnInit(): void {
     this.signinForm = new FormGroup({
       //Placeholder
@@ -52,17 +55,25 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  /**
+   * After view lifecycle hook
+   */
   ngAfterViewInit() {
     this.autoSignIn();
   }
 
+  /**
+   * On Destroy lifecycle hook
+   */
   ngOnDestroy() {
     this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 
+  /**
+   * Signin
+   */
   signin() {
-    //const signinData = this.signinForm.value
 
     this.submitButton.disabled = true;
     this.progressBar.mode = 'indeterminate';
@@ -74,11 +85,12 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
       })
     ).subscribe(
       res => {
-        //console.log(res)
         this.router.navigateByUrl('dashboard')
       },
       err => {
-        console.log(err)
+        //console.log(err)
+        this.submitButton.disabled = false;
+        this.errorMsg = "Unable to login. Please check credentials and try again."
       }
     );
     
@@ -93,6 +105,9 @@ export class SigninComponent implements OnInit, AfterViewInit, OnDestroy {
     //  })
   }
 
+  /** 
+   * Automatic signin 
+  */
   autoSignIn() {
     if (this.jwtAuth.return === '/') {
       return
