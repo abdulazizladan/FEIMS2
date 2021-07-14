@@ -1229,6 +1229,11 @@
   dependencies:
     "tslib" "^2.0.0"
 
+"@ngrx/schematics@^12.2.0":
+  "integrity" "sha512-SYgZekBW3jeHQ6FiknFzU9/ayNc8JT0Q4zvpwrFBThbf3hjLAv5W3oARHqObK51T+4KZf2g7QJB2DniJl6rtcw=="
+  "resolved" "https://registry.npmjs.org/@ngrx/schematics/-/schematics-12.2.0.tgz"
+  "version" "12.2.0"
+
 "@ngrx/store-devtools@^11.0.1":
   "integrity" "sha512-OLL1zOs07fdrHtd/92PyEu7l/0/F3m1tfHqiNYSUPeLs7zrq5xDVZmhv05zaUhSw9E/F9m0a+P0tj+Qlk1FvBA=="
   "resolved" "https://registry.npmjs.org/@ngrx/store-devtools/-/store-devtools-11.1.0.tgz"

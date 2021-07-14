@@ -41,7 +41,9 @@ export class BuildingService {
    * @returns buildings array
    */
   getBuildings(): Observable<building[]>{
-    return this._http.get<building[]>(`${baseUrl}/buildings`).pipe(delay(5000));
+    return this._http.get<building[]>(`${baseUrl}/buildings`).pipe(
+      delay(5000)
+    );
   }
 
   /**

@@ -32,7 +32,9 @@ export class SiteService {
   * @returns  sites 
   **/
   getSites(): Observable<Site[]>{
-    return this.http.get<Site[]>(`${baseUrl}/buildings`).pipe(
+    //return this.http.get<Site[]> (`${baseUrl}/sites`)
+    return this.http.get<Site[]> ('127.0.0.1:3000/sites')
+    .pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     );
@@ -44,7 +46,12 @@ export class SiteService {
   * @returns site
   **/
   getSingleSite( id: number): Observable<Site>{
-    return this.http.get<any>(`${baseUrl}/sites`).pipe(delay(500));
+    //return this.http.get<Site> (`${baseUrl}/sites`, id)
+    return this.http.get<Site>('127.0.0.1:3000/sites')
+    .pipe(
+      tap(data => console.log(JSON.stringify(data))),
+      catchError(() => throwError('error retreiving site'))
+    );
   }
 
   /**
@@ -53,21 +60,17 @@ export class SiteService {
    * @returns site
    */
   addSite( site: Site): Observable<Site> {
-    return this.http.post<Site>(`${baseUrl}/sites`, site).pipe(
-      catchError(() => throwError('error retrieving sites'))
+    return this.http.post<Site>(`${baseUrl}/sites`, site)
+    .pipe(
+      catchError(() => throwError('error adding site'))
     );
   }
 
   private handleError(err: any) {
-    // in a real world app, we may send the server to some remote logging infrastructure
-    // instead of just logging it to the console
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
       errorMessage = `An error occurred: ${err.error.message}`;
     } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong,
       errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
     }
     console.error(err);

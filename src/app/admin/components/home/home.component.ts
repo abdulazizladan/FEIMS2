@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { egretAnimations } from '../../../shared/animations/egret-animations';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddSiteComponent } from '../add-site/add-site.component';
@@ -11,6 +11,7 @@ import { Store } from '@ngrx/store';
 import { AdminState, getBuildings, getSites } from 'app/store/admin/admin.state';
 import * as actions from '../../../store/admin/admin.actions';
 import { Observable } from 'rxjs';
+import { SiteService } from 'app/admin/services/site.service';
 
 @Component({
   selector: 'app-home',
@@ -39,7 +40,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private themeService: ThemeService,
     private dialog: MatDialog,
-    private store: Store<AdminState>    
+    private store: Store<AdminState>,
+    private siteService: SiteService
   ) {}
 
   public buildings: Observable<building[]>;

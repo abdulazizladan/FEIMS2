@@ -33,6 +33,7 @@
     "@angular/router": "11.0.4",
     "@ngrx/effects": "^11.1.0",
     "@ngrx/router-store": "^11.0.1",
+    "@ngrx/schematics": "^12.2.0",
     "@ngrx/store": "^11.1.0",
     "@ngrx/store-devtools": "^11.0.1",
     "@ngu/carousel": "3.0.2",
