@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Store } from '@ngrx/store';
+import { BuildingState } from 'app/store/building/building.state';
 import { AddBuildingComponent } from '../add-building/add-building.component';
 
 export interface building{
@@ -71,7 +73,7 @@ export class BuildingsComponent implements OnInit {
 
   buildings : building[];
 
-  constructor( public dialog: MatDialog ) { }
+  constructor(public dialog: MatDialog, private store: Store<{building: BuildingState}>) { }
 
   ngOnInit(): void {
   }

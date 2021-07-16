@@ -2,17 +2,19 @@ import { routerReducer } from "@ngrx/router-store";
 import { ActionReducerMap, MetaReducer } from "@ngrx/store";
 import { environment } from "environments/environment";
 import { authReducer } from "./auth/auth.reducer";
-import { adminReducer } from "./admin/admin.reducer";
+import { buildingReducer } from "./building/building.reducer";
+import { siteReducer } from "./site/site.reducer";
 
 export interface AppState {
 
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-    router: routerReducer,
-    auth: authReducer,
-    admin: adminReducer
+  router: routerReducer,
+  auth: authReducer,
+  site: siteReducer,
+  building: buildingReducer
 };
 
 export const metaReducers: MetaReducer<AppState>[] = 
-    !environment.production ? [] : [];
+  !environment.production ? [] : [];

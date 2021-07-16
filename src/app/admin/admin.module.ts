@@ -58,7 +58,7 @@ import { BuildingSummaryComponent } from './components/building-summary/building
 import { SiteSurveyComponent } from './components/site-survey/site-survey.component';
 import { AddSiteComponent } from './components/add-site/add-site.component';
 import { EffectsModule } from '@ngrx/effects';
-import { AdminEffect } from 'app/store/admin/admin.effects';
+import { AdminEffect } from 'app/store/site/admin.effects';
 
 
 @NgModule({

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Site } from 'app/admin/models/site.model';
-import { addSite } from 'app/store/admin/admin.actions';
-import { AdminState } from '../../../store/admin/admin.state';
+import { addSite } from 'app/store/site/site.actions';
+import { SiteState } from '../../../store/site/site.state';
 
 @Component({
   selector: 'app-add-site',
@@ -22,7 +22,7 @@ export class AddSiteComponent implements OnInit {
   public hasWasteSite: boolean;
   public hasOthers: boolean;
 
-  constructor(private fb: FormBuilder, private store: Store<{ admin: AdminState }>) { }
+  constructor(private fb: FormBuilder, private store: Store<{ site: SiteState }>) { }
 
   ngOnInit(): void {
     this.initializeForm();

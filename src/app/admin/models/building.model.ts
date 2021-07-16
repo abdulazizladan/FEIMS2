@@ -1,4 +1,4 @@
-export interface building{
+export interface Building{
   structure: {
     dimension: {
       floor_area: number, //square meters

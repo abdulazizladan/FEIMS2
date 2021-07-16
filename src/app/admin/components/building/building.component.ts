@@ -28,5 +28,4 @@ export class BuildingComponent implements OnInit {
   showSummary(id : number){
     console.log(id)
   }
-
 }
