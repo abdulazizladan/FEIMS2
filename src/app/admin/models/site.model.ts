@@ -69,7 +69,7 @@ export interface Site{
     },    
     /* Drainage */
     drainage: {
-        description: string,
+        //description: string,
         depth: number, //meters
         length: number, //meters
         concrete_work: number, //cubic meters
@@ -83,7 +83,7 @@ export interface Site{
     },    
     /* Electricity */
     electricity: {
-        description: string,
+        //description: string,
         piping_and_accessories: number, //meters
         cabling: number, //meters
         sources: string, 
@@ -93,7 +93,7 @@ export interface Site{
     },    
     /* Water */
     water: {
-        description: string,
+        //description: string,
         piping_and_accessories: number, //meters
         cabling: number, //meters
         sources: string, 
@@ -103,7 +103,7 @@ export interface Site{
     },
     /* Steps */
     steps: null| {
-        description: string,
+        //description: string,
         concrete_work: number,
         width: number,
         length: number,
@@ -115,7 +115,7 @@ export interface Site{
     },
     /* Gas tanks */
     gas_tanks: null|{
-        description: string,
+        //description: string,
         quantity: number 
         condition: string, //working|not_working|repairable
         damage: number, //percentage 25|50|75
@@ -123,7 +123,7 @@ export interface Site{
     },
     /* Ramps */
     ramps: null|{
-        description: string,
+        //description: string,
         width: number,
         sloping_length: number,
         concrete_work: number, //cubic meters
@@ -132,7 +132,7 @@ export interface Site{
     },
     /* Street lights */
     street_lights: null|{
-        description: string,
+        //description: string,
         quantity: number,
         height: number,
         condition: string, //working|not_working|incomplete/repairable|obsolete
@@ -140,7 +140,7 @@ export interface Site{
     },
     /* Waste site */
     waste_site: null|{
-        description: string,
+        //description: string,
         length: number,
         width: number,
         position: {

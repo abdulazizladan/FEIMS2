@@ -1,3 +1,4 @@
+<!-- Add sites -->
 <h2 mat-dialog-title>
   Add site
   <span fxFlex="1 1 auto">
@@ -10,36 +11,41 @@
   </button>
 </h2>
 
-<div mat-dialog-content>
-  <mat-vertical-stepper linear labelPosition="bottom"> 
-    <form [formGroup]="siteForm">
-    
-    <mat-step>
-      <ng-template matStepLabel>Basic data</ng-template>
-    <div fxLayout="column" fxLayoutGap="20px">
+<button mat-flat-button mat-dialog-close color="primary" *ngIf="submitted">
+  Site details added successfully!!
+</button>
 
-      <div [formGroup]="siteForm.controls.site" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
+<div mat-dialog-content *ngIf="!submitted">
+  <mat-horizontal-stepper linear labelPosition="bottom"> 
+    <form [formGroup]="siteForm">    
+    <mat-step [stepControl]="siteForm">
+      <ng-template matStepLabel>Basic data</ng-template>
+    
+      <div fxLayout="column" fxLayoutGap="20px">
+
+      <!--<div fxFlex.gt-xs="100%" [formGroup]="siteForm.controls.site" fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">-->
+      <div fxFlex.gt-xs="100%" fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px">
         
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="35%">
           <mat-label>Site name</mat-label>
           <input type="text" matInput formControlName="name">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="10%">
           <mat-label>Site code</mat-label>
           <input type="text" matInput formControlName="code">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="23%">
           <mat-label>State select</mat-label>
           <mat-select formControlName="state">
-            <mat-option value="abia">
-              Abia
+            <mat-option *ngFor="let state of states" value={{state.name}}>
+              {{state.name | titlecase}}
             </mat-option>
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="23%">
           <mat-label>LGA select</mat-label>
           <mat-select formControlName="lga">
             <mat-option value="lg1">
@@ -48,41 +54,44 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="48%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="45%">
           <mat-label>Street address</mat-label>
           <textarea style="resize:none;" matInput formControlName="street_address"></textarea>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="23%">
           <mat-label>Overall site measurement</mat-label>
-          <input type="number" matInput formControlName="measurement">
-          <span matSuffix>m<sup>2</sup></span>
+          <input type="text" matInput class="right-align" formControlName="measurement">
+          <span matSuffix> m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="23%">
           <mat-label>Site level</mat-label>
-          <input type="number" matInput formControlName="level">
+          <input type="text" matInput class="right-align" formControlName="level">
           <span matSuffix>m</span>
         </mat-form-field>
 
         <div formGroupName="position" fxFlex="1 1 auto" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
           
-          <mat-form-field appearance="outline" fxFlex.gt-xs="48%">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="48%">
             <mat-label>Site position</mat-label>
-            <input type="number" matInput formControlName="longitude">
-            <span matSuffix>Longitude</span>
+            <input type="text" matInput class="right-align" formControlName="longitude">
+            <span matSuffix>longitude</span>
           </mat-form-field>
 
-          <mat-form-field appearance="outline" fxFlex.gt-xs="48%">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="48%">
             <mat-label>Site position</mat-label>
-            <input type="number" matInput formControlName="latitude">
-            <span matSuffix>Latitude</span>
+            <input type="text" matInput class="right-align" formControlName="latitude">
+            <span matSuffix>latitude</span>
           </mat-form-field>
         </div>
 
-          <input formControlName="map" type="file" size="60" placeholder="Site plan">
-
-        <mat-form-field appearance="outline" fxFlex.gt-xs="100%">
+        <label class="file">
+          <input id="file" formControlName="map" type="file"  placeholder="Site plan">
+          <span class="file-custom"></span>
+        </label>
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="100%">
           <mat-label>General comments</mat-label>
           <textarea formControlName="comment" style="resize:none;" matInput></textarea>
         </mat-form-field>
@@ -102,30 +111,30 @@
     <mat-divider></mat-divider>
     
     <!-- Gate -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.gate">
       <ng-template matStepLabel>Gate</ng-template>
-    <div fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="column" fxLayoutGap="20px" style="height: 100%">
       
-      <div [formGroup]="siteForm.controls.gate" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div fxLayoutAlign.gt-xs="space-between" fxFlex.gt-xs="100%" [formGroup]="siteForm.controls.gate" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutFap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Size</mat-label>
           <input type="text" matInput formControlName="size">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Thickness</mat-label>
           <input type="text" matInput formControlName="thickness">
           <span matSuffix>mm</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
             <mat-option value="working">
@@ -140,7 +149,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -149,10 +158,10 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
           <mat-label>Cost of repair</mat-label>
-          <input type="number" matInput formControlName="cost_of_repair" formControlName="cost_of_repair">
-          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          <input type="text" matInput formControlName="cost_of_repair" formControlName="cost_of_repair">
+          <span matPrefix>&#8358; &nbsp;</span><span matSuffix>.00</span>
         </mat-form-field>
 
       </div>
@@ -175,67 +184,67 @@
     <mat-divider></mat-divider>
 
     <!-- Fence -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.fence">
       <ng-template matStepLabel>Fence</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
       
-      <div [formGroup]="siteForm.controls.fence" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+      <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.fence" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Height</mat-label>
           <input type="text" matInput formControlName="fence_height">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Perimeter</mat-label>
           <input type="text" matInput formControlName="perimeter">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Concrete work</mat-label>
-          <input type="number" matInput formControlName="concrete_work">
+          <input type="text" matInput formControlName="concrete_work">
           <span matSuffix>m<sup>3</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Block work</mat-label>
-          <input type="number" matInput formControlName="block_work">
+          <input type="text" matInput formControlName="block_work">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Form work</mat-label>
-          <input type="number" matInput formControlName="form_work">
+          <input type="text" matInput formControlName="form_work">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Reinforcement</mat-label>
-          <input type="number" matInput formControlName="reinforcement">
+          <input type="text" matInput formControlName="reinforcement">
           <span matSuffix>kg</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Rendering</mat-label>
-          <input type="number" matInput formControlName="rendering">
+          <input type="text" matInput formControlName="rendering">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Barb wire</mat-label>
-          <input type="number" matInput formControlName="barb_wire">
+          <input type="text" matInput formControlName="barb_wire">
           <span matSuffix>m</span>
         </mat-form-field>
 
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
             <mat-option value="working">
@@ -250,7 +259,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -259,9 +268,9 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
           <mat-label>Cost of repair</mat-label>
-          <input type="number" matInput formControlName="cost_of_repair">
+          <input type="text" matInput formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
 
@@ -284,36 +293,36 @@
     <mat-divider></mat-divider>
 
     <!-- Roads -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.roads">
       <ng-template matStepLabel>Roads</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
       
-      <div [formGroup]="siteForm.controls.roads" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.roads" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Width</mat-label>
           <input type="text" matInput formControlName="width">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Length</mat-label>
-          <input type="number" matInput formControlName="length">
+          <input type="text" matInput formControlName="length">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Surface dressing</mat-label>
           <input type="text" matInput formControlName="surface_dressing">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
             <mat-option value="tarred">
@@ -334,7 +343,7 @@
           </mat-select>          
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -343,9 +352,9 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
           <mat-label>Cost of repair</mat-label>
-          <input type="number" matInput formControlName="cost_of_repair">
+          <input type="text" matInput formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
 
@@ -368,36 +377,36 @@
     <mat-divider></mat-divider>
 
     <!-- Paths & pavement-->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.paths">
       <ng-template matStepLabel>Paths & Pavements</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">        
       
-      <div [formGroup]="siteForm.controls.paths" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.paths" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Width</mat-label>
           <input type="text" matInput formControlName="width">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>length</mat-label>
-          <input type="number" matInput formControlName="length">
+          <input type="text" matInput formControlName="length">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Surface dressing</mat-label>
           <input type="text" matInput formControlName="surface_dressing">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
             <mat-option value="tarred">
@@ -418,7 +427,7 @@
           </mat-select>          
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -427,9 +436,9 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
           <mat-label>Cost of repair</mat-label>
-          <input type="number" matInput formControlName="cost_of_repair">
+          <input type="text" matInput formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
         </mat-form-field>
 
@@ -451,36 +460,36 @@
     </mat-step>
 
     <!-- Driveway -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.driveway">
       <ng-template matStepLabel>Driveway</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
       
-      <div [formGroup]="siteForm.controls.driveway" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.driveway" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Width</mat-label>
           <input type="text" matInput>
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>length</mat-label>
-          <input type="number" matInput>
+          <input type="text" matInput>
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Surface dressing</mat-label>
           <input type="text" matInput formControlName="surface_dressing">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
             <mat-option value="tarred">
@@ -501,7 +510,7 @@
           </mat-select>          
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -510,7 +519,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
           <mat-label>Cost of repair</mat-label>
           <input type="number" matInput formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -536,60 +545,60 @@
 
     <!-- Drainage -->
 
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.drainage">
       <ng-template matStepLabel>Drainage</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">        
       
-      <div [formGroup]="siteForm.controls.drainage" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div [formGroup]="siteForm.controls.drainage" fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Depth</mat-label>
           <input type="text" matInput formControlName="depth">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Length</mat-label>
           <input type="number" matInput formControlName="length">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Concrete work</mat-label>
           <input type="text" matInput formControlName="concrete_work">
           <span matSuffix>m<sup>3</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Block work</mat-label>
           <input type="text" matInput formControlName="block_work">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Form work</mat-label>
           <input type="text" matInput formControlName="form_work">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Reinforcement</mat-label>
           <input type="text" matInput formControlName="reinforcement">
           <span matSuffix>kg</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Rendering</mat-label>
           <input type="text" matInput formControlName="rendering">
           <span matSuffix>m<sup>2</sup></span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
             <mat-option value="working">
@@ -604,7 +613,7 @@
           </mat-select>          
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -613,7 +622,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
           <mat-label>Cost of repair</mat-label>
           <input type="number" matInput formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -638,50 +647,50 @@
     <mat-divider></mat-divider>
 
     <!-- Electricity-->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.electricity">
       <ng-template matStepLabel>Electricity</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">
         
-      <div [formGroup]="siteForm.controls.electricity" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.electricity" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Piping/Accessories</mat-label>
           <input type="text" matInput formControlName="piping_and_accessories">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Cabling</mat-label>
           <input type="number" matInput formControlName="cabling">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Sources</mat-label>
           <input type="text" matInput formControlName="sources">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
-            <mat-option value="working" fxFlex.gt-xs="23%">
+            <mat-option value="working">
               Working
             </mat-option>
-            <mat-option value="not_working" fxFlex.gt-xs="23%">
+            <mat-option value="not_working">
               Not working
             </mat-option>
-            <mat-option value="repairable" fxFlex.gt-xs="23%">
+            <mat-option value="repairable">
               Repairable
             </mat-option>       
           </mat-select>          
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -690,7 +699,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
           <mat-label>Cost of repair</mat-label>
           <input type="number" matInput formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -716,29 +725,29 @@
     <mat-divider></mat-divider>
 
     <!-- Water -->
-    <mat-step>
+    <mat-step [stepControl]="siteForm.controls.water">
       <ng-template matStepLabel>Water</ng-template>
     <div fxLayout="column" fxLayoutGap="20px">        
       
-      <div [formGroup]="siteForm.controls.water" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+      <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.water" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <mat-form-field appearance="outline">
+        <!--<mat-form-field appearance="outline">
           <mat-label>Descripton</mat-label>
           <input type="text" matInput formControlName="description">
-        </mat-form-field>
+        </mat-form-field>-->
 
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Piping/Accessories</mat-label>
           <input type="text" matInput formControlName="piping_and_accessories">
           <span matSuffix>m</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Sources</mat-label>
           <input type="text" matInput formControlName="sources">
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Condition</mat-label>
           <mat-select formControlName="condition">
             <mat-option value="working">
@@ -753,7 +762,7 @@
           </mat-select>          
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Damage</mat-label>
           <mat-select formControlName="damage">
             <mat-option value=25> 25% </mat-option>
@@ -762,7 +771,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
           <mat-label>Cost of repair</mat-label>
           <input type="number" matInput formControlName="cost_of_repair">
           <span matPrefix>&#8358;</span><span matSuffix>.00</span>
@@ -789,97 +798,163 @@
     <mat-step>
       <ng-template matStepLabel>Others</ng-template>
     <div fxLayout="column" fxLayoutGap="10px">
-      
+
+      <!-- Steps -->        
       <div fxLayout="column"  fxLayoutGap="10px">
-        <div fxLayout="column"  fxLayoutGap="10px">        
-          <div>
-            <button mat-flat-button color="primary" (click)="addSteps()" *ngIf="!hasSteps">
-              <mat-icon>
-                add
-              </mat-icon> 
-              Add Steps
-            </button>         
-            <button mat-flat-button color="warn" (click)="removeSteps()" *ngIf="hasSteps">
-              <mat-icon>
-                cancel
-              </mat-icon> 
-              Remove Steps
-            </button>
-            <h1 *ngIf="hasSteps">
-              Steps
+          
+        <div fxLayout="row">
+          <span fxFlex="1 1 auto"></span>
+          <button mat-stroked-button color="primary" (click)="addSteps()" *ngIf="!hasSteps">
+            <mat-icon>
+              add
+            </mat-icon> 
+            Add Steps
+          </button>         
+          <button mat-stroked-button color="warn" (click)="removeSteps()" *ngIf="hasSteps">
+            <mat-icon>
+              cancel
+            </mat-icon> 
+            Remove Steps
+          </button>
+          </div>
+
+          <h1 *ngIf="hasSteps">
+            Steps
+          </h1>
+          <mat-divider *ngIf="hasSteps"></mat-divider>
+          <div fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" *ngIf="hasSteps" [formGroup]="siteForm.controls.steps" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+            
+            
+            <!--<mat-form-field appearance={{appearance}} fxFlex="50%">
+              <mat-label>
+                Description
+              </mat-label>
+              <input matInput formControlName="description">
+            </mat-form-field>-->
+
+            <mat-form-field appearance={{appearance}} fxFlex="20%">
+              <mat-label>
+                Concrete work
+              </mat-label>
+              <input matInput formControlName="concrete_work">
+              <span matSuffix>m<sup>3</sup></span>
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex="20%">
+              <mat-label>
+                Width
+              </mat-label>
+              <input matInput formControlName="width">
+              <span matSuffix>m</span>
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex="20%">
+              <mat-label>
+                Length
+              </mat-label>
+              <input matInput formControlName="length">
+              <span matSuffix>m</span>
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex="20%">
+              <mat-label>
+                Quantity
+              </mat-label>
+              <input matInput formControlName="quantity">
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex="20%">
+              <mat-label>
+                surface dressing
+              </mat-label>
+              <input matInput formControlName="surface_dressing">
+              <span matSuffix>m<sup>2</sup></span>
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+              <mat-label>Condition</mat-label>
+              <mat-select formControlName="condition">
+                <mat-option value="tarred">
+                  tarred
+                </mat-option>
+                <mat-option value="untarred">
+                  untarred
+                </mat-option>
+                <mat-option value="graded">
+                  graded
+                </mat-option>
+                <mat-option value="potholes">
+                  potholes
+                </mat-option>
+                <mat-option value="bad_patches">
+                  bad patches
+                </mat-option>            
+              </mat-select>          
+            </mat-form-field>
+    
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+              <mat-label>Damage</mat-label>
+              <mat-select formControlName="damage">
+                <mat-option value=25> 25% </mat-option>
+                <mat-option value=50> 50% </mat-option>
+                <mat-option value=25> 75% </mat-option>
+              </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
+              <mat-label>Cost of repair</mat-label>
+              <input matInput formControlName="cost_of_repair">
+              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+            </mat-form-field>
+
+          </div>
+
+          <div fxLayout="column">
+            
+            <div fxLayout="row">
+              <span fxFlex="1 1 auto"></span>
+              <button mat-stroked-button color="primary" *ngIf="!hasGasTanks" (click)="addGasTanks()">
+                <mat-icon>
+                  add
+                </mat-icon> 
+                Add Gas Tanks
+              </button>
+              <button mat-stroked-button color="warn" *ngIf="hasGasTanks" (click)="removeGasTanks()">
+                <mat-icon>
+                  cancel
+                </mat-icon> 
+                Remove gas tanks
+              </button>
+            </div>
+            <h1 *ngIf="hasGasTanks">
+              Gas tanks
             </h1>
-            <mat-divider *ngIf="hasSteps"></mat-divider>
-            <div fxLayout.gt-xs="row wrap" *ngIf="hasSteps" [formGroup]="siteForm.controls.steps" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+            <mat-divider *ngIf="hasGasTanks"></mat-divider>
+            <div fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" *ngIf="hasGasTanks" [formGroup]="siteForm.controls.gas_tanks" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
               
-              
-              <mat-form-field appearance="outline" fxFlex="50%">
-                <mat-label>
-                  Description
-                </mat-label>
-                <input matInput formControlName="description">
-              </mat-form-field>
-
-              <mat-form-field appearance="outline" fxFlex="23%">
-                <mat-label>
-                  Concrete work
-                </mat-label>
-                <input matInput formControlName="concrete_work">
-                <span matSuffix>m<sup>3</sup></span>
-              </mat-form-field>
-
-              <mat-form-field appearance="outline" fxFlex="23%">
-                <mat-label>
-                  Width
-                </mat-label>
-                <input matInput formControlName="width">
-                <span matSuffix>m</span>
-              </mat-form-field>
-
-              <mat-form-field appearance="outline" fxFlex="23%">
-                <mat-label>
-                  Length
-                </mat-label>
-                <input matInput formControlName="length">
-                <span matSuffix>m</span>
-              </mat-form-field>
-
-              <mat-form-field appearance="outline" fxFlex="23%">
+              <mat-form-field appearance={{appearance}} fxFlex="20%">
                 <mat-label>
                   Quantity
                 </mat-label>
                 <input matInput formControlName="quantity">
               </mat-form-field>
-
-              <mat-form-field appearance="outline" fxFlex="23%">
-                <mat-label>
-                  surface dressing
-                </mat-label>
-                <input matInput formControlName="surface_dressing">
-                <span matSuffix>m<sup>2</sup></span>
-              </mat-form-field>
   
-              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+              <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
                 <mat-label>Condition</mat-label>
                 <mat-select formControlName="condition">
-                  <mat-option value="tarred">
-                    tarred
+                  <mat-option value="working">
+                    working
                   </mat-option>
-                  <mat-option value="untarred">
-                    untarred
+                  <mat-option value="not_working">
+                    not working
                   </mat-option>
-                  <mat-option value="graded">
-                    graded
-                  </mat-option>
-                  <mat-option value="potholes">
-                    potholes
-                  </mat-option>
-                  <mat-option value="bad_patches">
-                    bad patches
+                  <mat-option value="repairable">
+                    repairable
                   </mat-option>            
                 </mat-select>          
               </mat-form-field>
       
-              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+              <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
                 <mat-label>Damage</mat-label>
                 <mat-select formControlName="damage">
                   <mat-option value=25> 25% </mat-option>
@@ -888,94 +963,239 @@
                 </mat-select>
               </mat-form-field>
       
-              <mat-form-field appearance="outline" fxFlex.gt-xs="23%">
+              <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
                 <mat-label>Cost of repair</mat-label>
                 <input matInput formControlName="cost_of_repair">
                 <span matPrefix>&#8358;</span><span matSuffix>.00</span>
               </mat-form-field>
+            </div>  
+          </div>
+          <!-- /Steps -->
 
-            </div>
+          <!-- Ramps -->
+      <div fxLayout="column">
+        
+        <div fxLayout="row">
+          <span fxFlex="1 1 auto"></span>
+          <button mat-stroked-button color="primary" *ngIf="!hasRamps" (click)="addRamps()">
+            <mat-icon>
+              add
+            </mat-icon> 
+            Add Ramps
+          </button>
+          <button mat-stroked-button color="warn" *ngIf="hasRamps" (click)="removeRamps()">
+            <mat-icon>
+              cancel
+            </mat-icon> 
+            Remove Ramps
+          </button>
+        </div>
 
-          </div>
-          <div>
-            <button mat-flat-button color="primary" *ngIf="!hasGasTanks" (click)="addGasTanks()">
-              <mat-icon>
-                add
-              </mat-icon> 
-              Add Gas Tanks
-            </button>
-            <button mat-flat-button color="warn" *ngIf="hasGasTanks" (click)="removeGasTanks()">
-              <mat-icon>
-                cancel
-              </mat-icon> 
-              Remove gas tanks
-            </button>
-            
-          </div>
-          <div>
-            <button mat-flat-button color="primary" *ngIf="!hasRamps" (click)="addRamps()">
-              <mat-icon>
-                add
-              </mat-icon> 
-              Add Ramps
-            </button>
-            <button mat-flat-button color="warn" *ngIf="hasRamps" (click)="removeRamps()">
-              <mat-icon>
-                cancel
-              </mat-icon> 
-              Remove Ramps
-            </button>
-          </div>
-          <div>
-            <button mat-flat-button color="primary" *ngIf="!hasStreetLights" (click)="addStreetLights()">
+        <mat-divider *ngIf="hasRamps"></mat-divider>
+        <h1 *ngIf="hasRamps">
+          Ramps
+        </h1>
+        <div fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" *ngIf="hasRamps" [formGroup]="siteForm.controls.ramps" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+          
+          <mat-form-field appearance={{appearance}} fxFlex="25%">
+            <mat-label>
+              width
+            </mat-label>
+            <input matInput formControlName="width">
+          </mat-form-field>
+
+          <mat-form-field appearance={{appearance}} fxFlex="25%">
+            <mat-label>
+              sloping length
+            </mat-label>
+            <input matInput formControlName="sloping_length">
+          </mat-form-field>
+
+          <mat-form-field appearance={{appearance}} fxFlex="25%">
+            <mat-label>
+              concrete work
+            </mat-label>
+            <input matInput formControlName="concrete_work">
+          </mat-form-field>
+
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
+            <mat-label>Condition</mat-label>
+            <mat-select formControlName="condition">
+              <mat-option value="tarred">
+                working
+              </mat-option>
+              <mat-option value="untarred">
+                not working
+              </mat-option>
+              <mat-option value="graded">
+                repairable
+              </mat-option>            
+            </mat-select>          
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" fxFlex.gt-xs="50%">
+            <mat-label>Cost of repair</mat-label>
+            <input matInput formControlName="cost_of_repair">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>
+        </div>
+      </div>
+
+      
+        
+        <!-- Street lights -->
+        
+        <div fxLayout="column">
+          <div fxLayout="row">
+            <span fxFlex="1 1 auto"></span>
+            <button mat-stroked-button color="primary" *ngIf="!hasStreetLights" (click)="addStreetLights()">
               <mat-icon>
                 add
               </mat-icon> 
               Add Street Lights
             </button>
-            <button mat-flat-button color="warn" *ngIf="hasStreetLights" (click)="removeStreetLights()">
+            <button mat-stroked-button color="warn" *ngIf="hasStreetLights" (click)="removeStreetLights()">
               <mat-icon>
                 cancel
               </mat-icon> 
               Remove Street Lights
             </button>
           </div>
-          <div>
-            <button mat-flat-button color="primary" *ngIf="!hasWasteSite" (click)="addWasteSite()">
+
+          <mat-divider *ngIf="hasStreetLights"></mat-divider>
+          <h1 *ngIf="hasStreetLights">
+            Street lights
+          </h1>
+          <div fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" *ngIf="hasStreetLights" [formGroup]="siteForm.controls.street_lights" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+            
+            <mat-form-field appearance={{appearance}} fxFlex="20%">
+              <mat-label>
+                quantity
+              </mat-label>
+              <input matInput formControlName="quantity">
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex="20%">
+              <mat-label>
+                height
+              </mat-label>
+              <input matInput formControlName="height">
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+              <mat-label>Condition</mat-label>
+              <mat-select formControlName="condition">
+                <mat-option value="working">
+                  working
+                </mat-option>
+                <mat-option value="not_working">
+                  not working
+                </mat-option>
+                <mat-option value="incomplete">
+                  incomplete
+                </mat-option> 
+                <mat-option value="repairable">
+                  repairable
+                </mat-option>  
+                <mat-option value="Obsolete">
+                  obsolete
+                </mat-option>           
+              </mat-select>          
+            </mat-form-field>
+    
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
+              <mat-label>Cost of repair</mat-label>
+              <input matInput formControlName="cost_of_repair">
+              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+            </mat-form-field>
+          </div>
+
+        </div>
+        
+        <!-- Waste site -->
+        
+        <div fxLayout="column">
+          <div fxLayout="row">
+            <span fxFlex="1 1 auto"></span>
+            <button mat-stroked-button color="primary" *ngIf="!hasWasteSite" (click)="addWasteSite()">
               <mat-icon>
                 add
               </mat-icon> 
               Add Waste site
             </button>
-            <button mat-flat-button color="warn" *ngIf="hasWasteSite" (click)="removeWasteSite()">
+            <button mat-stroked-button color="warn" *ngIf="hasWasteSite" (click)="removeWasteSite()">
               <mat-icon>
                 cancel
               </mat-icon> 
               Remove Waste site
             </button>
           </div>
-          <!--<div>
-            <button mat-flat-button color="primary"><mat-icon>add</mat-icon> Add Others</button>
-          </div>-->
+
+          <mat-divider *ngIf="hasWasteSite"></mat-divider>
+          <h1 *ngIf="hasWasteSite">
+            Waste site
+          </h1>
+          <div fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" *ngIf="hasWasteSite" [formGroup]="siteForm.controls.waste_site" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid"> 
+            
+            <mat-form-field appearance={{appearance}} fxFlex="25%">
+              <mat-label>
+                length
+              </mat-label>
+              <input matInput formControlName="length">
+            </mat-form-field>
+
+            <mat-form-field appearance={{appearance}} fxFlex="25%">
+              <mat-label>
+                width
+              </mat-label>
+              <input matInput formControlName="width">
+            </mat-form-field>
+
+            <div fxLayoutAlign.gt-xs="space-between" formGroupName="position" fxFlex="50%" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayout.gt-xs="row wrap">
+        
+              <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
+                <mat-label>Site position</mat-label>
+                <input type="number" matInput formControlName="longitude">
+                <span matSuffix>Longitude</span>
+              </mat-form-field>
+    
+              <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
+                <mat-label>Site position</mat-label>
+                <input type="number" matInput formControlName="latitude">
+                <span matSuffix>Latitude</span>
+              </mat-form-field>
+            </div>
+    
+            <mat-form-field appearance={{appearance}} fxFlex.gt-xs="50%">
+              <mat-label>Cost of repair</mat-label>
+              <input matInput formControlName="cost_of_repair">
+              <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+            </mat-form-field>
+          </div>
+
         </div>
+        
+        
+      </div>
+
+      <div fxLayout="row">
+        <button mat-flat-button color="primary" matStepperPrevious>
+          <mat-icon>chevron_left</mat-icon>
+          Previous
+        </button>
+        <span fxFlex="1 1 auto"></span>
+        <button mat-flat-button color="primary" [disabled]="siteForm.invalid" (click)="submit()">
+          <mat-icon>check</mat-icon>
+          Add site
+        </button>
       </div>
 
     </div>
-
-    <div fxLayout="row">
-      <button mat-flat-button color="primary" matStepperPrevious>Previous</button>
-      <span fxFlex="1 1 auto"></span>
-      <button mat-flat-button color="primary" (click)="submit(null)">
-        <mat-icon>check</mat-icon>
-        Add site
-      </button>
-    </div>
   </mat-step>
   </form>
-</mat-vertical-stepper>
+</mat-horizontal-stepper>
 </div>
 
-<div mat-dialog-actions align="end">
-  <button mat-button>Preview</button>
-  <button [disabled]="siteForm.invalid" mat-flat-button color="primary">Submit</button>
+<div mat-dialog-actions align="end" *ngIf="error">
+  <span color="warn" style="color:red" class="mat-h4">Unable to complete action.</span>
 </div>

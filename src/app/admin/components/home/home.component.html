@@ -1,9 +1,9 @@
 
-<!-- SECOND ROW -->
+<!-- Pills -->
 
 <div fxLayout="row">
   <span fxFlex="1 1 auto"></span>
-  <button mat-flat-button color="primary" (click)="openAddSiteDialog()">
+  <button mat-flat-button color="primary" (click)="openAddSiteDialog()" matTooltip="Add site details">
     <mat-icon>add</mat-icon>
     Add site
   </button>
@@ -17,8 +17,7 @@
         <span style="width: 20px"></span>
         <div>
           <p class="m-0 text-14 text-muted line-height-1">Sites</p>
-          <span class="text-18 font-weight-bold text-green">2
-              <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+          <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
         </div>
       </mat-card>
     </div>
@@ -30,8 +29,7 @@
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Buildings</p>
-            <span class="text-18 font-weight-bold text-green">2
-                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+            <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
           </div>
         </mat-card>
     </div>
@@ -43,8 +41,7 @@
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Equipment (HV)</p>
-            <span class="text-18 font-weight-bold text-green">2
-                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+            <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
           </div>
         </mat-card>
     </div>
@@ -56,8 +53,7 @@
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Equipment (LV)</p>
-            <span class="text-18 font-weight-bold text-green">2
-                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+            <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
           </div>
         </mat-card>
     </div>
@@ -69,8 +65,7 @@
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Obsolete</p>
-            <span class="text-18 font-weight-bold text-green">2
-                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+            <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
           </div>
         </mat-card>
     </div>
@@ -82,8 +77,7 @@
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Abandoned</p>
-            <span class="text-18 font-weight-bold text-green">2
-                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+            <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
           </div>
         </mat-card>
     </div>
@@ -95,8 +89,7 @@
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Repairable</p>
-            <span class="text-18 font-weight-bold text-green">2
-                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+            <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
           </div>
         </mat-card>
     </div>
@@ -108,63 +101,15 @@
           <span style="width: 20px"></span>
           <div>
             <p class="m-0 text-14 text-muted line-height-1">Good Condition</p>
-            <span class="text-18 font-weight-bold text-green">2
-                <!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
+            <span class="text-18 font-weight-bold text-green">0<!--<span class="material-icons mat-icon-18">arrow_drop_up</span>--></span>
           </div>
         </mat-card>
     </div>
     
   </div>
-  <!--/ SECOND ROW 
 
-  <div fxLayout="row wrap">
-    <div
-      fxFlex="100"
-      fxFlex.gt-sm="66.67"
-      fxFlex.sm="50"
-      [@animate]="{ value: '*', params: { y: '50px', delay: '600ms' } }"
-    >
-      <mat-card class="p-0 ">
-        
-            <div
-              echarts
-              [options]="trafficVsSaleOptions"
-              [merge]="trafficVsSale"
-              [autoResize]="true"
-              style="height: 255px;"
-            ></div>
-            <div
-              echarts
-              [options]="sessionOptions"
-              [merge]="sessions"
-              [autoResize]="true"
-              style="height: 255px;"
-            ></div>
-      </mat-card>
-    </div>
-    / End tab -->
-  
-    <!-- Donut chart
-    <div
-      fxFlex="100"
-      fxFlex.gt-sm="33.33"
-      fxFlex.sm="50"
-      [@animate]="{ value: '*', params: { y: '50px', delay: '400ms' } }"
-    >
-      <mat-card class="p-0 ">
-        <p class=" ml-16 mt-16">TRAFFIC SOURCES</p>
-        <div
-          echarts
-          [options]="trafficSourcesChart"
-          [autoResize]="true"
-          style="height: 250px;"
-        ></div>
-      </mat-card>
-    </div>
-    / End donut chart -->
-    <!--/ End 2nd row -->
-
-    <app-charts></app-charts>
+  <!-- Charts component -->
+  <app-charts></app-charts>
 
   <div fxLayout="row wrap">
     <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{scale:'.9',delay:'300ms'}}">
@@ -175,10 +120,10 @@
           <mat-chip
           class="icon-chip" 
           color="primary" 
-          selected="true"><mat-icon>trending_up</mat-icon>20%</mat-chip>
+          selected="true"><mat-icon>trending_up</mat-icon>0%</mat-chip>
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">252,450</h3>
+          <h3 class="m-0 font-normal">&#8358;0.00</h3>
           <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>
@@ -192,10 +137,10 @@
           <mat-chip
           class="icon-chip" 
           color="accent" 
-          selected="true"><mat-icon>trending_up</mat-icon>10%</mat-chip>
+          selected="true"><mat-icon>trending_up</mat-icon>0%</mat-chip>
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">377,670</h3>
+          <h3 class="m-0 font-normal">&#8358;0.00</h3>
           <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>
@@ -209,10 +154,10 @@
           <mat-chip
           class="icon-chip" 
           color="accent" 
-          selected="true"><mat-icon>trending_up</mat-icon>9%</mat-chip>
+          selected="true"><mat-icon>trending_up</mat-icon>0%</mat-chip>
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">54,845</h3>
+          <h3 class="m-0 font-normal">&#8358;0.00</h3>
           <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>
@@ -226,10 +171,10 @@
           <mat-chip
           class="icon-chip" 
           color="warn" 
-          selected="true"><mat-icon>trending_down</mat-icon>2%</mat-chip>
+          selected="true"><mat-icon>trending_down</mat-icon>0%</mat-chip>
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">245</h3>
+          <h3 class="m-0 font-normal">&#8358;0.00</h3>
           <small class="text-muted">2020</small>
         </mat-card-content>
       </mat-card>

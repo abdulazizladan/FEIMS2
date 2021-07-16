@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { Site } from 'app/admin/models/site.model';
+import { SiteService } from 'app/admin/services/site.service';
 import { addSite } from 'app/store/site/site.actions';
+import { Subscription } from 'rxjs';
 import { SiteState } from '../../../store/site/site.state';
 
 @Component({
@@ -10,9 +14,20 @@ import { SiteState } from '../../../store/site/site.state';
   templateUrl: './add-site.component.html',
   styleUrls: ['./add-site.component.scss']
 })
+/** 
+ * Component that adds new site. 
+ * */
 export class AddSiteComponent implements OnInit {
 
-  expansionPanelStep: number = 0;
+  //expansionPanelStep: number = 0;
+
+  public states: any;
+
+  submitted: boolean = false;
+  error: boolean = false;
+  private subscription: Subscription;
+
+  public appearance="fill";
 
   public siteForm: FormGroup;//Site form
   public hasSteps: boolean;
@@ -22,32 +37,73 @@ export class AddSiteComponent implements OnInit {
   public hasWasteSite: boolean;
   public hasOthers: boolean;
 
-  constructor(private fb: FormBuilder, private store: Store<{ site: SiteState }>) { }
+  constructor( 
+    private siteService: SiteService, 
+    private fb: FormBuilder, 
+    private store: Store<{ site: SiteState }>, 
+    private dialogRef: MatDialogRef<any>) { }
 
+  /**
+   * First lifecycle hook
+   */
   ngOnInit(): void {
     this.initializeForm();
   }
 
+  /**
+   * OnDestroy lifecycle hook
+   */
+  ngOnDestroy() : void {
+    //this.subscription.unsubscribe();
+  }
+
+  /**
+   * POSTs request to store new site
+   */
+  submit() {
+    const data = this.siteForm.value;
+    this.subscription = this.siteService.addSite(data).subscribe(
+      response => {
+        this.submitted = true;
+        this.store.dispatch(addSite({site: data}))
+        setTimeout(
+          () => {
+            this.dialogRef.close()
+          },
+          2000
+        )        
+      },
+      error => {
+        this.error = true;
+        console.log(error)
+      }
+    )
+  }
+
+  /**
+   * Initialize form controls
+   */
+
   initializeForm():void {
 
+    this.getStates();
+
     this.siteForm = this.fb.group({
-      site: this.fb.group({
-        name: ['', [Validators.required]],
-        code: ['', [Validators.required]],
-        state: ['', [Validators.required]],
-        lga: ['', [Validators.required]],
-        street_address: ['', [Validators.required]],
-        measurement: [0, [Validators.required]],
-        level: [0, [Validators.required]],
-        position: this.fb.group({
-          longitude: [0, []],
-          latitude: [0, []]
-        }),
-        map: ['', []],
-        comment: ['', [Validators.required]]
+      name: ['', [Validators.required]],
+      code: ['', [Validators.required]],
+      state: ['', [Validators.required]],
+      lga: ['', [Validators.required]],
+      street_address: ['', [Validators.required]],
+      measurement: [0, [Validators.required]],
+      level: [0, []],
+      position: this.fb.group({
+        longitude: [0, []],
+        latitude: [0, []]
       }),
+      map: ['', []],
+      comment: ['', [Validators.required]],
       gate: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         size: [0, []],
         thickness: [0, []],
         condition: ['', []],
@@ -55,7 +111,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       fence: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         fence_height: [0, []],
         perimeter: [0, []],
         concrete_work: [0, []],
@@ -69,7 +125,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       roads: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         width: [0, []],
         length: [0, []],
         surface_dressing: [0, []],
@@ -78,7 +134,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []],
       }),
       paths: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         width: [0, []],
         length: [0, []],
         surface_dressing: [0, []],
@@ -87,7 +143,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       driveway: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         width: [0, []],
         length: [0, []],
         surface_dressing: [0, []],
@@ -96,7 +152,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       drainage: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         depth: [0, []],
         length: [0, []],
         concrete_work: [0, []],
@@ -109,7 +165,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       electricity: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         piping_and_accessories: [0, []],
         cabling: [0, []],
         sources: ['', []],
@@ -118,7 +174,7 @@ export class AddSiteComponent implements OnInit {
         cost_of_repair: [0, []]
       }),
       water: this.fb.group({
-        description: ['', []],
+        //description: ['', []],
         piping_and_accessories: [0, []],
         cabling: [0, []],
         sources: ['', []],
@@ -136,116 +192,292 @@ export class AddSiteComponent implements OnInit {
 
   }
 
+  /**
+   * 
+   */
   stepsForm: FormGroup = this.fb.group({
-    description: ['', []],
-    concrete_work: [0, []],
-    width: [0, ],
-    length: [0, []],
-    quantity: [0, []],
+    //description: ['', []],
+    concrete_work: [0, [Validators.required]],
+    width: [0, [Validators.required, Validators.min(1)]],
+    length: [0, [Validators.required, Validators.min(1)]],
+    quantity: [0, [Validators.required, Validators.min(1)]],
     surface_dressing: [0, []],
-    condition: ['', []],
+    condition: ['', [Validators.required]],
     damage: [0, []],
-    cost_of_repair: [0, []]
+    cost_of_repair: [0, [Validators.required]]
   })
 
+  /**
+   * 
+   */
   addSteps():  void{
     this.hasSteps = true;
     this.siteForm.addControl("steps", this.stepsForm)
   }
 
+  /**
+   * 
+   */
   removeSteps(): void {
     this.hasSteps = false;
     this.siteForm.removeControl('steps');
   }
 
+  /**
+   * 
+   */
   gasTanksForm: FormGroup = this.fb.group({
-    description: ['', [Validators.required]],
+    //description: ['', [Validators.required]],
     quantity: [0, [Validators.required]],
     condition: ['', [Validators.required]],
     damage: [0, [Validators.required]],
     cost_of_repair: [0, [Validators.required]]
   })
 
+  /**
+   * 
+   */
   addGasTanks(): void {
     this.hasGasTanks = true;
     this.siteForm.addControl('gas_tanks', this.gasTanksForm)
   }
 
+  /**
+   * 
+   */
   removeGasTanks(): void {
     this.hasGasTanks = false;
     this.siteForm.removeControl('gas_tanks');
   }
-  addRamps(): FormGroup {
+
+  /**
+   * 
+   */
+  rampsForm: FormGroup = this.fb.group({
+    //description: ['', [Validators.required]],
+    width: [0, [Validators.required]],
+    sloping_length: [0, [Validators.required]],
+    concrete_work: [0, [Validators.required]],
+    condition: ['', [Validators.required]],
+    cost_of_repair: [0, [Validators.required]]
+  })
+
+  /**
+   * 
+   */
+  addRamps(): void {
     this.hasRamps = true;
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      width: [0, [Validators.required]],
-      sloping_length: [0, [Validators.required]],
-      concrete_work: [0, [Validators.required]],
-      condition: ['', [Validators.required]],
-      cost_of_repair: [0, [Validators.required]]
-    })
+    this.siteForm.addControl('ramps', this.rampsForm);
   }
 
+  /**
+   * 
+   */
   removeRamps(): void {
     this.hasRamps = false;
+    this.siteForm.removeControl('ramps');
   }
 
-  addStreetLights(): FormGroup {
+  /**
+   * 
+   */
+  streetLights: FormGroup = this.fb.group({
+    //description: ['', [Validators.required]],
+    quantity: [0, [Validators.required]],
+    height: [0, [Validators.required]],
+    condition: ['', [Validators.required]],
+    cost_of_repair: [0, [Validators.required]]
+  })
+
+  /**
+   * 
+   */
+  addStreetLights(): void {
     this.hasStreetLights = true;
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      quantity: [0, [Validators.required]],
-      height: [0, [Validators.required]],
-      condition: ['', [Validators.required]],
-      cost_of_repair: [0, [Validators.required]]
-    })
+    this.siteForm.addControl('street_lights', this.streetLights);
   }
 
+  /**
+   * 
+   */
   removeStreetLights(): void {
     this.hasStreetLights = false;
+    this.siteForm.removeControl('street_lights');
   }
 
-  addWasteSite(): FormGroup {
+  wasteSite: FormGroup = this.fb.group({
+    //description: ['', [Validators.required]],
+    length: [0, [Validators.required]],
+    width: ['', [Validators.required]],
+    position: this.fb.group({
+      longitude: [0, []],
+      latitude: [0, []]
+    }),
+    cost_of_repair: [0, [Validators.required]]
+  })
+
+  /**
+   * 
+   */
+  addWasteSite(): void {
     this.hasWasteSite = true;
-    return this.fb.group({
-      description: ['', [Validators.required]],
-      length: [0, [Validators.required]],
-      width: ['', [Validators.required]],
-      position: this.fb.group({
-        longitude: [0, [Validators.required]],
-        latitude: [0, [Validators.required]]
-      }),
-      cost_of_repair: [0, [Validators.required]]
-    })
+    this.siteForm.addControl('waste_site', this.wasteSite);
   }
 
+  /**
+   * 
+   */
   removeWasteSite(): void {
     this.hasWasteSite = false;
+    this.siteForm.removeControl('waste_site');
   }
 
-  setPanelStep( index: number) {
-    this.expansionPanelStep = index;
+  /**
+   * 
+   */
+  getStates() {
+    this.states = [
+      {
+        "name": "abia",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "adamawa",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "akwa-ibom",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "anambra",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "bauchi",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "borno",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "cross-river",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "delta",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "edo",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "enugu",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "gombe",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "imo",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "jigawa",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "kaduna",
+        "lgas": [
+          {
+            "name": "zaria"
+          },
+          {
+            "name": "igabi"
+          },
+  
+        ]
+      },
+      {
+        "name": "kano",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      },
+      {
+        "name": "katsina",
+        "lgas": [
+          {
+            "name": ""
+          },
+        ]
+      }
+    ]
   }
 
-  prevStep() {
-    this.expansionPanelStep--;
-  }
-
-  nextStep() {
-    this.expansionPanelStep++;
-  }
-
-  get steps(): FormArray {
-    return this.siteForm.get('steps') as FormArray;
-  }
-
-  submit(site: Site) {
-    this.store.dispatch(addSite({site}));
-  }
-
+  /**
+   * 
+   */
   resetForm() {
     
   }
 
 }
+

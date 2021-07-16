@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginData } from '../models/loginData.model';
-import { environment } from '../../environment';
+import { environment } from '../../../environment.dev';
 import { ApiPaths } from '../../ApiPaths';
 import { AppSocket } from '../../app.socket';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+export interface User{
+  email: string,
+  token: string,
+}
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,48 +26,85 @@ const httpOptions = {
 })
 export class AuthService {
 
+  public user: Observable<any>;
   private baseUrl= environment.baseUrl;
 
-  //private loginUrl: string = '${this.baseUrl}/${this.apiPaths.signinUrl}';
-  //private registerUrl: string = '${this.baseUrl}/${this.apiPaths.signupUrl}';
-  private readonly loginUrl: string = "https://api.narr.ng/api/v1/auth/login";
-  private readonly registerUrl: string = "https://api.narr.ng/api/v1/auth/register";
-
+  private readonly loginUrl: string = `${this.baseUrl}/${ApiPaths.signin}`;
+  private readonly registerUrl: string = `${this.baseUrl}/${ApiPaths.signup}`;
+  
+  /**
+   * Constructor
+   * @param _http 
+   * @param appSocket 
+   */
   constructor( private _http: HttpClient, private appSocket: AppSocket) {
 
    }
 
+   /**
+    * Login
+    * @param credentials
+    */
   login(credentials: LoginData){
-    return this._http.post<any>( this.loginUrl, credentials, httpOptions)
+    return this._http.post<any>( this.loginUrl, credentials, httpOptions).pipe(
+      map(user => {
+        localStorage.setItem('user', JSON.stringify(user));
+        return user;
+      })
+    )
   }
 
+  /**
+   * Register
+   * @param value
+   */
   register(value: {email: string, password: string}){
     return this._http.post<any>( this.registerUrl, value)
   }
 
+  /**
+   * Reset password
+   * @param value
+   */
   resetPassword(value: string): boolean {
     return true;
   }
 
+  /**
+   * is user logged in?
+   */
   isLoggedIn(): boolean{
     return !!localStorage.getItem('token');
   }
 
+  /**
+   * get JWT token
+   */
   getToken(){
     return localStorage.getItem('token');
   }
 
+  /**
+   * add user to cache
+   */
   addUserToCache(){
 
   }
 
+  /**
+   * get user from cache
+   */
   getUserFromCache(){
 
   }
 
+  /**
+   * Is user authenticated?
+   * @returns 
+   */
   isAuthenticated(): boolean{
     //if(local storage credentials are validated){
-    //  return tru
+    //  return true
     //}
     return true;
   }

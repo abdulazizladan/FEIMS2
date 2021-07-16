@@ -1,251 +1,377 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BuildingService } from '../../services/building.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { building } from '../../models/building.model';
+import { Subscription } from 'rxjs';
 
+/** Add-building component */
 @Component({
   selector: 'app-add-building',
   templateUrl: './add-building.component.html',
   styleUrls: ['./add-building.component.scss']
 })
-export class AddBuildingComponent implements OnInit {
+export class AddBuildingComponent implements OnInit, OnDestroy {
 
-  //private addBuildingForm: FormGroup;
-  public firstFormGroup: FormGroup;//Building Survey
-  public secondFormGroup: FormGroup;//Building Dimensions
-  public thirdFormGroup: FormGroup;//Walls and Floors
-  //public fourthFormGroup: FormGroup;//
-  public fifthFormGroup: FormGroup;//Roof & Ceiling
-  public sixthFormGroup: FormGroup;//Doors & Windows
-  public seventhFormGroup: FormGroup;//Facilities
-  public eighthFormGroup: FormGroup;//Structure
-  public ninthFormGroup: FormGroup;//Elevators
-  public tenthFormGroup: FormGroup;//Services
+  submitted: boolean = false;
+  error: boolean = false;
 
-  expansionPanel1Step: number = 0;
-  expansionPanel2Step: number = 0;
-  expansionPanel3Step: number = 0;
+  public appearance: string = "fill";
 
-  setPanel1Step( index: number ){
-    this.expansionPanel1Step = index;
-  }
+  public buildingForm: FormGroup;
 
-  setPanel2Step( index: number ){
-    this.expansionPanel2Step = index;
-  }
+  public hasElevator: boolean = false;
 
-  setPanel3Step( index: number ){
-    this.expansionPanel3Step = index;
-  }
-
-  nextStep(){
-    this.expansionPanel1Step++; 
-  }
-
-  nextStep2(){
-    this.expansionPanel2Step++; 
-  }
-
-  nextStep3(){
-    this.expansionPanel3Step++; 
-  }
-
-  prevStep(){
-    this.expansionPanel1Step--; 
-  }
-
-  prevStep2(){
-    this.expansionPanel2Step--;
-  }
-
-  prevStep3(){
-    this.expansionPanel3Step--;
-  }
-
-  //Reset all input fields to default value
+  private subscription: Subscription;
+ 
   resetForm(){
 
   }
 
-  constructor( private buildingService: BuildingService, private fb: FormBuilder) { 
+  submit (){
+    //console.log(this.buildingForm.value)
+    this.subscription = this.buildingService.addBuilding(this.buildingForm.value).subscribe(
+      response => {
+        this.submitted = true;
+        setTimeout(
+          () => {
+            this.dialogRef.close()
+          },
+          2000
+        )
+        
+      },
+      error => {
+        this.error = true;
+        console.log(error)
+      }
+    )
+  }
+
+  constructor( private buildingService: BuildingService, private fb: FormBuilder, private dialogRef: MatDialogRef<any>) { 
     
   }
 
   ngOnInit(): void{
-    // 01 Building survey
-    this.firstFormGroup = this.fb.group({
-      facilityType: ['', [Validators.required]],
-      facilityName: ['', [Validators.required]],
-      facilityCode: ['', [Validators.required]],
-      facilityDescription: ['', [Validators.required]],
-      facilityStructure: ['', [Validators.required]],
-      facilityPurpose: ['', [Validators.required]],
-      numberOfStoreys: [0, [Validators.required]],
-      facilityStatus: ['good', [Validators.required]],
-      facilityDateBuilt: ['', [Validators.required]],
-      facilityDatePurchased: ['', [Validators.required]],
-      facilityLongitude: [0, [Validators.required]],
-      facilityLatitude: [0, [Validators.required]],
-      structureType: ['', [Validators.required]],
-      yearLastDecorated: [0, [Validators.required]],
-    })
-    // 02 Building Dimensions
-    this.secondFormGroup = this.fb.group({
-      buildingFloorArea: [0, [Validators.required]],
-      buildingHeadroom: [0, [Validators.required]],
-      numberOfFloors: [0, [Validators.required]],
-      superStructure: ['', [Validators.required]],
-      floorStructure: ['', [Validators.required]],
-      floorCovering: ['', [Validators.required]],
-      windows: ['', [Validators.required]]
-    })
-    // 03 Walls and Floors
-    this.thirdFormGroup = this.fb.group({
-      partitionsMaterial: ['', [Validators.required]],
-      partitionsFinishes: ['', [Validators.required]],
-      partitionsCondition: ['good', [Validators.required]],
-      partitionsRepairCost: [0, [Validators.required]],
-      exteriorWall: ['', [Validators.required]],
-      paintCondition: ['good', [Validators.required]],
-      foundationMaterial: ['', [Validators.required]],
-      foundationFinishes: ['', [Validators.required]],
-      foundationCondition: ['good', [Validators.required]],
-      foundationRepairCost: [0, [Validators.required]],
-      floorSlabsMaterial: ['', [Validators.required]],
-      floorSlabsFinishes: ['', [Validators.required]],
-      floorSlabsCondition: ['good', [Validators.required]],
-      floorSlabsRepairCost: [0, [Validators.required]],
-      floorJointsMaterials: ['', [Validators.required]],
-      floorJointsFinishes: ['', [Validators.required]],
-      floorJointsCondition: ['good', [Validators.required]],
-      floorJointsRepairCost: [0, [Validators.required]],
-      mortarCondition: ['good', [Validators.required]],
-    })
-    // 05 Roof & Ceiling
-    this.fifthFormGroup = this.fb.group({
-      roofStyleShape: ['', [Validators.required]],
-      roofTrussType: ['', []],
-      roofDeckingMaterial: ['wood', []],
-      roofOpeningsCondition: ['working', [Validators.required]],
-      roofOpeningsRepairCost: [0, [Validators.required]],
-      ceilingMaterial: ['', [Validators.required]],
-      ceilingFinishes: ['', [Validators.required]],
-      ceilingCondition: ['good', [Validators.required]],
-      ceilingRepairCost: [0, [Validators.required]]
-    })
-    // 06 Doors & Windows
-    this.sixthFormGroup = this.fb.group({
-      doorsMaterial: ['', [Validators.required]],
-      doorsFinishes: ['', [Validators.required]],
-      doorsCondition: ['good', [Validators.required]],
-      doorsRepairCost: [0, [Validators.required]],
-      buildingWindowsMaterial: ['', [Validators.required]],
-      buildingWindowsFinishes: ['', [Validators.required]],
-      buildingWindowsCondition: ['good', [Validators.required]],
-      buildingWindowsRepairCost: [0, [Validators.required]],
-      glazingMaterial: ['', []],
-      glazingFinishes: ['', []],
-      glazingCondition: ['good', []],
-      glazingRepairCost: [0, []],
-      burglarProofCondition: ['good', []],
-      burglarProofRepairCost: [0, []],
-      gatesCondition: ['none', []],
-      gatesRepairCost: [0, []]
-    })
-    // 07 Facilities
-    this.seventhFormGroup = this.fb.group({
-      roofLightsCondition: ['good', []],
-      roofLightsRepairCost: [0, []],
-      fanLightMaterial: ['', [Validators.required]],
-      fanLightFinishes: ['', [Validators.required]],
-      fanLightCondition: ['good', [Validators.required]],
-      fanLightRepairCost: [0, [Validators.required]],
-      airQualityCondition: ['good', []],
-      airQualityRepairCost: [0, []],
-      ventilationSystemCondition: ['good', []],
-      ventilationSystemRepairCost: [0, []],
-      airConditioningCondition: ['good', []],
-      airConditioningRepairCost: [0, []],
-      furnitureMaterial: ['', [Validators.required]],
-      furnitureFinishes: ['', [Validators.required]],
-      furnitureCondition: ['good', [Validators.required]],
-      furnitureRepairCost: ['', []],  
-      materialHandlingSystemCondition: ['good', []],
-      materialHandlingSystemRepairCost: [0, []],
-      temperatureControlCondition: ['good', []],
-      temperatureControlRepairCost: [0, []],
-      hotWaterCondition: ['good', []],
-      hotWaterRepairCost: [0, []],      
-      coldWaterCondition: ['good', []],
-      coldWaterRepairCost: [0, []],
-      gasTanksCondition: ['good', []],
-      gasTanksRepairCost: [0, []],
-      gasPipingCondition: ['good', []],
-      gasPipingRepairCost: [0, []],
-      compressedAirCondition: ['good', []],
-      compressedAirRepairCost: [0,[]],  
-    })
-    // 08 Structure
-    this.eighthFormGroup = this.fb.group({
-      trimMaterial: ['', [Validators.required]],
-      trimFinishes: ['', [Validators.required]],
-      trimCondition: ['good', [Validators.required]],
-      trimRepairCost: [0, [Validators.required]],
-      frameMaterial: ['', [Validators.required]],
-      frameFinishes: ['', [Validators.required]],
-      frameCondition: ['good', [Validators.required]],
-      frameRepairCost: [0, [Validators.required]],
-      buildingFacadeMaterial: ['', [Validators.required]],
-      buildingFacadeFinishes: ['', [Validators.required]],
-      buildingFacadeCondition: ['good', [Validators.required]],
-      buildingFacadeRepairCost: [0, [Validators.required]],
-      corridorsMaterial: ['', [Validators.required]],
-      corridorsFinishes: ['', [Validators.required]],
-      corridorsCondition: ['good', [Validators.required]],
-      corridorsRepairCost: [0, [Validators.required]],
-      entrancesMaterial: ['', [Validators.required]],
-      entrancesFinishes: ['', [Validators.required]],
-      entrancesCondition: ['good', [Validators.required]],
-      entrancesRepairCost: [0, [Validators.required]]
-    })
-    // 09 Elevator
-    this.ninthFormGroup = this.fb.group({
-      elevatorsCount: [0, []],
-      elevatorType: ['', []],
-      elevatorKeyLocation: ['', []],
-      elevatorBrandName: ['', []],
-      elevatorServiceCompany: ['', []],
-      elevatorServicePhoneNumber: ['', []],
-      elevatorEmergencyShutoffLocation: ['', []],
-      elevatorExit: ['', []]
-    })
-    // 10 Services
-    this.tenthFormGroup = this.fb.group({
-      serviceDuctMaterial: ['', [Validators.required]],
-      serviceDuctFinishes: ['', [Validators.required]],
-      serviceDuctCondition: ['good', [Validators.required]],
-      serviceDuctRepairCost: [0, [Validators.required]],
-      drainageCondition: ['good', []],
-      drainageRepairCost: [0, []],  
-      distributionCondition: ['', []],
-      distributionRepairCost: [0, []]
-    })
-
-    console.log(this.thirdFormGroup)
+    this.initForm();
   }
 
-  ngOnDestroy(){
+  ngOnDestroy(): void{
 
   }
 
-  addBuilding(){
-    //this.buildingService.addBuilding(this.firstFormGroup.value).subscribe(
-    // res=>{
-    //    console.log("Adding building")
-    //  },err=>{
-    //    console.log("Unable to add building")
-    //  }
+  initForm(): void{
+    this.buildingForm = this.fb.group({      
+      structure: this.fb.group({
+        name: ['', [Validators.required]],
+        code: ['', [Validators.required]],
+        year_built: [1900, [Validators.required, Validators.max(2022)]],
+        position: this.fb.group({
+          longitude: [0, []],
+          latitude: [0, []]
+        }),
+        purpose: ['', [Validators.required]], //residential/office/multiple
+        comment: ['', [Validators.required]], //any other detail not captured
+        dimensions: this.fb.group({
+          floor_area: [0, [Validators.required]],//square meters
+          wall_area: [0, []], //square meters
+          ceiling_area: [0, []], //square meters
+          floors: [1, [Validators.min(1), Validators.required]] //floor count
+        })
+      }),
+      super_structure: this.fb.group({
+        type: ['', [Validators.required]],
+        under_concrete: this.fb.group({
+          concrete_work: [0, []],
+          form_work: [0, []],
+          reinforcement: [0, []]
+        }),
+        under_block: this.fb.group({
+          brick_work: [0, []]
+        }),
+        under_crack_tiles: this.fb.group({
+          size: [0, []],
+          type: ['', []],
+          quantity: [0, []]
+        }),
+        under_alucobond: this.fb.group({
+          size: [0, []],
+          type: ['', []],
+          accessories: ['', []],
+          quantity: [0, []]
+        }),
+        condition: ['', [Validators.required]],
+        cost_of_repair: [0, [Validators.required]]
+      }),
+      walls: this.fb.group({
+        wall_type: ['', [Validators.required]],
+        quantity: [0, [Validators.required]],
+        last_decorated: [0, []],
+        has_stain:[false, []],
+        concrete_wall: this.fb.group({
+          condition: ['', []],
+          quantity: [0, []],
+          cost_of_repair: [0, []]
+        }),
+        paint: this.fb.group({
+          condition: ['', []],
+          quantity: [0, []],
+          cost_of_repair: [0, []]
+        }),
+        mortar: this.fb.group({
+          condition: ['', []],
+          quantity: [0, []],
+          cost_of_repair: [0, []]
+        }),
+        structure: this.fb.group({
+          type: ['', []],
+          quantity: [0, []],
+          damage: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+        }),
+        trimming: this.fb.group({
+          quantity: [0, []],
+          finishes: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+        }),
+        frame: this.fb.group({
+          concrete_work: [0, ''], //cubic meter
+          finishes: [0, []], //square meters
+          form_work: [0, []], //square meters
+          quantity: [0, []],
+          reinforcement: [0, []], //kilogram
+          damage: [0, []], //percentage 25|50|75
+          cost_of_repair: [0, []] //naira
+        }),
+        facade: this.fb.group({
+          concrete_work: [0, []], //cubic meter
+          finishes: [0, []], //square meters
+          form_work: [0, []], //square meters
+          type: ['', []],
+          quantity: [0, []], //square meters
+          damage: [0, []], //percentage 25|50|75
+          cost_of_repair: [0, []] //naira,
+        }),
+        corridors: this.fb.group({
+          quantity: [0, []],
+          type: ['', []],
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []]//naira
+        }),
+        interior_wall: this.fb.group({
+          finishing: ['', []], //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
+          size: [0, []], //square meter
+          type: ['', []], 
+          accessories: ['', []],
+          quantity: [0, []], //count
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []] //naira
+        }),
+        windows: this.fb.group({
+          material: ['', []], //wire_glass|glass_block|plate|tempered|operating|fixed|other
+          size: [0, []], //square meter
+          type: ['', []],
+          quantity: [0, []], //count
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, []] //naira
+        })
+      }),
+      floor: this.fb.group({
+        joints_and_beams: this.fb.group({
+          concrete_work: [0, []], //cubic meter
+          finishes: [0, []], //square meter
+          form_work: [0, []], //square meter
+          quantity: [0, []], //square meter
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        }), 
+        slabs: this.fb.group({
+          concrete_work: [0, []], //cubic meter
+          finishes: [0, []], //square meter
+          form_work: [0, []], //square meter
+          quantity: [0, []], //cubic meter
+          reinforcement: [0, []], //kilogram
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        }),
+        foundation: this.fb.group({
+          type: ['', [Validators.required]],
+          depth: [0, [Validators.required]], //meters
+          filling: [0, []], //cubic meters
+          excavation: [0, []], //cubic meter
+          concrete_work: [0, []], //cubic meters
+          block_work: [0, []], //square meters
+          form_work: [0, []], //square_meters
+          reinforcement: [0, []], //kilograms
+          rendering: [0, []], //square meters
+          dpm: [0, []], //square meters of damp proof membrane
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        }),
+        floor_structure: this.fb.group({
+          material: ['', [Validators.required]], //metal|wood|concrete|other
+          size: [0, []], //square meter
+          type: ['', ''],
+          accessories: ['', []],
+          quantity: [0, [Validators.required]],
+          condition: ['', [Validators.required]], //excellent|good|fair|poor
+          cost_of_repair: [0, [Validators.required, Validators.min(0)]] //naira
+        }),
+        floor_covering: this.fb.group({
+          material: ['', []], //metal|wood|concrete|vinyl|other
+          size: [0, ''], //square meter
+          type: ['', []],
+          accessories: ['', []],
+          quantity: [0, []],
+          condition: ['', []], //excellent|good|fair|poor
+          cost_of_repair: [0, [Validators.required, Validators.min(0)]] //naira
+        })
+      }),
+      roof: this.fb.group({
+        style: ['', [Validators.required]],
+        size: [0, []],
+        damage: [0, []],
+        condition: ['', []],
+        cost_of_repair: [0, []],
+        support: this.fb.group({
+          type: ['', [Validators.required]], //joist|truss|ridge_frame|arch|dome|cable|other
+          size: [0, []], //meter
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', [Validators.required]], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        steel_truss: this.fb.group({
+          type: ['', []], //joist|truss|z-purlins|cleats|bolts|cables
+          size: [0, []], //kilograms,
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', ''], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        decking: this.fb.group({
+          type: ['', []], //metal|wood|concrete|other
+          size: [0, []], //cubic meter
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', ''], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        covering: this.fb.group({
+          type: ['', ''], //asbestos|zinc|aluminium|stone_coated_tiles|other
+          size: [0, []], //square meter
+          quantity: [0, []],
+          damage: [0, []], //percentage 25|50|75,
+          condition: ['', []], //excellent|good|fair|poor,
+          cost_of_repair: [0, []], //naira
+        }),
+        ceiling: this.fb.group({
+          type: ['', []],
+          size: [0, []], //square meter
+          quantity: [0, []], //count
+          damage: [0, []], //percentage 25|50|75,
+          cost_of_repair: [0, []] //naira
+        })
+      }),
+      services: this.fb.group({
+        roof_lights: this.fb.group({
+          size: [0, []],
+          thickness: [0, []],
+          quantity: [0, []],
+          condition: ['', []],
+          damage: [0, []],
+          cost_of_repair: [0, []]
 
-    //)
+        }), 
+        air_conditioning: this.fb.group({
+          piping_length: [0, []],
+          quantity: [0, []],
+          condition: ['', []],
+          damage: ['', []],
+          cost_of_repair: [0, []]
+
+        }),
+        roof_covering: this.fb.group({
+          height: [0, []],
+          sloping_length: [0, []],
+          quantity: [0, []],
+          condition: ['', []],
+          damage: [0, []],
+          cost_of_repair: [0, []]
+
+        }),
+        burglar_proof: this.fb.group({
+          type: ['', []],
+          quantity: [0, []],
+          location: ['', []],
+          condition: ['', []],
+          damage: [0, []],
+          cost_of_repair: [0, []]
+
+        }),
+        gates: this.fb.group({
+          quantity: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+
+        }),
+        drainage: this.fb.group({
+          quantity: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+
+        }),
+        distribution: this.fb.group({
+          quantity: [0, []],
+          condition: ['', []],
+          cost_of_repair: [0, []]
+        })
+      })
+    })
   }
+
+  elevatorForm: FormGroup = this.fb.group({
+    count: this.fb.group({
+      passenger: [0, [Validators.required]],
+      freight: [0, [Validators.required]],
+      fire_service: [0, [Validators.required]]
+    }),
+    type: this.fb.group({
+      electric: [0, [Validators.required]],
+      hydraulic: [0, [Validators.required]]
+    }),
+    electric_eye: [false, []],
+    heat_sensor: [false, []],
+    key_location: ['', []],
+    brand_name: ['', []],
+    service_company: ['', []],
+    phone: ['', []],
+    smergency_shutoff_location: ['', []],
+    elevator_exits: this.fb.group({
+      top: [0, []],
+      side: [0, []],
+      dumb_waiter: [0, []],
+      laundry_chute: [0, []],
+      trash_chute: [0, []],
+      other: [0, []]
+    })
+  });
+
+  addElevator(): void {
+    this.hasElevator = true;
+    this.buildingForm.addControl('elevator', this.elevatorForm)
+  }
+
+  removeElevator(): void {
+    this.hasElevator = false
+    this.buildingForm.removeControl('elevator')
+  }
+
+  /**
+   * Submits building data form
+   */
+  
 
 }

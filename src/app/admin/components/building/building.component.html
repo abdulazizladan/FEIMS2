@@ -1,3 +1,4 @@
+<!-- Building component -->
 <mat-card>
 
     <mat-card-header>
@@ -17,7 +18,7 @@
           {{ data.description }}
         </mat-list-item>
         <mat-list-item color="warn">
-          Repair cost: &#8358;{{data.repair_cost }}
+          Repair cost: &#8358;{{ data.repair_cost | number: '.2' }}
         </mat-list-item>
       </mat-list>
   

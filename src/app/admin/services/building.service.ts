@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
+import { building } from '../models/building.model';
+import { environment } from 'environment.dev';
 import { HttpClient } from '@angular/common/http';
+import { Observable, of, throwError } from 'rxjs';
+import { delay, tap, map, catchError } from 'rxjs/operators';
+
+const baseUrl = environment.baseUrl;
 
 @Injectable({
   providedIn: 'root'
@@ -7,22 +13,62 @@ import { HttpClient } from '@angular/common/http';
 export class BuildingService {
 
   private readonly buildingsUrl: string = "";
-  private readonly singleBuildingUrl: string = "";
-  private readonly addBuildingUrl: string = "";
+  private readonly singleBuildingUrl: string = "buildings/{id}";
+  private readonly addBuildingUrl: string = "buildings";
 
+  /**
+   * Constructor
+   * @param _http 
+   */
   constructor( private _http : HttpClient ){
 
   }
 
-  addBuilding( buildingData ){
-    return this._http.post<any>(this.addBuildingUrl, buildingData)
+  /**
+   * Upload building data
+   * @param building 
+   * @returns 
+   */
+  addBuilding( building: building ): Observable<any>{
+    return this._http.post<building>(`${baseUrl}/buildings`, building).pipe(
+      tap(data => console.log(JSON.stringify(data))),
+      catchError(this.handleError)
+    )
   }
 
-  getBuildings(){
-    return this._http.get<any>(this.buildingsUrl);
+  /**
+   * get a list of buildings
+   * @returns buildings array
+   */
+  getBuildings(): Observable<building[]>{
+    return this._http.get<building[]>(`${baseUrl}/buildings`).pipe(
+      delay(5000)
+    );
   }
 
-  getSingleBuilding( id: string){
-    return this._http.get<any>(this.singleBuildingUrl);
+  /**
+   * get a single building's details
+   * @param id 
+   * @returns building
+   */
+  getSingleBuilding( id: number){
+    return this._http.get<building>(`${baseUrl}/buildings/${id}`).pipe(delay(500));
   }
+
+  private handleError(err: any) {
+    // in a real world app, we may send the server to some remote logging infrastructure
+    // instead of just logging it to the console
+    let errorMessage: string;
+    if (err.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      errorMessage = `An error occurred: ${err.error.message}`;
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
+    }
+    console.error(err);
+    return throwError(errorMessage);
+  }
+
 }

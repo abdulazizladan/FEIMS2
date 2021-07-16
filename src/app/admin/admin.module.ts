@@ -36,7 +36,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSliderModule}  from '@angular/material/slider';
-import { MatButtonToggleModule } from '@angular/material/button-toggle'
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTreeModule } from '@angular/material/tree';
 
 //Flex-layout
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -57,8 +60,7 @@ import { AboutComponent } from './components/about/about.component';
 import { BuildingSummaryComponent } from './components/building-summary/building-summary.component';
 import { SiteSurveyComponent } from './components/site-survey/site-survey.component';
 import { AddSiteComponent } from './components/add-site/add-site.component';
-import { EffectsModule } from '@ngrx/effects';
-import { AdminEffect } from 'app/store/site/admin.effects';
+import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
@@ -75,7 +77,9 @@ import { AdminEffect } from 'app/store/site/admin.effects';
     SidenavComponent, 
     ToolbarComponent, 
     AboutComponent, 
-    BuildingSummaryComponent, SiteSurveyComponent, AddSiteComponent
+    BuildingSummaryComponent, 
+    SiteSurveyComponent, 
+    AddSiteComponent
   ],
   imports: [
     CommonModule,
@@ -108,11 +112,15 @@ import { AdminEffect } from 'app/store/site/admin.effects';
     MatDividerModule,
     MatSliderModule,
     MatButtonToggleModule,
+    MatTooltipModule,
+    MatTabsModule,
+    MatTreeModule,
     FlexLayoutModule,
     AdminRoutingModule,
     NgxEchartsModule.forRoot({
       echarts
-    })
+    }),
+    StoreModule.forRoot({ })
   ], 
   providers: [
     {

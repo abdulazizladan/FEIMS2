@@ -1,0 +1,19 @@
+{
+    "states": {
+        "name": "Kaduna",
+        "lgas": [
+            {
+                "name": "Igabi"
+            },
+            {
+                "name": "Zaria"
+            },
+            {
+                "name": "Kauru"
+            },
+            {
+                "name": "Chukun"
+            }
+        ]
+    }
+}

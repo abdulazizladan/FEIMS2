@@ -1,9 +1,18 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { egretAnimations } from '../../../shared/animations/egret-animations';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddSiteComponent } from '../add-site/add-site.component';
 import { ThemeService } from '../../../shared/services/theme.service';
-import tinyColor from 'tinycolor2';
+import  * as tinyColor  from "tinycolor2";
+import { Building } from 'app/admin/models/building.model';
+import { Site } from 'app/admin/models/site.model';
+import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { SiteState } from 'app/store/site/site.state';
+import { Observable } from 'rxjs';
+import { SiteService } from 'app/admin/services/site.service';
+import { selectBuidings } from 'app/store/building/building.selector';
+import { selectSites } from 'app/store/site/site.selector';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +20,7 @@ import tinyColor from 'tinycolor2';
   styleUrls: ['./home.component.scss'],
   animations: egretAnimations
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   
   trafficVsSaleOptions: any;
   trafficVsSale: any;
@@ -31,11 +40,60 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(
     private themeService: ThemeService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private store: Store<SiteState>, //@ladan this is site store, i see you are selecting buidings on line 94
+    private siteService: SiteService
   ) {}
 
+  public buildings: Observable<Building[]>;
+  public sites: Observable<Site[]>;
+
+  //public sitesSubscription: Subscription;
+  //buildingsSubscription: Subscription;
+  //get sites
+    //getSites(): void {
+    //  this.sitesSubscription = this.siteService.getSites().subscribe(
+    //    response => {
+    //      this.sites = response;
+    //    },
+    //    error => {
+    //      console.log(error)
+    //    }
+    //  )
+    //}
+  //get buildings
+  //getBuildings(): void {
+  //  this.buildingsSubscription = this.buildingService.getBuildings().subscribe(
+  //    response => {
+  //      this.buildings = response;
+  //    },
+  //    error => {
+  //      console.log(error)
+  //    }
+  //  )
+  //}
+
+  /**
+   * AfterViewInit lifecycle hook
+   */
   ngAfterViewInit() {}
+  
+  /**
+   * OnDestroy lifecycle hook
+   */
+  ngOnDestroy() {
+    //this.sitesSubscription.unsubscribe();
+    //this.buildingsSubscription.unsubscribe();
+  }
+
+  /**
+   * OnInit lifecycle hook
+   */
   ngOnInit() {
+    this.sites = this.store.select(selectSites);
+    this.buildings = this.store.select(selectBuidings)
+    console.log(this.sites)
+    console.log(this.buildings)
     this.themeService.onThemeChange.subscribe(activeTheme => {
       this.initTrafficVsSaleChart(activeTheme);
       this.initSessionsChart(activeTheme);
@@ -765,8 +823,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   openAddSiteDialog(): void{
     const dialogRef = this.dialog.open(AddSiteComponent, {
-      width: '90%',
-      minHeight: '650px',
+      //width: '90%',
+      //minHeight: '650px',
       data: {},
       disableClose: true
     });
