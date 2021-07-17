@@ -5,8 +5,6 @@ import { environment } from 'environment.dev';
 import { Observable, throwError } from 'rxjs';
 import { catchError, mergeMap } from 'rxjs/operators';
 import { tap, map, delay } from 'rxjs/operators';
-import { Store } from '@ngrx/store';
-import { AdminState } from 'app/store/admin/admin.state';
 
 const baseUrl = environment.baseUrl;
 
@@ -23,7 +21,7 @@ export class SiteService {
    * @param http
    * @param store 
    */
-  constructor( private http : HttpClient, private store: Store<AdminState> ){
+  constructor( private http : HttpClient){
     this.sitesUrl = "sites";
   }
 

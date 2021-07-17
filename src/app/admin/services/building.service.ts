@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { building } from '../models/building.model';
+import { Building } from '../models/building.model';
 import { environment } from 'environment.dev';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
@@ -29,8 +29,8 @@ export class BuildingService {
    * @param building 
    * @returns 
    */
-  addBuilding( building: building ): Observable<any>{
-    return this._http.post<building>(`${baseUrl}/buildings`, building).pipe(
+  addBuilding( building: Building ): Observable<any>{
+    return this._http.post<Building>(`${baseUrl}/buildings`, building).pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     )
@@ -40,8 +40,8 @@ export class BuildingService {
    * get a list of buildings
    * @returns buildings array
    */
-  getBuildings(): Observable<building[]>{
-    return this._http.get<building[]>(`${baseUrl}/buildings`).pipe(
+  getBuildings(): Observable<Building[]>{
+    return this._http.get<Building[]>(`${baseUrl}/buildings`).pipe(
       delay(5000)
     );
   }
@@ -52,7 +52,7 @@ export class BuildingService {
    * @returns building
    */
   getSingleBuilding( id: number){
-    return this._http.get<building>(`${baseUrl}/buildings/${id}`).pipe(delay(500));
+    return this._http.get<Building>(`${baseUrl}/buildings/${id}`).pipe(delay(500));
   }
 
   private handleError(err: any) {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BuildingService } from 'app/admin/services/building.service';
-import { building } from 'app/admin/models/building.model';
+import { Building } from 'app/admin/models/building.model';
 import { egretAnimations } from '../../../shared/animations/egret-animations';
 import { ActivatedRoute } from '@angular/router';
 import { ThemeService } from '../../../shared/services/theme.service';
@@ -15,7 +15,7 @@ import * as tinyColor from 'tinycolor2';
 export class BuildingSummaryComponent implements OnInit {
 
   id: number;
-  public building: building;
+  public building: Building;
   constructor( private buildingService: BuildingService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {

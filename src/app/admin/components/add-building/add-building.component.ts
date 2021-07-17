@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BuildingService } from '../../services/building.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { building } from '../../models/building.model';
 import { Subscription } from 'rxjs';
 
 /** Add-building component */
