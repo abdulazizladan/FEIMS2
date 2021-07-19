@@ -24,6 +24,7 @@ export interface HVE{
     condition: string,
     comment: string,
     damage: number,
+    costOfRepair: number,
     components: null | [
         {
             name: string,
