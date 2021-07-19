@@ -6,15 +6,6 @@ import { AddBuildingComponent } from '../add-building/add-building.component';
 import { loadBuildings } from 'app/store/building/building.actions';
 import { selectBuidings } from 'app/store/building/building.selector';
 
-export interface building{
-  id: number,
-  name: string,
-  image: string,
-  type: string,
-  description: string,
-  repair_cost: number
-}
-
 @Component({
   selector: 'app-buildings',
   templateUrl: './buildings.component.html',

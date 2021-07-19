@@ -1,4 +1,5 @@
 export interface Building{
+  _id?: string,
   structure: {
     name: string, //given name
     code: null | string, //3 to 4 length string used to identify the building
