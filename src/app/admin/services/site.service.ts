@@ -45,7 +45,7 @@ export class SiteService {
   **/
   getSingleSite( id: number): Observable<Site>{
     //return this.http.get<Site> (`${baseUrl}/sites`, id)
-    return this.http.get<Site>('127.0.0.1:3000/sites')
+    return this.http.get<Site>('127.0.0.1:3000/sites/{id}')
     .pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(() => throwError('error retreiving site'))

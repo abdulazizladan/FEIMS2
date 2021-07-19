@@ -92,8 +92,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     this.sites = this.store.select(selectSites);
     this.buildings = this.store.select(selectBuidings)
-    console.log(this.sites)
-    console.log(this.buildings)
     this.themeService.onThemeChange.subscribe(activeTheme => {
       this.initTrafficVsSaleChart(activeTheme);
       this.initSessionsChart(activeTheme);
