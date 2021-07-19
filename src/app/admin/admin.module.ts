@@ -61,6 +61,7 @@ import { BuildingSummaryComponent } from './components/building-summary/building
 import { SiteSurveyComponent } from './components/site-survey/site-survey.component';
 import { AddSiteComponent } from './components/add-site/add-site.component';
 import { StoreModule } from '@ngrx/store';
+import { SiteComponent } from './components/site/site.component';
 
 
 @NgModule({
@@ -79,7 +80,7 @@ import { StoreModule } from '@ngrx/store';
     AboutComponent, 
     BuildingSummaryComponent, 
     SiteSurveyComponent, 
-    AddSiteComponent
+    AddSiteComponent, SiteComponent
   ],
   imports: [
     CommonModule,

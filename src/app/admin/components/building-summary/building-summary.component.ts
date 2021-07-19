@@ -8,7 +8,7 @@ import { ThemeService } from '../../../shared/services/theme.service';
 import * as tinyColor from 'tinycolor2';
 import { Store } from '@ngrx/store';
 import { BuildingState } from 'app/store/building/building.state';
-import { selectBuidings } from 'app/store/building/building.selector';
+import { selectBuidings, selectBuilding } from 'app/store/building/building.selector';
 
 @Component({
   selector: 'app-building-summary',
@@ -18,8 +18,8 @@ import { selectBuidings } from 'app/store/building/building.selector';
 })
 export class BuildingSummaryComponent implements OnInit {
 
-  id: number;
-  public building: Observable<Building[]>;
+  id: string;
+  public building: Observable<Building>;
   
   constructor( 
     private store: Store<BuildingState>,
@@ -27,9 +27,10 @@ export class BuildingSummaryComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = parseInt(this.route.snapshot.paramMap.get('id'));
-    this.building = this.store.select(selectBuidings)
-    this.getBuildings(this.id);
+    this.id = (this.route.snapshot.paramMap.get('id'));
+    this.building = this.store.select(selectBuilding, this.id)
+    //this.getBuildings(this.id);
+    //console.log(this.building)
   }
 
   getBuildings( id: number) {
