@@ -41,9 +41,10 @@ export class BuildingService {
    * @returns buildings array
    */
   getBuildings(): Observable<Building[]>{
-    return this._http.get<Building[]>(`${baseUrl}/buildings`).pipe(
-      delay(5000)
-    );
+    ///return this._http.get<Building[]>(`${baseUrl}/buildings`).pipe(
+    //  delay(5000)
+    //);
+    return this._http.get<Building[]>('http://127.0.0.1:3000/buildings')
   }
 
   /**

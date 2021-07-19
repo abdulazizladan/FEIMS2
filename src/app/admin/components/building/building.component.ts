@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
+import { Building } from 'app/admin/models/building.model';
 
 export interface building{
   id: number,
@@ -17,7 +18,7 @@ export interface building{
 export class BuildingComponent implements OnInit {
 
   @Input()
-  data : building;
+  data : Building;
 
   constructor() { }
 
@@ -25,7 +26,7 @@ export class BuildingComponent implements OnInit {
   }
 
   @Output()
-  showSummary(id : number){
+  showSummary(id : string){
     console.log(id)
   }
 }

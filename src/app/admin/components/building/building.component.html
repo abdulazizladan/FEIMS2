@@ -3,22 +3,23 @@
 
     <mat-card-header>
       <mat-card-title>
-        {{ data.name }}
+        {{ data.structure.name }}
       </mat-card-title>
       <mat-card-subtitle>
-        {{ data.type }}
+        Code: {{ data.structure.code }}
       </mat-card-subtitle>
     </mat-card-header>
   
-    <img mat-card-image src={{data.image}}>
+    <!--<img mat-card-image src={{data.image}}>-->
   
     <mat-card-content>
       <mat-list dense>
         <mat-list-item>
-          {{ data.description }}
+          {{ data.structure.comment }}
         </mat-list-item>
         <mat-list-item color="warn">
-          Repair cost: &#8358;{{ data.repair_cost | number: '.2' }}
+          <!--Repair cost: &#8358;{{ data.cost_of_repair | number: '.2' }} -->
+          Purpose: {{ data.structure.purpose}}
         </mat-list-item>
       </mat-list>
   
@@ -27,7 +28,7 @@
     <mat-divider></mat-divider>
   
     <mat-card-actions align="end">
-      <button mat-flat-button color="primary" routerLink="../building/{{data.id}}" value={{data.id}} (click)="showSummary(data.id)">
+      <button mat-flat-button color="primary" routerLink="../building/{{data._id}}" value={{data._id}} (click)="showSummary(data._id)">
         More details
       </button>
     </mat-card-actions>
