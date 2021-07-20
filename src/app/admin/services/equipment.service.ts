@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
 import { HVE } from '../models/hve.model';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class EquipmentService {
    * 
    * @param _http 
    */
-  constructor( private readonly _http: HttpClient ) { }
+  constructor( private _http: HttpClient ) { }
 
   getAllHighValueEquipment(): Observable<HVE>{
     return this._http.get<HVE>('127.0.0.1:3000/');
