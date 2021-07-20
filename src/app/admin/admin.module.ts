@@ -62,6 +62,8 @@ import { SiteSurveyComponent } from './components/site-survey/site-survey.compon
 import { AddSiteComponent } from './components/add-site/add-site.component';
 import { StoreModule } from '@ngrx/store';
 import { SiteComponent } from './components/site/site.component';
+import { AddHveComponent } from './components/add-hve/add-hve.component';
+import { AddLveComponent } from './components/add-lve/add-lve.component';
 
 
 @NgModule({
@@ -80,7 +82,7 @@ import { SiteComponent } from './components/site/site.component';
     AboutComponent, 
     BuildingSummaryComponent, 
     SiteSurveyComponent, 
-    AddSiteComponent, SiteComponent
+    AddSiteComponent, SiteComponent, AddHveComponent, AddLveComponent
   ],
   imports: [
     CommonModule,

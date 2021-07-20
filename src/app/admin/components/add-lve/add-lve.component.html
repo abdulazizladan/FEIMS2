@@ -1,0 +1,25 @@
+<!-- Add Low Value Equipment -->
+<h2 mat-dialog-title>
+    Add building
+    <span fxFlex="1 1 auto">
+    
+    </span>
+  
+    <button mat-stroked-button (click)="resetForm()">Reset form</button> 
+    <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </h2>
+
+  <button mat-flat-button mat-dialog-close color="primary" *ngIf="submitted">
+    Equipment added successfully!!
+  </button>
+
+  <mat-dialog-content [formGroup]="buildingForm" *ngIf="!submitted">
+
+  </mat-dialog-content>
+
+  <div mat-dialog-actions align="end" *ngIf="error">
+    <span color="warn" class="mat-h4">Unable to complete action</span>
+    <button mat-flat-button color="primary"></button>
+  </div>
