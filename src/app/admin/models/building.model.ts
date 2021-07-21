@@ -9,7 +9,7 @@ export interface Building{
       latitude: number 
     },
     purpose: string, //residential, academic, theater, multipurpose
-    comment: string, //
+    //comment: string, //removed
     dimensions: {
       floor_area: number, //square meters
       wall_area: number, //square meters
