@@ -64,6 +64,7 @@ import { StoreModule } from '@ngrx/store';
 import { SiteComponent } from './components/site/site.component';
 import { AddHveComponent } from './components/add-hve/add-hve.component';
 import { AddLveComponent } from './components/add-lve/add-lve.component';
+import { SitesListComponent } from './components/sites-list/sites-list.component';
 
 
 @NgModule({
@@ -82,7 +83,7 @@ import { AddLveComponent } from './components/add-lve/add-lve.component';
     AboutComponent, 
     BuildingSummaryComponent, 
     SiteSurveyComponent, 
-    AddSiteComponent, SiteComponent, AddHveComponent, AddLveComponent
+    AddSiteComponent, SiteComponent, AddHveComponent, AddLveComponent, SitesListComponent
   ],
   imports: [
     CommonModule,
