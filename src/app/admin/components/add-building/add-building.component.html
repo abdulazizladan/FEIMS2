@@ -28,7 +28,7 @@
       
         <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutAlign.gt-xs="space-between" fxLayoutGap="10px">
 
-          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="75%">
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="30%">
             <mat-label>Name</mat-label>
             <input matInput type="text" formControlName="name">
           </mat-form-field>
@@ -40,7 +40,10 @@
             <input matInput type="text" formControlName="code">
           </mat-form-field>
 
-          
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="200px">
+            <mat-label>Purpose</mat-label>
+            <input matInput type="text" formControlName="purpose">
+          </mat-form-field>          
 
           <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
             <mat-label>Year built</mat-label>
@@ -63,10 +66,7 @@
 
           </div>
 
-          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="200px">
-            <mat-label>Purpose</mat-label>
-            <input matInput type="text" formControlName="purpose">
-          </mat-form-field>
+          
 
           <!--<mat-form-field appearance={{appearance}} fxFlex.gt-xs="100%">
             <mat-label>Comment</mat-label>
