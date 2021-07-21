@@ -11,12 +11,20 @@ import { Observable } from 'rxjs';
 export class SitesListComponent implements OnInit {
 
   private sites: Observable<Site[]>;
-  
+
   constructor(
     private siteService: SiteService
   ) { }
 
   ngOnInit(): void {
+    this.siteService.getSites().subscribe(
+      result => {
+        //this.sites = result
+      },
+      error => {
+
+      }
+    )
   }
 
 }
