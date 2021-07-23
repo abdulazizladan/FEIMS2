@@ -62,21 +62,13 @@ export class AddSiteComponent implements OnInit {
    */
   submit() {
     const data = this.siteForm.value;
-    this.subscription = this.siteService.addSite(data).subscribe(
-      response => {
-        this.submitted = true;
-        this.store.dispatch(addSite({site: data}))
-        setTimeout(
-          () => {
-            this.dialogRef.close()
-          },
-          2000
-        )        
+    this.submitted = true;
+    this.store.dispatch(addSite({site: data}))
+    setTimeout(
+      () => {
+        this.dialogRef.close()
       },
-      error => {
-        this.error = true;
-        console.log(error)
-      }
+      2000
     )
   }
 

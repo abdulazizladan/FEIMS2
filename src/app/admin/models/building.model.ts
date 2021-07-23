@@ -23,10 +23,8 @@ export interface Building{
         //description: string,
         concrete_work: number, //cubic meter
         form_work: number, //square meter
-        reinforcement: number, //kilogram
-      },
-      under_block: {
         brick_work: number //square meters
+        reinforcement: number, //kilogram        
       },
       under_crack_tiles: {
         size: number, //square meters

@@ -83,10 +83,8 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
         under_concrete: this.fb.group({
           concrete_work: [0, []],
           form_work: [0, []],
+          brick_work: [0, []], // merged from under block work
           reinforcement: [0, []]
-        }),
-        under_block: this.fb.group({
-          brick_work: [0, []]
         }),
         under_crack_tiles: this.fb.group({
           size: [0, []],
