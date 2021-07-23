@@ -68,7 +68,7 @@ export class AddSiteComponent implements OnInit {
       () => {
         this.dialogRef.close()
       },
-      2000
+      5000
     )
   }
 
@@ -160,7 +160,8 @@ export class AddSiteComponent implements OnInit {
         //description: ['', []],
         piping_and_accessories: [0, []],
         cabling: [0, []],
-        sources: ['', []],
+        //sources: ['', []],
+        sources: this.fb.array([this.fb.control('')]),
         condition: ['', []],
         damage: [0, []],
         cost_of_repair: [0, []]
@@ -169,7 +170,8 @@ export class AddSiteComponent implements OnInit {
         //description: ['', []],
         piping_and_accessories: [0, []],
         cabling: [0, []],
-        sources: ['', []],
+        //sources: ['', []],
+        sources: this.fb.array([this.fb.control('')]),
         condition: ['', []],
         damage: [0, []],
         cost_of_repair: [0, []]
@@ -183,6 +185,31 @@ export class AddSiteComponent implements OnInit {
     this.hasOthers = false;
 
   }
+
+  get waterSources(): FormArray{
+    return this.siteForm.get('water.sources') as FormArray;
+  }
+
+  get electricitySources(): FormArray{
+    return this.siteForm.get('electricity.sources') as FormArray;
+  }
+
+  addElectricitySource(): void {
+    this.electricitySources.push(this.fb.control(''))    
+  }
+
+  removeElectricitySource( index: number): void {
+    this.electricitySources.removeAt(index)
+  }
+
+  addWaterSource(): void {
+    this.waterSources.push(this.fb.control(''))
+  }
+
+  removeWaterSource( index: number ): void {
+    this.waterSources.removeAt(index)
+  }
+
 
   /**
    * 

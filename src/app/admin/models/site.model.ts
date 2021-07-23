@@ -86,7 +86,7 @@ export interface Site{
         //description: string,
         piping_and_accessories: number, //meters
         cabling: number, //meters
-        sources: string, 
+        sources: [string], 
         condition: string, //working|not_working|repairable
         damage: number, //percentage 25|50|75
         cost_of_repair: number //naira
@@ -96,7 +96,7 @@ export interface Site{
         //description: string,
         piping_and_accessories: number, //meters
         cabling: number, //meters
-        sources: string, 
+        sources: [string], 
         condition: string, //working|not_working|repairable
         damage: number, //percentage 25|50|75
         cost_of_repair: number //naira

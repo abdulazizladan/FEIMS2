@@ -649,75 +649,85 @@
     <!-- Electricity-->
     <mat-step [stepControl]="siteForm.controls.electricity">
       <ng-template matStepLabel>Electricity</ng-template>
-    <div fxLayout="column" fxLayoutGap="20px">
+    <div [formGroup]="siteForm.controls.electricity" fxLayout="column" fxLayoutGap="20px">
+      <div fxLayout="column">
         
-      <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.electricity" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
+        <div fxLayoutAlign.gt-xs="space-between" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
 
-        <!--<mat-form-field appearance="outline" fxFlex.gt-xs="23%">
-          <mat-label>Descripton</mat-label>
-          <input type="text" matInput formControlName="description">
-        </mat-form-field>-->
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+            <mat-label>Piping/Accessories</mat-label>
+            <input type="text" matInput formControlName="piping_and_accessories">
+            <span matSuffix>m</span>
+          </mat-form-field>
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
-          <mat-label>Piping/Accessories</mat-label>
-          <input type="text" matInput formControlName="piping_and_accessories">
-          <span matSuffix>m</span>
-        </mat-form-field>
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+            <mat-label>Cabling</mat-label>
+            <input type="number" matInput formControlName="cabling">
+            <span matSuffix>m</span>
+          </mat-form-field>
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
-          <mat-label>Cabling</mat-label>
-          <input type="number" matInput formControlName="cabling">
-          <span matSuffix>m</span>
-        </mat-form-field>
+          
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
-          <mat-label>Sources</mat-label>
-          <input type="text" matInput formControlName="sources">
-        </mat-form-field>
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+            <mat-label>Condition</mat-label>
+            <mat-select formControlName="condition">
+              <mat-option value="working">
+                Working
+              </mat-option>
+              <mat-option value="not_working">
+                Not working
+              </mat-option>
+              <mat-option value="repairable">
+                Repairable
+              </mat-option>       
+            </mat-select>          
+          </mat-form-field>
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
-          <mat-label>Condition</mat-label>
-          <mat-select formControlName="condition">
-            <mat-option value="working">
-              Working
-            </mat-option>
-            <mat-option value="not_working">
-              Not working
-            </mat-option>
-            <mat-option value="repairable">
-              Repairable
-            </mat-option>       
-          </mat-select>          
-        </mat-form-field>
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
+            <mat-label>Damage</mat-label>
+            <mat-select formControlName="damage">
+              <mat-option value=25> 25% </mat-option>
+              <mat-option value=50> 50% </mat-option>
+              <mat-option value=25> 75% </mat-option>
+            </mat-select>
+          </mat-form-field>
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="20%">
-          <mat-label>Damage</mat-label>
-          <mat-select formControlName="damage">
-            <mat-option value=25> 25% </mat-option>
-            <mat-option value=50> 50% </mat-option>
-            <mat-option value=25> 75% </mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
+            <mat-label>Cost of repair</mat-label>
+            <input type="number" matInput formControlName="cost_of_repair">
+            <span matPrefix>&#8358;</span><span matSuffix>.00</span>
+          </mat-form-field>          
 
-        <mat-form-field appearance={{appearance}} fxFlex.gt-xs="40%">
-          <mat-label>Cost of repair</mat-label>
-          <input type="number" matInput formControlName="cost_of_repair">
-          <span matPrefix>&#8358;</span><span matSuffix>.00</span>
-        </mat-form-field>
+        </div>
+        
+        <!-- Electricity source Array<string> -->
+        <div formArrayName="sources" fxFlex.gt-xs fxLayout fxLayout.gt-xs="row" fxLayoutGap="20px">
+          <div *ngFor="let source of electricitySources.controls; let i = index"> 
+            <mat-form-field appearance={{appearance}}>
+              <mat-label>Sources</mat-label>
+              <input type="text" matInput [formControlName]="i">
+              <mat-icon matSuffix color="warn" (click)="removeElectricitySource(index)">cancel</mat-icon>
+            </mat-form-field>
+          </div>
+          <button mat-flat-button color="primary" (click)="addElectricitySource()">
+            <mat-icon>add</mat-icon>
+            Add source
+          </button>
+        </div>        
 
       </div>
 
       <div fxLayout="row">
-        <button mat-flat-button color="primary" matStepperPrevious> 
-          <mat-icon>chevron_left</mat-icon>
-          Previous 
-        </button>
-        <span fxFlex="1 1 auto"></span>
-        <button mat-flat-button color="primary" matStepperNext> 
-          Next
-          <mat-icon>chevron_right</mat-icon> 
-        </button>
-      </div>
+          <button mat-flat-button color="primary" matStepperPrevious> 
+            <mat-icon>chevron_left</mat-icon>
+            Previous 
+          </button>
+          <span fxFlex="1 1 auto"></span>
+          <button mat-flat-button color="primary" matStepperNext> 
+            Next
+            <mat-icon>chevron_right</mat-icon> 
+          </button>
+        </div>
 
     </div>
     </mat-step>
@@ -727,14 +737,9 @@
     <!-- Water -->
     <mat-step [stepControl]="siteForm.controls.water">
       <ng-template matStepLabel>Water</ng-template>
-    <div fxLayout="column" fxLayoutGap="20px">        
+    <div [formGroup]="siteForm.controls.water" fxLayout="column" fxLayoutGap="20px">        
       
       <div fxLayoutAlign.gt-xs="space-between" [formGroup]="siteForm.controls.water" fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="10px" fxLayoutGap.gt-xs="20px grid">
-
-        <!--<mat-form-field appearance="outline">
-          <mat-label>Descripton</mat-label>
-          <input type="text" matInput formControlName="description">
-        </mat-form-field>-->
 
         <mat-form-field appearance={{appearance}} fxFlex.gt-xs="25%">
           <mat-label>Piping/Accessories</mat-label>
@@ -778,6 +783,21 @@
         </mat-form-field>
 
       </div>
+
+      <!-- Water source Array<string> -->
+        <div formArrayName="sources" fxFlex.gt-xs fxLayout fxLayout.gt-xs="row" fxLayoutGap="20px">
+          <div *ngFor="let source of waterSources.controls; let i = index"> 
+            <mat-form-field appearance={{appearance}}>
+              <mat-label>Sources</mat-label>
+              <input type="text" matInput [formControlName]="i">
+              <mat-icon matSuffix color="warn" (click)="removeWaterSource(index)">cancel</mat-icon>
+            </mat-form-field>
+          </div>
+          <button mat-flat-button color="primary" (click)="addWaterSource()">
+            <mat-icon>add</mat-icon>
+            Add source
+          </button>
+        </div>
 
       <div fxLayout="row">
         <button mat-flat-button color="primary" matStepperPrevious> 
