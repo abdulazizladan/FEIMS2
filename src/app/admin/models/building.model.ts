@@ -17,7 +17,7 @@ export interface Building{
       floors: number, //count
     },
       /*---- Super structure ----*/
-    superstructure: {
+    super_structure: {
       type: string, //metal|wood|concrete|block|brick|brick veneer|alucoBond|crack_tiles|others
       under_concrete: {
         //description: string,

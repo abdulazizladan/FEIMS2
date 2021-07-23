@@ -1,5 +1,5 @@
 /** Low value equipment with high value */
-export interface Lve{
+export interface LVE{
     _id: string,
     name: string,
     code: string,

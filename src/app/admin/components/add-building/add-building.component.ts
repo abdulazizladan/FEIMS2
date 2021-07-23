@@ -70,7 +70,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
           latitude: [0, []]
         }),
         purpose: ['', [Validators.required]], //residential/office/multiple
-        comment: ['', [Validators.required]], //any other detail not captured
+        //comment: ['', [Validators.required]], //any other detail not captured
         dimensions: this.fb.group({
           floor_area: [0, [Validators.required]],//square meters
           wall_area: [0, []], //square meters

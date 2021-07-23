@@ -62,7 +62,8 @@ export class AddSiteComponent implements OnInit {
    */
   submit() {
     const data = this.siteForm.value;
-    this.submitted = true;
+    try{
+      this.submitted = true;
     this.store.dispatch(addSite({site: data}))
     setTimeout(
       () => {
@@ -70,6 +71,10 @@ export class AddSiteComponent implements OnInit {
       },
       5000
     )
+    }catch(error){
+
+    }
+    
   }
 
   /**

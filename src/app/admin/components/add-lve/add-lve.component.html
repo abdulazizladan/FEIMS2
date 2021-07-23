@@ -15,11 +15,62 @@
     Equipment added successfully!!
   </button>
 
-  <mat-dialog-content>
+  <mat-dialog-content formGroup="lveForm">
+
+    <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="20px" fxLayoutGap.gt-xs="20px grid">
+
+      <mat-form-field fxFlex.gt-xs="320px">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControl="name">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="320px">
+        <mat-label>Code</mat-label>
+        <input matInput type="text" formControl="code">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="100px">
+        <mat-label>Quantity</mat-label>
+        <input matInput type="number" formControl="quantity">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="400px">
+        <mat-label>S.no</mat-label>
+        <input matInput type="text" formControl="serialNumber">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="320px">
+        <mat-label>Date commissioned</mat-label>
+        <input matInput type="date" formControl="name">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="320px">
+        <mat-label>Brand</mat-label>
+        <input matInput type="text" formControl="brand">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="320px">
+        <mat-label>Model</mat-label>
+        <input matInput type="text" formControl="model">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="320px">
+        <mat-label>Status</mat-label>
+        <input matInput type="text" formControl="status">
+      </mat-form-field>
+
+      <mat-form-field fxFlex.gt-xs="320px">
+        <mat-label>Cost of repair</mat-label>
+        <input matInput type="text" formControl="costOfRepair">
+        <span matPrefix>&#8358;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+
+    </div>
 
   </mat-dialog-content>
 
   <div mat-dialog-actions align="end">
     <span color="warn" class="mat-h4">Unable to complete action</span>
-    <button mat-flat-button color="primary"></button>
+    <button mat-flat-button (click)="submit();" color="primary">Add Equipment</button>
   </div>
