@@ -3,6 +3,9 @@ import { BuildingService } from '../../services/building.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { BuildingState } from 'app/store/building/building.state';
+import { addBuilding } from 'app/store/building/building.actions';
 
 /** Add-building component */
 @Component({
@@ -22,13 +25,28 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   public hasElevator: boolean = false;
 
   private subscription: Subscription;
+
+  private store: Store<{ state: BuildingState}>
  
   resetForm(){
 
   }
 
   submit (){
-    //console.log(this.buildingForm.value)
+    const data = this.buildingForm.value;
+    try{
+      this.submitted = true;
+    this.store.dispatch(addBuilding({building: data}))
+    setTimeout(
+      () => {
+        this.dialogRef.close()
+      },
+      5000
+    )
+    }catch(error){
+
+    }
+    /**
     this.subscription = this.buildingService.addBuilding(this.buildingForm.value).subscribe(
       response => {
         this.submitted = true;
@@ -44,7 +62,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
         this.error = true;
         console.log(error)
       }
-    )
+    )*/
   }
 
   constructor( private buildingService: BuildingService, private fb: FormBuilder, private dialogRef: MatDialogRef<any>) { 
@@ -55,6 +73,9 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     this.initForm();
   }
 
+  tap() {
+    console.log(this.buildingForm.value)
+  }
   ngOnDestroy(): void{
 
   }
@@ -76,30 +97,31 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
           wall_area: [0, []], //square meters
           ceiling_area: [0, []], //square meters
           floors: [1, [Validators.min(1), Validators.required]] //floor count
-        })
+        }),
+        super_structure: this.fb.group({
+          type: ['', [Validators.required]],
+          under_concrete: this.fb.group({
+            concrete_work: [0, []],
+            form_work: [0, []],
+            brick_work: [0, []], // merged from under block work
+            reinforcement: [0, []]
+          }),
+          under_crack_tiles: this.fb.group({
+            size: [0, []],
+            type: ['', []],
+            quantity: [0, []]
+          }),
+          under_alucobond: this.fb.group({
+            size: [0, []],
+            type: ['', []],
+            accessories: ['', []],
+            quantity: [0, []]
+          }),
+          condition: ['', [Validators.required]],
+          cost_of_repair: [0, [Validators.required]]
+        }),
       }),
-      super_structure: this.fb.group({
-        type: ['', [Validators.required]],
-        under_concrete: this.fb.group({
-          concrete_work: [0, []],
-          form_work: [0, []],
-          brick_work: [0, []], // merged from under block work
-          reinforcement: [0, []]
-        }),
-        under_crack_tiles: this.fb.group({
-          size: [0, []],
-          type: ['', []],
-          quantity: [0, []]
-        }),
-        under_alucobond: this.fb.group({
-          size: [0, []],
-          type: ['', []],
-          accessories: ['', []],
-          quantity: [0, []]
-        }),
-        condition: ['', [Validators.required]],
-        cost_of_repair: [0, [Validators.required]]
-      }),
+      
       walls: this.fb.group({
         wall_type: ['', [Validators.required]],
         quantity: [0, [Validators.required]],

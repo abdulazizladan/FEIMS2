@@ -5,6 +5,7 @@ import { BuildingsComponent } from './admin/components/buildings/buildings.compo
 import { HomeComponent } from './admin/components/home/home.component';
 import { ReportsComponent } from './admin/components/reports/reports.component';
 import { SettingsComponent } from './admin/components/settings/settings.component';
+import { SiteComponent } from './admin/components/site/site.component';
 import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 //import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/auth-layout.component';
 import { AuthGuard } from './shared/guards/auth.guard';
@@ -56,6 +57,10 @@ export const rootRouterConfig: Routes = [
       {
         path: 'building/:id',
         component: BuildingSummaryComponent
+      },
+      {
+        path: 'sites',
+        component: SiteComponent
       }
     ]
   },
