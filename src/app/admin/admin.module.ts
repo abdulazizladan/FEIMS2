@@ -65,6 +65,8 @@ import { SiteComponent } from './components/site/site.component';
 import { AddHveComponent } from './components/add-hve/add-hve.component';
 import { AddLveComponent } from './components/add-lve/add-lve.component';
 import { SitesListComponent } from './components/sites-list/sites-list.component';
+import { BuildingsListComponent } from './components/buildings-list/buildings-list.component';
+import { EquipmentListComponent } from './components/equipment-list/equipment-list.component';
 
 
 @NgModule({
@@ -83,7 +85,7 @@ import { SitesListComponent } from './components/sites-list/sites-list.component
     AboutComponent, 
     BuildingSummaryComponent, 
     SiteSurveyComponent, 
-    AddSiteComponent, SiteComponent, AddHveComponent, AddLveComponent, SitesListComponent
+    AddSiteComponent, SiteComponent, AddHveComponent, AddLveComponent, SitesListComponent, BuildingsListComponent, EquipmentListComponent
   ],
   imports: [
     CommonModule,

@@ -1,30 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { SiteService } from 'app/admin/services/site.service';
-import { Site } from 'app/admin/models/site.model';
-import { Observable } from 'rxjs';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { AddSiteComponent } from '../add-site/add-site.component';
 
 @Component({
-  selector: 'app-sites-list',
+  selector: 'app-site',
   templateUrl: './sites-list.component.html',
   styleUrls: ['./sites-list.component.scss']
 })
 export class SitesListComponent implements OnInit {
 
-  private sites: Observable<Site[]>;
-
-  constructor(
-    private siteService: SiteService
-  ) { }
+  constructor( private dialog: MatDialog ) { }
 
   ngOnInit(): void {
-    this.siteService.getSites().subscribe(
-      result => {
-        //this.sites = result
-      },
-      error => {
+  }
 
-      }
-    )
+  openAddSiteDialog(): void{
+    const dialogRef = this.dialog.open(AddSiteComponent, {
+      //width: '90%',
+      //minHeight: '650px',
+      data: {},
+      disableClose: true
+    });
   }
 
 }

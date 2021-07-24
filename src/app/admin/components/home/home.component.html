@@ -12,7 +12,7 @@
 
 <div fxLayout="row wrap">
     <!-- Sites -->
-    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'100ms',scale:'.9'}}" routerLink="./sites" routerLinkActive="router-link-active" >
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'100ms',scale:'.9'}}" routerLink="sites">
       <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
         <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/sites.png" alt="">
         <span style="width: 20px"></span>
@@ -24,7 +24,7 @@
     </div>
     
     <!-- Buildings -->
-    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'150ms',scale:'.9'}}">
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'150ms',scale:'.9'}}" routerLink="buildings">
         <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
           <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/buildings.png" alt="">
           <span style="width: 20px"></span>
@@ -36,7 +36,7 @@
     </div>
 
     <!-- High Value Equipment -->
-    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'200ms',scale:'.9'}}">
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'200ms',scale:'.9'}}" routerLink='equipment' routerLinkActive="router-link-active" >
         <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
           <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/hve.png" alt="">
           <span style="width: 20px"></span>
@@ -48,7 +48,7 @@
     </div>
 
     <!-- Low Value Equipment -->
-    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'250ms',scale:'.9'}}">
+    <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'250ms',scale:'.9'}}" routerLink='equipment'>
         <mat-card class="rounded-circle" fxLayout="row wrap" fxLayoutAlign="start center">
           <img class="avatar-md rounded-circle" src="assets/FEIMS_icons/lve.png" alt="">
           <span style="width: 20px"></span>
