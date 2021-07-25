@@ -152,6 +152,25 @@
         (chartHover)="pieChartHovered($event)"
         (chartClick)="pieChartClicked($event)"></canvas>
       </mat-card-content>
+      <mat-card-footer style="padding: 10px;">
+        <mat-list dense>
+          <mat-list-item>
+            <div class="working"></div>
+            <span fxFlex="10px"></span>
+            Good condition
+          </mat-list-item>
+          <mat-list-item>
+            <div class="repairable"></div>
+            <span fxFlex="10px"></span>
+            Repairable
+          </mat-list-item>
+          <mat-list-item>
+            <div class="abandoned"></div>
+            <span fxFlex="10px"></span>
+            Abandoned
+          </mat-list-item>
+        </mat-list>
+      </mat-card-footer>
     </mat-card>
   </div>
   <!--
