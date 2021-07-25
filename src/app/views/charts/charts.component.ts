@@ -24,7 +24,7 @@ export class ChartsComponent implements OnInit {
     pointHoverBorderColor: 'rgba(148,159,177,0.8)'
   }, 
   {
-    backgroundColor: '#1e88e5',
+    backgroundColor: '#024455',
     borderColor: '#e0e0e0',
     pointBackgroundColor: '#e0e0e0',
     pointBorderColor: '#fff',
