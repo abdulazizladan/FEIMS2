@@ -1,21 +1,21 @@
 <!-- Add Low Value Equipment -->
 <h2 mat-dialog-title>
-    Add building
+    Add Low value equipment
     <span fxFlex="1 1 auto">
     
     </span>
   
-    <button mat-stroked-button>Reset form</button> 
+    <!--<button mat-stroked-button>Reset form</button>--> 
     <button mat-icon-button aria-label="close dialog" mat-dialog-close>
       <mat-icon>close</mat-icon>
     </button>
   </h2>
 
-  <button mat-flat-button mat-dialog-close color="primary">
+  <!--<button mat-flat-button mat-dialog-close color="primary">
     Equipment added successfully!!
-  </button>
+  </button>-->
 
-  <mat-dialog-content formGroup="lveForm">
+  <mat-dialog-content [formGroup]="lveForm">
 
     <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="20px" fxLayoutGap.gt-xs="20px grid">
 
@@ -71,6 +71,6 @@
   </mat-dialog-content>
 
   <div mat-dialog-actions align="end">
-    <span color="warn" class="mat-h4">Unable to complete action</span>
+    <!--<span color="warn" class="mat-h4">Unable to complete action</span>-->
     <button mat-flat-button (click)="submit();" color="primary">Add Equipment</button>
   </div>

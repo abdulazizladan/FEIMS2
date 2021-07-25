@@ -1,1 +1,215 @@
-<p>add-hve works!</p>
+<!-- Add High Value Equipment -->
+<h2 mat-dialog-title>
+    Add High value equipment
+    <span fxFlex="1 1 auto">
+    
+    </span>
+  
+    <!--<button mat-stroked-button>Reset form</button>--> 
+    <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+</h2>
+
+<mat-dialog-content [formGroup]="hveForm">
+
+    <div fxLayout="column">
+        
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="20px" fxLayoutGap.gt-xs="20px grid">
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Code</mat-label>
+                <input type="text" matInput formControlName="code">
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}"> 
+                <mat-label>Serial number</mat-label>
+                <input type="text" matInput formControlName="serialNumber">
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Has manual?</mat-label>
+                <mat-select formControlName="hasManual">
+                    <mat-option value=true>
+                        Yes
+                    </mat-option>
+                    <mat-option value=false>
+                        No
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Manufacturer</mat-label>
+                <input type="text" matInput formControlName="manufacturer">
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Date commissioned</mat-label>
+                <input type="date" matInput formControlName="commissionDate">
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Model</mat-label>
+                <input type="text" matInput formControlName="model">
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Date manufactured</mat-label>
+                <input type="date" matInput formControlName="dateManufactured">
+                <mat-icon matSuffix>perm_contact_calendar</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="{{appearance}}">
+                <mat-label>Date acquired</mat-label>
+                <input type="date" matInput formControlName="dateAcquired">
+                <mat-icon matSuffix>perm_contact_calendar</mat-icon>
+            </mat-form-field>
+
+        </div>
+
+        <mat-divider></mat-divider>
+        <div formGroupName="position" fxLayout="column" fxLayoutGap="20px">
+            <h3>Position</h3>
+            
+            <div fxLayout="row" fxLayoutGap="20px">
+                <mat-form-field appearance="{{appearance}}">
+                    <mat-label>Longitude</mat-label>
+                    <input type="text" matInput formControlName="longitude">
+                </mat-form-field>
+
+                <mat-form-field appearance="{{appearance}}">
+                    <mat-label>Latitude</mat-label>
+                    <input type="text" matInput formControlName="latitude">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="20px" fxLayoutGap.gt-xs="20px grid">
+        <mat-form-field appearance="{{appearance}}">
+            <mat-label>Has circuit diagram?</mat-label>
+            <mat-select formControlName="hasCircuitDiagram">
+                <mat-option value=true>
+                    Yes
+                </mat-option>
+                <mat-option value=false>
+                    No
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="{{appearance}}">
+            <mat-label>Condition</mat-label>
+            <mat-select formControlName="condition">
+                <mat-option value="excellent">
+                    Excellent
+                  </mat-option>
+                  <mat-option value="good">
+                    Good
+                  </mat-option>
+                  <mat-option value="fair">
+                    Fair
+                  </mat-option>
+                  <mat-option value="poor">
+                    Poor
+                  </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance={{appearance}}>
+            <mat-label>Damage</mat-label>
+            <mat-select formControlName="damage">
+              <mat-option value=25>
+                25%
+              </mat-option>
+              <mat-option value=50>
+                50%
+              </mat-option>
+              <mat-option value=75>
+                75%
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="{{appearance}}">
+            <mat-label>Cost of repair</mat-label>
+            <input matInput type="text" formControlName="costOfRepair">
+            <span matPrefix>&#8358;</span>
+            <span matSuffix>.00</span>
+        </mat-form-field>
+
+        </div>
+
+        <mat-divider></mat-divider>
+        <div fxLayout="column" formArrayName="components"> 
+            <h3>Changeable components</h3>
+
+            <div> 
+                <div fxLayout="row wrap" *ngFor="let component of components; let i = index">
+                    <div [formGroupName]="i">
+                    
+                        <mat-form-field>
+                            <mat-label>Name</mat-label>
+                            <input type="text" matInput formControlName="name">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Description</mat-label>
+                            <input type="text" matInput formControlName="description">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Quantity</mat-label>
+                            <input type="number" matInput formControlName="quantity">
+                        </mat-form-field>
+
+                    </div>
+                    <button mat-icon-button (click)="removeComponent(i)">
+                        <mat-icon>cancel</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <span fxFlex="1 1 auto"></span>
+                <button mat-flat-button color="primary" (click)="addComponent()">
+                    <mat-icon>add</mat-icon>
+                    Add Component
+                </button>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+        <div fxLayout="column"> 
+            <h3>Other specifications</h3>
+
+            <div fxLayout="row wrap">
+
+
+                <button mat-icon-button (click)="removeSpecification(0)">
+                    <mat-icon>cancel</mat-icon>
+                </button>
+            </div>
+
+            <div fxLayout="row">
+                <span fxFlex="1 1 auto"></span>
+                <button mat-flat-button color="primary" (click)="addSpecification()">
+                    <mat-icon>add</mat-icon>
+                    Add specification
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</mat-dialog-content>
+
+<div mat-dialog-actions align="end">
+    <!--<span color="warn" class="mat-h4">Unable to complete action</span>-->
+    <button [disabled]="hveForm.invalid" mat-flat-button (click)="submit();" color="primary">Add Equipment</button>
+  </div>

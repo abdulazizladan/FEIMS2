@@ -9,7 +9,7 @@ import { LVE } from 'app/admin/models/lve.model';
 })
 export class AddLveComponent implements OnInit {
 
-  public lveForm: any;
+  public lveForm: FormGroup;
 
   /**
    * 
@@ -20,6 +20,10 @@ export class AddLveComponent implements OnInit {
    * 
    */
   ngOnInit(): void {
+    this.initializeForm();
+  }
+
+  initializeForm() {
     this.lveForm = this.fb.group({
       name: ['', [Validators.required]],
       code: ['', [Validators.required]],
@@ -32,7 +36,6 @@ export class AddLveComponent implements OnInit {
       costOfRepair: [0, [Validators.required]],
       comment: ['', []]
     })
-  
   }
 
   /**

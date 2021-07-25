@@ -29,7 +29,8 @@ export class AuthService {
   public user: Observable<any>;
   private baseUrl= environment.baseUrl;
 
-  private readonly loginUrl: string = `${this.baseUrl}/${ApiPaths.signin}`;
+  //private readonly loginUrl: string = `${this.baseUrl}/${ApiPaths.signin}`;
+  private readonly loginUrl: string = "http://narr.ng/api/v1/auth/login"
   private readonly registerUrl: string = `${this.baseUrl}/${ApiPaths.signup}`;
   
   /**

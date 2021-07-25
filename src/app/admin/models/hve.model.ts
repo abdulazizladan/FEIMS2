@@ -4,7 +4,7 @@ export interface HVE{
     code: string,
     serialNumber: string,
     hasManual: boolean,
-    purchaseDate: Date,
+    //purchaseDate: Date, //Redundant
     manufacturer: string,
     commissionDate: Date,
     model: null | string,
@@ -22,7 +22,7 @@ export interface HVE{
     ],
     hasCircuitDiagram: boolean,
     condition: string,
-    comment: string,
+    //comment: string,// Remove
     damage: number,
     costOfRepair: number,
     components: null | [
