@@ -7,7 +7,9 @@ import { EquipmentListComponent } from './admin/components/equipment-list/equipm
 import { HomeComponent } from './admin/components/home/home.component';
 import { ReportsComponent } from './admin/components/reports/reports.component';
 import { SettingsComponent } from './admin/components/settings/settings.component';
-import { SitesListComponent } from './admin/components/sites-list/sites-list.component'
+import { SitesListComponent } from './admin/components/sites-list/sites-list.component';
+import { ProfileBlankComponent } from './views/profile/profile-blank/profile-blank.component';
+import { ProfileSettingsComponent } from './views/profile/profile-settings/profile-settings.component';
 import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 //import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/auth-layout.component';
 import { AuthGuard } from './shared/guards/auth.guard';
@@ -46,7 +48,7 @@ export const rootRouterConfig: Routes = [
       },
       {
         path: 'settings',
-        component: SettingsComponent
+        component: ProfileSettingsComponent
       },
       {
         path: 'about',
@@ -67,6 +69,10 @@ export const rootRouterConfig: Routes = [
       {
         path: 'sites',
         component: SitesListComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileBlankComponent
       }
     ]
   },

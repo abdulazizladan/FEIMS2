@@ -20,10 +20,11 @@
                     <span class="mat-h4">Year built: 19XX </span>
                 </mat-list-item>
             </mat-list>
+            
             <div fxFlex.gt-xs="30%">
                 <mat-list>
                     <mat-list-item>
-                        <span class="mat-h4">Estimated repair cost:</span> 
+                        <span class="mat-h4">Estimated repair cost: &#8358; 0.00 </span> 
                     </mat-list-item>
                 </mat-list>
             </div>
@@ -38,161 +39,293 @@
             
             <mat-tab label="Building Structure">
                 
-                <div fxLayout.xs="column" fxLayout.gt-xs="column">
+                <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
                     
-                    <span class="mat-headline">Dimensions</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Total floor area : 
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Wall area : 
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area : 
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors : 
-                        </mat-list-item>
-                    </mat-list>
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Dimensions
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Total floor area : 0 m<sup>2</sup>
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Total Wall area : 0 m<sup>2</sup>
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Total Ceiling area : 0 m<sup>2</sup>
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Number of floors : 0 m<sup>2</sup>
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
 
-                    <span class="mat-headline">Superstructure</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Type : 
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors
-                        </mat-list-item>
-                    </mat-list>
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Super structure
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Type : Concrete
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Condition : Excellent
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Cost of repair: &#8358;0.00
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
                     
-                    <span class="mat-headline">Walls & Windows</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Type : 
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors
-                        </mat-list-item>
-                    </mat-list>
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Walls & Windows
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Wall type : generic
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Total wall area : 0.00 m<sup>2</sup>
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Wall decorations? : No
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
                     
-                    <span class="mat-headline">Floor</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Type : 
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors
-                        </mat-list-item>
-                    </mat-list>
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Floor
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Floor finish :  
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Total floor area : 0.00 m<sup>2</sup>
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Number of floors
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
                     
-                    <span class="mat-headline">Roof & Ceiling</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Type : 
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors
-                        </mat-list-item>
-                    </mat-list>
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Roof & Ceiling
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Type : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Total Ceiling area : n0 m<sup>2</sup>
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Ceiling finishing : 
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
                 </div>
             </mat-tab>
 
             <mat-tab label="Building Services">
-                <div fxLayout="column">
+                <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
                     
-                    <span class="mat-headline">Dimensions</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Total floor area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Wall area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors
-                        </mat-list-item>
-                    </mat-list>
-                
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Roof lights
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Area : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Condition : Excellent
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Material : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Finishes : 
+                                </mat-list-item>
+
+                                <mat-list-item class="mat-h4">
+                                    Cost of repair : &#8358;0.00 
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>                
                 </div>
             </mat-tab>
 
             <mat-tab label="High Value Equipment">
-                <div fxLayout.gt-xs="column">
-                    <span class="mat-headline">Dimensions</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Total floor area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Wall area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors
-                        </mat-list-item>
-                    </mat-list>
+                <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
+
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Equipment
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Name : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Brand : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Model : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Serial number : 
+                                </mat-list-item>
+                                <mat-list-item>
+                                    Position : 
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Equipment
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Name : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Brand : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Model : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Serial number : 
+                                </mat-list-item>
+                                <mat-list-item>
+                                    Position : 
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Equipment
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Name : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Brand : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Model : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Serial number : 
+                                </mat-list-item>
+                                <mat-list-item>
+                                    Position : 
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
+
                 </div>
             </mat-tab>
 
             <mat-tab label="Low Value Equipment">
-                <div fxLayout="column">
+                <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap="10px grid">
                     
-                    <span class="mat-headline">Dimensions</span>
-                    <mat-list dense>
-                        <mat-list-item class="mat-h4">
-                            Total floor area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Wall area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Total Ceiling area
-                        </mat-list-item>
-                        <mat-list-item class="mat-h4">
-                            Number of floors
-                        </mat-list-item>
-                    </mat-list>
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Equipment
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Name : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Quantity : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Manufacturer : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Date acquired : 
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card fxFlex="45%">
+                        <mat-card-header>
+                            <mat-card-title>
+                                Equipment
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-list dense>
+                                <mat-list-item class="mat-h4">
+                                    Name : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Quantity : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Manufacturer : 
+                                </mat-list-item>
+                                <mat-list-item class="mat-h4">
+                                    Date acquired : 
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card-content>
+                    </mat-card>
+
                 </div>
 
             </mat-tab>
 
-            <mat-tab label="Maintenance History">
-                
-                <span class="mat-h4">Building Maintenance History</span>
-                <mat-list>
-                    <mat-list-item>
-                        Activity<span fxFlex></span>Cost (&#8358;) <span fxFlex></span>Date
-                    </mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item>
-                        Activity<span fxFlex></span>Cost (&#8358;) <span fxFlex></span>Date
-                    </mat-list-item>
-                    <mat-divider></mat-divider>
-                    <mat-list-item>
-                        Activity<span fxFlex></span>Cost (&#8358;) <span fxFlex></span>Date
-                    </mat-list-item>
-                    <mat-divider></mat-divider>
-                </mat-list>
-                
-            </mat-tab>
         </mat-tab-group>
     </mat-card>
 </div>

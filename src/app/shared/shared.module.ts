@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTabsModule } from '@angular/material/tabs';
 
 // SERVICES
 import { ThemeService } from './services/theme.service';
@@ -22,6 +23,7 @@ import { SharedDirectivesModule } from './directives/shared-directives.module';
   CommonModule,
   MatInputModule,
   MatSelectModule,
+  MatTabsModule,
     SharedComponentsModule,
     SharedPipesModule,
     SharedDirectivesModule    
