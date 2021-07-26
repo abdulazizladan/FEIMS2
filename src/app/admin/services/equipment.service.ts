@@ -9,34 +9,30 @@ import { HVE } from '../models/hve.model';
 })
 export class EquipmentService {
 
-  /**
-   * 
-   * @param _http 
-   */
-  constructor( private _http: HttpClient ) { }
+  constructor( private http: HttpClient ) { }
 
   getAllHighValueEquipment(): Observable<HVE[]>{
-    return this._http.get<HVE[]>('127.0.0.1:3000/');
+    return this.http.get<HVE[]>('127.0.0.1:3000/');
   }
 
   getSingleHighValueEquipment( id: string): Observable<HVE>{
-    return this._http.get<HVE>('127.0.0.1:3000/hve');
+    return this.http.get<HVE>('127.0.0.1:3000/hve');
   }
   
   getAllLowValueEquipment(): Observable<HVE[]>{
-    return this._http.get<HVE[]>('127.0.0.1:3000/equipment/high-value');
+    return this.http.get<HVE[]>('127.0.0.1:3000/equipments/high-value');
   }
 
   getSingleLowValueEquipment( id: string ): Observable<HVE>{
-    return this._http.get<HVE>('127.0.0.1:3000/equipment/low-value');
+    return this.http.get<HVE>('127.0.0.1:3000/equipments/low-value');
   }
 
   addHighValueEquipment( hve: HVE ): Observable<HVE>{
-    return this._http.post<HVE>('127.0.0.1:3000/equipment/high-value', hve)
+    return this.http.post<HVE>('127.0.0.1:3000/equipments/high-value', hve)
   };
 
   addLowValueEquipment( lve: LVE ): Observable<LVE>{
-    return this._http.post<LVE>('127.0.0.1:3000/equipment/low-value', lve)
+    return this.http.post<LVE>('127.0.0.1:3000/equipments/low-value', lve)
   };
 
 }
