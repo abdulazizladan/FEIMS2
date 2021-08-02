@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BuildingService } from '../../services/building.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
@@ -46,23 +46,6 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     }catch(error){
 
     }
-    /**
-    this.subscription = this.buildingService.addBuilding(this.buildingForm.value).subscribe(
-      response => {
-        this.submitted = true;
-        setTimeout(
-          () => {
-            this.dialogRef.close()
-          },
-          2000
-        )
-        
-      },
-      error => {
-        this.error = true;
-        console.log(error)
-      }
-    )*/
   }
 
   constructor( private buildingService: BuildingService, private fb: FormBuilder, private dialogRef: MatDialogRef<any>) { 
@@ -81,51 +64,51 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   }
 
   initForm(): void{
-    this.buildingForm = this.fb.group({      
+    this.buildingForm = this.fb.group({
       structure: this.fb.group({
         name: ['', [Validators.required]],
         code: ['', [Validators.required]],
         year_built: [1900, [Validators.required, Validators.max(2022)]],
         position: this.fb.group({
-          longitude: [0, []],
-          latitude: [0, []]
+          longitude: [null, []],
+          latitude: [null, []]
         }),
         purpose: ['', [Validators.required]], //residential/office/multiple
         //comment: ['', [Validators.required]], //any other detail not captured
         dimensions: this.fb.group({
-          floor_area: [0, [Validators.required]],//square meters
-          wall_area: [0, []], //square meters
-          ceiling_area: [0, []], //square meters
+          floor_area: [null, [Validators.required]],//square meters
+          wall_area: [null, []], //square meters
+          ceiling_area: [null, []], //square meters
           floors: [1, [Validators.min(1), Validators.required]] //floor count
-        }),
-        super_structure: this.fb.group({
-          type: ['', [Validators.required]],
-          under_concrete: this.fb.group({
-            concrete_work: [0, []],
-            form_work: [0, []],
-            brick_work: [0, []], // merged from under block work
-            reinforcement: [0, []]
-          }),
-          under_crack_tiles: this.fb.group({
-            size: [0, []],
-            type: ['', []],
-            quantity: [0, []]
-          }),
-          under_alucobond: this.fb.group({
-            size: [0, []],
-            type: ['', []],
-            accessories: ['', []],
-            quantity: [0, []]
-          }),
-          condition: ['', [Validators.required]],
-          cost_of_repair: [0, [Validators.required]]
-        }),
+        })
       }),
-      
+      super_structure: this.fb.group({
+        type: ['', [Validators.required]],
+        under_concrete: this.fb.group({
+          concrete_work: [0, []],
+          form_work: [0, []],
+          reinforcement: [0, []],
+          brick_work: [0, []]
+        }),
+        under_crack_tiles: this.fb.group({
+          size: [0, []],//square meters
+          type: ['', []],
+          quantity: [0, []]//number
+        }),
+        under_alucobond: this.fb.group({
+          size: [0, []], //square meters
+          type: ['', []], //string
+          //accessories: ['', []], //string[]
+          accessories: this.fb.array([]),
+          quantity: [0, []] //number
+        }),
+        condition: ['', [Validators.required]],
+        cost_of_repair: [0, [Validators.required]] //naira
+      }),
       walls: this.fb.group({
         wall_type: ['', [Validators.required]],
         quantity: [0, [Validators.required]],
-        last_decorated: [0, []],
+        last_decorated: [1900, []],
         has_stain:[false, []],
         concrete_wall: this.fb.group({
           condition: ['', []],
@@ -182,7 +165,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
         interior_wall: this.fb.group({
           finishing: ['', []], //metal|wood|sheetrock|plaster|concrete|brick|paneling|other
           size: [0, []], //square meter
-          type: ['', []], 
+          type: ['', []],
           accessories: ['', []],
           quantity: [0, []], //count
           condition: ['', []], //excellent|good|fair|poor
@@ -205,7 +188,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
           quantity: [0, []], //square meter
           damage: [0, []], //percentage 25|50|75,
           cost_of_repair: [0, []] //naira
-        }), 
+        }),
         slabs: this.fb.group({
           concrete_work: [0, []], //cubic meter
           finishes: [0, []], //square meter
@@ -303,7 +286,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
           damage: [0, []],
           cost_of_repair: [0, []]
 
-        }), 
+        }),
         air_conditioning: this.fb.group({
           piping_length: [0, []],
           quantity: [0, []],
@@ -347,7 +330,8 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
           condition: ['', []],
           cost_of_repair: [0, []]
         })
-      })
+      }),
+
     })
   }
 
@@ -367,7 +351,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     brand_name: ['', []],
     service_company: ['', []],
     phone: ['', []],
-    smergency_shutoff_location: ['', []],
+    emergency_shutoff_location: ['', []],
     elevator_exits: this.fb.group({
       top: [0, []],
       side: [0, []],
@@ -386,6 +370,19 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   removeElevator(): void {
     this.hasElevator = false
     this.buildingForm.removeControl('elevator')
+  }
+
+  get accessories(): FormArray {
+    return this.buildingForm.get('super_structure.under_alucobond.accessories') as FormArray;
+  }
+
+
+  addAlucobondAccessory(): void{
+    this.accessories.push(this.fb.control('', Validators.required))
+  }
+
+  removeAlucobondAccessory(id: number): void{
+    this.accessories.removeAt(id)
   }
 
   /**
