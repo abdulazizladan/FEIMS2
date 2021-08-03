@@ -36,6 +36,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     const data = this.buildingForm.value;
     try{
       this.submitted = true;
+      console.log(data)
       this.store.dispatch(addBuilding({building: data}))
       setTimeout(
       () => {
@@ -83,7 +84,7 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
         })
       }),
       super_structure: this.fb.group({
-        type: ['', [Validators.required]],
+        structure_type: ['', [Validators.required]],
         under_concrete: this.fb.group({
           concrete_work: [0, []],
           form_work: [0, []],

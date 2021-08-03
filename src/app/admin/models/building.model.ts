@@ -18,7 +18,7 @@ export interface Building{
     },
       /*---- Super structure ----*/
     super_structure: {
-      type: string, //metal|wood|concrete|block|brick|brick veneer|alucoBond|crack_tiles|others
+      structure_type: string, //metal|wood|concrete|block|brick|brick veneer|alucoBond|crack_tiles|others
       under_concrete: {
         //description: string,
         concrete_work: number, //cubic meter
