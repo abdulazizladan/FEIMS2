@@ -21,6 +21,8 @@ import { selectSites } from 'app/store/site/site.selector';
   animations: egretAnimations
 })
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  buildings$ = this.store.select(selectBuidings);
   
   trafficVsSaleOptions: any;
   trafficVsSale: any;

@@ -36,8 +36,8 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     const data = this.buildingForm.value;
     try{
       this.submitted = true;
-    this.store.dispatch(addBuilding({building: data}))
-    setTimeout(
+      this.store.dispatch(addBuilding({building: data}))
+      setTimeout(
       () => {
         this.dialogRef.close()
       },
@@ -383,11 +383,6 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
 
   removeAlucobondAccessory(id: number): void{
     this.accessories.removeAt(id)
-  }
-
-  /**
-   * Submits building data form
-   */
-  
+  } 
 
 }

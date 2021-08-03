@@ -15,7 +15,9 @@ export class BuildingsListComponent implements OnInit {
 
   buildings$ = this.store.select(selectBuidings);
 
-  constructor( public dialog: MatDialog, private store: Store<{building: BuildingState}> ) { }
+  constructor( 
+    public dialog: MatDialog, 
+    private store: Store<{building: BuildingState}> ) { }
 
   ngOnInit(): void {
     this.store.dispatch(loadBuildings());
