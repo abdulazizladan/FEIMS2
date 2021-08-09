@@ -16,8 +16,8 @@ export class SitesListComponent implements OnInit {
 
   openAddSiteDialog(): void{
     const dialogRef = this.dialog.open(AddSiteComponent, {
-      //width: '90%',
-      //minHeight: '650px',
+      //width: '800px%',
+      //height: '90%',
       data: {},
       disableClose: true
     });

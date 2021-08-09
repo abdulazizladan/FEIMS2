@@ -20,9 +20,14 @@ export const rootRouterConfig: Routes = [
     redirectTo: 'auth',
     pathMatch: 'full'
   },
+  //{
+  //  path: '',
+  //  loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
+  //},
   {
     path: '',
-    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   },
   {
     path: 'dashboard1',
@@ -36,7 +41,7 @@ export const rootRouterConfig: Routes = [
   {
     path: 'dashboard',
     component: AdminLayoutComponent,
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
     children: [
       {
         path: '',
