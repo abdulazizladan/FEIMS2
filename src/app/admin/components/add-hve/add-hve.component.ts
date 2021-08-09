@@ -10,7 +10,6 @@ import { LVE } from 'app/admin/models/lve.model';
 export class AddHveComponent implements OnInit {
 
   public hveForm: FormGroup;
-  appearance: string = 'fill';
 
   /**
    * 
@@ -29,71 +28,67 @@ export class AddHveComponent implements OnInit {
    */
   initializeForm() {
     this.hveForm = this.fb.group({
-      name: ['', [Validators.required]],
-      code: [''],
-      serialNumber: [''],
-      hasManual: [false, [Validators.required]],
-      manufacturer: [''],
-      commissionDate: [0],
-      model: [''],
-      dateManufactured: [0],
-      dateAcquired: [0],
+      name: (['', [Validators.required]]),
+      code: (['']),
+      serialNumber:  (['']),
+      hasManual: ([false, [Validators.required]]),
+      manufacturer: (['']),
+      commissionDate: (['', [Validators.required]]),
+      model: (['']),
+      dateManufactured: (['']),
+      dateAcquired: (['']),
       position: this.fb.group({
-        longitude: [0],
-        latitude: [0]
+        longitude: ([null]),
+        latitude: ([null]),
       }),
-      specifications: this.fb.array([
-        {
-          parameter: ['', [Validators.required]],
-          value: [0, [Validators.required]]
-        }
-      ]),
-      hasCircuitDiagram: [false, [Validators.required]],
-      condition: ['', [Validators.required]],
-      damage: [0, [Validators.required]],
-      costOfRepair: [0, [Validators.required]],
+      /*specifications: this.fb.array([
+
+      ]),*/
+      hasCircuitDiagram: (false),
+      condition: ([null]),
+      damage: ([0, Validators.required]),
+      costOfRepair: (null),
       components: this.fb.array([
-        {
-          name: ['', [Validators.required]],
-          description: ['', [Validators.required]],
-          quantity: [0, [Validators.required]]
-        }
+
       ])
-    })  
+    }) 
   }
 
   submit() {
-    console.log(this.hveForm.value)
+    const formData = this.hveForm.value
+    console.log(formData)
   }
 
-  get specifications(): FormArray {
-    return this.hveForm.get('specifications') as FormArray;
+   /*get specifications(): FormArray{
+    return this.HveForm.controls["specifications"] as FormArray;
   }
 
-  get components(): FormArray {
-    return this.hveForm.get('components') as FormArray;
+  addSpec(): void {
+    const specification = this.fb.group({
+      parameter: (['', Validators.required]),
+      value: (['', Validators.required])
+    })
+    this.specifications.push(specification)
   }
 
-  addSpecification() {
-    this.specifications.push(this.fb.group({
-      parameter: ['', [Validators.required]],
-      value: [0, [Validators.required]]
-    }))
+  removeSpec( id: number): void{
+    this.specifications.removeAt(id);
+  }*/
+
+  get components(): FormArray{
+    return this.hveForm.controls.components as FormArray;
   }
 
-  addComponent() {
-    this.components.push(this.fb.group({
-      name: ['', [Validators.required]],
-      description: ['', [Validators.required]],
-      quantity: [0, [Validators.required]]
-    }))
+  addComponent(): void{
+    const component =this.fb.group({
+      name: (['', Validators.required]),
+      description: (['', Validators.required]),
+      quantity: ([null, [Validators.required, Validators.min(1)]])
+    })
+    this.components.push(component)
   }
 
-  removeSpecification(index: number): void{
-    this.specifications.removeAt(index)
-  }
-
-  removeComponent(index: number): void{
-    this.components.removeAt(index)
+  removeComponent( i: number): void{
+    this.components.removeAt(i);
   }
 }
