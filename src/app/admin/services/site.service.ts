@@ -17,7 +17,6 @@ export class SiteService {
   private siteUrl : string = "sites";
 
   /**
-   * 
    * @param http
    * @param store 
    */
@@ -31,7 +30,7 @@ export class SiteService {
   **/
   getSites(): Observable<Site[]>{
     //return this.http.get<Site[]> (`${baseUrl}/sites`)
-    return this.http.get<Site[]> ('127.0.0.1:3000/sites')
+    return this.http.get<Site[]> (`${baseUrl}/sites`)
     .pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
@@ -45,7 +44,7 @@ export class SiteService {
   **/
   getSingleSite( id: number): Observable<Site>{
     //return this.http.get<Site> (`${baseUrl}/sites`, id)
-    return this.http.get<Site>('127.0.0.1:3000/sites/{id}')
+    return this.http.get<Site>(`${baseUrl}/sites/${id}`)
     .pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(() => throwError('error retreiving site'))

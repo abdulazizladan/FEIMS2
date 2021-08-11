@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { EquipmentService } from 'app/admin/services/equipment.service';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EquipmentState } from 'app/store/equipments/equipment.state';
+import { Store } from '@ngrx/store';
 import { HVE } from 'app/admin/models/hve.model';
+import { MatDialogRef } from '@angular/material/dialog';
+import { addHVEquipment } from 'app/store/equipments/equipment.actions';
 
 @Component({
   selector: 'app-add-hve',
@@ -14,7 +19,12 @@ export class AddHveComponent implements OnInit {
   /**
    * 
    */
-  constructor( private fb: FormBuilder) { }
+  constructor( 
+    private fb: FormBuilder,
+    private equipmentService: EquipmentService,
+    private store: Store<{ equipment: EquipmentState}>,
+    private dialogRef: MatDialogRef<any>
+  ) { }
 
   /**
    * 
@@ -55,8 +65,18 @@ export class AddHveComponent implements OnInit {
   }
 
   submit() {
-    const formData = this.hveForm.value
-    console.log(formData)
+    const data = this.hveForm.value
+    try{
+      this.store.dispatch(addHVEquipment({equipment: data}))
+      setTimeout(
+        () => {
+          this.dialogRef.close()
+        },
+        5000
+      )
+    }catch(error: any){
+
+    }
   }
 
    /*get specifications(): FormArray{

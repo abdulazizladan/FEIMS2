@@ -25,8 +25,6 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   public hasElevator: boolean = false;
 
   private subscription: Subscription;
-
-  private store: Store<{ state: BuildingState}>
  
   resetForm(){
 
@@ -36,20 +34,23 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     const data = this.buildingForm.value;
     try{
       this.submitted = true;
-      console.log(data)
       this.store.dispatch(addBuilding({building: data}))
       setTimeout(
-      () => {
-        this.dialogRef.close()
-      },
-      5000
-    )
+        () => {
+          this.dialogRef.close()
+        },
+        5000
+      )
     }catch(error){
 
     }
   }
 
-  constructor( private buildingService: BuildingService, private fb: FormBuilder, private dialogRef: MatDialogRef<any>) { 
+  constructor( 
+    private buildingService: BuildingService, 
+    private fb: FormBuilder, 
+    private store: Store<{ building: BuildingState}>,
+    private dialogRef: MatDialogRef<any>) { 
     
   }
 
@@ -374,6 +375,9 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     this.buildingForm.removeControl('elevator')
   }
 
+  /**
+   * @returns accessories as formArray
+   */
   get accessories(): FormArray {
     return this.buildingForm.get('superStructure.underAlucobond.accessories') as FormArray;
   }
