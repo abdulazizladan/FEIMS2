@@ -1,4 +1,3 @@
-import { CompileShallowModuleMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LVE } from 'app/admin/models/lve.model';
@@ -24,6 +23,9 @@ export class AddLveComponent implements OnInit {
     this.initializeForm();
   }
 
+  /**
+   * 
+   */
   initializeForm() {
     this.lveForm = this.fb.group({
       name: ['', [Validators.required]],

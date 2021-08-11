@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LVE } from 'app/admin/models/lve.model';
+import { HVE } from 'app/admin/models/hve.model';
 
 @Component({
   selector: 'app-add-hve',

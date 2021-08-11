@@ -15,60 +15,60 @@
     Equipment added successfully!!
   </button>-->
 
-  <mat-dialog-content [formGroup]="lveForm">
+  <mat-dialog-content>
 
-    <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="20px" fxLayoutGap.gt-xs="20px grid">
+    <div fxLayout.xs="column" fxLayout.gt-xs="row wrap" fxLayoutGap.xs="20px" fxLayoutGap.gt-xs="20px grid" [formGroup]="lveForm">
 
       <mat-form-field fxFlex.gt-xs="320px">
         <mat-label>Name</mat-label>
-        <input matInput type="text" formControl="name">
+        <input matInput type="text" formControlName="name">
       </mat-form-field>
 
-      <mat-form-field fxFlex.gt-xs="320px">
+      <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Code</mat-label>
-        <input matInput type="text" formControl="code">
+        <input matInput type="text" formControlName="code">
       </mat-form-field>
 
-      <mat-form-field fxFlex.gt-xs="100px">
+      <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Quantity</mat-label>
-        <input matInput type="number" formControl="quantity">
+        <input matInput type="number" formControlName="quantity">
       </mat-form-field>
 
       <mat-form-field fxFlex.gt-xs="400px">
         <mat-label>S.no</mat-label>
-        <input matInput type="text" formControl="serialNumber">
+        <input matInput type="text" formControlName="serialNumber">
       </mat-form-field>
 
-      <mat-form-field fxFlex.gt-xs="320px">
+      <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Date commissioned</mat-label>
-        <input matInput type="date" formControl="name">
+        <input matInput type="date" formControlName="name">
       </mat-form-field>
 
-      <mat-form-field fxFlex.gt-xs="320px">
+      <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Brand</mat-label>
-        <input matInput type="text" formControl="brand">
+        <input matInput type="text" formControlName="brand">
       </mat-form-field>
 
-      <mat-form-field fxFlex.gt-xs="320px">
+      <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Model</mat-label>
-        <input matInput type="text" formControl="model">
+        <input matInput type="text" formControlName="model">
       </mat-form-field>
 
-      <mat-form-field fxFlex.gt-xs="320px">
+      <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Status</mat-label>
-        <input matInput type="text" formControl="status">
+        <input matInput type="text" formControlName="status">
       </mat-form-field>
 
-      <mat-form-field fxFlex.gt-xs="320px">
+      <mat-form-field fxFlex.gt-xs="240px">
         <mat-label>Cost of repair</mat-label>
-        <input matInput type="text" formControl="costOfRepair">
+        <input matInput type="text" formControlName="costOfRepair">
         <span matPrefix>&#8358;</span>
         <span matSuffix>.00</span>
       </mat-form-field>
 
       <mat-form-field fxFlex.gt-xs="400px">
         <mat-label>Comment</mat-label>
-        <textarea matInput type="text" formControl="comment"></textarea>
+        <textarea matInput style="resize: none;" type="text" formControlName="comment"></textarea>
       </mat-form-field>
 
 
