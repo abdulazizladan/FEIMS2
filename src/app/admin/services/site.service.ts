@@ -3,9 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Site } from '../models/site.model';
 import { environment } from 'environment.dev';
 import { Observable, throwError } from 'rxjs';
-import { catchError, mergeMap } from 'rxjs/operators';
-import { tap, map, delay } from 'rxjs/operators';
-
+import { tap, map, delay, catchError, mergeMap } from 'rxjs/operators';
 const baseUrl = environment.baseUrl;
 
 @Injectable({
@@ -30,11 +28,12 @@ export class SiteService {
   **/
   getSites(): Observable<Site[]>{
     //return this.http.get<Site[]> (`${baseUrl}/sites`)
-    return this.http.get<Site[]> (`${baseUrl}/sites`)
-    .pipe(
-      tap(data => console.log(JSON.stringify(data))),
-      catchError(this.handleError)
-    );
+    //return this.http.get<Site[]> (`${baseUrl}/sites`)
+    //.pipe(
+    //  tap(data => console.log(JSON.stringify(data))),
+    //  catchError(this.handleError)
+    //);
+    return this.http.get<Site[]>('http://127.0.0.1:3000/sites')
   }
 
   /**

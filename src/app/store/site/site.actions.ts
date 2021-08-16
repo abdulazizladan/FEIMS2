@@ -4,10 +4,10 @@ import { Site } from '../../admin/models/site.model';
 export enum SiteActions {
   ADD_SITE = '[SITE] Add site',
   ADD_SITE_SUCCESS = '[SITE] Add site success',
-	ADD_SITE_FAIL = '[SITE] Add site fail',
-	LOAD_SITES = '[SITE] Load sites',
-	LOAD_SITES_SUCCESS = '[SITE] Load sites success',
-	LOAD_SITES_FAIL = '[SITE] Load sites fail'
+  ADD_SITE_FAIL = '[SITE] Add site fail',
+  LOAD_SITES = '[SITE] Load sites',
+  LOAD_SITES_SUCCESS = '[SITE] Load sites success',
+  LOAD_SITES_FAIL = '[SITE] Load sites fail'
 }
 
 export const addSite = createAction(

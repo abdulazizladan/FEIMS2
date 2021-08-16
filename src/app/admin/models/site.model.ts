@@ -1,6 +1,7 @@
 /* Site form data */
 export interface Site{
     /* Site description */
+        _id?: string,
         name : string,
         code : string,
         state: string,

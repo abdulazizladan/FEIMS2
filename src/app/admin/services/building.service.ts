@@ -52,7 +52,7 @@ export class BuildingService {
    * @param id 
    * @returns building
    */
-  getSingleBuilding( id: number){
+  getSingleBuilding( id: string){
     return this._http.get<Building>(`${baseUrl}/buildings/${id}`).pipe(delay(500));
   }
 

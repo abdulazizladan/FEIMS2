@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { EquipmentService } from 'app/admin/services/equipment.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EquipmentState } from 'app/store/equipments/equipment.state';
-import { Store } from '@ngrx/store';
-import { LVE } from 'app/admin/models/lve.model';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { EquipmentState } from 'app/store/equipments/equipment.state';
 import { addLVEquipment } from 'app/store/equipments/equipment.actions';
 
 @Component({
@@ -12,7 +12,10 @@ import { addLVEquipment } from 'app/store/equipments/equipment.actions';
   templateUrl: './add-lve.component.html',
   styleUrls: ['./add-lve.component.scss']
 })
-export class AddLveComponent implements OnInit {
+export class AddLveComponent implements OnInit, OnDestroy {
+
+  submitted: boolean = false;
+  error: boolean = false;
 
   public lveForm: FormGroup;
 
@@ -33,20 +36,24 @@ export class AddLveComponent implements OnInit {
     this.initializeForm();
   }
 
+  ngOnDestroy() {
+
+  }
+
   /**
    * 
    */
   initializeForm() {
     this.lveForm = this.fb.group({
-      name: ['', [Validators.required]],
-      code: ['', [Validators.required]],
-      quantity: ['', [Validators.required]],
-      serialNumber: [0, [Validators.required]],
-      dateCommissioned: ['', [Validators.required]],
-      brand: ['generic', [Validators.required]], //generic as default
+      name: ['', []],
+      code: ['', []],
+      quantity: ['', []],
+      serialNumber: [0, []],
+      dateCommissioned: ['', []],
+      brand: ['generic', []], //generic as default
       model: ['', []],
-      status: ['', [Validators.required]],
-      costOfRepair: [0, [Validators.required]],
+      status: ['', []],
+      costOfRepair: [0, []],
       comment: ['', []]
     })
   }
@@ -56,6 +63,7 @@ export class AddLveComponent implements OnInit {
    */
   submit(): void{
     const data = this.lveForm.value;
+    console.log(data)
     try{
       this.store.dispatch(addLVEquipment({equipment: data}))
       setTimeout(
@@ -65,8 +73,20 @@ export class AddLveComponent implements OnInit {
         5000
       )
     }catch(error: any){
-
+      console.log(error)
     }
+  }
+
+  testSubmit(): void {
+    const data = this.lveForm.value;
+    console.log(data)
+    this.equipmentService.addLowValueEquipment(data).subscribe(
+      res => {
+        console.log(res)
+      }, err => {
+        console.log(err)
+      }
+    )
   }
 
 }

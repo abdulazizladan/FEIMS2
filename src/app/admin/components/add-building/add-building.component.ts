@@ -18,8 +18,6 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   submitted: boolean = false;
   error: boolean = false;
 
-  public appearance: string = "fill";
-
   public buildingForm: FormGroup;
 
   public hasElevator: boolean = false;
@@ -47,7 +45,6 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
   }
 
   constructor( 
-    private buildingService: BuildingService, 
     private fb: FormBuilder, 
     private store: Store<{ building: BuildingState}>,
     private dialogRef: MatDialogRef<any>) { 

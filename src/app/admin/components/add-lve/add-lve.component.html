@@ -41,7 +41,7 @@
 
       <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Date commissioned</mat-label>
-        <input matInput type="date" formControlName="name">
+        <input matInput type="date" formControlName="dateCommissioned">
       </mat-form-field>
 
       <mat-form-field fxFlex.gt-xs="120px">
@@ -78,5 +78,5 @@
 
   <div mat-dialog-actions align="end">
     <!--<span color="warn" class="mat-h4">Unable to complete action</span>-->
-    <button mat-flat-button (click)="submit();" color="primary">Add Equipment</button>
+    <button mat-flat-button (click)="testSubmit();" color="primary">Add Equipment</button>
   </div>

@@ -5,19 +5,19 @@
         <mat-card-content fxLayout.gt-xs="row">
             <mat-list fxFlex.gt-xs="70%">
                 <mat-list-item>
-                    <span class="mat-headline">Building name: </span>
+                    <span class="mat-headline">Building name : {{ building.structure.name }}</span>
                 </mat-list-item>
                 <mat-list-item>
-                    <span class="mat-h4">Code:</span>
+                    <span class="mat-h4">Code : {{ building.structure.code | uppercase }}</span>
                 </mat-list-item>
                 <mat-list-item>
-                    <span class="mat-h4">Purpose:</span>
+                    <span class="mat-h4">Purpose : {{ building.structure.purpose }}</span>
                 </mat-list-item>
                 <mat-list-item>
-                    <span class="mat-h4">GPS Position: [Longitude, Latitude] </span>
+                    <span class="mat-h4">GPS Position : [{{building.structure.position.longitude}}, {{building.structure.position.latitude}}] </span>
                 </mat-list-item>
                 <mat-list-item>
-                    <span class="mat-h4">Year built: 19XX </span>
+                    <span class="mat-h4">Year built : {{building.structure.yearBuilt}} </span>
                 </mat-list-item>
             </mat-list>
             

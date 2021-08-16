@@ -11,7 +11,7 @@ export class SiteEffect {
   addHVEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(addHVEquipment),
     exhaustMap(({equipment}) => this.equipment.addHighValueEquipment(equipment).pipe(
-        map(site => addEquipmentSuccess({equipment})),
+        map(equipment => addEquipmentSuccess({equipment})),
         catchError(error => of(addEquipmentFail({reason: error})))
     ))
   ));
@@ -19,7 +19,7 @@ export class SiteEffect {
   addLVEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(addLVEquipment),
     exhaustMap(({equipment}) => this.equipment.addLowValueEquipment(equipment).pipe(
-        map(site => addEquipmentSuccess({equipment})),
+        map(equipment => addEquipmentSuccess({equipment})),
         catchError(error => of(addEquipmentFail({reason: error})))
     ))
   ));

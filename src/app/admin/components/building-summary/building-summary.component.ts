@@ -18,8 +18,9 @@ import { selectBuidings, selectBuilding } from 'app/store/building/building.sele
 })
 export class BuildingSummaryComponent implements OnInit {
 
-  id: string;
-  public building: Observable<Building>;
+  id: string
+  public building: Building;
+  //public building: Observable<Building>;
   
   constructor( 
     private store: Store<BuildingState>,
@@ -28,18 +29,19 @@ export class BuildingSummaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = (this.route.snapshot.paramMap.get('id'));
-    this.building = this.store.select(selectBuilding, this.id)
-    //this.getBuildings(this.id);
+    //this.building = this.store.select(selectBuilding, this.id)
+    this.getBuildings(this.id);
     //console.log(this.building)
   }
 
-  getBuildings( id: number) {
+  getBuildings( id: string) {
     this.buildingService.getSingleBuilding(id).subscribe(
       result => {
-
+        this.building = result;
+        console.log(result)
       },
       error => {
-         
+        console.log(error)
       }
     )
   }

@@ -47,7 +47,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AdminRoutingModule } from './admin-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { AddBuildingComponent } from './components/add-building/add-building.component';
-//import { SummaryComponent } from './components/summary/summary.component';
 import { BuildingComponent } from './components/building/building.component';
 import { BuildingsComponent } from './components/buildings/buildings.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -73,7 +72,6 @@ import { EquipmentListComponent } from './components/equipment-list/equipment-li
   declarations: [
     HomeComponent, 
     AddBuildingComponent, 
-    //SummaryComponent, 
     BuildingComponent, 
     BuildingsComponent, 
     DashboardComponent, 
@@ -85,7 +83,13 @@ import { EquipmentListComponent } from './components/equipment-list/equipment-li
     AboutComponent, 
     BuildingSummaryComponent, 
     SiteSurveyComponent, 
-    AddSiteComponent, SiteComponent, AddHveComponent, AddLveComponent, SitesListComponent, BuildingsListComponent, EquipmentListComponent
+    AddSiteComponent, 
+    SiteComponent, 
+    AddHveComponent, 
+    AddLveComponent, 
+    SitesListComponent, 
+    BuildingsListComponent, 
+    EquipmentListComponent
   ],
   imports: [
     CommonModule,

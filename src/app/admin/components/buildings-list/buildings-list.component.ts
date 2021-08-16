@@ -11,7 +11,7 @@ import { selectBuidings } from 'app/store/building/building.selector';
   templateUrl: './buildings-list.component.html',
   styleUrls: ['./buildings-list.component.scss']
 })
-export class BuildingsListComponent implements OnInit {
+export class BuildingsListComponent implements OnInit, OnDestroy {
 
   buildings$ = this.store.select(selectBuidings);
 
@@ -21,6 +21,10 @@ export class BuildingsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(loadBuildings());
+  }
+
+  ngOnDestroy() {
+    
   }
 
   openAddDialog(): void{

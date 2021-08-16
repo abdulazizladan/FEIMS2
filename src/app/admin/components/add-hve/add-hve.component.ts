@@ -79,6 +79,19 @@ export class AddHveComponent implements OnInit {
     }
   }
 
+  testSubmit() {
+    const data = this.hveForm.value
+    console.log(data)
+    this.equipmentService.addHighValueEquipment(data).subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
+  }
+
    /*get specifications(): FormArray{
     return this.HveForm.controls["specifications"] as FormArray;
   }

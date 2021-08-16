@@ -7,7 +7,19 @@
               Add Low value equipment
             </button>
           </div>
-        No items uploaded yet.
+          <div *ngIf="lves.length == 0">No items uploaded yet.</div>
+          <div *ngFor="let eq of lves" fxLayout="column" fxLayoutGap="20px">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>
+                  Name: {{eq.name}}
+                </mat-card-title>
+                <mat-card-subtitle> 
+                  Code: {{eq.code | uppercase}}
+                </mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+          </div>
     </mat-tab>
     <mat-tab label="High Value Equipment">
         <div fxLayout="row">
@@ -17,6 +29,34 @@
               Add High value equipment
             </button>
           </div>
-        No items uploaded yet.
+          <div *ngIf="hves.length == 0">No items uploaded yet.</div>
+          <div *ngFor="let eq of hves" fxLayout="column" fxLayoutGap="20px">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>
+                  Name: {{eq.name}}
+                </mat-card-title>
+                <mat-card-subtitle> 
+                  Code: {{eq.code | uppercase}}
+                </mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <mat-list dense>
+                  <mat-list-item>
+                    Brand and model: {{manufacturer | titlecase}} {{ model | uppercase }} 
+                  </mat-list-item>
+                  <mat-list-item>
+                    Date commissioned : {{ dateCommissioned }}
+                  </mat-list-item>
+                  <mat-list-item>
+                    Condition : {{ condition | titlecase }}  
+                  </mat-list-item>
+                  <mat-list-item>
+                    Status : {{ status }}
+                  </mat-list-item>
+                </mat-list>
+              </mat-card-content>
+            </mat-card>
+          </div>
     </mat-tab>
 </mat-tab-group>
