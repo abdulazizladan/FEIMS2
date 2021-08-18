@@ -17,16 +17,11 @@ import { AuthGuard } from './shared/guards/auth.guard';
 export const rootRouterConfig: Routes = [
   {
     path: 'auth',
-    redirectTo: 'auth',
-    pathMatch: 'full'
+    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
   },
-  //{
-  //  path: '',
-  //  loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
-  //},
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
   {
@@ -41,7 +36,7 @@ export const rootRouterConfig: Routes = [
   {
     path: 'dashboard',
     component: AdminLayoutComponent,
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',

@@ -16,5 +16,8 @@ export class SiteEffect {
     ))
   ));
 
-  constructor(private actions$: Actions, private siteService: SiteService) {}
+  constructor(
+    private actions$: Actions, 
+    private siteService: SiteService
+  ) {}
 }

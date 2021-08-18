@@ -61,17 +61,16 @@ export class AddSiteComponent implements OnInit {
    * POSTs request to store new site
    */
   submit() {
-    console.log(this.siteForm.value)
     const data = this.siteForm.value;
     try{
       this.submitted = true;
-    this.store.dispatch(addSite({site: data}))
-    setTimeout(
-      () => {
-        this.dialogRef.close()
-      },
-      5000
-    )
+      this.store.dispatch(addSite({site: data}))
+      setTimeout(
+        () => {
+          this.dialogRef.close()
+        },
+        5000
+      )
     }catch(error){
 
     }

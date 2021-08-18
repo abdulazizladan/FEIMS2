@@ -40,7 +40,6 @@ export class SitesListComponent implements OnInit {
     this.siteService.getSites().subscribe(
       res => {
         this.sitess = res;
-        console.log(this.sitess)
       },err => {
         console.log(err)
       }

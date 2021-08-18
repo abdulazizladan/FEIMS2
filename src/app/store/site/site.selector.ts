@@ -1,5 +1,4 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { SitesListComponent } from "app/admin/components/sites-list/sites-list.component";
 import { Site } from "app/admin/models/site.model";
 import { SiteState } from "./site.state";
 
