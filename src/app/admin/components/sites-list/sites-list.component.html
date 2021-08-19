@@ -8,7 +8,7 @@
 
 <div style="padding: 20px" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap.gt-xs="10px grid">
     <div *ngIf="sites$">
-    <div fxFlex.xs="100%" fxFlex.gt-xs="500px" *ngFor="let site of sitess">
+    <div fxFlex.xs="100%" fxFlex.gt-xs="500px" *ngFor="let site of sites$ | async">
         <mat-card>
             <mat-card-header>
                 <mat-card-title>

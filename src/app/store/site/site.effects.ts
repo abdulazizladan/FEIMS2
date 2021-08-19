@@ -3,7 +3,7 @@ import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { SiteService } from "app/admin/services/site.service";
 import { of } from "rxjs";
 import { catchError, exhaustMap, map } from "rxjs/operators";
-import { addSite, addSiteFail, addSiteSuccess } from "./site.actions";
+import { addSite, addSiteFail, addSiteSuccess, loadSites, loadSitesFail, loadSitesSuccess } from "./site.actions";
 
 @Injectable()
 export class SiteEffect {
@@ -13,6 +13,14 @@ export class SiteEffect {
     exhaustMap(({site}) => this.siteService.addSite(site).pipe(
         map(site => addSiteSuccess({site})),
         catchError(error => of(addSiteFail({reason: error})))
+    ))
+  ));
+
+  loadBuildings$ = createEffect(() => this.actions$.pipe(
+    ofType(loadSites),
+    exhaustMap(() => this.siteService.getSites().pipe(
+      map(sites => loadSitesSuccess({sites})),
+      catchError(error => of(loadSitesFail({reason: error})))
     ))
   ));
 

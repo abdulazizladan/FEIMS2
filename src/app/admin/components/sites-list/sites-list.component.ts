@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { SiteState } from 'app/store/site/site.state';
 import { AddSiteComponent } from '../add-site/add-site.component';
@@ -16,7 +16,7 @@ import { Site } from 'app/admin/models/site.model';
 export class SitesListComponent implements OnInit {
 
   sites$ = this.store.select(selectSites)
-  sitess: Site[]
+  sitess: Site[] 
 
   constructor( 
     private dialog: MatDialog,
@@ -24,8 +24,8 @@ export class SitesListComponent implements OnInit {
     private store: Store<{site: SiteState}> ) { }
 
   ngOnInit(): void {
-    //this.store.dispatch(loadSites());
-    this.getSites()
+    this.store.dispatch(loadSites());
+    //this.getSites()
   }
 
   openAddSiteDialog(): void{
