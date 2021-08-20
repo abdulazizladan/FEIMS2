@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 import { EquipmentState } from 'app/store/equipments/equipment.state';
 import { AddHveComponent } from '../add-hve/add-hve.component';
 import { AddLveComponent } from '../add-lve/add-lve.component';
-import { loadEquipments } from 'app/store/equipments/equipment.actions';
+import { loadHighValueEquipment, loadLowValueEquipment } from 'app/store/equipments/equipment.actions';
 import { selectEquipmentState } from 'app/store/equipments/equipment.selector';
 import { HVE } from 'app/admin/models/hve.model';
 import { LVE } from 'app/admin/models/lve.model';
@@ -28,7 +28,8 @@ export class EquipmentListComponent implements OnInit {
     private store: Store<{equipment: EquipmentState}>) { }
 
   ngOnInit(): void {
-    this.store.dispatch(loadEquipments())
+    this.store.dispatch(loadHighValueEquipment())
+    this.store.dispatch(loadLowValueEquipment())
     this.getEquipments() //remove after presentation
   }
 
