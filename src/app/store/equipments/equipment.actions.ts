@@ -3,10 +3,12 @@ import { HVE } from '../../admin/models/hve.model';
 import { LVE } from '../../admin/models/lve.model';
 
 export enum EquipmentActions {
-  ADD_HVEQUIPMENT = '[EQUIPMENT] Add HVEQUIPMENT',
-  ADD_LVEQUIPMENT = '[EQUIPMENT] Add LVEQUIPMENT',
-  ADD_EQUIPMENT_SUCCESS = '[EQUIPMENT] Add EQUIPMENT success',
-  ADD_EQUIPMENT_FAIL = '[EQUIPMENT] Add EQUIPMENT fail',
+  ADD_HV_EQUIPMENT = '[EQUIPMENT] Add HVEQUIPMENT',
+  ADD_LV_EQUIPMENT = '[EQUIPMENT] Add LVEQUIPMENT',
+  ADD_LV_EQUIPMENT_SUCCESS = '[EQUIPMENT] Add EQUIPMENT success',
+  ADD_LV_EQUIPMENT_FAIL = '[EQUIPMENT] Add EQUIPMENT fail',
+  ADD_HV_EQUIPMENT_SUCCESS = '[EQUIPMENT] Add EQUIPMENT success',
+  ADD_HV_EQUIPMENT_FAIL = '[EQUIPMENT] Add EQUIPMENT fail',
   LOAD_EQUIPMENTS = '[EQUIPMENT] Load equipments',
   LOAD_EQUIPMENTS_SUCCESS = '[EQUIPMENT] Load equipments success',
   LOAD_EQUIPMENTS_FAIL = '[EQUIPMENT] Load equipments fail',
@@ -19,22 +21,32 @@ export enum EquipmentActions {
 }
 
 export const addHVEquipment = createAction(
-	EquipmentActions.ADD_HVEQUIPMENT,
+	EquipmentActions.ADD_HV_EQUIPMENT,
 	props<{equipment: HVE}>()
 );
 
 export const addLVEquipment = createAction(
-	EquipmentActions.ADD_LVEQUIPMENT,
+	EquipmentActions.ADD_LV_EQUIPMENT,
 	props<{equipment: LVE}>()
 );
 
-export const addEquipmentSuccess = createAction(
-  EquipmentActions.ADD_EQUIPMENT_SUCCESS,
-  props<{equipment: HVE | LVE}>()
+export const addLVEquipmentSuccess = createAction(
+  EquipmentActions.ADD_LV_EQUIPMENT_SUCCESS,
+  props<{equipment: LVE}>()
 );
 
-export const addEquipmentFail = createAction(
-	EquipmentActions.ADD_EQUIPMENT_FAIL,
+export const addHVEquipmentSuccess = createAction(
+	EquipmentActions.ADD_HV_EQUIPMENT_SUCCESS,
+	props<{equipment: HVE }>()
+  );
+
+export const addHVEquipmentFail = createAction(
+	EquipmentActions.ADD_HV_EQUIPMENT_FAIL,
+	props<{reason: string}>()
+);
+
+export const addLVEquipmentFail = createAction(
+	EquipmentActions.ADD_LV_EQUIPMENT_FAIL,
 	props<{reason: string}>()
 );
 

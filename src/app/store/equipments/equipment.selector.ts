@@ -4,9 +4,14 @@ import { EquipmentState } from "./equipment.state";
 
 export const selectEquipmentState = createFeatureSelector<EquipmentState>('equipment');
 
-export const selectSites = createSelector(
+export const selectHighValueEquipment = createSelector(
   selectEquipmentState,
-  (state: EquipmentState) => state.equipments
+  (state: EquipmentState) => state.highValueEquipment
+);
+
+export const selectLowValueEquipment = createSelector(
+  selectEquipmentState,
+  (state: EquipmentState) => state.highValueEquipment
 );
 
 export const selectLoading = createSelector(
