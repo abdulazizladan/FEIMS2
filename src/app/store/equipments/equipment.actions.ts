@@ -56,7 +56,7 @@ export const loadEquipment = createAction(
 
 export const loadEquipmentSuccess = createAction(
 	EquipmentActions.LOAD_EQUIPMENTS_SUCCESS,
-	props<{equipments: HVE[]}>()
+	props<{equipment: HVE[]}>()
 );
 
 export const loadEquipmentFail = createAction(
@@ -71,7 +71,7 @@ export const loadHighValueEquipment = createAction(
 
 export const loadHighValueEquipmentSuccess = createAction(
 	EquipmentActions.LOAD_HIGH_VALUE_EQUIPMENTS_SUCCESS,
-	props<{equipments: HVE[]}>()
+	props<{equipment: HVE[]}>()
 );
 
 export const loadHighValueEquipmentFail = createAction(
@@ -85,7 +85,7 @@ export const loadLowValueEquipment = createAction(
 
 export const loadLowValueEquipmentSuccess = createAction(
 	EquipmentActions.LOAD_LOW_VALUE_EQUIPMENTS_SUCCESS,
-	props<{equipments: LVE[]}>()
+	props<{equipment: LVE[]}>()
 );
 
 export const loadLowValueEquipmentFail = createAction(

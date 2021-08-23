@@ -4,8 +4,10 @@ import { EquipmentService } from "app/admin/services/equipment.service";
 import { of } from "rxjs";
 import { catchError, exhaustMap, map } from "rxjs/operators";
 import { addHVEquipment, 
-  addEquipmentFail, 
-  addEquipmentSuccess, 
+  addLVEquipmentFail, 
+  addLVEquipmentSuccess,
+  addHVEquipmentFail, 
+  addHVEquipmentSuccess,  
   addLVEquipment, 
   loadLowValueEquipment, 
   loadLowValueEquipmentSuccess, 
@@ -23,8 +25,8 @@ export class SiteEffect {
   addHVEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(addHVEquipment),
     exhaustMap(({equipment}) => this.equipment.addHighValueEquipment(equipment).pipe(
-        map(equipment => addEquipmentSuccess({equipment})),
-        catchError(error => of(addEquipmentFail({reason: error})))
+        map(equipment => addHVEquipmentSuccess({equipment})),
+        catchError(error => of(addHVEquipmentFail({reason: error})))
     ))
   ));
 
@@ -34,8 +36,8 @@ export class SiteEffect {
   addLVEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(addLVEquipment),
     exhaustMap(({equipment}) => this.equipment.addLowValueEquipment(equipment).pipe(
-        map(equipment => addEquipmentSuccess({equipment})),
-        catchError(error => of(addEquipmentFail({reason: error})))
+        map(equipment => addLVEquipmentSuccess({equipment})),
+        catchError(error => of(addLVEquipmentFail({reason: error})))
     ))
   ));
 
@@ -45,7 +47,7 @@ export class SiteEffect {
   loadHighValueEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(loadHighValueEquipment),
     exhaustMap(() => this.equipment.getAllHighValueEquipment().pipe(
-      map(equipments => loadHighValueEquipmentSuccess({equipments})),
+      map(equipment => loadHighValueEquipmentSuccess({equipment})),
       catchError(error => of(loadHighValueEquipmentFail({reason: error})))
     ))
   ))
@@ -56,7 +58,7 @@ export class SiteEffect {
   loadLowValueEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(loadLowValueEquipment),
     exhaustMap(() => this.equipment.getAllLowValueEquipment().pipe(
-      map(equipments => loadLowValueEquipmentSuccess({equipments})),
+      map(equipment => loadLowValueEquipmentSuccess({equipment})),
       catchError(error => of(loadLowValueEquipmentFail({reason: error})))
     ))
   ))
