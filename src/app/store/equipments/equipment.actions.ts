@@ -9,9 +9,6 @@ export enum EquipmentActions {
   ADD_LV_EQUIPMENT_FAIL = '[EQUIPMENT] Add EQUIPMENT fail',
   ADD_HV_EQUIPMENT_SUCCESS = '[EQUIPMENT] Add EQUIPMENT success',
   ADD_HV_EQUIPMENT_FAIL = '[EQUIPMENT] Add EQUIPMENT fail',
-  LOAD_EQUIPMENTS = '[EQUIPMENT] Load equipments',
-  LOAD_EQUIPMENTS_SUCCESS = '[EQUIPMENT] Load equipments success',
-  LOAD_EQUIPMENTS_FAIL = '[EQUIPMENT] Load equipments fail',
   LOAD_HIGH_VALUE_EQUIPMENTS = '[EQUIPMENT] Load high value equipment',
   LOAD_HIGH_VALUE_EQUIPMENTS_SUCCESS = '[EQUIPMENT] Load high value equipment success',
   LOAD_HIGH_VALUE_EQUIPMENTS_FAIL = '[EQUIPMENT] Load high value equipment fail',
@@ -49,21 +46,6 @@ export const addLVEquipmentFail = createAction(
 	EquipmentActions.ADD_LV_EQUIPMENT_FAIL,
 	props<{reason: string}>()
 );
-
-export const loadEquipment = createAction(
-	EquipmentActions.LOAD_EQUIPMENTS
-);
-
-export const loadEquipmentSuccess = createAction(
-	EquipmentActions.LOAD_EQUIPMENTS_SUCCESS,
-	props<{equipment: HVE[]}>()
-);
-
-export const loadEquipmentFail = createAction(
-	EquipmentActions.LOAD_EQUIPMENTS_FAIL,
-	props<{reason: string}>()
-);
-
 
 export const loadHighValueEquipment = createAction(
 	EquipmentActions.LOAD_HIGH_VALUE_EQUIPMENTS

@@ -17,57 +17,39 @@ import { addHVEquipment,
   loadHighValueEquipmentFail } from "./equipment.actions";
 
 @Injectable()
-export class SiteEffect {
+export class EquipmentEffect {
 
-  /**
-   * 
-   */
   addHVEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(addHVEquipment),
-    exhaustMap(({equipment}) => this.equipment.addHighValueEquipment(equipment).pipe(
+    exhaustMap(({equipment}) => this.equipmentService.addHighValueEquipment(equipment).pipe(
         map(equipment => addHVEquipmentSuccess({equipment})),
         catchError(error => of(addHVEquipmentFail({reason: error})))
     ))
   ));
 
-  /**
-   * 
-   */
   addLVEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(addLVEquipment),
-    exhaustMap(({equipment}) => this.equipment.addLowValueEquipment(equipment).pipe(
+    exhaustMap(({equipment}) => this.equipmentService.addLowValueEquipment(equipment).pipe(
         map(equipment => addLVEquipmentSuccess({equipment})),
         catchError(error => of(addLVEquipmentFail({reason: error})))
     ))
   ));
 
-  /**
-   * 
-   */
   loadHighValueEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(loadHighValueEquipment),
-    exhaustMap(() => this.equipment.getAllHighValueEquipment().pipe(
+    exhaustMap(() => this.equipmentService.getAllHighValueEquipment().pipe(
       map(equipment => loadHighValueEquipmentSuccess({equipment})),
       catchError(error => of(loadHighValueEquipmentFail({reason: error})))
     ))
-  ))
+  ));
 
-  /**
-   * 
-   */
   loadLowValueEquipment$ = createEffect(() => this.actions$.pipe(
     ofType(loadLowValueEquipment),
-    exhaustMap(() => this.equipment.getAllLowValueEquipment().pipe(
+    exhaustMap(() => this.equipmentService.getAllLowValueEquipment().pipe(
       map(equipment => loadLowValueEquipmentSuccess({equipment})),
       catchError(error => of(loadLowValueEquipmentFail({reason: error})))
     ))
-  ))
+  ));
 
-  /**
-   * 
-   */
-  constructor(
-    private actions$: Actions, 
-    private equipment: EquipmentService
-  ) {}
+  constructor(private actions$: Actions, private equipmentService: EquipmentService) { }
 }

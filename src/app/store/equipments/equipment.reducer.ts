@@ -1,14 +1,11 @@
 import { createReducer, on } from "@ngrx/store";
 import { 
-  //addEquipmentFail, 
   addLVEquipmentSuccess, 
   addHVEquipment, 
   addLVEquipment, 
   addHVEquipmentFail,
   addHVEquipmentSuccess,
   addLVEquipmentFail,
-  //loadEquipmentFail, 
-  //loadEquipmentSuccess, 
   loadHighValueEquipment, 
   loadHighValueEquipmentFail, 
   loadHighValueEquipmentSuccess, 
@@ -27,12 +24,10 @@ export const equipmentReducer = createReducer(
   on(addHVEquipmentSuccess, (state, {equipment}) => ({...state, loading: false, sites: [...state.lowValueEquipment, equipment]})),
   on(addLVEquipmentFail, (state, {reason}) => ({...state, loading: false, errors: [reason, ...state.errors]})),
   
-  //on(loadEquipmentSuccess, (state, {equipment}) => ({...state, sites: equipment})),
-  //on(loadEquipmentFail, (state, {reason}) => ({...state, loading: false})),
   on(loadHighValueEquipment, (state) => ({...state, loading: true})),
-  on(loadHighValueEquipmentSuccess, (state, {equipment}) => ({...state, equipment})),
+  on(loadHighValueEquipmentSuccess, (state, {equipment}) => ({...state, highValueEquipment: equipment})),
   on(loadHighValueEquipmentFail, (state, {reason}) => ({...state, loading: false})),
   on(loadLowValueEquipment, (state) => ({...state, loading: true})),
-  on(loadLowValueEquipmentSuccess, (state, {equipment}) => ({...state, equipment})),
+  on(loadLowValueEquipmentSuccess, (state, {equipment}) => ({...state, lowValueEquipment: equipment})),
   on(loadLowValueEquipmentFail, (state, {reason}) => ({...state, loading: false})),
 );
