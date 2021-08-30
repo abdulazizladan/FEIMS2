@@ -70,6 +70,10 @@ import { EquipmentListComponent } from './components/equipment-list/equipment-li
 import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 import { HveListComponent } from './components/hve-list/hve-list.component';
 import { LveListComponent } from './components/lve-list/lve-list.component';
+import { MailComponent } from './components/mail/mail.component';
+import { ConferenceComponent } from './components/conference/conference.component';
+import { PhoneComponent } from './components/phone/phone.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 
 @NgModule({
@@ -93,7 +97,7 @@ import { LveListComponent } from './components/lve-list/lve-list.component';
     AddLveComponent, 
     SitesListComponent, 
     BuildingsListComponent, 
-    EquipmentListComponent, ProfileViewComponent, HveListComponent, LveListComponent
+    EquipmentListComponent, ProfileViewComponent, HveListComponent, LveListComponent, MailComponent, ConferenceComponent, PhoneComponent, NotificationComponent
   ],
   imports: [
     CommonModule,

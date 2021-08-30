@@ -37,16 +37,39 @@ export class NavigationService {
       state: 'dashboard',
       disabled: false
     },
+    //{
+    //  name: 'Report',
+    //  type: 'link',
+    //  tooltip: 'Report',
+    //  icon: 'assessment',
+    //  state: 'dashboard/report',
+    //  disabled: false
+    //},
     {
-      name: 'Report',
+      name: 'mail',
       type: 'link',
-      tooltip: 'Report',
-      icon: 'assessment',
-      state: 'dashboard/report',
+      tooltip: 'Mail',
+      icon: 'mail',
+      state: 'dashboard/email'
+    },
+    {
+      name: 'conference',
+      type: 'link',
+      tooltip: 'conference',
+      icon: 'video_call',
+      state: 'dashboard/conference',
       disabled: false
     },
     {
-      name: 'Settings',
+      name: 'phone',
+      type: 'link',
+      tooltip: 'Phone',
+      icon: 'phone',
+      state: 'dashboard/phone',
+      disabled: false
+    },
+    {
+      name: 'Notification',
       type: 'link',
       tooltip: 'settings',
       icon: 'settings',

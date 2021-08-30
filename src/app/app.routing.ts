@@ -14,6 +14,10 @@ import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/a
 //import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/auth-layout.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { ProfileViewComponent } from './admin/components/profile-view/profile-view.component';
+import { MailComponent } from './admin/components/mail/mail.component';
+import { ConferenceComponent } from './admin/components/conference/conference.component';
+import { PhoneComponent } from './admin/components/phone/phone.component';
+import { NotificationComponent } from './admin/components/notification/notification.component';
 
 export const rootRouterConfig: Routes = [
   {
@@ -74,6 +78,21 @@ export const rootRouterConfig: Routes = [
       {
         path: 'profile',
         component: ProfileBlankComponent
+      },{
+        path: 'email',
+        component: MailComponent
+      },
+      {
+        path: 'conference',
+        component: ConferenceComponent
+      },
+      {
+        path: 'phone',
+        component: PhoneComponent
+      },
+      {
+        path: 'notification',
+        component: NotificationComponent
       }
     ]
   },
