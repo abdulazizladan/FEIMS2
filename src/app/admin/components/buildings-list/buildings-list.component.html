@@ -1,12 +1,6 @@
 <!--Buildings component -->
-
-<div style="padding: 10px">
-    <span fxFlex="1 1 auto"></span>
-    <button mat-raised-button color="primary" (click)="openAddDialog()">
-      <mat-icon>add</mat-icon>
-      Add building
-    </button>
-  </div>
+<div style="height: 100%;" fxLayout="column">
+  
   
   <div style="padding: 20px" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap.gt-xs="10px grid">
     <div *ngIf="buildings$">
@@ -15,3 +9,14 @@
     </div>
     <span *ngIf="!buildings$" class="mat-headline" color="warn">No buildings added</span>
   </div>
+
+  <span fxFlex="100%"></span>
+
+  <div style="padding: 10px">
+    <span fxFlex="1 1 auto"></span>
+    <button mat-fab color="primary" (click)="openAddDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+</div>

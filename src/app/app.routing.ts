@@ -13,6 +13,7 @@ import { ProfileSettingsComponent } from './views/profile/profile-settings/profi
 import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 //import { AuthLayoutComponent } from './shared/components/layouts/auth-layout/auth-layout.component';
 import { AuthGuard } from './shared/guards/auth.guard';
+import { ProfileViewComponent } from './admin/components/profile-view/profile-view.component';
 
 export const rootRouterConfig: Routes = [
   {
@@ -48,7 +49,7 @@ export const rootRouterConfig: Routes = [
       },
       {
         path: 'settings',
-        component: ProfileSettingsComponent
+        component: ProfileViewComponent
       },
       {
         path: 'about',

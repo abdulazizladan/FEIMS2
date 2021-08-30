@@ -1,12 +1,6 @@
 <mat-tab-group>
-    <mat-tab label="Low value Equipment">
-        <div fxLayout="row">
-            <span fxFlex="1 1 auto"></span>
-            <button mat-flat-button color="primary" (click)="openAddLVEDialog()" matTooltip="Add low value equipment">
-              <mat-icon>add</mat-icon>
-              Add Low value equipment
-            </button>
-          </div>
+    <mat-tab fxLayout="column" label="Low value Equipment" style="background-color: grey; height: 100%;">
+        
           <div *ngIf="lves.length == 0">No items uploaded yet.</div>
           <div *ngFor="let eq of lves" fxLayout="column" fxLayoutGap="20px">
             <mat-card>
@@ -20,43 +14,49 @@
               </mat-card-header>
             </mat-card>
           </div>
-    </mat-tab>
-    <mat-tab label="High Value Equipment">
-        <div fxLayout="row">
+
+          <div fxLayout="row">
             <span fxFlex="1 1 auto"></span>
-            <button mat-flat-button color="primary" (click)="openAddHVEDialog()" matTooltip="Add High value equipment">
+            <button mat-fab color="primary" (click)="openAddLVEDialog()" matTooltip="Add low value equipment">
               <mat-icon>add</mat-icon>
-              Add High value equipment
             </button>
           </div>
-          <div *ngIf="hves.length == 0">No items uploaded yet.</div>
-          <div *ngFor="let eq of hves" fxLayout="column" fxLayoutGap="20px">
-            <mat-card>
-              <mat-card-header>
-                <mat-card-title>
-                  Name: {{eq.name}}
-                </mat-card-title>
-                <mat-card-subtitle> 
-                  Code: {{eq.code | uppercase}}
-                </mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content>
-                <mat-list dense>
-                  <mat-list-item>
-                    Brand and model: {{manufacturer | titlecase}} {{ model | uppercase }} 
-                  </mat-list-item>
-                  <mat-list-item>
-                    Date commissioned : {{ dateCommissioned }}
-                  </mat-list-item>
-                  <mat-list-item>
-                    Condition : {{ condition | titlecase }}  
-                  </mat-list-item>
-                  <mat-list-item>
-                    Status : {{ status }}
-                  </mat-list-item>
-                </mat-list>
-              </mat-card-content>
-            </mat-card>
-          </div>
+    </mat-tab>
+    <mat-tab label="High Value Equipment">      
+      <div *ngIf="hves.length == 0">No items uploaded yet.</div>
+      <div *ngFor="let eq of hves" fxLayout="column" fxLayoutGap="20px">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              Name: {{eq.name}}
+            </mat-card-title>
+            <mat-card-subtitle> 
+              Code: {{eq.code | uppercase}}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-list dense>
+              <mat-list-item>
+                Brand and model: {{manufacturer | titlecase}} {{ model | uppercase }} 
+              </mat-list-item>
+              <mat-list-item>
+                Date commissioned : {{ dateCommissioned }}
+              </mat-list-item>
+              <mat-list-item>
+                Condition : {{ condition | titlecase }}  
+              </mat-list-item>
+              <mat-list-item>
+                Status : {{ status }}
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxLayout="row">
+        <span fxFlex="1 1 auto"></span>
+        <button mat-fab color="primary" (click)="openAddHVEDialog()" matTooltip="Add High value equipment">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
     </mat-tab>
 </mat-tab-group>

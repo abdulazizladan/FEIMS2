@@ -1,55 +1,57 @@
-<div fxLayout="row">
-    <span fxFlex="1 1 auto"></span>
-    <button mat-flat-button color="primary" (click)="openAddSiteDialog()" matTooltip="Add site details">
-        <mat-icon>add</mat-icon>
-        Add site
-    </button>
-</div>
+<div style="height: 100%;" fxLayout="column">
 
-<div style="padding: 20px" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap.gt-xs="10px grid">
-    <div *ngIf="sites$">
-    <div fxFlex.xs="100%" fxFlex.gt-xs="500px" *ngFor="let site of sites$ | async">
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>
-                    Site name: {{ site.name | titlecase }}
-                </mat-card-title>
-                <mat-card-subtitle>
-                    Site code : {{ site.code | uppercase }}
-                </mat-card-subtitle>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <mat-card-content fxLayout="column">
-                <span fxFlex="20px"></span>
-                <amt-list dense>
-                    <mat-list-item>
-                        Location : {{ site.streetAddress }}, {{ site.state | titlecase }}
-                    </mat-list-item>
-                    <mat-list-item>
-                        Position : [{{ site.position.longitude }}, {{ site.position.latitude }}]
-                    </mat-list-item>
-                    <mat-list-item>
-                        Site area: {{ site.measurement }}m<sup>2</sup>
-                    </mat-list-item>
-                    <mat-list-item>
+    <div style="padding: 20px" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap.gt-xs="10px grid">
+        <div *ngIf="sites$">
+        <div fxFlex.xs="100%" fxFlex.gt-xs="500px" *ngFor="let site of sites$ | async">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        Site name: {{ site.name | titlecase }}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        Site code : {{ site.code | uppercase }}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content fxLayout="column">
+                    <span fxFlex="20px"></span>
+                    <amt-list dense>
+                        <mat-list-item>
+                            Location : {{ site.streetAddress }}, {{ site.state | titlecase }}
+                        </mat-list-item>
+                        <mat-list-item>
+                            Position : [{{ site.position.longitude }}, {{ site.position.latitude }}]
+                        </mat-list-item>
+                        <mat-list-item>
+                            Site area: {{ site.measurement }}m<sup>2</sup>
+                        </mat-list-item>
+                        <mat-list-item>
 
-                    </mat-list-item>
-                </amt-list>
-                {{ site.commment | lowercase }}
-            </mat-card-content>
-            <mat-divider></mat-divider>
-            <mat-card-actions align="end">
-                <button mat-flat-button color="primary" disabled>
-                    details
-                </button>
-            </mat-card-actions>
-            <mat-card-footer style="padding: 10px">
-                {{ site.comment }}
-            </mat-card-footer>
-        </mat-card>
+                        </mat-list-item>
+                    </amt-list>
+                    {{ site.commment | lowercase }}
+                </mat-card-content>
+                <mat-divider></mat-divider>
+                <mat-card-actions align="end">
+                    <button mat-flat-button color="primary" disabled>
+                        details
+                    </button>
+                </mat-card-actions>
+                <mat-card-footer style="padding: 10px">
+                    {{ site.comment }}
+                </mat-card-footer>
+            </mat-card>
 
+        </div>
+            <span fxFlex.gt-xs></span>    
+        </div>
+        <span *ngIf="!sites$" class="mat-headline" color="warn">No sites added</span>
     </div>
-        <span fxFlex.gt-xs></span>    
+    <span fxFlex="100%"></span>
+    <div fxLayout="row">
+        <span fxFlex="1 1 auto"></span>
+        <button mat-fab color="primary" (click)="openAddSiteDialog()" matTooltip="Add site details">
+            <mat-icon>add</mat-icon>
+        </button>
     </div>
-    <span *ngIf="!sites$" class="mat-headline" color="warn">No sites added</span>
   </div>

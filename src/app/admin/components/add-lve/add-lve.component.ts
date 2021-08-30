@@ -65,6 +65,7 @@ export class AddLveComponent implements OnInit, OnDestroy {
     const data = this.lveForm.value;
     console.log(data)
     try{
+      this.submitted = true;
       this.store.dispatch(addLVEquipment({equipment: data}))
       setTimeout(
         () => {

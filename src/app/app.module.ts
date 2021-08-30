@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { GestureConfig } from '@angular/material/core';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { 
   PerfectScrollbarModule, 
   PERFECT_SCROLLBAR_CONFIG, 
@@ -60,6 +61,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
+    NgxDatatableModule,
     PerfectScrollbarModule,
     MatSelectModule,
     MatInputModule,

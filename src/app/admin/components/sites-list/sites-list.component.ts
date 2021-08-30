@@ -25,7 +25,6 @@ export class SitesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(loadSites());
-    //this.getSites()
   }
 
   openAddSiteDialog(): void{
@@ -33,17 +32,6 @@ export class SitesListComponent implements OnInit {
       data: {},
       disableClose: true
     });
-  }
-
-  //temporary fix for PermSec presentation
-  getSites() {
-    this.siteService.getSites().subscribe(
-      res => {
-        this.sitess = res;
-      },err => {
-        console.log(err)
-      }
-    )
   }
 
 }
