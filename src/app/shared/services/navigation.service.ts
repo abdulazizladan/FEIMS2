@@ -105,7 +105,7 @@ export class NavigationService {
       type: 'link',
       tooltip: 'settings',
       icon: 'settings',
-      state: 'dashboard/settings',
+      state: 'dashboard/notification',
       disabled: false
     },
     {
