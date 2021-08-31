@@ -13,10 +13,10 @@ import {
   loadLowValueEquipmentFail, 
   loadLowValueEquipmentSuccess 
 } from "./equipment.actions";
-import { initialSiteState } from "./equipment.state";
+import { initialEquipmentState } from "./equipment.state";
 
 export const equipmentReducer = createReducer(
-  initialSiteState,
+  initialEquipmentState,
   on(addHVEquipment, (state, {equipment}) => ({...state, loading: true})),
   on(addLVEquipment, (state, {equipment}) => ({...state, loading: true})),
   on(addLVEquipmentSuccess, (state, {equipment}) => ({...state, loading: false, sites: [...state.lowValueEquipment, equipment]})),

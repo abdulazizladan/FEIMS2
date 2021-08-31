@@ -3,6 +3,7 @@ import { ActionReducerMap, MetaReducer } from "@ngrx/store";
 import { environment } from "environments/environment";
 import { authReducer } from "./auth/auth.reducer";
 import { buildingReducer } from "./building/building.reducer";
+import { emailReducer } from "./email/email.reducer";
 import { equipmentReducer } from "./equipments/equipment.reducer";
 import { siteReducer } from "./site/site.reducer";
 
@@ -15,7 +16,8 @@ export const reducers: ActionReducerMap<AppState> = {
   auth: authReducer,
   site: siteReducer,
   building: buildingReducer,
-  equipment: equipmentReducer
+  equipment: equipmentReducer,
+  email: emailReducer
 };
 
 export const metaReducers: MetaReducer<AppState>[] = 

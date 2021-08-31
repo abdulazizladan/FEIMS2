@@ -8,7 +8,7 @@ export interface EquipmentState {
   errors: String[];
 }
 
-export const initialSiteState: EquipmentState = {
+export const initialEquipmentState: EquipmentState = {
   loading: false,
   highValueEquipment: [],
   lowValueEquipment: [],

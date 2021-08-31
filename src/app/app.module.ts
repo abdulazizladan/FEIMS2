@@ -43,6 +43,7 @@ import { AuthEffect } from './store/auth/auth.effects';
 import { SiteEffect } from './store/site/site.effects';
 import { BuildingEffect } from './store/building/building.effects';
 import { EquipmentEffect } from './store/equipments/equipment.effects';
+import { EmailEffect } from './store/email/email.effects';
 
 
 // AoT requires an exported function for factories
@@ -83,7 +84,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       routerState: RouterState.Minimal
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([AuthEffect, SiteEffect, BuildingEffect, EquipmentEffect])
+    EffectsModule.forRoot([AuthEffect, SiteEffect, BuildingEffect, EquipmentEffect, EmailEffect])
   ],
   declarations: [AppComponent],
   providers: [
