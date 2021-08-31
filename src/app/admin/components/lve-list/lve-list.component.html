@@ -1,23 +1,27 @@
-<div fxLayout="column" style="background-color: aquamarine; height: 100%;">
+<div fxLayout="column" style="height: 100%;">
 
-    <div *ngFor="let eq of lves" fxLayout="column" fxLayoutGap="20px">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>
-              Name: {{eq.name}}
-            </mat-card-title>
-            <mat-card-subtitle> 
-              Code: {{eq.code | uppercase}}
-            </mat-card-subtitle>
-          </mat-card-header>
-        </mat-card>
-      </div>
+  <div *ngFor="let lve of lves" fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-between" fxFlex="100%">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Name: {{lv.name}}
+          </mat-card-title>
+          <mat-card-subtitle> 
+            Code: {{lve.code | uppercase}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="./assets/blank.png" alt="Placeholder image">
+        <mat-card-content>
 
-      <div fxLayout="row">
-        <span fxFlex="1 1 auto"></span>
-        <button mat-fab color="primary" (click)="openAddLVEDialog()" matTooltip="Add low value equipment">
-          <mat-icon>add</mat-icon>
-        </button>
-      </div>
+        </mat-card-content>
+      </mat-card>
+  </div>
+  <span fxFlex="100%"></span>
+  <div fxLayout="row">
+    <span fxFlex="1 1 auto"></span>
+    <button mat-fab color="primary" (click)="openAddLVEDialog()" matTooltip="Add low value equipment">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
 
 </div>

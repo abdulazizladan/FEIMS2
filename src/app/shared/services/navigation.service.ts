@@ -93,9 +93,9 @@ export class NavigationService {
       disabled: false
     },
     {
-      name: 'phone',
+      name: 'phone center',
       type: 'link',
-      tooltip: 'Phone',
+      tooltip: 'Phone center',
       icon: 'phone',
       state: 'dashboard/phone',
       disabled: false

@@ -1,1 +1,25 @@
-<p>inbox works!</p>
+<mat-card>
+    <mat-card-content>
+        <table mat-table [dataSource]="dataSource">
+            
+            <ng-container matColumnDef="subject">
+                <th mat-header-cell *matHeaderCellDef> Subject </th>
+                <td mat-cell *matCellDef="let mail"> {{mail.subject}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="recipient">
+                <th mat-header-cell *matHeaderCellDef> Recipient </th>
+                <td mat-cell *matCellDef="let mail"> {{mail.recipient}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let mail"> {{mail.date}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </mat-card-content>
+</mat-card>

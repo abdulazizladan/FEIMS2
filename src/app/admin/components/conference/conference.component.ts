@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class ConferenceComponent implements OnInit {
   
   name = 'Set iframe source';
-  url: string = "https://angular.io";
+  url: string = "https://adamawa-coms.verdant.ng/meetings";
   urlSafe: SafeResourceUrl;
 
   constructor(public sanitizer: DomSanitizer) { }

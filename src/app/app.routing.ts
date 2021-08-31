@@ -20,6 +20,9 @@ import { PhoneComponent } from './admin/components/phone/phone.component';
 import { NotificationComponent } from './admin/components/notification/notification.component';
 import { HveListComponent } from './admin/components/hve-list/hve-list.component';
 import { LveListComponent } from './admin/components/lve-list/lve-list.component';
+import { InboxComponent } from './admin/components/inbox/inbox.component';
+import { SentMessagesComponent } from './admin/components/sent-messages/sent-messages.component';
+import { DraftsComponent } from './admin/components/drafts/drafts.component';
 
 export const rootRouterConfig: Routes = [
   {
@@ -90,7 +93,26 @@ export const rootRouterConfig: Routes = [
         component: ProfileBlankComponent
       },{
         path: 'email',
-        component: MailComponent
+        component: MailComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'inbox',
+            pathMatch: 'full'
+          },
+          {
+            path: 'inbox',
+            component: InboxComponent
+          },
+          {
+            path: 'sent',
+            component: SentMessagesComponent
+          },
+          {
+            path: 'drafts',
+            component: DraftsComponent
+          }
+        ]
       },
       {
         path: 'conference',

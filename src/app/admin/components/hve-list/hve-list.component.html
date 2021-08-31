@@ -1,36 +1,38 @@
-<div fxLayout="column" style="background-color: aquamarine; height: 100%;">
+<div fxLayout="column" style="height: 100%;">
     
     <div *ngFor="let eq of hves" fxLayout="row wrap" fxLayoutAlign="space-between">
-    <mat-card fxFlex="300px">
-        <mat-card-header>
-        <mat-card-title>
-            Name: {{eq.name}}
-        </mat-card-title>
-        <mat-card-subtitle> 
-            Code: {{eq.code | uppercase}}
-        </mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-        <mat-list dense>
-            <mat-list-item>
-            Brand and model: {{manufacturer | titlecase}} {{ model | uppercase }} 
-            </mat-list-item>
-            <mat-list-item>
-            Date commissioned : {{ dateCommissioned }}
-            </mat-list-item>
-            <mat-list-item>
-            Condition : {{ condition | titlecase }}  
-            </mat-list-item>
-            <mat-list-item>
-            Status : {{ status }}
-            </mat-list-item>
-        </mat-list>
-        </mat-card-content>
-    </mat-card>
+        <mat-card fxFlex="300px">
+            <mat-card-header>
+            <mat-card-title>
+                Name: {{eq.name}}
+            </mat-card-title>
+            <mat-card-subtitle> 
+                Code: {{eq.code | uppercase}}
+            </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+            <mat-list dense>
+                <mat-list-item>
+                Brand and model: {{manufacturer | titlecase}} {{ model | uppercase }} 
+                </mat-list-item>
+                <mat-list-item>
+                Date commissioned : {{ dateCommissioned }}
+                </mat-list-item>
+                <mat-list-item>
+                Condition : {{ condition | titlecase }}  
+                </mat-list-item>
+                <mat-list-item>
+                Status : {{ status }}
+                </mat-list-item>
+            </mat-list>
+            </mat-card-content>
+        </mat-card>
     </div>
+    <span fxFlex="100%"></span>
     <div fxLayout="row">
-    <span fxFlex="1 1 auto"></span>
-    <button mat-fab color="primary" (click)="openAddHVEDialog()" matTooltip="Add High value equipment">
-    <mat-icon>add</mat-icon>
-    </button>
+        <span fxFlex="1 1 auto"></span>
+        <button mat-fab color="primary" (click)="openAddHVEDialog()" matTooltip="Add High value equipment">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
 </div>

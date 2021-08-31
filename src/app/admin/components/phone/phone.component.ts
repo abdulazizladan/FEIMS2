@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class PhoneComponent implements OnInit {
 
   name = 'Set iframe source';
-  url: string = "https://angular.io";
+  url: string = "https://raspberrypi.local/";
   urlSafe: SafeResourceUrl;
 
   constructor(public sanitizer: DomSanitizer) { }
