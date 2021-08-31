@@ -38,15 +38,70 @@ export class NavigationService {
       disabled: false
     },
     {
-      name: 'Report',
+      name: 'Sites',
       type: 'link',
-      tooltip: 'Report',
-      icon: 'assessment',
-      state: 'dashboard/report',
+      tooltip: 'sites',
+      icon: 'location_on',
+      state: 'dashboard/sites',
       disabled: false
     },
     {
-      name: 'Settings',
+      name: 'Buildings',
+      type: 'link',
+      tooltip: 'building',
+      icon: 'business',
+      state: 'dashboard/buildings',
+      disabled: false
+    },
+    {
+      name: 'High value equipment',
+      type: 'link',
+      tooltip: 'building',
+      icon: 'kitchen',
+      state: 'dashboard/high-value-equipment',
+      disabled: false
+    },
+    {
+      name: 'Low value equipment',
+      type: 'link',
+      tooltip: 'building',
+      icon: 'speaker_group',
+      state: 'dashboard/low-value-equipment',
+      disabled: false
+    },
+    //{
+    //  name: 'Report',
+    //  type: 'link',
+    //  tooltip: 'Report',
+    //  icon: 'assessment',
+    //  state: 'dashboard/report',
+    //  disabled: false
+    //},
+    {
+      name: 'mail',
+      type: 'link',
+      tooltip: 'Mail',
+      icon: 'mail',
+      state: 'dashboard/email'
+    },
+    {
+      name: 'conference',
+      type: 'link',
+      tooltip: 'conference',
+      icon: 'video_call',
+      state: 'dashboard/conference',
+      disabled: false
+    },
+    {
+      name: 'phone center',
+      type: 'link',
+      tooltip: 'Phone center',
+      icon: 'phone',
+      state: 'dashboard/phone',
+      disabled: false
+    },
+    {
+      name: 'Notification',
       type: 'link',
       tooltip: 'settings',
       icon: 'settings',

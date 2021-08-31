@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 //required Egret Module
 import { SharedComponentsModule } from '../shared/components/shared-components.module';
+import { SharedModule } from '../shared/shared.module';
 import { AppChartsModule } from '../views/charts/charts.module';
 
 //Material Modules
@@ -66,6 +67,17 @@ import { AddLveComponent } from './components/add-lve/add-lve.component';
 import { SitesListComponent } from './components/sites-list/sites-list.component';
 import { BuildingsListComponent } from './components/buildings-list/buildings-list.component';
 import { EquipmentListComponent } from './components/equipment-list/equipment-list.component';
+import { ProfileViewComponent } from './components/profile-view/profile-view.component';
+import { HveListComponent } from './components/hve-list/hve-list.component';
+import { LveListComponent } from './components/lve-list/lve-list.component';
+import { MailComponent } from './components/mail/mail.component';
+import { ConferenceComponent } from './components/conference/conference.component';
+import { PhoneComponent } from './components/phone/phone.component';
+import { NotificationComponent } from './components/notification/notification.component';
+import { ComposeMailComponent } from './components/compose-mail/compose-mail.component';
+import { InboxComponent } from './components/inbox/inbox.component';
+import { SentMessagesComponent } from './components/sent-messages/sent-messages.component';
+import { DraftsComponent } from './components/drafts/drafts.component';
 
 
 @NgModule({
@@ -89,10 +101,11 @@ import { EquipmentListComponent } from './components/equipment-list/equipment-li
     AddLveComponent, 
     SitesListComponent, 
     BuildingsListComponent, 
-    EquipmentListComponent
+    EquipmentListComponent, ProfileViewComponent, HveListComponent, LveListComponent, MailComponent, ConferenceComponent, PhoneComponent, NotificationComponent, ComposeMailComponent, InboxComponent, SentMessagesComponent, DraftsComponent
   ],
   imports: [
     CommonModule,
+    SharedModule,
     SharedComponentsModule,
     HttpClientModule,
     ReactiveFormsModule,

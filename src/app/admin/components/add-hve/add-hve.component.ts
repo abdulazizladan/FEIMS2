@@ -14,6 +14,8 @@ import { addHVEquipment } from 'app/store/equipments/equipment.actions';
 })
 export class AddHveComponent implements OnInit {
 
+  submitted: boolean = false;
+  
   public hveForm: FormGroup;
 
   /**
@@ -67,6 +69,7 @@ export class AddHveComponent implements OnInit {
   submit() {
     const data = this.hveForm.value
     try{
+      this.submitted = true;
       this.store.dispatch(addHVEquipment({equipment: data}))
       setTimeout(
         () => {

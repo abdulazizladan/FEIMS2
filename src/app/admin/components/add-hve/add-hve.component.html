@@ -11,7 +11,11 @@
     </button>
 </h2>
 
-<mat-dialog-content [formGroup]="hveForm">
+  <button *ngIf="submitted" mat-flat-button mat-dialog-close color="primary">
+    Equipment added successfully!!
+  </button>  
+  
+  <mat-dialog-content *ngIf="!submitted" [formGroup]="hveForm">
 
     <div  fxLayoutGap="20px" fxLayout="column" [formGroup]="hveForm">
 
@@ -111,7 +115,7 @@
           <mat-form-field fxFlex.gt-xs="120px">
             <mat-label>cost of repair</mat-label>
             <input matInput formControlName="costOfRepair">
-            <sup matPrefix>&#8358; </sup>
+            <span matPrefix>&#8358; </span>
           </mat-form-field>
       
       
@@ -193,7 +197,7 @@
 
 </mat-dialog-content>
 
-<div mat-dialog-actions align="end">
-    <!--<span color="warn" class="mat-h4">Unable to complete action</span>-->
-    <button mat-flat-button color="primary" [disabled]="hveForm.invalid" (click)="testSubmit()">Add Equipment</button>
-  </div>
+<div mat-dialog-actions *ngIf="!submitted" align="end">
+  <!--<span color="warn" class="mat-h4">Unable to complete action</span>-->
+  <button mat-flat-button color="primary" [disabled]="hveForm.invalid" (click)="submit()">Add Equipment</button>
+</div>
