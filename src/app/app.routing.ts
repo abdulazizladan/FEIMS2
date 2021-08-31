@@ -18,6 +18,8 @@ import { MailComponent } from './admin/components/mail/mail.component';
 import { ConferenceComponent } from './admin/components/conference/conference.component';
 import { PhoneComponent } from './admin/components/phone/phone.component';
 import { NotificationComponent } from './admin/components/notification/notification.component';
+import { HveListComponent } from './admin/components/hve-list/hve-list.component';
+import { LveListComponent } from './admin/components/lve-list/lve-list.component';
 
 export const rootRouterConfig: Routes = [
   {
@@ -74,6 +76,14 @@ export const rootRouterConfig: Routes = [
       {
         path: 'sites',
         component: SitesListComponent
+      },
+      {
+        path: 'high-value-equipment',
+        component: HveListComponent
+      },
+      {
+        path: 'low-value-equipment',
+        component: LveListComponent
       },
       {
         path: 'profile',

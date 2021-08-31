@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ComposeMailComponent } from '../compose-mail/compose-mail.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-mail',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MailComponent implements OnInit {
 
-  constructor() { }
+  constructor( private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog(): void{
+    const dialogRef = this.dialog.open(ComposeMailComponent, {
+      width: '1200px'
+    })
   }
 
 }

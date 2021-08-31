@@ -25,7 +25,8 @@ export class EquipmentListComponent implements OnInit {
   constructor( 
     private dialog: MatDialog,
     private equipmentService: EquipmentService,
-    private store: Store<{equipment: EquipmentState}>) { }
+    private store: Store<{equipment: EquipmentState}>
+  ) { }
 
   ngOnInit(): void {
     this.store.dispatch(loadHighValueEquipment())

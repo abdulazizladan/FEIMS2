@@ -74,6 +74,10 @@ import { MailComponent } from './components/mail/mail.component';
 import { ConferenceComponent } from './components/conference/conference.component';
 import { PhoneComponent } from './components/phone/phone.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { ComposeMailComponent } from './components/compose-mail/compose-mail.component';
+import { InboxComponent } from './components/inbox/inbox.component';
+import { SentMessagesComponent } from './components/sent-messages/sent-messages.component';
+import { DraftsComponent } from './components/drafts/drafts.component';
 
 
 @NgModule({
@@ -97,7 +101,7 @@ import { NotificationComponent } from './components/notification/notification.co
     AddLveComponent, 
     SitesListComponent, 
     BuildingsListComponent, 
-    EquipmentListComponent, ProfileViewComponent, HveListComponent, LveListComponent, MailComponent, ConferenceComponent, PhoneComponent, NotificationComponent
+    EquipmentListComponent, ProfileViewComponent, HveListComponent, LveListComponent, MailComponent, ConferenceComponent, PhoneComponent, NotificationComponent, ComposeMailComponent, InboxComponent, SentMessagesComponent, DraftsComponent
   ],
   imports: [
     CommonModule,

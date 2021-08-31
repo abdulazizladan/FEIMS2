@@ -37,6 +37,38 @@ export class NavigationService {
       state: 'dashboard',
       disabled: false
     },
+    {
+      name: 'Sites',
+      type: 'link',
+      tooltip: 'sites',
+      icon: 'location_on',
+      state: 'dashboard/sites',
+      disabled: false
+    },
+    {
+      name: 'Buildings',
+      type: 'link',
+      tooltip: 'building',
+      icon: 'business',
+      state: 'dashboard/buildings',
+      disabled: false
+    },
+    {
+      name: 'High value equipment',
+      type: 'link',
+      tooltip: 'building',
+      icon: 'kitchen',
+      state: 'dashboard/high-value-equipment',
+      disabled: false
+    },
+    {
+      name: 'Low value equipment',
+      type: 'link',
+      tooltip: 'building',
+      icon: 'speaker_group',
+      state: 'dashboard/low-value-equipment',
+      disabled: false
+    },
     //{
     //  name: 'Report',
     //  type: 'link',

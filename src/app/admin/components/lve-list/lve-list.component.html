@@ -1,1 +1,23 @@
-<p>lve-list works!</p>
+<div fxLayout="column" style="background-color: aquamarine; height: 100%;">
+
+    <div *ngFor="let eq of lves" fxLayout="column" fxLayoutGap="20px">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              Name: {{eq.name}}
+            </mat-card-title>
+            <mat-card-subtitle> 
+              Code: {{eq.code | uppercase}}
+            </mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+
+      <div fxLayout="row">
+        <span fxFlex="1 1 auto"></span>
+        <button mat-fab color="primary" (click)="openAddLVEDialog()" matTooltip="Add low value equipment">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+
+</div>
