@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
-import { MailService } from 'app/admin/services/mail.service';
+import { EmailService } from 'app/admin/services/email.service';
 
 @Component({
   selector: 'app-compose-mail',
@@ -11,7 +11,7 @@ export class ComposeMailComponent implements OnInit {
 
   mailForm: FormGroup;
 
-  constructor( private fb: FormBuilder, private mailService: MailService) { }
+  constructor( private fb: FormBuilder, private emailService: EmailService) { }
 
   ngOnInit(): void {
     this.initializeForm()

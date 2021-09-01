@@ -1,13 +1,16 @@
 import { createAction, props } from "@ngrx/store";
-import { Email } from "./email";
+import { Email } from "app/admin/models/email.model";
 
 export enum EmailActions {
     SEND_EMAIL = '[EMAIL] Send Email',
     SEND_EMAIL_FAIL = '[EMAIL] Send Email Failed',
     SEND_EMAIL_SUCCESS = '[EMAIL] Send Email Success',
-    LOAD_EMAILS = '[EMAIL] Load Emails',
-    LOAD_EMAILS_SUCCESS = '[EMAIL] Load Emails Successful',
-    LOAD_EMAILS_FAILED = '[EMAIL] Load Emails Failed'
+    LOAD_INBOX = '[EMAIL] Load inbox',
+    LOAD_INBOX_SUCCESS = '[EMAIL] Load inbox Successful',
+    LOAD_INBOX_FAILED = '[EMAIL] Load Emails Failed',
+    LOAD_OUTBOX = '[EMAIL] Load outbox',
+    LOAD_OUTBOX_SUCCESS = '[EMAIL] Load outbox Successful',
+    LOAD_OUTBOX_FAILED = '[EMAIL] Load outbox Failed',
 }
 
 export const sendEmailAction = createAction(
@@ -25,16 +28,30 @@ export const sendEmailFailAction = createAction(
     props<{reason: string}>()
 );
 
-export const loadEmailsAction = createAction(
-    EmailActions.LOAD_EMAILS
+export const loadInboxAction = createAction(
+    EmailActions.LOAD_INBOX
 );
 
-export const loadEmailsSuccessAction = createAction(
-    EmailActions.LOAD_EMAILS_SUCCESS,
-    props<{emails: Email[]}>()
+export const loadInboxSuccessAction = createAction(
+    EmailActions.LOAD_INBOX_SUCCESS,
+    props<{inbox: Email[]}>()
 );
 
-export const loadEmailsFailAction = createAction(
-    EmailActions.LOAD_EMAILS_FAILED,
+export const loadInboxFailAction = createAction(
+    EmailActions.LOAD_INBOX_FAILED,
+    props<{reason: string}>()
+);
+
+export const loadOutboxAction = createAction(
+    EmailActions.LOAD_OUTBOX
+);
+
+export const loadOutboxSuccessAction = createAction(
+    EmailActions.LOAD_OUTBOX_SUCCESS,
+    props<{outbox: Email[]}>()
+);
+
+export const loadOutboxFailAction = createAction(
+    EmailActions.LOAD_OUTBOX_FAILED,
     props<{reason: string}>()
 );
