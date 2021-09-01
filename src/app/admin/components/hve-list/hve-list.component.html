@@ -1,15 +1,17 @@
 <div fxLayout="column" style="height: 100%;">
     
-    <div *ngFor="let eq of hves" fxLayout="row wrap" fxLayoutAlign="space-between">
-        <mat-card fxFlex="300px">
+    <div  fxLayout="row wrap" fxLayoutAlign="space-between">
+        
+        <mat-card *ngFor="let eq of equipment$ | async" fxFlex="400px">
             <mat-card-header>
-            <mat-card-title>
-                Name: {{eq.name}}
-            </mat-card-title>
-            <mat-card-subtitle> 
-                Code: {{eq.code | uppercase}}
-            </mat-card-subtitle>
+                <mat-card-title>
+                    Name: {{eq.name}}
+                </mat-card-title>
+                <mat-card-subtitle> 
+                    Code: {{eq.code | uppercase}}
+                </mat-card-subtitle>
             </mat-card-header>
+            <img mat-card-image src="./assets/blank.svg">
             <mat-card-content>
             <mat-list dense>
                 <mat-list-item>
@@ -26,6 +28,12 @@
                 </mat-list-item>
             </mat-list>
             </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions align="end">
+                <button mat-flat-button color="primary" disabled>
+                    details
+                </button>
+            </mat-card-actions>
         </mat-card>
     </div>
     <span fxFlex="100%"></span>

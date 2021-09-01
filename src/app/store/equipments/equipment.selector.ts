@@ -11,7 +11,7 @@ export const selectHighValueEquipment = createSelector(
 
 export const selectLowValueEquipment = createSelector(
   selectEquipmentState,
-  (state: EquipmentState) => state.highValueEquipment
+  (state: EquipmentState) => state.lowValueEquipment
 );
 
 export const selectLoading = createSelector(

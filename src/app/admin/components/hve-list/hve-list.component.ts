@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { EquipmentState } from 'app/store/equipments/equipment.state';
 import { AddHveComponent } from '../add-hve/add-hve.component';
 import { loadHighValueEquipment } from 'app/store/equipments/equipment.actions';
-import { selectEquipmentState } from 'app/store/equipments/equipment.selector';
+import { selectHighValueEquipment } from 'app/store/equipments/equipment.selector';
 import { HVE } from 'app/admin/models/hve.model';
 import { EquipmentService } from 'app/admin/services/equipment.service';
 
@@ -16,7 +16,7 @@ import { EquipmentService } from 'app/admin/services/equipment.service';
 })
 export class HveListComponent implements OnInit {
 
-  equipment$ = this.store.select(selectEquipmentState)
+  equipment$ = this.store.select(selectHighValueEquipment)
 
   hves: HVE[]
 

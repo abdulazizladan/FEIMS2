@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { EquipmentState } from 'app/store/equipments/equipment.state';
 import { AddLveComponent } from '../add-lve/add-lve.component';
-import { loadHighValueEquipment, loadLowValueEquipment } from 'app/store/equipments/equipment.actions';
-import { selectEquipmentState } from 'app/store/equipments/equipment.selector';
+import { loadLowValueEquipment } from 'app/store/equipments/equipment.actions';
+import { selectLowValueEquipment } from 'app/store/equipments/equipment.selector';
 import { LVE } from 'app/admin/models/lve.model';
 import { EquipmentService } from 'app/admin/services/equipment.service';
 
@@ -16,7 +16,8 @@ import { EquipmentService } from 'app/admin/services/equipment.service';
 })
 export class LveListComponent implements OnInit {
 
-  equipment$ = this.store.select(selectEquipmentState)
+  equipment$ = this.store.select(selectLowValueEquipment)
+  
   lves: LVE[]
 
   constructor(

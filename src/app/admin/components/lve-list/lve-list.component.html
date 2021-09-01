@@ -1,19 +1,25 @@
 <div fxLayout="column" style="height: 100%;">
 
-  <div *ngFor="let lve of lves" fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-between" fxFlex="100%">
-      <mat-card>
+  <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="space-between" fxFlex="100%">
+      <mat-card *ngFor="let eq of equipment$ | async" fxFlex="400px">
         <mat-card-header>
           <mat-card-title>
-            Name: {{lv.name}}
+            Name: {{ eq.name }}
           </mat-card-title>
           <mat-card-subtitle> 
-            Code: {{lve.code | uppercase}}
+            Code:
           </mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="./assets/blank.png" alt="Placeholder image">
+        <img mat-card-image src="./assets/blank.svg">
         <mat-card-content>
 
         </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions align="end">
+            <button mat-flat-button color="primary" disabled>
+                details
+            </button>
+        </mat-card-actions>
       </mat-card>
   </div>
   <span fxFlex="100%"></span>
