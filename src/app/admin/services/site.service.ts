@@ -62,6 +62,10 @@ export class SiteService {
     );
   }
 
+  getStates(){
+    return this.http.get('./assets/nigeria.json');
+  }
+
   private handleError(err: any) {
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {

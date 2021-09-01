@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MailService } from 'app/admin/services/email.service';
+import { EmailService } from 'app/admin/services/email.service';
 
 export interface Mail{
   subject: string,
@@ -21,7 +21,7 @@ export class InboxComponent implements OnInit {
   displayedColumns: string[] = ['subject', 'recipient', 'date'];
   dataSource = MAILS;
 
-  constructor( private mailService: MailService) { }
+  constructor( private mailService: EmailService) { }
 
   ngOnInit(): void {
   }
