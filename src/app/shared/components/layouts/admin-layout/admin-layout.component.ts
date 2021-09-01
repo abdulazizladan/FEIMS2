@@ -15,7 +15,7 @@ import { filter, map, withLatestFrom } from 'rxjs/operators';
 import { JwtAuthService } from '../../../services/auth/jwt-auth.service';
 import { SocketService } from 'app/socket/socket.service';
 import { Store } from '@ngrx/store';
-import { addNotificationAction } from 'app/store/notification/notification.actions';
+import { addNotificationAction, loadNotificationsAction } from 'app/store/notification/notification.actions';
 import { AppState } from 'app/store/app.reducer';
 import { selectUser } from 'app/store/auth/auth.selectors';
 import { Notification } from '../../../../store/notification/notification'; 
@@ -80,6 +80,8 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
         this.isModuleLoading = false;
       }
     });
+
+    this.appStore.dispatch(loadNotificationsAction());
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -117,9 +119,9 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
     }
   }
   ngOnDestroy() {
-    if(this.moduleLoaderSub) this.moduleLoaderSub.unsubscribe();
-    if(this.layoutConfSub) this.layoutConfSub.unsubscribe();
-    if(this.routerEventSub) this.routerEventSub.unsubscribe();
+    if (this.moduleLoaderSub) this.moduleLoaderSub.unsubscribe();
+    if (this.layoutConfSub) this.layoutConfSub.unsubscribe();
+    if (this.routerEventSub) this.routerEventSub.unsubscribe();
     if (this.socketSubscription) this.socketSubscription.unsubscribe();
   }
   closeSidebar() {
