@@ -12,7 +12,7 @@
                         Site code : {{ site.code | uppercase }}
                     </mat-card-subtitle>
                 </mat-card-header>
-                <mat-divider></mat-divider>
+                <img mat-card-image src="./assets/blank.svg">
                 <mat-card-content fxLayout="column">
                     <span fxFlex="20px"></span>
                     <amt-list dense>
@@ -37,9 +37,6 @@
                         details
                     </button>
                 </mat-card-actions>
-                <mat-card-footer style="padding: 10px">
-                    {{ site.comment }}
-                </mat-card-footer>
             </mat-card>
 
         </div>

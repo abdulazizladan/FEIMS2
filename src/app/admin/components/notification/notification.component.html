@@ -3,10 +3,17 @@
         
         <mat-form-field style="width: 100%;" appearance="outline">
             <mat-label>Recipient</mat-label>
-            <mat-select formControlName="recipient">
+            <mat-select formControlName="recipient" name="recipient" [(ngModel)]="selectedRecipient">
                 <mat-option value="building caretakers">Building caretakers</mat-option>
                 <mat-option value="surveyors">Surveyors</mat-option>
+                <mat-option value="other">Other</mat-option>
             </mat-select>
+        </mat-form-field>
+
+        <mat-form-field style="width: 100%;" appearance="outline" *ngIf="selectedRecipient === 'other'">
+            <mat-label>Recipient</mat-label>
+            <input matInput formControlName="other">
+            <mat-hint align="end">Manually enter hint here</mat-hint>
         </mat-form-field>
 
         <mat-form-field style="width: 100%;" appearance="outline">

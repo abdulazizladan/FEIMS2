@@ -24,6 +24,12 @@ export class NotificationComponent implements OnInit {
 
   public form: FormGroup;
 
+  selectedRecipient: string;
+
+  doStuff() {
+    console.log('Stuff')
+  }
+
   displayedColumns: string[] = ['recipient', 'description', 'body', 'date'];
   dataSource = NOTIFICATIONS;
 
@@ -38,6 +44,7 @@ export class NotificationComponent implements OnInit {
   initializeForm(): void{
     this.form = this.fb.group({
       recipient: (['', [Validators.required]]),
+      other: (['']),
       description: (['', [Validators.required, Validators.minLength(5)]]),
       body: (['', [Validators.required, Validators.minLength(5)]])
     })
