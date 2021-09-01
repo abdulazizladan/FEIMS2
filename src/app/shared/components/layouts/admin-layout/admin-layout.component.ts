@@ -11,8 +11,14 @@ import { Subscription } from "rxjs";
 import { TranslateService } from '@ngx-translate/core';
 import { ThemeService } from '../../../services/theme.service';
 import { LayoutService } from '../../../services/layout.service';
-import { filter } from 'rxjs/operators';
+import { filter, map, withLatestFrom } from 'rxjs/operators';
 import { JwtAuthService } from '../../../services/auth/jwt-auth.service';
+import { SocketService } from 'app/socket/socket.service';
+import { Store } from '@ngrx/store';
+import { addNotificationAction } from 'app/store/notification/notification.actions';
+import { AppState } from 'app/store/app.reducer';
+import { selectUser } from 'app/store/auth/auth.selectors';
+import { Notification } from '../../../../store/notification/notification'; 
 
 @Component({
   selector: 'app-admin-layout',
@@ -27,6 +33,8 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
   public  scrollConfig = {}
   public layoutConf: any = {};
   public adminContainerClasses: any = {};
+
+  private socketSubscription: Subscription;
   
   constructor(
     private router: Router,
@@ -34,7 +42,9 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
     public themeService: ThemeService,
     private layout: LayoutService,
     private cdr: ChangeDetectorRef,
-    private jwtAuth: JwtAuthService
+    private jwtAuth: JwtAuthService,
+    private socket: SocketService,
+    private appStore: Store<AppState>
   ) {
     // Check Auth Token is valid
     this.jwtAuth.checkTokenIsValid().subscribe();
@@ -77,7 +87,20 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
   }
   
   ngAfterViewInit() {
-
+    this.socketSubscription = this.socket.fromEvent("EVENT:EMAIL:NEW")
+      .pipe(
+        withLatestFrom(this.appStore.select(selectUser)),
+        filter((value:any[]) => value[0].to == value[1].email),
+        map(value => value[0])
+      ).subscribe(email => {
+        const notification: Notification = {
+          id: email.id,
+          notification: email.from,
+          seen: false,
+          date: new Date()
+        };
+        this.appStore.dispatch(addNotificationAction({notification}));
+      });
   }
   
   scrollToTop() {
@@ -94,15 +117,10 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
     }
   }
   ngOnDestroy() {
-    if(this.moduleLoaderSub) {
-      this.moduleLoaderSub.unsubscribe();
-    }
-    if(this.layoutConfSub) {
-      this.layoutConfSub.unsubscribe();
-    }
-    if(this.routerEventSub) {
-      this.routerEventSub.unsubscribe();
-    }
+    if(this.moduleLoaderSub) this.moduleLoaderSub.unsubscribe();
+    if(this.layoutConfSub) this.layoutConfSub.unsubscribe();
+    if(this.routerEventSub) this.routerEventSub.unsubscribe();
+    if (this.socketSubscription) this.socketSubscription.unsubscribe();
   }
   closeSidebar() {
     this.layout.publishLayoutChange({
