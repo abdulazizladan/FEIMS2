@@ -38,18 +38,14 @@
   
               <mat-form-field fxFlex.gt-xs="120px">
                 <mat-label>State select</mat-label>
-                <mat-select formControlName="state">
-                  <mat-option value="kaduna">Kaduna</mat-option>
+                <mat-select formControlName="state" >
+                  <mat-option *ngFor="let state of states" value={{state.name}}>{{ state.name | titlecase }}</mat-option>
                 </mat-select>
               </mat-form-field>
   
               <mat-form-field fxFlex.gt-xs="120px">
                 <mat-label>LGA select</mat-label>
-                <mat-select formControlName="lga">
-                  <mat-option value="lg1">
-                    lg1
-                  </mat-option>
-                </mat-select>
+                <input matInput formControlName="lga">
               </mat-form-field>
   
               <mat-form-field fxFlex.gt-xs="320px">
