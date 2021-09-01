@@ -4,7 +4,8 @@ import { Email } from "app/admin/models/email.model";
 export interface EmailState {
     inbox: Email[],
     outbox: Email[],
-    loading: boolean,
+    inboxLoading: boolean,
+    outboxLoading: boolean,
     sending: boolean,
     errors: string[]
 }
@@ -12,7 +13,8 @@ export interface EmailState {
 export const initialEmailState: EmailState = {
     inbox: [],
     outbox: [],
-    loading: false,
+    inboxLoading: false,
+    outboxLoading: false,
     sending: false,
     errors: []
 };
