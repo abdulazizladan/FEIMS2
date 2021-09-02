@@ -4,7 +4,7 @@
   
   <div style="padding: 20px" fxLayout.xs="column" fxLayoutAlign.gt-xs="space-between" fxLayout.gt-xs="row wrap" fxLayoutGap.gt-xs="10px grid">
     <div *ngIf="buildings$">
-    <app-building fxFlex.xs="100%" fxFlex.gt-xs="400px" *ngFor="let building of buildings$ | async" [data]="building"></app-building>
+    <app-building fxFlex.xs="100%" fxFlex.gt-xs="400px" fxFlexAlign="center" *ngFor="let building of buildings$ | async" [data]="building"></app-building>
     <span fxFlex.gt-xs></span>    
     </div>
     <span *ngIf="!buildings$" class="mat-headline" color="warn">No buildings added</span>
