@@ -1,15 +1,15 @@
 <!-- Add Low Value Equipment -->
-<h2 mat-dialog-title>
-    Add Low value equipment
-    <span fxFlex="1 1 auto">
-    
-    </span>
+<h2 mat-dialog-title *ngIf="!submitted">
+  Add Low value equipment
+  <span fxFlex="1 1 auto">
   
-    <!--<button mat-stroked-button>Reset form</button>--> 
-    <button mat-icon-button aria-label="close dialog" mat-dialog-close>
-      <mat-icon>close</mat-icon>
-    </button>
-  </h2>
+  </span>
+
+  <!--<button mat-stroked-button>Reset form</button>--> 
+  <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</h2>
 
   <button *ngIf="submitted" mat-flat-button mat-dialog-close color="primary">
     Equipment added successfully!!
@@ -56,6 +56,11 @@
 
       <mat-form-field fxFlex.gt-xs="120px">
         <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="working">Working</mat-option>
+          <mat-option value="repairable">Repairable</mat-option>
+          <mat-option value="replaceable">Replaceable</mat-option>
+        </mat-select>
         <input matInput type="text" formControlName="status">
       </mat-form-field>
 

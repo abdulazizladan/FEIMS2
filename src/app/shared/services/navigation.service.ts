@@ -101,10 +101,10 @@ export class NavigationService {
       disabled: false
     },
     {
-      name: 'Notification',
+      name: 'Announcement',
       type: 'link',
-      tooltip: 'settings',
-      icon: 'settings',
+      tooltip: 'announcement',
+      icon: 'announcement',
       state: 'dashboard/notification',
       disabled: false
     },

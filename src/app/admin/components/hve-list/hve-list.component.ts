@@ -6,7 +6,6 @@ import { AddHveComponent } from '../add-hve/add-hve.component';
 import { loadHighValueEquipment } from 'app/store/equipments/equipment.actions';
 import { selectHighValueEquipment } from 'app/store/equipments/equipment.selector';
 import { HVE } from 'app/admin/models/hve.model';
-import { EquipmentService } from 'app/admin/services/equipment.service';
 
 
 @Component({
@@ -18,11 +17,8 @@ export class HveListComponent implements OnInit {
 
   equipment$ = this.store.select(selectHighValueEquipment)
 
-  hves: HVE[]
-
   constructor( 
     private dialog: MatDialog,
-    private equipmentService: EquipmentService,
     private store: Store<{equipment: EquipmentState}>
   ) { }
 
