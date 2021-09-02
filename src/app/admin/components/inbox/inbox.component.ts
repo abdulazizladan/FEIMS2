@@ -5,8 +5,8 @@ import {MatTableDataSource} from '@angular/material/table';
 import { Mail } from 'app/admin/models/mail.model';
 
 const MAILS: Mail[] = [
-  { "_id": "124jnkdf34423", "subject": "Facilities status update", "recipient": ["abdulazizladan@gmail.com"], "date": '2019-06-11T00:00'},
-  { "_id": "rj983499i13", "subject": "New Generator", "recipient": ["danielolayinka@yahoo.com"], "date": '2019-06-11T00:00'}
+  { "_id": "124jnkdf34423", "subject": "Facilities status update", "recipient": ["abdulazizladan@gmail.com"], "date": '2014-01-01T23:28:56.782Z', "sender": "", "body": "", 'readStatus': false},
+  { "_id": "rj983499i13", "subject": "New Generator", "recipient": ["danielolayinka@yahoo.com"], "date": '2014-01-01T23:28:56.782Z', "sender": "", "body": "", 'readStatus': true}
 ]
 @Component({
   selector: 'app-inbox',

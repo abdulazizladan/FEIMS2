@@ -1,7 +1,11 @@
 <mat-card>
    
-    <input matInput style="width: 98%; border-radius:30px; padding: 10px; border: 1px solid #666666;">
-    
+    <mat-form-field style="width:100%">
+        <mat-label>Search inbox</mat-label>
+        <input matInput>
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
     <mat-card-content fxLayout="coulmn">
         <table mat-table [dataSource]="dataSource">
 

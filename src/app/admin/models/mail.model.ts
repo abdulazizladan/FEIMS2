@@ -4,5 +4,6 @@ export interface Mail{
     sender: string,
     subject: string,
     body: string,
-    date: Date
+    date: string,
+    readStatus: boolean
 }
