@@ -17,15 +17,25 @@ export class HveListComponent implements OnInit {
 
   equipment$ = this.store.select(selectHighValueEquipment)
 
+  /**
+   * constructor
+   * inject MatDialog, Store<{Equipment}>
+   */
   constructor( 
     private dialog: MatDialog,
     private store: Store<{equipment: EquipmentState}>
   ) { }
 
+  /**
+   * first lifecycle hook
+   */
   ngOnInit(): void {
     this.store.dispatch(loadHighValueEquipment())
   }
 
+  /**
+   * open addHVEDialog
+   */
   openAddHVEDialog() {
     const dialogRef = this.dialog.open(AddHveComponent, {
       data: {},

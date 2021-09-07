@@ -37,10 +37,16 @@ export class NotificationComponent implements OnInit {
     private fb: FormBuilder
   ) { }
 
+  /**
+   * first lifecycle hook
+   */
   ngOnInit(): void {
     this.initializeForm()
   }
 
+  /**
+   * Initialize form
+   */
   initializeForm(): void{
     this.form = this.fb.group({
       recipient: (['', [Validators.required]]),

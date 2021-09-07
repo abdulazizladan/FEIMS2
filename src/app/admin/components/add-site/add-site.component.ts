@@ -343,7 +343,7 @@ export class AddSiteComponent implements OnInit {
   })
 
   /**
-   *
+   * add Waste site form group
    */
   addWasteSite(): void {
     this.hasWasteSite = true;
@@ -351,7 +351,7 @@ export class AddSiteComponent implements OnInit {
   }
 
   /**
-   *
+   *  remove reactive form group
    */
   removeWasteSite(): void {
     this.hasWasteSite = false;
@@ -359,7 +359,7 @@ export class AddSiteComponent implements OnInit {
   }
 
   /**
-   * 
+   * get a list of states in Nigeria
    */
   getStates() {
     this.siteService.getStates().subscribe(

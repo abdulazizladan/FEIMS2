@@ -19,11 +19,21 @@ export class InboxComponent implements OnInit {
   displayedColumns: string[] = ['_id', 'subject', 'recipient', 'date'];
   dataSource = new MatTableDataSource<Mail>(MAILS)
 
+  /**
+   * Constructor
+   * inject emailService
+   */
   constructor( private mailService: EmailService) { }
 
+  /**
+   * First lifecyce hook
+   */
   ngOnInit(): void {
   }
 
+  /**
+   * 
+   */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
@@ -40,7 +50,9 @@ export class InboxComponent implements OnInit {
     this.selection.select(...this.dataSource.data);
   }
 
-  /** The label for the checkbox on the passed row */
+  /** 
+   * The label for the checkbox on the passed row 
+   * */
   checkboxLabel(row?: Mail): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;

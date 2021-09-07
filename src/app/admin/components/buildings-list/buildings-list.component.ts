@@ -15,10 +15,18 @@ export class BuildingsListComponent implements OnInit, OnDestroy {
 
   buildings$ = this.store.select(selectBuidings);
 
+  /**
+   * constructor
+   * inject MatDialog, Store<{BuildingState}>
+   */
   constructor( 
     public dialog: MatDialog, 
     private store: Store<{building: BuildingState}> ) { }
 
+    /**
+     * first lifecycle hook
+     * dispatch store
+     */
   ngOnInit(): void {
     this.store.dispatch(loadBuildings());
   }

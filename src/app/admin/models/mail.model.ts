@@ -1,3 +1,6 @@
+/**
+ * @interface Mail
+ */
 export interface Mail{
     _id: string,
     recipient: string[],
