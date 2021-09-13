@@ -28,6 +28,9 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
 
   }
 
+  /**
+   * Submit
+   */
   submit (){
     const data = this.buildingForm.value;
     try{
@@ -44,6 +47,9 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * constructor
+   */
   constructor( 
     private fb: FormBuilder, 
     private store: Store<{ building: BuildingState}>,
@@ -51,6 +57,9 @@ export class AddBuildingComponent implements OnInit, OnDestroy {
     
   }
 
+  /**
+   * First lifecycle hook
+   */
   ngOnInit(): void{
     this.initForm();
   }

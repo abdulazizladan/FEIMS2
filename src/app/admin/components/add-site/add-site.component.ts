@@ -54,7 +54,7 @@ export class AddSiteComponent implements OnInit {
    * OnDestroy lifecycle hook
    */
   ngOnDestroy() : void {
-    //this.subscription.unsubscribe();
+    
   }
 
   /**

@@ -69,11 +69,11 @@ export class AddHveComponent implements OnInit {
   submit() {
     const data = this.hveForm.value
     try{
-      this.submitted = true;
       this.store.dispatch(addHVEquipment({equipment: data}))
       setTimeout(
         () => {
-          this.dialogRef.close()
+          this.submitted = true;
+          this.dialogRef.close();
         },
         5000
       )

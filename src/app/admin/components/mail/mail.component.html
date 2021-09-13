@@ -1,23 +1,65 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened class="nav-menu" fxLayout="column">
-        <button mat-flat-button color="primary" (click)="openDialog()" style="padding: 5px; border-radius: 25px; margin-bottom: 50px; text-align: center;">
-            <mat-icon>add</mat-icon>
+        <button mat-raised-button color="primary" (click)="openDialog()" style="margin-bottom: 10px; text-align: center;">
             Compose
         </button>
-        <button routerLink="./inbox" mat-stroked-button color="primary">
+        <button routerLink="./inbox" mat-flat-button>
             <mat-icon>inbox</mat-icon>
-                Inbox
+            &nbsp;
+            Inbox
         </button>
-        <button routerLink="drafts" mat-stroked-button color="primary">
-            <mat-icon>edit</mat-icon>
-                Drafts
+        <button routerLink="./inbox" mat-flat-button>
+            <mat-icon>folder_special</mat-icon>
+            &nbsp;
+            Starred
         </button>
-        <button routerLink="sent" mat-stroked-button color="primary">
-            <mat-icon>send</mat-icon>
-                Sent
+        <button routerLink="sent" mat-flat-button>
+            <mat-icon>send</mat-icon>    
+            &nbsp;
+            Sent
         </button>
+        <button routerLink="drafts" mat-flat-button>
+            <mat-icon>drafts</mat-icon>
+            &nbsp;    
+            Drafts
+        </button>
+        <button routerLink="sent" mat-flat-button>
+            <mat-icon>report</mat-icon>
+            &nbsp;
+            Spam
+        </button>
+        
     </mat-sidenav>
-    <mat-sidenav-container style="height: 100%; width: 100%; padding: 10px;">
+
+    <mat-sidenav-container fxLayout="column" style="height: 100%; width: 100%; padding: 0px;">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <mat-checkbox value="" color="primary">
+                    All
+                </mat-checkbox>
+                <button mat-icon-button>
+                    <mat-icon>
+                        delete
+                    </mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>
+                        folder_special
+                    </mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>
+                        archive
+                    </mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>
+                        error
+                    </mat-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
         <router-outlet></router-outlet>
     </mat-sidenav-container>
+    
 </mat-sidenav-container>
